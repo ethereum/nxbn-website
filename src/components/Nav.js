@@ -130,7 +130,7 @@ const Nav = ({ hasShadow }) => {
       ref={containerRef}
     >
       <div>
-        <NavLinkMain to="/en/">
+        <NavLinkMain to="/">
           <Img
             fixed={data.file.childImageSharp.fixed}
             alt="Ethereum Foundation Fellowship Program Logo"

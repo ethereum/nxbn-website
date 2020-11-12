@@ -111,7 +111,7 @@ const links = [
     text: "Terms of Use",
   },
   {
-    to: "/en/cookie-policy/",
+    to: "/cookie-policy/",
     text: "Cookie Policy",
   },
 ]
