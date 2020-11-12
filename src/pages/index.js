@@ -11,6 +11,7 @@ import {
   ButtonLink,
   H2,
 } from "../components/SharedStyledComponents"
+// TODO replace logos
 import horzLogo from "../images/horz-logo.svg"
 import vertLogo from "../images/vert-logo.svg"
 import { screenSizeM, screenSizeS, colorGrayLight } from "../utils/styles"
