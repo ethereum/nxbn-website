@@ -150,19 +150,30 @@ class IndexPage extends React.Component {
                   changemakers over 9-months by providing the community,
                   mentorship & expertise that only the Ethereum Foundation can.
                 </p>
+                <p>
+                  We believe that{" "}
+                  <Link to="https://ethereum.org/">Ethereum’s</Link> capability
+                  to build trust, transparency, and efficiency has the potential
+                  to help solve some of the challenges that exist in emerging
+                  markets and developing economies. These challenges include the
+                  lack of formal identification, lack of access to banking
+                  services, and lack of internet connectivity. This overlap
+                  between Ethereum’s opportunities and potential led us to
+                  recognize the need for the Ethereum Foundation Fellowship
+                  Program.
+                </p>
               </Section>
-              <H2 id="contact">
-                {/* <FormattedMessage id="page-home.contact-us" /> */}
-              </H2>
-              <p>{/* <FormattedMessage id="page-home.contact-us-desc" /> */}</p>
+              <H2 id="contact">Contact Us</H2>
+              <p>
+                Whether you are looking to apply for a Fellowship, recommend a
+                candidate, sign up to be a mentor or fund a project, simply fill
+                out the form below.
+              </p>
               <ButtonContainer>
-                {/* <ButtonLink to={`${this.props.intl.locale}/inquire/`}> */}
-                {/* <FormattedMessage id="page-home.inquire" /> */}
-                {/* </ButtonLink> */}
+                <ButtonLink to="https://forms.gle/iKYQA1LNEBoc59Wh7">
+                  Contact Us
+                </ButtonLink>
               </ButtonContainer>
-              <Section id="newsletter">
-                <H2>{/* <FormattedMessage id="page-home.updates" /> */}</H2>
-              </Section>
             </Copy>
           </PageBody>
         </div>

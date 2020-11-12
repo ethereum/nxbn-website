@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+import Link from "./Link"
 import * as styles from "../utils/styles"
 
 // TODO add styled-components ThemeProvider to handle pixel widths
@@ -188,29 +188,6 @@ export const Button = styled.button`
 `
 
 export const ButtonLink = styled(Link)`
-  display: inline-block;
-  line-height: 1.5;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 4px;
-  color: ${styles.colorWhite};
-  background: ${styles.colorOrangeLight};
-  border: 1px solid ${styles.colorOrangeLight};
-  font-size: 1.1rem;
-  padding: 15px 30px;
-  transition: all 0.3s ease 0s;
-
-  &:hover {
-    background: ${styles.colorRed};
-    color: ${styles.colorWhite};
-  }
-
-  @media (max-width: ${styles.screenSizeS}) {
-    width: 100%;
-  }
-`
-
-export const ButtonExternalLink = styled.a`
   display: inline-block;
   line-height: 1.5;
   font-weight: bold;
