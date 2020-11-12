@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0c117ad4-cd27-49b6-b75e-81bd74ca6e8e/deploy-status)](https://app.netlify.com/sites/goofy-hermann-031648/deploys)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/8097623/69177629-c137a400-0abc-11ea-9bcd-da3ba03d2688.png" width="60%" alt="Ethereum Foundation Fellowship Program">
 </p>
@@ -17,7 +19,8 @@ This repository holds the codebase to our website, [fellowship.ethereum.foundati
 2. Clone this project
 
 ```
-$ git clone git@github.com:ethereum/esp-website.git && cd esp-website
+$ git clone git@github.com:ethereum/fellowship-program-website.git && cd fellowship-program-website
+
 ```
 
 3. Install dependencies
