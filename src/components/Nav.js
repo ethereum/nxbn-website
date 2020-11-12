@@ -101,21 +101,10 @@ const MobileNavBackground = styled(motion.div)`
   background: ${styles.colorGrayLightest};
 `
 
-// TODO remove explicit `/en/` once we add translations
 const navItems = [
-  { to: "/en/", text: "page-home.title" },
-  { to: "/en/about/", text: "page-about.title" },
-  { to: "/en/guide/", text: "page-guide.title" },
-  { to: "/en/faq/", text: "page-faq.title" },
-  { to: "/en/projects/", text: "page-projects.title" },
-  { to: "/en/wishlist/", text: "page-wishlist.title" },
-  { to: "/en/inquire/", text: "page-inquire.title" },
-  {
-    to: "https://blog.ethereum.org/category/ecosystem-support-program/",
-    text: "blog",
-  },
+  { to: "/", text: "Home" },
+  { to: "/faq/", text: "FAQ" },
 ]
-const desktopNavItems = navItems.slice(1)
 
 const Nav = ({ hasShadow }) => {
   const data = useStaticQuery(graphql`
@@ -141,8 +130,6 @@ const Nav = ({ hasShadow }) => {
       ref={containerRef}
     >
       <div>
-        {/* TODO replace once we add language support */}
-        {/* <NavLinkMain to={`/${intl.locale}/`}> */}
         <NavLinkMain to="/en/">
           <Img
             fixed={data.file.childImageSharp.fixed}
@@ -153,7 +140,7 @@ const Nav = ({ hasShadow }) => {
       </div>
       {/* Desktop */}
       <NavLinks>
-        {desktopNavItems.map((item, idx) => {
+        {navItems.map((item, idx) => {
           return (
             <NavLink to={item.to} key={idx}>
               {item.text}
