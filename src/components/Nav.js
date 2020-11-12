@@ -8,7 +8,6 @@ import styled from "styled-components"
 import MobileNavMenu from "./MobileNavMenu"
 import MobileNavLinks from "./MobileNavLinks"
 import Link from "./Link"
-import TranslatedString from "./TranslatedString"
 import * as styles from "../utils/styles"
 
 const StyledNav = styled(motion.nav)`
@@ -149,10 +148,7 @@ const Nav = ({ hasShadow }) => {
             fixed={data.file.childImageSharp.fixed}
             alt="Ethereum Foundation Fellowship Program Logo"
           />
-          <NavLogoText>
-            <TranslatedString id="ecosystem" />{" "}
-            <TranslatedString id="support" />
-          </NavLogoText>
+          <NavLogoText>Fellowship Program</NavLogoText>
         </NavLinkMain>
       </div>
       {/* Desktop */}
@@ -160,7 +156,7 @@ const Nav = ({ hasShadow }) => {
         {desktopNavItems.map((item, idx) => {
           return (
             <NavLink to={item.to} key={idx}>
-              <TranslatedString id={item.text} />
+              {item.text}
             </NavLink>
           )
         })}

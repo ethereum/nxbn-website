@@ -1,11 +1,7 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby"
-import { Link as IntlLink } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import * as styles from "../utils/styles"
-
-// TODO pull from gatsby-config.js
-const supportedLanguages = [`en`, `es`]
 
 const HASH_PATTERN = /^#.*/
 const isHashLink = to => HASH_PATTERN.test(to)
@@ -21,7 +17,7 @@ const ExternalLink = styled.a`
     color: ${styles.colorRed};
   }
 `
-const InternalLink = styled(IntlLink)`
+const InternalLink = styled(GatsbyLink)`
   color: ${styles.colorOrange};
   text-decoration: none;
   opacity: 1;
@@ -68,22 +64,6 @@ const Link = ({ to, href, children, className, isPartiallyActive = true }) => {
     )
   }
 
-  // If lang path has been explicitly set, use Gatsby's Link
-  const langPath = to.split("/")[1]
-  if (supportedLanguages.includes(langPath)) {
-    return (
-      <GatsbyLink
-        className={className}
-        to={to}
-        activeClassName="active"
-        partiallyActive={isPartiallyActive}
-      >
-        {children}
-      </GatsbyLink>
-    )
-  }
-
-  // Use `gatsby-plugin-intl` Link (which prepends lang path)
   return (
     <InternalLink
       className={className}

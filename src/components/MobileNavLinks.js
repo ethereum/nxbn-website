@@ -1,7 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
-import { FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
@@ -89,9 +88,7 @@ const MobileNavLinks = ({ navItems, toggle }) => {
       {navItems.map((item, idx) => (
         <Item item={item} key={idx} onClick={toggle}>
           <h3>
-            <Link to={item.to}>
-              <FormattedMessage id={item.text} />
-            </Link>
+            <Link to={item.to}>{item.text}</Link>
           </h3>
         </Item>
       ))}

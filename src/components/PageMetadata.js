@@ -2,10 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { Location } from "@reach/router"
-
-import { getDefaultMessage, supportedLanguages } from "../utils/translations"
 
 const PageMetadata = ({ description, meta, title }) => {
   const { site, ogImageDefault } = useStaticQuery(
@@ -14,6 +11,8 @@ const PageMetadata = ({ description, meta, title }) => {
         site {
           siteMetadata {
             author
+            description
+            title
             url
           }
         }
@@ -28,43 +27,20 @@ const PageMetadata = ({ description, meta, title }) => {
     `
   )
 
-  const intl = useIntl()
-
-  const desc =
-    description ||
-    intl.formatMessage({
-      id: "site-description",
-      defaultMessage: getDefaultMessage("site-description"),
-    })
-
-  const siteTitle = intl.formatMessage({
-    id: "site-title",
-    defaultMessage: getDefaultMessage("site-title"),
-  })
-
+  const desc = description || site.siteMetadata.description
+  const siteTitle = site.siteMetadata.title
   const siteUrl = site.siteMetadata.url
   const ogImageUrl = siteUrl.concat(ogImageDefault.childImageSharp.fixed.src)
 
   return (
     <Location>
       {({ location }) => {
-        {
-          /* Set canonocial URL to use language path to avoid duplicate content */
-        }
-        {
-          /* e.g. set fellowship.ethereum.foundation/about/ to fellowship.ethereum.foundation/en/about/ */
-        }
         const { pathname } = location
-        let canonicalPath = pathname
-        const firstDirectory = canonicalPath.split("/")[1]
-        if (!supportedLanguages.includes(firstDirectory)) {
-          canonicalPath = `/en${pathname}`
-        }
-        const canonical = `${site.siteMetadata.url}${canonicalPath}`
+        const canonical = `${site.siteMetadata.url}${pathname}`
 
         return (
           <Helmet
-            htmlAttributes={{ lang: intl.locale }}
+            htmlAttributes={{ lang: `en` }}
             title={title}
             titleTemplate={`%s | ${siteTitle}`}
             link={[{ rel: "canonical", key: canonical, href: canonical }]}

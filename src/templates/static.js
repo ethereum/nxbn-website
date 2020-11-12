@@ -6,7 +6,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
 import Link from "../components/Link"
-import LocalGrantsForm from "../components/LocalGrantsForm"
 import PageMetadata from "../components/PageMetadata"
 import { PageBody } from "../components/SharedStyledComponents"
 import * as styles from "../utils/styles"
@@ -165,7 +164,6 @@ const components = {
   h2: Header2,
   h3: Header3,
   h4: Header4,
-  LocalGrantsForm,
 }
 
 const HeroImg = styled(Img)`
@@ -203,16 +201,7 @@ export const staticPageQuery = graphql`
         slug
       }
       frontmatter {
-        img {
-          childImageSharp {
-            fluid(maxWidth: 748) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        imgAlt
         title
-        description
       }
       body
     }

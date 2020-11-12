@@ -1,22 +1,15 @@
 import React from "react"
-import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 
 import PageMetadata from "../components/PageMetadata"
 import { PageBodyNoBanner } from "../components/SharedStyledComponents"
 
 const NotFoundPage = () => {
-  const intl = useIntl()
-
   return (
     <>
-      <PageMetadata title={intl.formatMessage({ id: "page-404.title" })} />
+      <PageMetadata title="Page not found" />
       <PageBodyNoBanner>
-        <h1>
-          <FormattedMessage id="page-404.title" />
-        </h1>
-        <p>
-          <FormattedMessage id="page-404.body" />
-        </p>
+        <h1>Page not found</h1>
+        <p>You just hit a route that doesn't exist... the sadness.</p>
       </PageBodyNoBanner>
     </>
   )

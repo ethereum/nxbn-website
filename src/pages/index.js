@@ -2,11 +2,9 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
-import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
-import NewsletterSignup from "../components/NewsletterSignup"
 import {
   PageBody,
   Section,
@@ -116,9 +114,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <PageMetadata
-          title={this.props.intl.formatMessage({ id: "page-home.title" })}
-        />
+        <PageMetadata title="TODO" />
         <div>
           <Hero>
             <HorizontalLogo
@@ -129,9 +125,7 @@ class IndexPage extends React.Component {
               src={vertLogo}
               alt="Ecosystem Support Program Vertical Logo"
             />
-            <Header>
-              <FormattedMessage id="page-home.header" />
-            </Header>
+            <Header>An Ethereum Foundation Initiative</Header>
             <Link
               to="#welcome"
               className={
@@ -144,32 +138,30 @@ class IndexPage extends React.Component {
           <PageBody>
             <Copy id="welcome">
               <Section>
-                <H1>
-                  <FormattedMessage id="page-home.h1" />
-                </H1>
+                <H1>Welcome!</H1>
                 <p>
-                  <FormattedMessage id="page-home.p-1" />
+                  The Ethereum Foundation Fellowship Program is an opportunity
+                  to experiment with using Ethereum to help solve pressing
+                  social, economic, and environmental challenges in emerging
+                  markets and developing economies.
                 </p>
                 <p>
-                  <FormattedMessage id="page-home.p-2" />
+                  The program aims to identify, develop, and grow a cohort of
+                  changemakers over 9-months by providing the community,
+                  mentorship & expertise that only the Ethereum Foundation can.
                 </p>
               </Section>
               <H2 id="contact">
-                <FormattedMessage id="page-home.contact-us" />
+                {/* <FormattedMessage id="page-home.contact-us" /> */}
               </H2>
-              <p>
-                <FormattedMessage id="page-home.contact-us-desc" />
-              </p>
+              <p>{/* <FormattedMessage id="page-home.contact-us-desc" /> */}</p>
               <ButtonContainer>
-                <ButtonLink to={`${this.props.intl.locale}/inquire/`}>
-                  <FormattedMessage id="page-home.inquire" />
-                </ButtonLink>
+                {/* <ButtonLink to={`${this.props.intl.locale}/inquire/`}> */}
+                {/* <FormattedMessage id="page-home.inquire" /> */}
+                {/* </ButtonLink> */}
               </ButtonContainer>
               <Section id="newsletter">
-                <H2>
-                  <FormattedMessage id="page-home.updates" />
-                </H2>
-                <NewsletterSignup />
+                <H2>{/* <FormattedMessage id="page-home.updates" /> */}</H2>
               </Section>
             </Copy>
           </PageBody>
@@ -179,4 +171,4 @@ class IndexPage extends React.Component {
   }
 }
 
-export default injectIntl(IndexPage)
+export default IndexPage

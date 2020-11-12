@@ -1,9 +1,9 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { navigate } from "gatsby"
 import { useToasts } from "react-toast-notifications"
 import Select from "react-select"
-import { FormattedMessage, useIntl, Link } from "gatsby-plugin-intl"
 
 import PageMetadata from "../components/PageMetadata"
 import { REFERRAL_SOURCES, COUNTRIES } from "../utils/form-inputs"
@@ -85,7 +85,6 @@ const InquirePage = () => {
   })
 
   const { addToast } = useToasts()
-  const intl = useIntl()
 
   const handleCheckBoxChange = event => {
     const target = event.target
@@ -166,25 +165,21 @@ const InquirePage = () => {
 
   const isValid = isFormValid()
   const isButtonDisabled = !isValid || formState.isPending
-  const buttonTextId = formState.isPending
-    ? "page-project.button-pending"
-    : "page-project.button"
+  // const buttonTextId = formState.isPending
+  //   ? "page-project.button-pending"
+  //   : "page-project.button"
 
   return (
     <>
-      <PageMetadata title={intl.formatMessage({ id: "page-inquire.title" })} />
+      <PageMetadata title="TODO" />
       <PageBody>
         <FormHeader>
-          <h1>
-            <FormattedMessage id="page-inquire.h1" />
-          </h1>
+          <h1>{/* <FormattedMessage id="page-inquire.h1" /> */}</h1>
+          <p>{/* <FormattedMessage id="page-inquire.description" /> */}</p>
           <p>
-            <FormattedMessage id="page-inquire.description" />
-          </p>
-          <p>
-            <FormattedMessage id="page-inquire.guide" />{" "}
+            {/* <FormattedMessage id="page-inquire.guide" />{" "} */}
             <Link to="/guide/">
-              <FormattedMessage id="page-inquire.guide-link" />
+              {/* <FormattedMessage id="page-inquire.guide-link" /> */}
             </Link>
             .
           </p>
@@ -192,11 +187,11 @@ const InquirePage = () => {
         <Form onSubmit={handleSubmit}>
           <RadioContainer>
             <RadioPrompt>
-              <FormattedMessage id="page-inquire.prompt" />{" "}
+              {/* <FormattedMessage id="page-inquire.prompt" />{" "} */}
               <Required>*</Required>
               <br />
               <SmallPrompt>
-                <FormattedMessage id="page-inquire.prompt-small" />
+                {/* <FormattedMessage id="page-inquire.prompt-small" /> */}
               </SmallPrompt>
             </RadioPrompt>
             <RadioInputContainer>
@@ -227,7 +222,7 @@ const InquirePage = () => {
             <div>
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.proj-name" />
+                  {/* <FormattedMessage id="page-project.proj-name" /> */}
                 </span>
                 <Input
                   type="text"
@@ -239,12 +234,12 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.proj-desc" />{" "}
+                  {/* <FormattedMessage id="page-project.proj-desc" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <div>
                   <small>
-                    <FormattedMessage id="page-project.proj-success" />
+                    {/* <FormattedMessage id="page-project.proj-success" /> */}
                   </small>
                 </div>
                 <TextArea
@@ -255,12 +250,12 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.profile" />{" "}
+                  {/* <FormattedMessage id="page-project.profile" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <div>
                   <small>
-                    <FormattedMessage id="page-project.team" />
+                    {/* <FormattedMessage id="page-project.team" /> */}
                   </small>
                 </div>
                 <TextArea
@@ -271,12 +266,12 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.impact" />{" "}
+                  {/* <FormattedMessage id="page-project.impact" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <div>
                   <small>
-                    <FormattedMessage id="page-project.proj-impact" />
+                    {/* <FormattedMessage id="page-project.proj-impact" /> */}
                   </small>
                 </div>
                 <TextArea
@@ -287,12 +282,12 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.challenges" />{" "}
+                  {/* <FormattedMessage id="page-project.challenges" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <div>
                   <small>
-                    <FormattedMessage id="page-project.challenges-info" />
+                    {/* <FormattedMessage id="page-project.challenges-info" /> */}
                   </small>
                 </div>
                 <TextArea
@@ -303,11 +298,11 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.prev-work" />
+                  {/* <FormattedMessage id="page-project.prev-work" /> */}
                 </span>
                 <div>
                   <small>
-                    <FormattedMessage id="page-project.prev-work-links" />
+                    {/* <FormattedMessage id="page-project.prev-work-links" /> */}
                   </small>
                 </div>
                 <TextArea
@@ -318,7 +313,7 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.contact-person" />{" "}
+                  {/* <FormattedMessage id="page-project.contact-person" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <Input
@@ -331,7 +326,7 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="contact-email" /> <Required>*</Required>
+                  {/* <FormattedMessage id="contact-email" /> <Required>*</Required> */}
                 </span>
                 <Input
                   type="email"
@@ -344,7 +339,7 @@ const InquirePage = () => {
 
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.contact-p-country" />
+                  {/* <FormattedMessage id="page-project.contact-p-country" /> */}
                 </span>
                 <Select
                   options={countryOptions}
@@ -354,7 +349,7 @@ const InquirePage = () => {
 
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.contact-p-city" />
+                  {/* <FormattedMessage id="page-project.contact-p-city" /> */}
                 </span>
                 <Input
                   type="text"
@@ -367,7 +362,7 @@ const InquirePage = () => {
 
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.support" />
+                  {/* <FormattedMessage id="page-project.support" /> */}
                 </span>
                 <Select
                   options={referralSourceOptions}
@@ -377,7 +372,7 @@ const InquirePage = () => {
 
               <Label>
                 <span>
-                  <FormattedMessage id="page-project.support-p" />
+                  {/* <FormattedMessage id="page-project.support-p" /> */}
                 </span>
                 <Input
                   type="text"
@@ -395,11 +390,11 @@ const InquirePage = () => {
                   value={formState.newsletter}
                   onChange={handleCheckBoxChange}
                 />
-                <FormattedMessage id="subscribe" />
+                {/* <FormattedMessage id="subscribe" /> */}
               </Checkbox>
               <div>
                 <Button disabled={isButtonDisabled} type="submit">
-                  <FormattedMessage id={buttonTextId} />
+                  {/* <FormattedMessage id={buttonTextId} /> */}
                 </Button>
               </div>
             </div>
@@ -408,12 +403,12 @@ const InquirePage = () => {
             <div>
               <Label>
                 <span>
-                  <FormattedMessage id="page-inquire.name" />{" "}
+                  {/* <FormattedMessage id="page-inquire.name" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <div>
                   <small>
-                    <FormattedMessage id="page-inquire.name-guide" />
+                    {/* <FormattedMessage id="page-inquire.name-guide" /> */}
                   </small>
                 </div>
 
@@ -427,7 +422,7 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="contact-email" /> <Required>*</Required>
+                  {/* <FormattedMessage id="contact-email" /> <Required>*</Required> */}
                 </span>
                 <Input
                   type="email"
@@ -439,7 +434,7 @@ const InquirePage = () => {
               </Label>
               <Label>
                 <span>
-                  <FormattedMessage id="page-inquire.proj-company-name" />
+                  {/* <FormattedMessage id="page-inquire.proj-company-name" /> */}
                 </span>
                 <Input
                   type="text"
@@ -452,7 +447,7 @@ const InquirePage = () => {
 
               <Label>
                 <span>
-                  <FormattedMessage id="page-inquire.inquiry-type" />{" "}
+                  {/* <FormattedMessage id="page-inquire.inquiry-type" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <Select
@@ -463,7 +458,7 @@ const InquirePage = () => {
 
               <Label>
                 <span>
-                  <FormattedMessage id="page-inquire.inquiry" />{" "}
+                  {/* <FormattedMessage id="page-inquire.inquiry" />{" "} */}
                   <Required>*</Required>
                 </span>
                 <TextArea
@@ -481,11 +476,11 @@ const InquirePage = () => {
                   value={formState.newsletter}
                   onChange={handleCheckBoxChange}
                 />
-                <FormattedMessage id="subscribe" />
+                {/* <FormattedMessage id="subscribe" /> */}
               </Checkbox>
               <div>
                 <Button disabled={isButtonDisabled} type="submit">
-                  <FormattedMessage id={buttonTextId} />
+                  {/* <FormattedMessage id={buttonTextId} /> */}
                 </Button>
               </div>
             </div>

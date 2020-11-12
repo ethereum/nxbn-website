@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { colorOrangeLightest } from "../utils/styles"
 import { Input, Button } from "../components/SharedStyledComponents"
 import { useToasts } from "react-toast-notifications"
-import { FormattedMessage } from "gatsby-plugin-intl"
 
 const Container = styled.div`
   background-color: ${colorOrangeLightest};
@@ -105,7 +104,7 @@ const NewsletterSignup = () => {
         />
 
         <SubmitButton disabled={!isEmailValid} type="submit">
-          <FormattedMessage id="sign-up" />
+          {/* <FormattedMessage id="sign-up" /> */}
         </SubmitButton>
       </Form>
     </Container>

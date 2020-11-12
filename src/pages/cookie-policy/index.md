@@ -1,6 +1,5 @@
 ---
 title: Cookie Policy
-lang: en
 ---
 
 # Cookie Policy

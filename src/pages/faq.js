@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
@@ -17,7 +16,6 @@ import {
 } from "../components/SharedStyledComponents"
 
 const FAQPage = ({ data }) => {
-  const intl = useIntl()
   // TODO simplify w/ Array... couldn't get it working
   const [expanded, setExpanded] = useState({
     0: false,
@@ -51,67 +49,55 @@ const FAQPage = ({ data }) => {
     setExpanded(newState)
   }
 
-  const toggleAllText = areAnyOpen
-    ? intl.formatMessage({ id: "page-faq.collapse-all" })
-    : intl.formatMessage({ id: "page-faq.expand-all" })
+  const toggleAllText = areAnyOpen ? "Collapse all" : "Expand all"
 
   return (
     <>
-      <PageMetadata title={intl.formatMessage({ id: "page-faq.title" })} />
+      <PageMetadata title="FAQ" />
       <div>
         <PageHeader>
-          <H1>
-            <FormattedMessage id="page-faq.h1" />
-          </H1>
+          <H1>Fellowship Program FAQ</H1>
         </PageHeader>
         <PageBody>
           <FakeLink onClick={toggleAll}>{toggleAllText}</FakeLink>
-          <H2>
-            <FormattedMessage id="page-faq.h2-program" />
-          </H2>
+          <H2>{/* <FormattedMessage id="page-faq.h2-program" /> */}</H2>
           <HR />
           <AccordionSection
             key={0}
             i={0}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({ id: "page-faq.help.question" })}
+            headerText="TODO"
           >
-            <p>
-              <FormattedMessage id="page-faq.help.answer-p-1" />
-            </p>
-            <p>
-              <FormattedMessage id="page-faq.help.answer-p-2" />
-            </p>
+            <p>{/* <FormattedMessage id="page-faq.help.answer-p-1" /> */}</p>
+            <p>{/* <FormattedMessage id="page-faq.help.answer-p-2" /> */}</p>
             <ul>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-1" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-1" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-2" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-2" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-3" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-3" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-4" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-4" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-5" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-5" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-6" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-6" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-7" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-7" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.help.answer-li-8" />
+                {/* <FormattedMessage id="page-faq.help.answer-li-8" /> */}
               </li>
             </ul>
-            <p>
-              <FormattedMessage id="page-faq.help.answer-p-3" />
-            </p>
+            <p>{/* <FormattedMessage id="page-faq.help.answer-p-3" /> */}</p>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -119,11 +105,9 @@ const FAQPage = ({ data }) => {
             i={1}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({ id: "page-faq.grant.question" })}
+            headerText="TODO"
           >
-            <p>
-              <FormattedMessage id="page-faq.grant.answer-p-1" />
-            </p>
+            <p>{/* <FormattedMessage id="page-faq.grant.answer-p-1" /> */}</p>
           </AccordionSection>
           <HR />
           <H2>Eligibility</H2>
@@ -133,14 +117,12 @@ const FAQPage = ({ data }) => {
             i={3}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({
-              id: "page-faq.eligibility.question",
-            })}
+            headerText="TODO"
           >
             <p>
-              <FormattedMessage id="page-faq.eligibility.answer-p-1" />{" "}
+              {/* <FormattedMessage id="page-faq.eligibility.answer-p-1" />{" "} */}
               <Link to="/inquire/">inquiry form</Link>
-              . <FormattedMessage id="page-faq.eligibility.answer-p-2" />
+              {/* . <FormattedMessage id="page-faq.eligibility.answer-p-2" /> */}
             </p>
           </AccordionSection>
           <HR />
@@ -149,15 +131,13 @@ const FAQPage = ({ data }) => {
             i={4}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({
-              id: "page-faq.eligibility-2.question",
-            })}
+            headerText="TODO"
           >
             <p>
-              <FormattedMessage id="page-faq.eligibility-2.answer-p-1" />
+              {/* <FormattedMessage id="page-faq.eligibility-2.answer-p-1" /> */}
             </p>
             <p>
-              <FormattedMessage id="page-faq.eligibility-2.answer-p-2" />
+              {/* <FormattedMessage id="page-faq.eligibility-2.answer-p-2" /> */}
             </p>
           </AccordionSection>
           <HR />
@@ -166,40 +146,36 @@ const FAQPage = ({ data }) => {
             i={5}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({ id: "page-faq.topics.question" })}
+            headerText="TODO"
           >
-            <p>
-              <FormattedMessage id="page-faq.topics.answer-p-1" />
-            </p>
+            <p>{/* <FormattedMessage id="page-faq.topics.answer-p-1" /> */}</p>
             <ul>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-1" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-1" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-2" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-2" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-3" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-3" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-4" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-4" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-5" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-5" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-6" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-6" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-7" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-7" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.topics.answer-li-8" />
+                {/* <FormattedMessage id="page-faq.topics.answer-li-8" /> */}
               </li>
             </ul>
-            <p>
-              <FormattedMessage id="page-faq.topics.answer-p-2" />
-            </p>
+            <p>{/* <FormattedMessage id="page-faq.topics.answer-p-2" /> */}</p>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -207,29 +183,27 @@ const FAQPage = ({ data }) => {
             i={6}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({
-              id: "page-faq.applications.question",
-            })}
+            headerText="TODO"
           >
             <p>
-              <FormattedMessage id="page-faq.applications.answer-p-1" />
+              {/* <FormattedMessage id="page-faq.applications.answer-p-1" /> */}
             </p>
             <p>
-              <FormattedMessage id="page-faq.applications.answer-p-2" />
+              {/* <FormattedMessage id="page-faq.applications.answer-p-2" /> */}
             </p>
             <ul>
               <li>
-                <FormattedMessage id="page-faq.applications.answer-li-1" />
+                {/* <FormattedMessage id="page-faq.applications.answer-li-1" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.applications.answer-li-2" />
+                {/* <FormattedMessage id="page-faq.applications.answer-li-2" /> */}
               </li>
               <li>
-                <FormattedMessage id="page-faq.applications.answer-li-3" />
+                {/* <FormattedMessage id="page-faq.applications.answer-li-3" /> */}
               </li>
             </ul>
             <p>
-              <FormattedMessage id="page-faq.applications.answer-p-3" />
+              {/* <FormattedMessage id="page-faq.applications.answer-p-3" /> */}
             </p>
           </AccordionSection>
           <HR />
@@ -238,12 +212,10 @@ const FAQPage = ({ data }) => {
             i={7}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({
-              id: "page-faq.millions.question",
-            })}
+            headerText="TODO"
           >
             <p>
-              <FormattedMessage id="page-faq.millions.answer-p-1" />
+              {/* <FormattedMessage id="page-faq.millions.answer-p-1" /> */}
             </p>
           </AccordionSection>
           <HR />
@@ -254,12 +226,10 @@ const FAQPage = ({ data }) => {
             i={8}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({
-              id: "page-faq.application-process.question",
-            })}
+            headerText="TODO"
           >
             <p>
-              <FormattedMessage id="page-faq.application-process.answer-p-1" />
+              {/* <FormattedMessage id="page-faq.application-process.answer-p-1" /> */}
             </p>
             <Img
               className="process-img"
@@ -273,12 +243,10 @@ const FAQPage = ({ data }) => {
             i={9}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({
-              id: "page-faq.response-time.question",
-            })}
+            headerText="TODO"
           >
             <p>
-              <FormattedMessage id="page-faq.response-time.answer-p-1" />
+              {/* <FormattedMessage id="page-faq.response-time.answer-p-1" /> */}
             </p>
           </AccordionSection>
           <HR />
@@ -287,12 +255,10 @@ const FAQPage = ({ data }) => {
             i={10}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({
-              id: "page-faq.confidentiality.question",
-            })}
+            headerText="TODO"
           >
             <p>
-              <FormattedMessage id="page-faq.confidentiality.answer-p-1" />
+              {/* <FormattedMessage id="page-faq.confidentiality.answer-p-1" /> */}
             </p>
           </AccordionSection>
           <HR />
@@ -301,11 +267,9 @@ const FAQPage = ({ data }) => {
             i={11}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText={intl.formatMessage({ id: "page-faq.payment.question" })}
+            headerText="TODO"
           >
-            <p>
-              <FormattedMessage id="page-faq.payment.answer-p-1" />
-            </p>
+            <p>{/* <FormattedMessage id="page-faq.payment.answer-p-1" /> */}</p>
           </AccordionSection>
           <HR />
         </PageBody>

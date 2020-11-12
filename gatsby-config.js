@@ -1,7 +1,3 @@
-const translations = require("./src/utils/translations")
-
-const supportedLanguages = translations.supportedLanguages
-const defaultLanguage = `en`
 const siteUrl = `https://fellowship.ethereum.foundation`
 
 module.exports = {
@@ -12,8 +8,7 @@ module.exports = {
     url: siteUrl,
     siteUrl, // for sitemap generation
     author: `@EF_ESP`,
-    defaultLanguage,
-    supportedLanguages,
+    defaultLanguage: `en`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -113,36 +108,15 @@ module.exports = {
         }`,
         serialize: ({ site, allSitePage }) =>
           allSitePage.nodes
-            .filter((node) => {
-              const path = node.path
-              // Filter out 404 pages
-              if (path.includes("404")) {
-                return false
-              }
-              // Filter out base pages that don't have a language directory
-              return supportedLanguages.includes(path.split("/")[1])
-            })
-            .map((node) => {
+            // Filter out 404 pages
+            .filter(node => !node.path.includes("404"))
+            .map(node => {
               return {
                 url: `${site.siteMetadata.siteUrl}${node.path}`,
                 changefreq: `weekly`,
                 priority: 0.7,
               }
             }),
-      },
-    },
-    // i18n support
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        // language JSON resource path
-        path: `${__dirname}/src/intl`,
-        // supported language
-        languages: supportedLanguages,
-        // language file path
-        defaultLanguage,
-        // redirect to `/en/` when connecting `/`
-        redirect: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
