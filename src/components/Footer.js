@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 import Link from "./Link"
 import {
@@ -103,10 +103,6 @@ const links = [
     text: "Ethereum.foundation",
   },
   {
-    to: "https://blog.ethereum.org/category/ecosystem-support-program/",
-    text: "Blog",
-  },
-  {
     to: "https://ethereum.org/privacy-policy/",
     text: "Privacy Policy",
   },
@@ -136,9 +132,6 @@ const Footer = () => (
         })}
       </LinkContainer>
       <IconContainer>
-        <IconLink to="https://twitter.com/EF_ESP">
-          <Icon icon={faTwitter} />
-        </IconLink>
         <IconLink to="https://github.com/ethereum">
           <Icon icon={faGithub} />
         </IconLink>
