@@ -11,14 +11,10 @@
   publish = "public"
 
   # Directory with the serverless Lambda functions to deploy to AWS.
-  functions = "public/lambda"
+  # functions = "public/lambda"
 
   # Default build command.
   command = "yarn build"
-
-  # Directory with the serverless Lambda functions to deploy to AWS.
-  # functions = "project/functions/"
-
 
 # DEPLOY CONTEXTS
 
@@ -37,86 +33,6 @@
 
 # REDIRECTS
 
-# vanity URLs
-[[redirects]]
-  from = "/honduras"
-  to = "/es/local-grants/honduras"
-[[redirects]]
-  from = "/colombia"
-  to = "/es/local-grants/colombia"
-
-# legacy site redirects
-[[redirects]]
-  from = "/index.html"
-  to = "/"
-  force = true
-[[redirects]]
-  from = "/application.html"
-  to = "/en/inquire/"
-
-# i18n redirects
-# Force because the files exist (root paths still resolve to English)
-[[redirects]]
-  from = "/"
-  to = "/en/"
-  force = true
-[[redirects]]
-  from = "/about/"
-  to = "/en/about/"
-  force = true
-[[redirects]]
-  from = "/projects/"
-  to = "/en/projects/"
-  force = true
-[[redirects]]
-  from = "/faq/"
-  to = "/en/faq/"
-  force = true
-[[redirects]]
-  from = "/wishlist/"
-  to = "/en/wishlist/"
-  force = true
-[[redirects]]
-  from = "/projects/nethermind/"
-  to = "/en/projects/nethermind/"
-  force = true
-[[redirects]]
-  from = "/project/"
-  to = "/en/inquire/"
-  force = true
-[[redirects]]
-  from = "/projects/ethereum-on-arm/"
-  to = "/en/projects/ethereum-on-arm/"
-  force = true
-[[redirects]]
-  from = "/projects/turbo-geth/"
-  to = "/en/projects/turbo-geth/"
-  force = true
-[[redirects]]
-  from = "/explore/"
-  to = "/en/inquire/"
-  force = true
-[[redirects]]
-  from = "/projects/ethers-js/"
-  to = "/en/projects/ethers-js/"
-  force = true
-[[redirects]]
-  from = "/projects/circom/"
-  to = "/en/projects/circom/"
-  force = true
-[[redirects]]
-  from = "/projects/uniswap/"
-  to = "/en/projects/uniswap/"
-  force = true
-[[redirects]]
-  from = "/projects/circom/link"
-  to = "/en/projects/circom/link"
-  force = true
-
-  # form merge redirects
-[[redirects]]
-  from = "/en/project/"
-  to = "/en/inquire/"
-[[redirects]]
-  from = "/en/explore/"
-  to = "/en/inquire/"
+# [[redirects]]
+#   from = "/honduras"
+#   to = "/es/local-grants/honduras"

@@ -33,7 +33,6 @@
     "gatsby-source-filesystem": "^2.1.36",
     "gatsby-transformer-sharp": "^2.3.3",
     "google-spreadsheet": "^3.0.13",
-    "netlify-lambda": "^1.6.3",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -53,9 +52,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && yarn build:lambda",
-    "build:app": "gatsby build",
-    "build:lambda": "netlify-lambda build src/lambda",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "yarn develop",
