@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -166,12 +165,7 @@ const components = {
   h4: Header4,
 }
 
-const HeroImg = styled(Img)`
-  margin-bottom: ${props => (props.hasImgMargin ? `3rem` : `0`)};
-`
-
-const StaticPage = ({ location, data: { mdx } }) => {
-  const hasImgMargin = location.pathname.includes("/local-grants/colombia")
+const StaticPage = ({ data: { mdx } }) => {
   return (
     <>
       <PageMetadata
@@ -179,13 +173,6 @@ const StaticPage = ({ location, data: { mdx } }) => {
         description={mdx.frontmatter.description}
       />
       <PageBody>
-        {mdx.frontmatter.img && (
-          <HeroImg
-            fluid={mdx.frontmatter.img.childImageSharp.fluid}
-            alt={mdx.frontmatter.imgAlt}
-            hasImgMargin={hasImgMargin}
-          />
-        )}
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
