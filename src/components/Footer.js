@@ -6,7 +6,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import Link from "./Link"
 import {
   colorGrayDarker,
-  colorRed,
+  colorBlue,
+  colorBlueLight,
+  colorGreenLightest,
   screenSizeS,
   screenSizeL,
   screenSizeM,
@@ -40,7 +42,7 @@ const StyledLink = styled(Link)`
   margin-left: 16px;
   margin-right: 16px;
   &:hover {
-    color: ${colorRed};
+    color: ${colorBlue};
   }
 
   @media (max-width: ${screenSizeL}) {
@@ -60,7 +62,7 @@ const Icon = styled(FontAwesomeIcon)`
   margin: 16px 8px;
 
   &:hover {
-    color: ${colorRed};
+    color: ${colorBlue};
   }
 `
 
@@ -86,7 +88,11 @@ const BR = styled.br`
 
 const Divider = styled.div`
   height: 3px;
-  background-image: linear-gradient(to right, #ffcf47, #c6566c);
+  background-image: linear-gradient(
+    to right,
+    ${colorGreenLightest},
+    ${colorBlueLight}
+  );
 `
 
 const LinkAndBar = styled.div`

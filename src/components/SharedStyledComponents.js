@@ -27,7 +27,11 @@ export const PageBodyWide = styled.div`
 
 export const PageHeader = styled.div`
   height: 100px;
-  background-image: linear-gradient(to right, #ffcf47, #c6566c);
+  background-image: linear-gradient(
+    to right,
+    ${styles.colorGreenLightest},
+    ${styles.colorBlue}
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,10 +61,10 @@ export const HR = styled.hr`
 export const FakeLink = styled.div`
   cursor: pointer;
   text-align: right;
-  color: ${styles.colorOrange};
+  color: ${styles.colorBlueLight};
 
   &:hover {
-    color: ${styles.colorRed};
+    color: ${styles.colorBlue};
   }
 `
 
@@ -145,7 +149,7 @@ export const FormHeader = styled.header`
 `
 
 export const Required = styled.span`
-  color: ${styles.colorRed};
+  color: ${styles.colorGreen};
   font-weight: bold;
 `
 
@@ -171,14 +175,14 @@ export const Button = styled.button`
   text-align: center;
   border-radius: 4px;
   color: ${styles.colorWhite};
-  background: ${styles.colorOrangeLight};
-  border: 1px solid ${styles.colorOrangeLight};
+  background: ${styles.colorBlueLight};
+  border: 1px solid ${styles.colorBlueLight};
   font-size: 1.1rem;
   padding: 15px 30px;
   cursor: pointer;
 
   &:hover {
-    background: ${styles.colorRed};
+    background: ${styles.colorBlue};
   }
   &:disabled {
     background: ${styles.colorGrayDark};
@@ -194,14 +198,14 @@ export const ButtonLink = styled(Link)`
   text-align: center;
   border-radius: 4px;
   color: ${styles.colorWhite};
-  background: ${styles.colorOrangeLight};
-  border: 1px solid ${styles.colorOrangeLight};
+  background: ${styles.colorBlueLight};
+  border: 1px solid ${styles.colorBlueLight};
   font-size: 1.1rem;
   padding: 15px 30px;
   transition: all 0.3s ease 0s;
 
   &:hover {
-    background: ${styles.colorRed};
+    background: ${styles.colorBlue};
     color: ${styles.colorWhite};
   }
 

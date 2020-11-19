@@ -26,7 +26,7 @@ const Header = styled(motion.header)`
 `
 const Icon = styled(FontAwesomeIcon)`
   margin-right: 16px;
-  color: ${styles.colorYellow};
+  color: ${styles.colorGreen};
 `
 
 const Section = styled(motion.section)`

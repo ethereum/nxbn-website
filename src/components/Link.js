@@ -7,29 +7,29 @@ const HASH_PATTERN = /^#.*/
 const isHashLink = to => HASH_PATTERN.test(to)
 
 const ExternalLink = styled.a`
-  color: ${styles.colorOrange};
+  color: ${styles.colorBlueLight};
   text-decoration: none;
   opacity: 1;
   outline: none;
 
   &:hover {
     text-decoration: none;
-    color: ${styles.colorRed};
+    color: ${styles.colorBlue};
   }
 `
 const InternalLink = styled(GatsbyLink)`
-  color: ${styles.colorOrange};
+  color: ${styles.colorBlueLight};
   text-decoration: none;
   opacity: 1;
   outline: none;
 
   &:hover {
     text-decoration: none;
-    color: ${styles.colorRed};
+    color: ${styles.colorBlue};
   }
 
   &.active {
-    color: ${styles.colorOrange};
+    color: ${styles.colorBlue};
   }
 `
 

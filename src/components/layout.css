@@ -669,7 +669,7 @@ pre tt:after {
 /* Links */
 
 a {
-  color: #f26b38;
+  color: #1688a4;
   text-decoration: none;
   opacity: 1;
   outline: none;
@@ -677,7 +677,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #e65753;
+  color: #1476a0;
 }
 
 /* Navbar */
@@ -694,7 +694,7 @@ a:hover {
 
 .hero-link {
   font-size: 24px;
-  color: #f26b38;
+  color: #1476a0;
   text-align: center;
   position: absolute;
   width: 20px;

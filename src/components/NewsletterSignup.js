@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { colorOrangeLightest } from "../utils/styles"
+import { colorBlueLightest } from "../utils/styles"
 import { Input, Button } from "../components/SharedStyledComponents"
 import { useToasts } from "react-toast-notifications"
 
 const Container = styled.div`
-  background-color: ${colorOrangeLightest};
+  background-color: ${colorBlueLightest};
   padding: 24px;
 `
 
