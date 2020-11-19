@@ -11,9 +11,8 @@ import {
   ButtonLink,
   H2,
 } from "../components/SharedStyledComponents"
-// TODO replace logos
-import horzLogo from "../images/horz-logo.svg"
-import vertLogo from "../images/vert-logo.svg"
+import horzLogo from "../images/fellowship-program-logo.svg"
+import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import { screenSizeM, screenSizeS, colorGrayLight } from "../utils/styles"
 
 const Hero = styled.div`
@@ -60,7 +59,7 @@ const VerticalLogo = styled.img`
   display: none;
 
   @media (max-width: ${screenSizeS}) {
-    width: 200px;
+    /* width: 200px; */
     display: block;
     margin: 2rem auto;
   }

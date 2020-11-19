@@ -692,32 +692,6 @@ a:hover {
 
 /* Hero */
 
-/* TODO move to styled components */
-
-.image .horz-logo {
-  width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.image .vert-logo {
-  display: none;
-}
-
-@media (max-width: 480px) {
-  .image .horz-logo {
-    display: none;
-  }
-
-  .image .vert-logo {
-    width: 210px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .hero-link {
   font-size: 24px;
   color: #f26b38;
