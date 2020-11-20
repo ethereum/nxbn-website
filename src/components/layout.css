@@ -611,61 +611,6 @@ pre tt:after {
   }
 }
 
-/* lines */
-.line {
-  content: "";
-  position: fixed;
-  z-index: 105;
-}
-
-.line.top {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 25px;
-  background-image: url("../images/lines.svg");
-}
-
-.line.bottom {
-  position: relative;
-  width: 100%;
-  height: 25px;
-  background-image: url("../images/lines.svg");
-}
-
-.line.left {
-  left: 0;
-  top: 0;
-  width: 25px;
-  height: 200%;
-  background-image: url("../images/lines.svg");
-}
-
-.line.right {
-  left: auto;
-  right: 0;
-  top: 0;
-  width: 25px;
-  height: 200%;
-  background-image: url("../images/lines.svg");
-}
-
-/* styles.screenSizeL */
-@media (max-width: 1024px) {
-  .line.bottom {
-    height: 18px;
-  }
-  .line.top {
-    height: 18px;
-  }
-  .line.right {
-    width: 18px;
-  }
-  .line.left {
-    width: 18px;
-  }
-}
-
 /* Links */
 
 a {
@@ -743,19 +688,6 @@ a:hover {
 }
 
 /* TODO move to styled components */
-
-/* Layout */
-
-.layout {
-  margin: 25px 25px 0;
-}
-
-/* styles.screenSizeL */
-@media (max-width: 1024px) {
-  .layout {
-    margin: 18px 18px 0;
-  }
-}
 
 /* FAQ page */
 

@@ -16,6 +16,7 @@ import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import { screenSizeM, screenSizeS, colorGrayLight } from "../utils/styles"
 
 const Hero = styled.div`
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;

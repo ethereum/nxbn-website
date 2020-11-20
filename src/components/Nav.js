@@ -12,10 +12,11 @@ import * as styles from "../utils/styles"
 
 const StyledNav = styled(motion.nav)`
   position: fixed;
+  top: 15px;
   z-index: 100;
-  background: #ffffff;
-  width: 100%;
-  padding: 15px 50px 5px 15px;
+  background: ${styles.colorWhite};
+  width: calc(100% - 30px); /* account for Border */
+  padding: 15px 15px 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,7 +87,7 @@ const backgroundVariants = {
     },
   },
   closed: {
-    clipPath: "circle(24px at 200px -10px)",
+    clipPath: "circle(24px at 200px -40px)",
     transition: {
       delay: 0.5,
       type: "spring",

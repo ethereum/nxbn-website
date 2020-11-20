@@ -29,6 +29,66 @@ const variants = {
   },
 }
 
+const Border = styled.div`
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  background: #d7e7b9; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #d7e7b9 0%,
+    #95c7ed 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #d7e7b9 0%,
+    #95c7ed 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #d7e7b9 0%,
+    #95c7ed 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7e7b9', endColorstr='#95c7ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+`
+
+// Need an additional border w/ higher z-index
+const BorderTop = styled.div`
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 15px;
+
+  background: #d7e7b9; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #d7e7b9 0%,
+    #95c7ed 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #d7e7b9 0%,
+    #95c7ed 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #d7e7b9 0%,
+    #95c7ed 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7e7b9', endColorstr='#95c7ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+`
+
+const Container = styled.div`
+  position: absolute;
+  width: calc(100% - 30px); /* account for Border */
+  margin: 15px;
+  box-sizing: border-box;
+  background: ${styles.colorWhite};
+  z-index: 1;
+`
+
 const Main = styled(motion.main)`
   padding-top: 75px;
   /* lines (25px * 2) + footer (87.5px) = 137.6px */
@@ -77,10 +137,9 @@ class Layout extends React.Component {
   render() {
     return (
       <ToastProvider>
-        <div className="line top"></div>
-        <div className="line left"></div>
-        <div className="line right"></div>
-        <div className="layout">
+        <Border />
+        <BorderTop />
+        <Container>
           <Nav hasShadow={this.state.hasNavShadow} />
           <div>
             <AnimatePresence>
@@ -95,8 +154,7 @@ class Layout extends React.Component {
             </AnimatePresence>
           </div>
           <Footer />
-          <div className="line bottom"></div>
-        </div>
+        </Container>
       </ToastProvider>
     )
   }
