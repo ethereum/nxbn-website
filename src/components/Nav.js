@@ -62,6 +62,10 @@ const NavLink = styled(Link)`
   }
 `
 
+const NavLogo = styled(Img)`
+  margin: 0 0.5rem;
+`
+
 const NavLogoText = styled.div`
   margin: 0;
   margin-left: 5px;
@@ -109,9 +113,9 @@ const navItems = [
 const Nav = ({ hasShadow }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "favicons/114.png" }) {
+      file(relativePath: { eq: "favicon.png" }) {
         childImageSharp {
-          fixed(width: 45) {
+          fixed(height: 40) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -131,7 +135,7 @@ const Nav = ({ hasShadow }) => {
     >
       <div>
         <NavLinkMain to="/">
-          <Img
+          <NavLogo
             fixed={data.file.childImageSharp.fixed}
             alt="Ethereum Foundation Fellowship Program Logo"
           />

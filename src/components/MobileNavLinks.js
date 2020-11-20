@@ -56,7 +56,7 @@ const Item = styled(motion.li)`
 const MobileNavLinks = ({ navItems, toggle }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "favicons/114.png" }) {
+      file(relativePath: { eq: "favicon.png" }) {
         childImageSharp {
           fixed(width: 90) {
             ...GatsbyImageSharpFixed
