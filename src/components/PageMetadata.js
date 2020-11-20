@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Location } from "@reach/router"
 
 const PageMetadata = ({ description, meta, title }) => {
-  // TODO replace ogImageDefault
   const { site, ogImageDefault } = useStaticQuery(
     graphql`
       query {
