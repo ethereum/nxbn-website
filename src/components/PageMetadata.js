@@ -17,9 +17,11 @@ const PageMetadata = ({ description, meta, title }) => {
             url
           }
         }
-        ogImageDefault: file(relativePath: { eq: "esp-logo-og-image.png" }) {
+        ogImageDefault: file(
+          relativePath: { eq: "ef-fellowship-program-og-image.png" }
+        ) {
           childImageSharp {
-            fixed(width: 1200) {
+            fixed(width: 758) {
               src
             }
           }
