@@ -1,14 +1,13 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0c117ad4-cd27-49b6-b75e-81bd74ca6e8e/deploy-status)](https://app.netlify.com/sites/goofy-hermann-031648/deploys)
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/8097623/69177629-c137a400-0abc-11ea-9bcd-da3ba03d2688.png" width="60%" alt="Ethereum Foundation Fellowship Program">
+  <img src="./src/images/fellowship-program-logo.png" width="60%" alt="Ethereum Foundation Fellowship Program">
 </p>
-
 <h1 align="center">
   Ethereum Foundation Fellowship Program
 </h1>
 
-The Ethereum Foundation Fellowship Program exists to provide both financial and non-financial support to projects and entities within the greater Ethereum community, in order to accelerate the growth of the ecosystem. The Ecosystem Support Program is an expansion of the original Ethereum Grants Program which mainly focused on financial support. Our focus is on deploying our resources where they will have the biggest impact.
+The Ethereum Foundation Fellowship Program is an opportunity to experiment with using Ethereum to help solve pressing social, economic, and environmental challenges in developing countries.
 
 This repository holds the codebase to our website, [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation)
 
