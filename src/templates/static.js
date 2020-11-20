@@ -168,10 +168,7 @@ const components = {
 const StaticPage = ({ data: { mdx } }) => {
   return (
     <>
-      <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
-      />
+      <PageMetadata title={mdx.frontmatter.title} />
       <PageBody>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>

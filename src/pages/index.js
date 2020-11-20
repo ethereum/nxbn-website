@@ -115,7 +115,10 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <PageMetadata title="TODO" />
+        <PageMetadata
+          title="Home"
+          description="The Ethereum Foundation Fellowship Program aims to help solve pressing social, economic, and environmental challenges in developing countries."
+        />
         <div>
           <Hero>
             <HorizontalLogo
