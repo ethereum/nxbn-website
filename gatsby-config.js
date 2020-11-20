@@ -2,9 +2,8 @@ const siteUrl = `https://fellowship.ethereum.foundation`
 
 module.exports = {
   siteMetadata: {
-    // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
     title: `Ethereum Foundation Fellowship Program`,
-    description: `The Ethereum Foundation Fellowship Program provides financial and non-financial support for projects working to accelerate the growth of Ethereum.`,
+    description: `Ethereum Foundation’s social impact initiative for Changemakers. Solve social, economic & environmental challenges in developing countries and emerging markets.`,
     url: siteUrl,
     siteUrl, // for sitemap generation
     author: `@ethereum`,

@@ -4,7 +4,12 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { Location } from "@reach/router"
 
-const PageMetadata = ({ description, meta, title }) => {
+const PageMetadata = ({
+  description,
+  meta,
+  title,
+  useTitleTemplate = true,
+}) => {
   const { site, ogImageDefault } = useStaticQuery(
     graphql`
       query {
@@ -31,6 +36,7 @@ const PageMetadata = ({ description, meta, title }) => {
 
   const desc = description || site.siteMetadata.description
   const siteTitle = site.siteMetadata.title
+  const titleTemplate = useTitleTemplate ? `%s | ${siteTitle}` : ``
   const siteUrl = site.siteMetadata.url
   const ogImageUrl = siteUrl.concat(ogImageDefault.childImageSharp.fixed.src)
 
@@ -44,7 +50,7 @@ const PageMetadata = ({ description, meta, title }) => {
           <Helmet
             htmlAttributes={{ lang: `en` }}
             title={title}
-            titleTemplate={`%s | ${siteTitle}`}
+            titleTemplate={titleTemplate}
             link={[{ rel: "canonical", key: canonical, href: canonical }]}
             meta={[
               {

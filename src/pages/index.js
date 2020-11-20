@@ -116,8 +116,9 @@ class IndexPage extends React.Component {
     return (
       <>
         <PageMetadata
-          title="Home"
-          description="The Ethereum Foundation Fellowship Program aims to help solve pressing social, economic, and environmental challenges in developing countries."
+          title="Ethereum Foundation Fellowship Program - Applications now open!"
+          useTitleTemplate={false}
+          description="Ethereum Foundation’s social impact initiative for Changemakers. Solve social, economic & environmental challenges in developing countries and emerging markets."
         />
         <div>
           <Hero>
