@@ -7,7 +7,7 @@ module.exports = {
     description: `The Ethereum Foundation Fellowship Program provides financial and non-financial support for projects working to accelerate the growth of Ethereum.`,
     url: siteUrl,
     siteUrl, // for sitemap generation
-    author: `@EF_ESP`,
+    author: `@ethereum`,
     defaultLanguage: `en`,
   },
   plugins: [
