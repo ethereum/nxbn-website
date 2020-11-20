@@ -11,6 +11,7 @@ import {
   H2,
   HR,
   FakeLink,
+  TextHiddenMobile,
 } from "../components/SharedStyledComponents"
 
 const FAQPage = () => {
@@ -43,9 +44,6 @@ const FAQPage = () => {
     24: false,
     25: false,
     26: false,
-    27: false,
-    28: false,
-    29: false,
   })
 
   let areAnyOpen = false
@@ -72,7 +70,9 @@ const FAQPage = () => {
       <PageMetadata title="FAQ" />
       <div>
         <PageHeader>
-          <H1>Fellowship Program FAQ</H1>
+          <H1>
+            <TextHiddenMobile>Fellowship</TextHiddenMobile> Program FAQ
+          </H1>
         </PageHeader>
         <PageBody>
           <FakeLink onClick={toggleAll}>{toggleAllText}</FakeLink>
@@ -113,25 +113,24 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={3}
-            i={3}
+            key={2}
+            i={2}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="How is Ethereum different from Bitcoin?"
+            headerText="How is Ethereum currently being used?"
           >
             <p>
-              Bitcoin is a blockchain technology that serves strictly as a
-              currency. Ethereum is also a blockchain technology, but its code
-              allows it to serve as an open-source platform and operating
-              system, on top of which other applications can be built. These
-              decentralized applications built on Ethereum have been coined
-              “dApps.”
+              Ethereum is used for impactful cases such as identity solutions,
+              international record-keeping & decentralized finance, as well as
+              more entertaining cases such as collectibles and games. If you are
+              interested in learning more, please visit{" "}
+              <Link to="https://ethereum.org">ethereum.org</Link>.
             </p>
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={4}
-            i={4}
+            key={3}
+            i={3}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="Why would someone use Ethereum?"
@@ -148,24 +147,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={5}
-            i={5}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How is Ethereum currently being used?"
-          >
-            <p>
-              Ethereum is being used for impactful cases such as identity
-              solutions, international record-keeping & decentralized finance,
-              as well as more entertaining cases such as collectibles and games.
-              If you are interested in learning more, please visit the “More
-              Resources” section at the bottom of this FAQ.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={6}
-            i={6}
+            key={4}
+            i={4}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="What is Ethereum not able to solve?"
@@ -178,54 +161,61 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={7}
-            i={7}
+            key={5}
+            i={5}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What are some examples of Blockchain in social impact? "
+            headerText="How is Ethereum different from Bitcoin?"
           >
             <p>
-              <Link to="https://docs.google.com/spreadsheets/d/1UrSTrj0onwFFbq_orMeJyMaI12R42hY1rhfINJcN2bI/edit#gid=0">
-                Here
-              </Link>{" "}
-              we’ve compiled some examples of existing projects using blockchain
-              to transform communities around the world.
+              Bitcoin is a blockchain technology that serves strictly as a
+              currency. Ethereum is also a blockchain technology, but its code
+              allows it to serve as an open-source platform and operating
+              system, on top of which other applications can be built. These
+              decentralized applications built on Ethereum have been coined
+              "dApps".
             </p>
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={8}
-            i={8}
+            key={6}
+            i={6}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="Where can I learn more about Ethereum?"
           >
             <p>
               If you wish to read more about Ethereum, please visit{" "}
-              <Link to="https://ethereum.org/">Ethereum.org</Link>.
+              <Link to="https://ethereum.org/">ethereum.org</Link>.
             </p>
           </AccordionSection>
           <HR />
           <H2>About the Program</H2>
           <HR />
           <AccordionSection
-            key={9}
-            i={9}
+            key={7}
+            i={7}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What is the EF Fellowship Program?"
+            headerText="How do I apply?"
           >
             <p>
-              The EF Fellowship Program (EFFP) is a fellowship wherein the EF
-              will provide changemakers around the world with the expertise,
-              resources, and support necessary to incorporate Ethereum into
-              industrializing nations.
+              Fill out the{" "}
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
+                application form
+              </Link>{" "}
+              and include a referral. Once your application is received, you’ll
+              be requested to submit a short video submission (maximum 3
+              minutes). The organisers will carry out the necessary due
+              diligence and contact you for any required additional information.
+              Successful and unsuccessful applicants will be contacted and
+              announced before March 2, 2021.
             </p>
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={10}
-            i={10}
+            key={8}
+            i={8}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
@@ -236,18 +226,50 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
+            key={9}
+            i={9}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is the duration of the Fellowship program?"
+          >
+            <p>
+              The Fellowship Program is 9 months, however Fellows are expected
+              to contribute to the Ethereum community and as alumni of the
+              program beyond the official program dates.
+            </p>
+          </AccordionSection>
+          <HR />
+
+          <AccordionSection
+            key={10}
+            i={10}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is the Ethereum Foundation Fellowship Program?"
+          >
+            <p>
+              The Ethereum Foundation Fellowship Program is a fellowship wherein
+              the Ethereum Foundation provides changemakers around the world
+              with the expertise, resources, and support necessary to
+              incorporate Ethereum into their development work in developing
+              countries.
+            </p>
+          </AccordionSection>
+          <HR />
+
+          <AccordionSection
             key={11}
             i={11}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What is included in the Fellowship?"
+            headerText="What kinds of challenges should I expect throughout this Fellowship?"
           >
-            <ul>
-              <li>Networking & Community-building</li>
-              <li>Guidance</li>
-              <li>Mentorship</li>
-              <li>Exposure</li>
-            </ul>
+            <p>
+              Throughout the Fellowship, you will be challenged to learn & grow
+              with the help of our Mentors. We understand that there will be an
+              initial learning curve, and we’re here to help you in every step
+              of the journey.
+            </p>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -264,19 +286,80 @@ const FAQPage = () => {
             </p>
             <ul>
               <li>Spend at least 10 hours per week on their project</li>
-              <li>
-                Participate in cohort-wide activities on a monthly/bi-monthly
-                basis
-              </li>
-              <li>
-                Submit monthly progress reports + how stipend is being spent
-              </li>
+              <li>Document their journey (including monthly reports)</li>
+              <li>Participate in cohort-wide activities on a monthly basis</li>
             </ul>
           </AccordionSection>
           <HR />
           <AccordionSection
             key={13}
             i={13}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="When do applications open?"
+          >
+            <p>
+              Applications are currently open for early submissions!{" "}
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
+                Apply here
+              </Link>
+              . Applications close on February 7, 2021 at 23:59 (PST).
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={14}
+            i={14}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What are some examples of successful Fellowship projects?"
+          >
+            <p>
+              Fellows’ projects are diverse, ranging from applications (e.g.,
+              Ethereum-based ID solutions for refugees) and research (e.g.,
+              usage and challenges of Ethereum in Sub-Saharan Africa), to
+              organizational (e.g., establishing a “blockchain working group”
+              within an organisation). This short list of examples is by no
+              means comprehensive and the possibilities are boundless.
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={15}
+            i={15}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is included in the Fellowship?"
+          >
+            <ul>
+              <li>Networking and community-building</li>
+              <li>Guidance</li>
+              <li>Mentorship</li>
+              <li>Potential funding</li>
+              <li>Exposure</li>
+            </ul>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={16}
+            i={16}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="Will Fellows be expected to travel as part of the Fellowship Program?"
+          >
+            <p>
+              While travel is not necessary for Fellows as they work on their
+              project, Fellows are invited to participate in the Ethereum
+              Foundation’s annual Devcon conference. For information on this
+              year’s Devcon, please visit{" "}
+              <Link to="https://devcon.org">Devcon.org</Link>. In these cases,
+              travel related to the program will be compensated.
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={17}
+            i={17}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="What is a changemaker?"
@@ -290,8 +373,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={14}
-            i={14}
+            key={18}
+            i={18}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="Who is a Fellow?"
@@ -306,80 +389,22 @@ const FAQPage = () => {
             </p>
           </AccordionSection>
           <HR />
-          <AccordionSection
-            key={15}
-            i={15}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How long does the Fellowship last?"
-          >
-            <p>
-              The Fellowship is 9 months, depending on what stage a Fellows’
-              project is in. Projects will be examined on a case-by-case basis.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={16}
-            i={16}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Will Fellows be paid a stipend?"
-          >
-            <p>
-              We will consider the best means of funding for Fellows’ projects -
-              this includes the potential for a stipend. The exact amount in
-              each stipend will depend on a variety of factors including length
-              of Fellowship, where the Fellow is located, and will vary from
-              Fellow to Fellow.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={17}
-            i={17}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="When does the application open?"
-          >
-            <p>
-              Applications are currently open for early submissions!{" "}
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
-                Apply here
-              </Link>
-              . Applications close on February 7, 2021 at 23:59 (PST).
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={18}
-            i={18}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is the selection process?"
-          >
-            <p>
-              Fill out the application form and include a referral. Once your
-              application is received, you’ll be requested to submit a short
-              video submission (maximum 3 minutes). The organisers will carry
-              out the necessary due diligence and contact you for any required
-              additional information. Successful and unsuccessful applicants
-              will be contacted and announced before March 2, 2021.
-            </p>
-          </AccordionSection>
+          <H2>About Fellows</H2>
           <HR />
           <AccordionSection
             key={19}
             i={19}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="Do Fellows need to travel for their project?"
+            headerText="How do I recommend a Fellow?"
           >
             <p>
-              While travel will not be necessary for Fellows as they work on
-              their project, Fellows are invited to come to the EF’s annual
-              Devcon conference. For information on this year’s Devcon, please
-              visit <Link to="https://devcon.org">Devcon.org</Link>
+              If you are interested in recommending a Fellow, please fill out{" "}
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
+                this form
+              </Link>
+              , and schedule a call with us{" "}
+              <Link to="https://calendly.com/effp">here</Link>.
             </p>
           </AccordionSection>
           <HR />
@@ -388,44 +413,11 @@ const FAQPage = () => {
             i={20}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What are some examples of successful Fellowship projects?"
+            headerText="Are there any restrictions or eligibility criteria for being a Fellow? "
           >
             <p>
-              Fellows’ projects may be diverse, ranging from applications (e.g.,
-              Ethereum-based ID solutions for refugees) and research (e.g.,
-              usage and challenges of Ethereum in Sub-Saharan Africa), to
-              organizational (e.g., establishing a “blockchain working group”
-              within an organisation), and beyond.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={21}
-            i={21}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What kinds of challenges should I expect throughout this Fellowship?"
-          >
-            <p>
-              Throughout the Fellowship, you will be challenged to learn & grow
-              with the help of our Mentors. We understand that there will be an
-              initial learning curve, and we’re here to help you in every step
-              of the journey.
-            </p>
-          </AccordionSection>
-          <HR />
-          <H2>About You</H2>
-          <HR />
-          <AccordionSection
-            key={22}
-            i={22}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What are the eligibility criteria for being a Fellow?"
-          >
-            <p>
-              Due to staff limitations, this pilot program <i>cannot</i> choose
-              someone who:
+              Due to staff limitations, this pilot program cannot choose someone
+              who:
             </p>
             <ul>
               <li>Is under 18 years old</li>
@@ -438,11 +430,25 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={23}
-            i={23}
+            key={21}
+            i={21}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What kind of educational background & skills are required?"
+            headerText="Where do I need to live to qualify for the Fellowship Program?"
+          >
+            <p>
+              Individuals living and working in developing countries, emerging
+              and frontier markets are the focus, and we’re looking for a
+              diverse group of Fellows from all over the world.
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={22}
+            i={22}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What educational background and skills are required?"
           >
             <p>
               We will not require formal education or specific skills. Our
@@ -452,8 +458,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={24}
-            i={24}
+            key={23}
+            i={23}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="Do I need to submit letters of recommendation?"
@@ -465,53 +471,18 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={25}
-            i={25}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Where do I need to live to apply?"
-          >
-            <p>
-              While we’re focusing on individuals living and working in
-              developing countries, emerging and frontier markets, we’re looking
-              for a diverse group of Fellows from all over the world.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={26}
-            i={26}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How can I recommend a Fellow?"
-          >
-            <p>
-              If you are interested in recommending a Fellow, please fill out{" "}
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
-                this form
-              </Link>{" "}
-              to the best of your ability, and schedule a call with us{" "}
-              <Link to="https://calendly.com/effp">here</Link>.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={27}
-            i={27}
+            key={24}
+            i={24}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="What stage does my project need to be in?"
           >
-            <p>
-              At this time, we are looking for projects in their early-middle
-              stages. We encourage you to keep building on these ideas and apply
-              at a later date.
-            </p>
+            <p>Projects should be in their early-middle stages.</p>
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={28}
-            i={28}
+            key={25}
+            i={25}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="What if my project changes during the Fellowship?"
@@ -523,11 +494,11 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={29}
-            i={29}
+            key={26}
+            i={26}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="I am a journalist looking to interview someone in EF’s leadership; how can I get in touch with someone?"
+            headerText="I am a journalist looking to interview someone in the Ethereum Foundation's leadership; how can I get in touch with someone?"
           >
             <p>
               For interview requests, please fill out{" "}

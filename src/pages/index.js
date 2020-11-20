@@ -142,20 +142,21 @@ class IndexPage extends React.Component {
                 <p>
                   The Ethereum Foundation Fellowship Program is an opportunity
                   to experiment with using Ethereum to help solve pressing
-                  social, economic, and environmental challenges in emerging
-                  markets and developing economies.
+                  social, economic, and environmental challenges in developing
+                  countries.
                 </p>
                 <p>
-                  The program aims to identify, develop, and grow a cohort of
-                  changemakers over 9-months by providing the community,
-                  mentorship & expertise that only the Ethereum Foundation can.
+                  Changemakers will carry out their independent projects over 9
+                  months while working alongside like-minded Fellows. The
+                  Ethereum Foundation will provide an unique experience as well
+                  as access to the community, mentorship & expertise.
                 </p>
                 <p>
                   We believe that{" "}
                   <Link to="https://ethereum.org/">Ethereum’s</Link> capability
                   to build trust, transparency, and efficiency has the potential
-                  to help solve some of the challenges that exist in emerging
-                  markets and developing economies. These challenges include the
+                  to help solve some of the challenges that exist in developing
+                  countries and emerging markets. These challenges include the
                   lack of formal identification, lack of access to banking
                   services, and lack of internet connectivity. This overlap
                   between Ethereum’s opportunities and potential led us to
@@ -163,11 +164,11 @@ class IndexPage extends React.Component {
                   Program.
                 </p>
               </Section>
-              <H2 id="contact">Contact Us</H2>
+              <H2 id="contact">We want to hear from you!</H2>
               <p>
-                Whether you are looking to apply for a Fellowship, recommend a
-                candidate, sign up to be a mentor or fund a project, simply fill
-                out the form below.
+                Whether you are interested in applying for the Fellowship,
+                recommending a candidate, or would like to be involved, simply
+                fill out this form.
               </p>
               <ButtonContainer>
                 <ButtonLink to="https://forms.gle/iKYQA1LNEBoc59Wh7">

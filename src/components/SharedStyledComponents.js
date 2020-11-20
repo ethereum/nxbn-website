@@ -222,3 +222,9 @@ export const Disclaimer = styled.p`
   opacity: 0.6;
   font-size: 0.8rem;
 `
+
+export const TextHiddenMobile = styled.span`
+  @media (max-width: ${styles.screenSizeS}) {
+    display: none;
+  }
+`
