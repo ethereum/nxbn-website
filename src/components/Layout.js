@@ -80,7 +80,7 @@ const BorderTop = styled.div`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7e7b9', endColorstr='#95c7ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 `
 
-const Container = styled.div`
+const ContentContainer = styled.div`
   position: absolute;
   width: calc(100% - 30px); /* account for Border */
   margin: 15px;
@@ -139,22 +139,20 @@ class Layout extends React.Component {
       <ToastProvider>
         <Border />
         <BorderTop />
-        <Container>
-          <Nav hasShadow={this.state.hasNavShadow} />
-          <div>
-            <AnimatePresence>
-              <Main
-                variants={variants}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-              >
-                {this.props.children}
-              </Main>
-            </AnimatePresence>
-          </div>
+        <Nav hasShadow={this.state.hasNavShadow} />
+        <ContentContainer>
+          <AnimatePresence>
+            <Main
+              variants={variants}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+            >
+              {this.props.children}
+            </Main>
+          </AnimatePresence>
           <Footer />
-        </Container>
+        </ContentContainer>
       </ToastProvider>
     )
   }

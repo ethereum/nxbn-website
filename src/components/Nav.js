@@ -13,6 +13,7 @@ import * as styles from "../utils/styles"
 const StyledNav = styled(motion.nav)`
   position: fixed;
   top: 15px;
+  left: 15px;
   z-index: 100;
   background: ${styles.colorWhite};
   width: calc(100% - 30px); /* account for Border */
