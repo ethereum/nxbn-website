@@ -120,11 +120,11 @@ class IndexPage extends React.Component {
           <Hero>
             <HorizontalLogo
               src={horzLogo}
-              alt="Ecosystem Support Program Horizontal Logo"
+              alt="Ethereum Foundation Fellowship Program Horizontal Logo"
             />
             <VerticalLogo
               src={vertLogo}
-              alt="Ecosystem Support Program Vertical Logo"
+              alt="Ethereum Foundation Fellowship Program Vertical Logo"
             />
             <Header>An Ethereum Foundation Initiative</Header>
             <Link
