@@ -192,6 +192,42 @@ const FAQPage = () => {
           <HR />
           <H2>About the Program</H2>
           <HR />
+
+          <AccordionSection
+            key={10}
+            i={10}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is the Ethereum Foundation Fellowship Program?"
+          >
+            <p>
+              The Ethereum Foundation Fellowship Program is a fellowship wherein
+              the Ethereum Foundation provides changemakers around the world
+              with the expertise, resources, and support necessary to
+              incorporate Ethereum into their development work in developing
+              countries.
+            </p>
+          </AccordionSection>
+
+          <HR />
+          <AccordionSection
+            key={18}
+            i={18}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="Who is a Fellow?"
+          >
+            <p>
+              Our selection of Fellows will be based not on blockchain or
+              Ethereum knowledge, but on the candidate’s impact, leadership and
+              entrepreneurship abilities. Fellows must commit to the formal
+              program duration of 9 months. In other words, the ideal candidate
+              can be an entrepreneur, full stack engineer, a manager in an
+              organization or a company, a designer, a researcher, or a teacher.
+            </p>
+          </AccordionSection>
+
+          <HR />
           <AccordionSection
             key={7}
             i={7}
@@ -236,23 +272,6 @@ const FAQPage = () => {
               The Fellowship Program is 9 months, however Fellows are expected
               to contribute to the Ethereum community and as alumni of the
               program beyond the official program dates.
-            </p>
-          </AccordionSection>
-          <HR />
-
-          <AccordionSection
-            key={10}
-            i={10}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is the Ethereum Foundation Fellowship Program?"
-          >
-            <p>
-              The Ethereum Foundation Fellowship Program is a fellowship wherein
-              the Ethereum Foundation provides changemakers around the world
-              with the expertise, resources, and support necessary to
-              incorporate Ethereum into their development work in developing
-              countries.
             </p>
           </AccordionSection>
           <HR />
@@ -372,23 +391,7 @@ const FAQPage = () => {
             </p>
           </AccordionSection>
           <HR />
-          <AccordionSection
-            key={18}
-            i={18}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Who is a Fellow?"
-          >
-            <p>
-              Our selection of Fellows will be based not on blockchain or
-              Ethereum knowledge, but on the candidate’s impact, leadership and
-              entrepreneurship abilities. Fellows must commit to the formal
-              program duration of 9 months. In other words, the ideal candidate
-              can be a full stack engineer, a manager in an organization or a
-              company, an entrepreneur, a designer, a researcher, or a teacher.
-            </p>
-          </AccordionSection>
-          <HR />
+
           <H2>About Fellows</H2>
           <HR />
           <AccordionSection
@@ -417,15 +420,9 @@ const FAQPage = () => {
           >
             <p>
               Due to staff limitations, this pilot program cannot choose someone
-              who:
-            </p>
-            <ul>
-              <li>Is under 18 years old</li>
-              <li>Does not communicate in English</li>
-            </ul>
-            <p>
-              The Ethereum Foundation is seeking to expand the reach and
-              accessibility of the program for the future cohorts.
+              who does not communicate in English. However, the Ethereum
+              Foundation is seeking to expand the reach and accessibility of the
+              program for the future cohorts.
             </p>
           </AccordionSection>
           <HR />
