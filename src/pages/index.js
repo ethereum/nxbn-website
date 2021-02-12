@@ -116,9 +116,9 @@ class IndexPage extends React.Component {
     return (
       <>
         <PageMetadata
-          title="Ethereum Foundation Fellowship Program - Applications now open!"
+          title="Ethereum Foundation Fellowship Program"
           useTitleTemplate={false}
-          description="Ethereum Foundation’s social impact initiative for Changemakers. Solve social, economic & environmental challenges in developing countries and emerging markets."
+          description="Ethereum Foundation’s impact initiative for changemakers. Solve social, economic & environmental challenges in developing countries and emerging markets."
         />
         <div>
           <Hero>
@@ -171,9 +171,8 @@ class IndexPage extends React.Component {
               </Section>
               <H2 id="contact">We want to hear from you!</H2>
               <p>
-                Whether you are interested in applying for the Fellowship,
-                recommending a candidate, or would like to be involved, simply
-                fill out this form.
+                Be involved with the Fellowship Program by simply filling out
+                this form.
               </p>
               <ButtonContainer>
                 <ButtonLink to="https://forms.gle/iKYQA1LNEBoc59Wh7">
