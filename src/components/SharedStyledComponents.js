@@ -50,6 +50,7 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   font-weight: bold;
   padding-top: 32px;
+  text-align: center;
 `
 
 export const HR = styled.hr`
@@ -227,4 +228,10 @@ export const TextHiddenMobile = styled.span`
   @media (max-width: ${styles.screenSizeS}) {
     display: none;
   }
+`
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `

@@ -1,27 +1,31 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import * as styles from "../utils/styles"
 import styled from "styled-components"
 
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import {
   PageBody,
-  Section,
+  // Section,
   ButtonLink,
+  Center,
   H2,
 } from "../components/SharedStyledComponents"
 import horzLogo from "../images/fellowship-program-logo.svg"
+import fellowsMap from "../images/fellows-map.png"
+import fellowBenson from "../images/fellow-benson-njugana.png";
+import fellowChuy from "../images/fellow-chuy-cepeda.png";
+import fellowKuldeep from "../images/fellow-kuldeep-bandhu-aryal.png";
+import fellowNaroa from "../images/fellow-naroa-zurutuza.png";
 import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import { screenSizeM, screenSizeS, colorGrayLight } from "../utils/styles"
 
 const Hero = styled.div`
   position: relative;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -100px;
+  margin-top: 84px;
 `
 
 const Copy = styled.div`
@@ -29,7 +33,7 @@ const Copy = styled.div`
 `
 
 const ButtonContainer = styled.div`
-  margin: 60px 0;
+  margin: 0px 0;
   display: flex;
   justify-content: space-around;
 
@@ -54,6 +58,14 @@ const HorizontalLogo = styled.img`
   @media (max-width: ${screenSizeS}) {
     display: none;
   }
+`
+
+export const Section = styled.div`
+  margin-bottom: 84px;
+`
+
+export const BigSection = styled.div`
+  margin-bottom: 126px;
 `
 
 const VerticalLogo = styled.img`
@@ -87,31 +99,46 @@ const Header = styled.h3`
   }
 `
 
+const Profile = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+
+  > img {
+    width: 50%;
+
+    @media (max-width: ${styles.screenSizeM}) {
+      min-width: 65%;
+    }
+
+    @media (max-width: ${styles.screenSizeS}) {
+      min-width: 100%;
+    }
+  }
+
+  > p {
+    margin-left: 32px;
+    flex-basis: 50%;
+    flex-shrink: 1;
+    
+    @media (max-width: ${styles.screenSizeM}) {
+      margin-left: 0px;
+    }
+  }
+
+  @media (max-width: ${styles.screenSizeM}) {
+    flex-direction: column;
+  }
+
+  > * {
+    @media (max-width: ${styles.screenSizeM}) {
+      width: 100%;
+    }
+  }
+`;
+
 class IndexPage extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      showHeroLink: true,
-    }
-  }
-
-  componentDidMount = () => {
-    window.addEventListener("scroll", this.handleScroll)
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener("scroll", this.handleScroll)
-  }
-
-  handleScroll = () => {
-    if (window.pageYOffset <= 100 && !this.state.showHeroLink) {
-      this.setState({ showHeroLink: true })
-    }
-    if (window.pageYOffset > 100 && this.state.showHeroLink) {
-      this.setState({ showHeroLink: false })
-    }
-  }
-
   render() {
     return (
       <>
@@ -131,19 +158,10 @@ class IndexPage extends React.Component {
               alt="Ethereum Foundation Fellowship Program Vertical Logo"
             />
             <Header>An Ethereum Foundation Initiative</Header>
-            <Link
-              to="#welcome"
-              className={
-                "hero-link " + (this.state.showHeroLink ? "show" : "hide")
-              }
-            >
-              <FontAwesomeIcon className="hero-icon" icon={faChevronDown} />
-            </Link>
           </Hero>
           <PageBody>
             <Copy id="welcome">
               <Section>
-                <H1>Welcome!</H1>
                 <p>
                   The Ethereum Foundation Fellowship Program is an opportunity
                   to experiment with using Ethereum to help solve pressing
@@ -169,11 +187,48 @@ class IndexPage extends React.Component {
                   Program.
                 </p>
               </Section>
-              <H2 id="contact">We want to hear from you!</H2>
-              <p>
-                Be involved with the Fellowship Program by simply filling out
-                this form.
-              </p>
+
+              <BigSection>
+                <Center>
+                  <H2>Ethereum Foundation Fellowship Cohort 2021</H2>
+                </Center>
+
+                <img
+                  src={fellowsMap}
+                  alt="Fellows map"
+                />
+
+                <p>
+                During the course of 9 months starting in April 2021, Fellows will drive forward their own projects, each addressing a social, economic, or environmental challenge that exists in their communities reflecting the developing world at large. 
+                </p>
+              </BigSection>
+
+              <Section>
+                <Profile>
+                  <img src={fellowBenson} alt="Fellow: Benson Njuguna" />
+                  <p><b>Benson Njuguna</b> (Acre Africa) aims to support financially and digitally excluded populations, to achieve reliable digital and financial inclusion, for a positive social change. Benson is implementing and experimenting with blockchain in the context of agricultural microinsurance in Kenya; the short-term impact of this project will serve thousands of small-scale farmers.</p>
+                </Profile>
+                <Profile>
+                  <img src={fellowChuy} alt="Fellow: Chuy Cepada" />
+                  <p><b>Chuy Cepeda</b> (OS.City) cares about the future of cities and governance models. He’s fully committed to growing OS City, a company he co-founded, to make cities more sustainable and governments more trustworthy. Chuy is driven to accelerate the meaningful adoption of blockchain in governments with a focus on the Latin America region.</p>
+                </Profile>
+                <Profile>
+                  <img src={fellowKuldeep} alt="Fellow: Kuldeep Bandhu Aryal" />
+                  <p><b>Kuldeep Bandhu Aryal</b> (BRAC) developed his passion for social innovation during the humanitarian response and reconstruction efforts post-2015 earthquake in Nepal. Focusing on engineering, technology, and design, he aims to bridge traditionally isolated sectors through cross-cutting innovation projects. Kuldeep is tackling blockchain strategy within the world’s largest development agency, BRAC.</p>
+                </Profile>
+                <Profile>
+                  <img src={fellowNaroa} alt="Fellow: Naroa Zurutuza" />
+                  <p><b>Naroa Zurutuza</b> (UNICEF - Giga) sees information as a source of empowerment and driver of change and is a strong supporter of knowledge being openly accessible to everyone. She aims to further experiment with blockchain technologies and explore the role that they can play in decentralizing the internet connectivity ecosystem, creating stronger infrastructures, and delivering better services to communities. </p>
+                </Profile>
+              </Section>
+
+              <Center>
+                <H2 id="contact">We want to hear from you!</H2>
+                <p>
+                  Be involved with the Fellowship Program by simply filling out
+                  this form.
+                </p>
+              </Center>
               <ButtonContainer>
                 <ButtonLink to="https://forms.gle/iKYQA1LNEBoc59Wh7">
                   Contact Us
