@@ -98,6 +98,19 @@ const FAQPage = () => {
             i={1}
             expanded={expanded}
             setExpanded={setExpanded}
+            headerText="Where can I learn more about Ethereum?"
+          >
+            <p>
+              If you wish to find out more about Ethereum, please visit{" "}
+              <Link to="https://ethereum.org">Ethereum.org</Link>
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={2}
+            i={2}
+            expanded={expanded}
+            setExpanded={setExpanded}
             headerText="What is the Ethereum Foundation?"
           >
             <p>
@@ -113,8 +126,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={2}
-            i={2}
+            key={3}
+            i={3}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="How is Ethereum currently being used?"
@@ -129,8 +142,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={3}
-            i={3}
+            key={4}
+            i={4}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="Why would someone use Ethereum?"
@@ -147,8 +160,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={4}
-            i={4}
+            key={5}
+            i={5}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="What is Ethereum not able to solve?"
@@ -161,8 +174,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={5}
-            i={5}
+            key={6}
+            i={6}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="How is Ethereum different from Bitcoin?"
@@ -178,8 +191,8 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={6}
-            i={6}
+            key={7}
+            i={7}
             expanded={expanded}
             setExpanded={setExpanded}
             headerText="Where can I learn more about Ethereum?"
@@ -218,36 +231,13 @@ const FAQPage = () => {
             headerText="Who is a Fellow?"
           >
             <p>
-              Our selection of Fellows will be based not on blockchain or
-              Ethereum knowledge, but on the candidate’s impact, leadership and
+              Our selection of Fellows is not based not on blockchain or
+              Ethereum knowledge, but on the individual’s impact, leadership and
               entrepreneurship abilities. Fellows must commit to the formal
-              program duration of 9 months. In other words, the ideal candidate
-              can be an entrepreneur, full stack engineer, a manager in an
-              organization or a company, a designer, a researcher, or a teacher.
+              program duration of 9 months.
             </p>
           </AccordionSection>
 
-          <HR />
-          <AccordionSection
-            key={7}
-            i={7}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How do I apply?"
-          >
-            <p>
-              Fill out the{" "}
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
-                application form
-              </Link>{" "}
-              and include a referral. Once your application is received, you’ll
-              be requested to submit a short video submission (maximum 3
-              minutes). The organisers will carry out the necessary due
-              diligence and contact you for any required additional information.
-              Successful and unsuccessful applicants will be contacted and
-              announced before March 2, 2021.
-            </p>
-          </AccordionSection>
           <HR />
           <AccordionSection
             key={8}
@@ -256,9 +246,8 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Application close: February 7, 2021 at 23:59 (PST)</p>
             <p>Selection & Announcement: March 2, 2021</p>
-            <p>Program Duration: April 12, 2021 - December 2021</p>
+            <p>Program Duration: April 12, 2021 - December 31, 2021</p>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -311,36 +300,23 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
-            key={13}
-            i={13}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="When do applications open?"
-          >
-            <p>
-              Applications are currently open for early submissions!{" "}
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
-                Apply here
-              </Link>
-              . Applications close on February 7, 2021 at 23:59 (PST).
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
             key={14}
             i={14}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What are some examples of successful Fellowship projects?"
+            headerText="What are some examples of Fellowship projects?"
           >
             <p>
-              Fellows’ projects are diverse, ranging from applications (e.g.,
-              Ethereum-based ID solutions for refugees) and research (e.g.,
-              usage and challenges of Ethereum in Sub-Saharan Africa), to
-              organizational (e.g., establishing a “blockchain working group”
-              within an organisation). This short list of examples is by no
-              means comprehensive and the possibilities are boundless.
+              This short list of examples is by no means comprehensive and the
+              possibilities are boundless. The projects included in the pilot
+              program include:
             </p>
+            <ul>
+              <li>{`Implementing blockchain in agricultural microinsurance in Kenya <https://acreafrica.com/>;`}</li>
+              <li>{`Accelerating the meaningful adoption of blockchain in governments with a focus on the Latin America region <https://os.city/en/>;`}</li>
+              <li>{`Tackling blockchain strategy within the world’s largest development agency <http://www.brac.net/>;`}</li>
+              <li>{`Decentralizing the internet connectivity ecosystem, creating stronger infrastructures, and delivering better services to communities <https://gigaconnect.org/>.`}</li>
+            </ul>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -358,23 +334,7 @@ const FAQPage = () => {
               <li>Exposure</li>
             </ul>
           </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={16}
-            i={16}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Will Fellows be expected to travel as part of the Fellowship Program?"
-          >
-            <p>
-              While travel is not necessary for Fellows as they work on their
-              project, Fellows are invited to participate in the Ethereum
-              Foundation’s annual Devcon conference. For information on this
-              year’s Devcon, please visit{" "}
-              <Link to="https://devcon.org">Devcon.org</Link>. In these cases,
-              travel related to the program will be compensated.
-            </p>
-          </AccordionSection>
+
           <HR />
           <AccordionSection
             key={17}
@@ -392,117 +352,19 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
 
-          <H2>About Fellows</H2>
-          <HR />
-          <AccordionSection
-            key={19}
-            i={19}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How do I recommend a Fellow?"
-          >
-            <p>
-              If you are interested in recommending a Fellow, please fill out{" "}
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
-                this form
-              </Link>
-              , and schedule a call with us{" "}
-              <Link to="https://calendly.com/effp">here</Link>.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={20}
-            i={20}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Are there any restrictions or eligibility criteria for being a Fellow? "
-          >
-            <p>
-              Due to staff limitations, this pilot program cannot choose someone
-              who does not communicate in English. However, the Ethereum
-              Foundation is seeking to expand the reach and accessibility of the
-              program for the future cohorts.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={21}
-            i={21}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Where do I need to live to qualify for the Fellowship Program?"
-          >
-            <p>
-              Individuals living and working in developing countries, emerging
-              and frontier markets are the focus, and we’re looking for a
-              diverse group of Fellows from all over the world.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={22}
-            i={22}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What educational background and skills are required?"
-          >
-            <p>
-              We will not require formal education or specific skills. Our
-              emphasis is on the candidate's impact, leadership and
-              entrepreneurship abilities.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={23}
-            i={23}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Do I need to submit letters of recommendation?"
-          >
-            <p>
-              In our pilot year, candidates must be recommended to the program
-              in order to be considered for a Fellowship.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={24}
-            i={24}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What stage does my project need to be in?"
-          >
-            <p>Projects should be in their early-middle stages.</p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={25}
-            i={25}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What if my project changes during the Fellowship?"
-          >
-            <p>
-              The organisers will work with you to develop or join another
-              project.
-            </p>
-          </AccordionSection>
+          <H2>Media</H2>
+
           <HR />
           <AccordionSection
             key={26}
             i={26}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="I am a journalist looking to interview someone in the Ethereum Foundation's leadership; how can I get in touch with someone?"
+            headerText="I am a journalist looking to interview someone in the Ethereum Foundation's leadership."
           >
             <p>
               For interview requests, please fill out{" "}
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf8wOmOfBkmyhlCyfVI3zmBvrDaCD3vB_s60JXGW73AlPK6dA/viewform">
-                this form
-              </Link>
-              .
+              <Link to="https://bit.ly/3nt9Sm1">this form</Link>.
             </p>
           </AccordionSection>
           <HR />

@@ -63,6 +63,7 @@ module.exports = {
       },
     },
     // Need for `gatsby-image`
+    "gatsby-plugin-image",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -93,7 +94,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/thanks/`],
+        excludes: [`/thanks/`],
         query: `{
           site {
             siteMetadata {

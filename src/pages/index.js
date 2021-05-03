@@ -10,13 +10,14 @@ import {
   H2,
 } from "../components/SharedStyledComponents"
 import horzLogo from "../images/fellowship-program-logo.svg"
-import fellowsMap from "../images/fellows-map.png"
-import fellowBenson from "../images/fellow-benson-njugana.png"
-import fellowChuy from "../images/fellow-chuy-cepeda.png"
-import fellowKuldeep from "../images/fellow-kuldeep-bandhu-aryal.png"
-import fellowNaroa from "../images/fellow-naroa-zurutuza.png"
+// import fellowsMap from "../images/fellows-map.png"
+// import fellowBenson from "../images/fellow-benson-njugana.png"
+// import fellowChuy from "../images/fellow-chuy-cepeda.png"
+// import fellowKuldeep from "../images/fellow-kuldeep-bandhu-aryal.png"
+// import fellowNaroa from "../images/fellow-naroa-zurutuza.png"
 import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import { screenSizeM, screenSizeS, colorGrayLight } from "../utils/styles"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = styled.div`
   position: relative;
@@ -58,11 +59,11 @@ const HorizontalLogo = styled.img`
   }
 `
 
-export const Section = styled.div`
+const Section = styled.div`
   margin-bottom: 84px;
 `
 
-export const BigSection = styled.div`
+const BigSection = styled.div`
   margin-bottom: 126px;
 `
 
@@ -97,12 +98,14 @@ const Profile = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
+  margin-bottom: 60px;
 
-  > img {
+  > .img {
     width: 50%;
 
     @media (max-width: ${styles.screenSizeM}) {
       min-width: 65%;
+      margin-bottom: 16px;
     }
 
     @media (max-width: ${styles.screenSizeS}) {
@@ -110,10 +113,12 @@ const Profile = styled.div`
     }
   }
 
-  > p {
+  > .description {
     margin-left: 32px;
     flex-basis: 50%;
     flex-shrink: 1;
+    margin: 0px;
+    margin-left: 32px;
 
     @media (max-width: ${styles.screenSizeM}) {
       margin-left: 0px;
@@ -186,7 +191,12 @@ class IndexPage extends React.Component {
                   <H2>Ethereum Foundation Fellowship Cohort 2021</H2>
                 </Center>
 
-                <img src={fellowsMap} alt="Fellows map" />
+                <StaticImage
+                  src="../images/fellows-map.png"
+                  alt="Fellows World Map"
+                  placeholder="blurred"
+                  layout="constrained"
+                />
 
                 <p>
                   During the course of 9 months starting in April 2021, Fellows
@@ -198,8 +208,16 @@ class IndexPage extends React.Component {
 
               <Section>
                 <Profile>
-                  <img src={fellowBenson} alt="Fellow: Benson Njuguna" />
-                  <p>
+                  <StaticImage
+                    className="img"
+                    src="../images/fellow-benson-njugana.png"
+                    alt="Fellow: Benson Njuguna"
+                    placeholder="blurred"
+                    layout="fixed"
+                    width="350"
+                    height="219"
+                  />
+                  <p className="description">
                     <b>Benson Njuguna</b>{" "}
                     <Link to="https://acreafrica.com/">(Acre Africa)</Link> aims
                     to support financially and digitally excluded populations,
@@ -211,8 +229,16 @@ class IndexPage extends React.Component {
                   </p>
                 </Profile>
                 <Profile>
-                  <img src={fellowChuy} alt="Fellow: Chuy Cepada" />
-                  <p>
+                  <StaticImage
+                    className="img"
+                    src="../images/fellow-chuy-cepeda.png"
+                    alt="Fellow: Chuy Cepada"
+                    placeholder="blurred"
+                    layout="fixed"
+                    width="350"
+                    height="219"
+                  />
+                  <p className="description">
                     <b>Chuy Cepeda</b>{" "}
                     <Link to="https://os.city/en/">(OS.City)</Link> cares about
                     the future of cities and governance models. He’s fully
@@ -224,8 +250,16 @@ class IndexPage extends React.Component {
                   </p>
                 </Profile>
                 <Profile>
-                  <img src={fellowKuldeep} alt="Fellow: Kuldeep Bandhu Aryal" />
-                  <p>
+                  <StaticImage
+                    className="img"
+                    src="../images/fellow-kuldeep-bandhu-aryal.png"
+                    alt="Fellow: Kuldeep Bandhu Aryal"
+                    placeholder="blurred"
+                    layout="fixed"
+                    width="350"
+                    height="219"
+                  />
+                  <p className="description">
                     <b>Kuldeep Bandhu Aryal</b>{" "}
                     <Link to="http://www.brac.net/">(BRAC)</Link> developed his
                     passion for social innovation during the humanitarian
@@ -238,8 +272,16 @@ class IndexPage extends React.Component {
                   </p>
                 </Profile>
                 <Profile>
-                  <img src={fellowNaroa} alt="Fellow: Naroa Zurutuza" />
-                  <p>
+                  <StaticImage
+                    className="img"
+                    src="../images/fellow-naroa-zurutuza.png"
+                    alt="Fellow: Naroa Zurutuza"
+                    placeholder="blurred"
+                    layout="fixed"
+                    width="350"
+                    height="218"
+                  />
+                  <p className="description">
                     <b>Naroa Zurutuza</b>{" "}
                     <Link to="https://gigaconnect.org/">(UNICEF - Giga)</Link>{" "}
                     sees information as a source of empowerment and driver of
