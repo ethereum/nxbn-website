@@ -10,11 +10,6 @@ import {
   H2,
 } from "../components/SharedStyledComponents"
 import horzLogo from "../images/fellowship-program-logo.svg"
-// import fellowsMap from "../images/fellows-map.png"
-// import fellowBenson from "../images/fellow-benson-njugana.png"
-// import fellowChuy from "../images/fellow-chuy-cepeda.png"
-// import fellowKuldeep from "../images/fellow-kuldeep-bandhu-aryal.png"
-// import fellowNaroa from "../images/fellow-naroa-zurutuza.png"
 import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import { screenSizeM, screenSizeS, colorGrayLight } from "../utils/styles"
 import { StaticImage } from "gatsby-plugin-image"
