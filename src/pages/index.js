@@ -1,22 +1,20 @@
 import React from "react"
 import * as styles from "../utils/styles"
 import styled from "styled-components"
-
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import {
   PageBody,
-  // Section,
   ButtonLink,
   Center,
   H2,
 } from "../components/SharedStyledComponents"
 import horzLogo from "../images/fellowship-program-logo.svg"
 import fellowsMap from "../images/fellows-map.png"
-import fellowBenson from "../images/fellow-benson-njugana.png";
-import fellowChuy from "../images/fellow-chuy-cepeda.png";
-import fellowKuldeep from "../images/fellow-kuldeep-bandhu-aryal.png";
-import fellowNaroa from "../images/fellow-naroa-zurutuza.png";
+import fellowBenson from "../images/fellow-benson-njugana.png"
+import fellowChuy from "../images/fellow-chuy-cepeda.png"
+import fellowKuldeep from "../images/fellow-kuldeep-bandhu-aryal.png"
+import fellowNaroa from "../images/fellow-naroa-zurutuza.png"
 import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import { screenSizeM, screenSizeS, colorGrayLight } from "../utils/styles"
 
@@ -83,11 +81,6 @@ const VerticalLogo = styled.img`
   }
 `
 
-const H1 = styled.h1`
-  padding-top: 110px;
-  font-weight: bold;
-`
-
 const Header = styled.h3`
   text-align: center;
   margin-top: 8px;
@@ -121,7 +114,7 @@ const Profile = styled.div`
     margin-left: 32px;
     flex-basis: 50%;
     flex-shrink: 1;
-    
+
     @media (max-width: ${styles.screenSizeM}) {
       margin-left: 0px;
     }
@@ -136,7 +129,7 @@ const Profile = styled.div`
       width: 100%;
     }
   }
-`;
+`
 
 class IndexPage extends React.Component {
   render() {
@@ -193,32 +186,70 @@ class IndexPage extends React.Component {
                   <H2>Ethereum Foundation Fellowship Cohort 2021</H2>
                 </Center>
 
-                <img
-                  src={fellowsMap}
-                  alt="Fellows map"
-                />
+                <img src={fellowsMap} alt="Fellows map" />
 
                 <p>
-                During the course of 9 months starting in April 2021, Fellows will drive forward their own projects, each addressing a social, economic, or environmental challenge that exists in their communities reflecting the developing world at large. 
+                  During the course of 9 months starting in April 2021, Fellows
+                  will drive forward their own projects, each addressing a
+                  social, economic, or environmental challenge that exists in
+                  their communities reflecting the developing world at large.
                 </p>
               </BigSection>
 
               <Section>
                 <Profile>
                   <img src={fellowBenson} alt="Fellow: Benson Njuguna" />
-                  <p><b>Benson Njuguna</b> (Acre Africa) aims to support financially and digitally excluded populations, to achieve reliable digital and financial inclusion, for a positive social change. Benson is implementing and experimenting with blockchain in the context of agricultural microinsurance in Kenya; the short-term impact of this project will serve thousands of small-scale farmers.</p>
+                  <p>
+                    <b>Benson Njuguna</b>{" "}
+                    <Link to="https://acreafrica.com/">(Acre Africa)</Link> aims
+                    to support financially and digitally excluded populations,
+                    to achieve reliable digital and financial inclusion, for a
+                    positive social change. Benson is implementing and
+                    experimenting with blockchain in the context of agricultural
+                    microinsurance in Kenya; the short-term impact of this
+                    project will serve thousands of small-scale farmers.
+                  </p>
                 </Profile>
                 <Profile>
                   <img src={fellowChuy} alt="Fellow: Chuy Cepada" />
-                  <p><b>Chuy Cepeda</b> (OS.City) cares about the future of cities and governance models. He’s fully committed to growing OS City, a company he co-founded, to make cities more sustainable and governments more trustworthy. Chuy is driven to accelerate the meaningful adoption of blockchain in governments with a focus on the Latin America region.</p>
+                  <p>
+                    <b>Chuy Cepeda</b>{" "}
+                    <Link to="https://os.city/en/">(OS.City)</Link> cares about
+                    the future of cities and governance models. He’s fully
+                    committed to growing OS City, a company he co-founded, to
+                    make cities more sustainable and governments more
+                    trustworthy. Chuy is driven to accelerate the meaningful
+                    adoption of blockchain in governments with a focus on the
+                    Latin America region.
+                  </p>
                 </Profile>
                 <Profile>
                   <img src={fellowKuldeep} alt="Fellow: Kuldeep Bandhu Aryal" />
-                  <p><b>Kuldeep Bandhu Aryal</b> (BRAC) developed his passion for social innovation during the humanitarian response and reconstruction efforts post-2015 earthquake in Nepal. Focusing on engineering, technology, and design, he aims to bridge traditionally isolated sectors through cross-cutting innovation projects. Kuldeep is tackling blockchain strategy within the world’s largest development agency, BRAC.</p>
+                  <p>
+                    <b>Kuldeep Bandhu Aryal</b>{" "}
+                    <Link to="http://www.brac.net/">(BRAC)</Link> developed his
+                    passion for social innovation during the humanitarian
+                    response and reconstruction efforts post-2015 earthquake in
+                    Nepal. Focusing on engineering, technology, and design, he
+                    aims to bridge traditionally isolated sectors through
+                    cross-cutting innovation projects. Kuldeep is tackling
+                    blockchain strategy within the world’s largest development
+                    agency, BRAC.
+                  </p>
                 </Profile>
                 <Profile>
                   <img src={fellowNaroa} alt="Fellow: Naroa Zurutuza" />
-                  <p><b>Naroa Zurutuza</b> (UNICEF - Giga) sees information as a source of empowerment and driver of change and is a strong supporter of knowledge being openly accessible to everyone. She aims to further experiment with blockchain technologies and explore the role that they can play in decentralizing the internet connectivity ecosystem, creating stronger infrastructures, and delivering better services to communities. </p>
+                  <p>
+                    <b>Naroa Zurutuza</b>{" "}
+                    <Link to="https://gigaconnect.org/">(UNICEF - Giga)</Link>{" "}
+                    sees information as a source of empowerment and driver of
+                    change and is a strong supporter of knowledge being openly
+                    accessible to everyone. She aims to further experiment with
+                    blockchain technologies and explore the role that they can
+                    play in decentralizing the internet connectivity ecosystem,
+                    creating stronger infrastructures, and delivering better
+                    services to communities.
+                  </p>
                 </Profile>
               </Section>
 
