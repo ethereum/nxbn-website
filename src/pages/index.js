@@ -19,7 +19,8 @@ const Hero = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 84px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 `
 
 const Copy = styled.div`
@@ -51,6 +52,18 @@ const HorizontalLogo = styled.img`
 
   @media (max-width: ${screenSizeS}) {
     display: none;
+  }
+`
+
+const FellowsMap = styled.div`
+  width: 130%;
+  margin-left: -15%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @media (max-width: ${styles.screenSizeL}) {
+    width: 100%;
+    margin-left: 0px;
   }
 `
 
@@ -93,6 +106,7 @@ const Profile = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
+  line-height: 1.6em;
   margin-bottom: 60px;
 
   > .img {
@@ -157,8 +171,7 @@ class IndexPage extends React.Component {
               <Section>
                 <p>
                   The Ethereum Foundation Fellowship Program is an opportunity
-                  to experiment with using Ethereum to help solve pressing
-                  social, economic, and environmental challenges in developing
+                  to use Ethereum to help solve challenges in developing
                   countries.
                 </p>
                 <p>
@@ -186,12 +199,14 @@ class IndexPage extends React.Component {
                   <H2>Ethereum Foundation Fellowship Cohort 2021</H2>
                 </Center>
 
-                <StaticImage
-                  src="../images/fellows-map.png"
-                  alt="Fellows World Map"
-                  placeholder="blurred"
-                  layout="constrained"
-                />
+                <FellowsMap>
+                  <StaticImage
+                    src="../images/fellows-map.png"
+                    alt="Fellows World Map"
+                    placeholder="blurred"
+                    layout="constrained"
+                  />
+                </FellowsMap>
 
                 <p>
                   During the course of 9 months starting in April 2021, Fellows
@@ -208,9 +223,9 @@ class IndexPage extends React.Component {
                     src="../images/fellow-benson-njugana.png"
                     alt="Fellow: Benson Njuguna"
                     placeholder="blurred"
+                    objectFit="contain"
                     layout="fixed"
                     width="350"
-                    height="219"
                   />
                   <p className="description">
                     <b>Benson Njuguna</b>{" "}
@@ -229,9 +244,9 @@ class IndexPage extends React.Component {
                     src="../images/fellow-chuy-cepeda.png"
                     alt="Fellow: Chuy Cepada"
                     placeholder="blurred"
+                    objectFit="contain"
                     layout="fixed"
                     width="350"
-                    height="219"
                   />
                   <p className="description">
                     <b>Chuy Cepeda</b>{" "}
@@ -250,9 +265,9 @@ class IndexPage extends React.Component {
                     src="../images/fellow-kuldeep-bandhu-aryal.png"
                     alt="Fellow: Kuldeep Bandhu Aryal"
                     placeholder="blurred"
+                    objectFit="contain"
                     layout="fixed"
                     width="350"
-                    height="219"
                   />
                   <p className="description">
                     <b>Kuldeep Bandhu Aryal</b>{" "}
@@ -272,9 +287,9 @@ class IndexPage extends React.Component {
                     src="../images/fellow-naroa-zurutuza.png"
                     alt="Fellow: Naroa Zurutuza"
                     placeholder="blurred"
+                    objectFit="contain"
                     layout="fixed"
                     width="350"
-                    height="218"
                   />
                   <p className="description">
                     <b>Naroa Zurutuza</b>{" "}
