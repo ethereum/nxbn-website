@@ -102,7 +102,7 @@ const FAQPage = () => {
           >
             <p>
               If you wish to find out more about Ethereum, please visit{" "}
-              <Link to="https://ethereum.org">Ethereum.org</Link>
+              <Link to="https://ethereum.org">Ethereum.org</Link>.
             </p>
           </AccordionSection>
           <HR />
@@ -137,7 +137,7 @@ const FAQPage = () => {
               international record-keeping & decentralized finance, as well as
               more entertaining cases such as collectibles and games. If you are
               interested in learning more, please visit{" "}
-              <Link to="https://ethereum.org">ethereum.org</Link>.
+              <Link to="https://ethereum.org">Ethereum.org</Link>.
             </p>
           </AccordionSection>
           <HR />
@@ -190,19 +190,6 @@ const FAQPage = () => {
             </p>
           </AccordionSection>
           <HR />
-          <AccordionSection
-            key={7}
-            i={7}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Where can I learn more about Ethereum?"
-          >
-            <p>
-              If you wish to read more about Ethereum, please visit{" "}
-              <Link to="https://ethereum.org/">ethereum.org</Link>.
-            </p>
-          </AccordionSection>
-          <HR />
           <H2>About the Program</H2>
           <HR />
 
@@ -246,7 +233,6 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Selection & Announcement: March 2, 2021</p>
             <p>Program Duration: April 12, 2021 - December 31, 2021</p>
           </AccordionSection>
           <HR />
@@ -307,15 +293,37 @@ const FAQPage = () => {
             headerText="What are some examples of Fellowship projects?"
           >
             <p>
-              This short list of examples is by no means comprehensive and the
+              This list of examples is by no means comprehensive and the
               possibilities are boundless. The projects included in the pilot
               program include:
             </p>
             <ul>
-              <li>{`Implementing blockchain in agricultural microinsurance in Kenya <https://acreafrica.com/>;`}</li>
-              <li>{`Accelerating the meaningful adoption of blockchain in governments with a focus on the Latin America region <https://os.city/en/>;`}</li>
-              <li>{`Tackling blockchain strategy within the world’s largest development agency <http://www.brac.net/>;`}</li>
-              <li>{`Decentralizing the internet connectivity ecosystem, creating stronger infrastructures, and delivering better services to communities <https://gigaconnect.org/>.`}</li>
+              <li>
+                Implementing blockchain in{" "}
+                <Link to="https://acreafrica.com/">
+                  agricultural microinsurance
+                </Link>{" "}
+                in Kenya
+              </li>
+              <li>
+                Accelerating the{" "}
+                <Link to="https://os.city/en/">
+                  meaningful adoption of blockchain in governments
+                </Link>{" "}
+                with a focus on the Latin America region
+              </li>
+              <li>
+                Tackling{" "}
+                <Link to="http://www.brac.net/>">blockchain strategy</Link>{" "}
+                within the world’s largest development agency
+              </li>
+              <li>
+                <Link to="https://gigaconnect.org/">
+                  Decentralizing the internet connectivity ecosystem
+                </Link>
+                , creating stronger infrastructures, and delivering better
+                services to communities.
+              </li>
             </ul>
           </AccordionSection>
           <HR />
