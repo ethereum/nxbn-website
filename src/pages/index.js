@@ -171,26 +171,26 @@ class IndexPage extends React.Component {
               <Section>
                 <p>
                   The Ethereum Foundation Fellowship Program is an opportunity
-                  to use Ethereum to help solve challenges in developing
-                  countries.
+                  for changemakers to use Ethereum to help solve challenges in
+                  developing countries.
                 </p>
                 <p>
-                  Changemakers will carry out their independent projects over 9
-                  months while working alongside like-minded Fellows. The
-                  Ethereum Foundation will provide an unique experience as well
-                  as access to the community, mentorship & expertise.
+                  Changemakers drive their independent projects while working
+                  alongside like-minded Fellows. The Ethereum Foundation
+                  provides a unique experience as well as access to mentorship
+                  and technical support.
                 </p>
                 <p>
                   We believe that{" "}
                   <Link to="https://ethereum.org/">Ethereum’s</Link> capability
                   to build trust, transparency, and efficiency has the potential
                   to help solve some of the challenges that exist in developing
-                  countries and emerging markets. These challenges include the
-                  lack of formal identification, lack of access to banking
-                  services, and lack of internet connectivity. This overlap
-                  between Ethereum’s opportunities and potential led us to
-                  recognize the need for the Ethereum Foundation Fellowship
-                  Program.
+                  countries, and are faced by billions of people. These
+                  challenges include the lack of formal identification, lack of
+                  access to banking and financial services, and lack of internet
+                  connectivity. It is in this context - an overlap between
+                  opportunities, impact, and potential for Ethereum - that the
+                  Ethereum Foundation’s Fellowship Program was created.
                 </p>
               </Section>
 
@@ -201,7 +201,7 @@ class IndexPage extends React.Component {
 
                 <FellowsMap>
                   <StaticImage
-                    src="../images/fellows-map.png"
+                    src="../images/EF-FP-world-map.jpg"
                     alt="Fellows World Map"
                     placeholder="blurred"
                     layout="constrained"
@@ -209,10 +209,14 @@ class IndexPage extends React.Component {
                 </FellowsMap>
 
                 <p>
-                  During the course of 9 months starting in April 2021, Fellows
-                  will drive forward their own projects, each addressing a
-                  social, economic, or environmental challenge that exists in
-                  their communities reflecting the developing world at large.
+                  From April through December 2021, this pilot cohort of Fellows
+                  will drive forward their projects, each addressing a social,
+                  economic, or environmental challenge that exists in their
+                  communities, reflecting the developing world at large. They
+                  will provide insights from their experiences, as each explores
+                  the capabilities of blockchain technology for development. We
+                  look forward to learning from the Fellows as they further
+                  enrich the global Ethereum community.
                 </p>
               </BigSection>
 
@@ -220,7 +224,7 @@ class IndexPage extends React.Component {
                 <Profile>
                   <StaticImage
                     className="img"
-                    src="../images/fellow-benson-njugana.png"
+                    src="../images/EF-FP-headshots-Benson.jpg"
                     alt="Fellow: Benson Njuguna"
                     placeholder="blurred"
                     objectFit="contain"
@@ -241,7 +245,7 @@ class IndexPage extends React.Component {
                 <Profile>
                   <StaticImage
                     className="img"
-                    src="../images/fellow-chuy-cepeda.png"
+                    src="../images/EF-FP-headshots-Chuy.jpg"
                     alt="Fellow: Chuy Cepada"
                     placeholder="blurred"
                     objectFit="contain"
@@ -262,7 +266,7 @@ class IndexPage extends React.Component {
                 <Profile>
                   <StaticImage
                     className="img"
-                    src="../images/fellow-kuldeep-bandhu-aryal.png"
+                    src="../images/EF-FP-headshots-Kuldeep.jpg"
                     alt="Fellow: Kuldeep Bandhu Aryal"
                     placeholder="blurred"
                     objectFit="contain"
@@ -284,7 +288,7 @@ class IndexPage extends React.Component {
                 <Profile>
                   <StaticImage
                     className="img"
-                    src="../images/fellow-naroa-zurutuza.png"
+                    src="../images/EF-FP-headshots-Naroa.jpg"
                     alt="Fellow: Naroa Zurutuza"
                     placeholder="blurred"
                     objectFit="contain"
