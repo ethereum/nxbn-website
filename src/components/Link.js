@@ -9,6 +9,7 @@ const isHashLink = to => HASH_PATTERN.test(to)
 const ExternalLink = styled.a`
   color: ${styles.colorBlueLight};
   text-decoration: none;
+  font-weight: 500;
   opacity: 1;
   outline: none;
 
@@ -17,9 +18,11 @@ const ExternalLink = styled.a`
     color: ${styles.colorBlue};
   }
 `
+
 const InternalLink = styled(GatsbyLink)`
   color: ${styles.colorBlueLight};
   text-decoration: none;
+  font-weight: 500;
   opacity: 1;
   outline: none;
 

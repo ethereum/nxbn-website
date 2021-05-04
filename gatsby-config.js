@@ -63,6 +63,7 @@ module.exports = {
       },
     },
     // Need for `gatsby-image`
+    "gatsby-plugin-image",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -93,7 +94,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/thanks/`],
+        excludes: [`/thanks/`],
+        output: "/",
         query: `{
           site {
             siteMetadata {
@@ -106,17 +108,13 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes
-            // Filter out 404 pages
-            .filter(node => !node.path.includes("404"))
-            .map(node => {
-              return {
-                url: `${site.siteMetadata.siteUrl}${node.path}`,
-                changefreq: `weekly`,
-                priority: 0.7,
-              }
-            }),
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: "weekly",
+            priority: 0.7,
+          }
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
