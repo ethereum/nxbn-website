@@ -233,13 +233,13 @@ class IndexPage extends React.Component {
                   />
                   <p className="description">
                     <b>Benson Njuguna</b>{" "}
-                    <Link to="https://acreafrica.com/">(Acre Africa)</Link> aims
-                    to support financially and digitally excluded populations,
-                    to achieve reliable digital and financial inclusion, for a
-                    positive social change. Benson is implementing and
-                    experimenting with blockchain in the context of agricultural
-                    microinsurance in Kenya; the short-term impact of this
-                    project will serve thousands of small-scale farmers.
+                    <Link to="https://acreafrica.com/">(Acre Africa)</Link> is
+                    working to implement blockchain solutions to a
+                    microinsurance product that protects thousands of
+                    small-scale farmers in Kenya from extreme weather events.
+                    His project will test and showcase Ethereum’s potential in
+                    enabling the viability and sustainability of products and
+                    services that target the bottom of the pyramid.
                   </p>
                 </Profile>
                 <Profile>
@@ -254,13 +254,15 @@ class IndexPage extends React.Component {
                   />
                   <p className="description">
                     <b>Chuy Cepeda</b>{" "}
-                    <Link to="https://os.city/en/">(OS.City)</Link> cares about
-                    the future of cities and governance models. He’s fully
-                    committed to growing OS City, a company he co-founded, to
-                    make cities more sustainable and governments more
-                    trustworthy. Chuy is driven to accelerate the meaningful
-                    adoption of blockchain in governments with a focus on the
-                    Latin America region.
+                    <Link to="https://os.city/en/">(OS.City)</Link> provides
+                    municipal and national governments a platform to easily
+                    issue blockchain-based documents to its citizens, with a
+                    vision that one day our Ethereum wallets would hold every
+                    government-issued document like permits and IDs. During the
+                    Fellowship Program, he and his team will work with the
+                    Presidency of Argentina and strategize for the meaningful
+                    adoption of blockchain in the public sector in Latin
+                    America.
                   </p>
                 </Profile>
                 <Profile>
@@ -275,14 +277,13 @@ class IndexPage extends React.Component {
                   />
                   <p className="description">
                     <b>Kuldeep Bandhu Aryal</b>{" "}
-                    <Link to="http://www.brac.net/">(BRAC)</Link> developed his
-                    passion for social innovation during the humanitarian
-                    response and reconstruction efforts post-2015 earthquake in
-                    Nepal. Focusing on engineering, technology, and design, he
-                    aims to bridge traditionally isolated sectors through
-                    cross-cutting innovation projects. Kuldeep is tackling
-                    blockchain strategy within the world’s largest development
-                    agency, BRAC.
+                    <Link to="http://www.brac.net/">(BRAC)</Link> will develop a
+                    blockchain and crypto strategy for BRAC - the world’s
+                    largest NGO based in Bangladesh that annually serves over
+                    100 million people. His project - which also involves
+                    multiple experiments using blockchain - could serve as a
+                    model for other social enterprises and the development
+                    sector at large.
                   </p>
                 </Profile>
                 <Profile>
@@ -298,13 +299,13 @@ class IndexPage extends React.Component {
                   <p className="description">
                     <b>Naroa Zurutuza</b>{" "}
                     <Link to="https://gigaconnect.org/">(UNICEF - Giga)</Link>{" "}
-                    sees information as a source of empowerment and driver of
-                    change and is a strong supporter of knowledge being openly
-                    accessible to everyone. She aims to further experiment with
-                    blockchain technologies and explore the role that they can
-                    play in decentralizing the internet connectivity ecosystem,
-                    creating stronger infrastructures, and delivering better
-                    services to communities.
+                    is exploring the power of blockchain in Giga’s effort to
+                    connect every school to the internet. In providing today’s
+                    most important public good to billions of currently
+                    unconnected people, she is envisioning many roles that
+                    blockchain can play, from increasing accountability of
+                    service providers and financing connectivity infrastructures
+                    to an access point to the global economy and marketplaces.
                   </p>
                 </Profile>
               </Section>
