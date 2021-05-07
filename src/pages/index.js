@@ -145,6 +145,60 @@ const Profile = styled.div`
   }
 `
 
+const Box = styled.div`
+  border: 1px solid #cccccc;
+  padding: 30px 50px;
+  margin-top: 110px;
+  margin-bottom: 100px;
+
+  @media (max-width: ${styles.screenSizeM}) {
+    padding: 20px 30px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  * {
+    &:not(a) {
+      font-weight: normal;
+      color: black;
+    }
+  }
+
+  .subtitle {
+    font-weight: 500;
+    color: ${styles.colorBlueLight};
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-family: Work Sans;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 0px;
+  }
+
+  .author {
+    font-family: Work Sans;
+    font-size: 14px;
+    color: rgba(153, 153, 153, 1);
+    margin-bottom: 28px;
+  }
+
+  .teaser {
+    font-family: Work Sans;
+    font-size: 14px;
+    margin-bottom: 0px;
+
+    > span {
+      font-weight: 500;
+      color: ${styles.colorBlueLight};
+    }
+  }
+`
+
 class IndexPage extends React.Component {
   render() {
     return (
@@ -310,6 +364,28 @@ class IndexPage extends React.Component {
                 </Profile>
               </Section>
 
+              <Link to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
+                <Box>
+                  <p className="subtitle">Our Blog</p>
+                  <p className="title">
+                    Ethereum for the Next Billion: Announcing the EF Fellowship
+                    Program
+                  </p>
+                  <p className="author">
+                    Posted by Aya Miyaguchi on May 7, 2021
+                  </p>
+                  <p className="teaser">
+                    The progress being made in the the Ethereum ecosystem lately
+                    is really inspiring. Whether you're excited by the adoption
+                    of proof of stake (and a faster, more secure, greener
+                    Ethereum) ...{" "}
+                    <span to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
+                      Read more
+                    </span>
+                  </p>
+                </Box>
+              </Link>
+
               <Center>
                 <H2 id="contact">We want to hear from you!</H2>
                 <p>
@@ -317,6 +393,7 @@ class IndexPage extends React.Component {
                   this form.
                 </p>
               </Center>
+
               <ButtonContainer>
                 <ButtonLink to="https://forms.gle/iKYQA1LNEBoc59Wh7">
                   Contact Us
