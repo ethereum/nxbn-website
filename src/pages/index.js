@@ -149,12 +149,12 @@ const Box = styled.div`
   border: 1px solid #cccccc;
   padding: 30px 50px;
   margin-top: 110px;
-  margin-bottom: 100px;
+  margin-bottom: 68px;
 
   @media (max-width: ${styles.screenSizeM}) {
     padding: 20px 30px;
     margin-top: 70px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 
   * {
