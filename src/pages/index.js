@@ -378,7 +378,7 @@ class IndexPage extends React.Component {
                     The progress being made in the the Ethereum ecosystem lately
                     is really inspiring. Whether you're excited by the adoption
                     of proof of stake (and a faster, more secure, greener
-                    Ethereum) ...{" "}
+                    Ethereum)...{" "}
                     <span to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
                       Read more
                     </span>
