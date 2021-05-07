@@ -298,8 +298,8 @@ class IndexPage extends React.Component {
                   />
                   <p className="description">
                     <b>Naroa Zurutuza</b>{" "}
-                    <Link to="https://gigaconnect.org/">(UNICEF - Giga)</Link>{" "}
-                    is exploring the power of blockchain in Giga’s effort to
+                    <Link to="https://gigaconnect.org/">(Giga)</Link> is
+                    exploring the power of blockchain in Giga’s effort to
                     connect every school to the internet. In providing today’s
                     most important public good to billions of currently
                     unconnected people, she is envisioning many roles that
