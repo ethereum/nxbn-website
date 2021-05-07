@@ -151,10 +151,14 @@ const Box = styled.div`
   margin-top: 110px;
   margin-bottom: 68px;
 
+  &:hover {
+    background: #f9fdfe;
+  }
+
   @media (max-width: ${styles.screenSizeM}) {
     padding: 20px 30px;
     margin-top: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   * {
