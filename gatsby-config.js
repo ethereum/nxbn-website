@@ -1,4 +1,6 @@
 const siteUrl = `https://fellowship.ethereum.foundation`
+const matomoSiteId = "28"
+const matomoUrl = "https://matomo.ethereum.org"
 
 module.exports = {
   siteMetadata: {
@@ -12,6 +14,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: matomoSiteId,
+        matomoUrl: matomoUrl,
+        siteUrl,
+      },
+    },
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
