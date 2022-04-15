@@ -94,13 +94,6 @@ module.exports = {
         fonts: [`Work Sans\:100,300,400,500,600,700`],
       },
     },
-    // TODO need different plugin to support new Measurement IDs?
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-1BJFN30WTF",
-      },
-    },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
