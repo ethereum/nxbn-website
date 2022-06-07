@@ -76,6 +76,180 @@ const FAQPage = () => {
         </PageHeader>
         <PageBody>
           <FakeLink onClick={toggleAll}>{toggleAllText}</FakeLink>
+          <H2>About the Program</H2>
+          <HR />
+
+          <AccordionSection
+            key={10}
+            i={10}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is the Ethereum Foundation Fellowship Program?"
+          >
+            <p>
+            The Ethereum Foundation Fellowship Program is focused on identifying
+            and supporting unique and talented individuals helping to enable
+            Ethereum's relevance and breaking down barriers to entry for people
+            and communities not currently part of the Ethereum ecosystem.
+            </p>
+            <p>
+            Fellows will be part of a small forum for leaders who, during the course of six months,
+            drive their own projects that address a particular enabler or blocker for Ethereum
+            becoming a universal public good.
+            </p>
+            <p>
+            While there are some cohort-wide activities, it is a self-directed, self-driven program.
+            Depending on the needs of each Fellow and their project, different support is provided,
+            including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network.
+            Fellows’ work will be highlighted to showcase the impact and value of Ethereum and its community.
+            </p>
+          </AccordionSection>
+
+          <HR />
+          <AccordionSection
+            key={18}
+            i={18}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What kinds of projects qualify?"
+          >
+            <p>
+              A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem.
+
+              </p>
+              <p>
+              The project can be just an idea, in early stages, or already ongoing.
+              It can be building an application, research, community building, or organizational program/initiative.
+              Whatever it is, the project must enable the flourishing of regions, populations, or communities
+              that are underrepresented in the existing Ethereum ecosystem.
+            </p>
+          </AccordionSection>
+
+          <HR />
+          <AccordionSection
+            key={8}
+            i={8}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What are the key dates of the program?"
+          >
+            <p>Program Duration: August 2022 to January 2023</p>
+
+            <p>Fellows will also be invited to travel to {" "} <Link to="https://devcon.org/"> Devcon6 on October 11-14 in Bogotá, Colombia</Link>{" "} </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={9}
+            i={9}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is the duration of the Fellowship program?"
+          >
+            <p>
+              The Fellowship Program is 6 months. However Fellows are expected
+              to contribute to the Ethereum community as alumni of the
+              program beyond the official program dates.
+            </p>
+          </AccordionSection>
+          <HR />
+
+          <AccordionSection
+            key={12}
+            i={12}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is the time commitment?"
+          >
+            <p>
+              Fellows are not required to work on their project full-time, but Fellows commit to:
+            </p>
+            <ul>
+              <li>Defining goals for their project and driving it forward in a measurable way
+              during the 6 month program period.</li>
+              <li>Documenting their journey, and writing
+              a reflective blogpost after the fellowship is complete</li>
+              <li>Participating in cohort-wide activities on a monthly basis</li>
+            </ul>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={14}
+            i={14}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What are some examples of Fellowship projects?"
+          >
+            <p>
+              This list of examples is by no means comprehensive and the
+              possibilities are boundless. The projects included in the pilot
+              program include:
+            </p>
+            <ul>
+              <li>
+                Implementing blockchain in{" "}
+                <Link to="https://acreafrica.com/">
+                  agricultural microinsurance
+                </Link>{" "}
+                in Kenya
+              </li>
+              <li>
+                Accelerating the{" "}
+                <Link to="https://os.city/en/">
+                  meaningful adoption of blockchain in governments
+                </Link>{" "}
+                with a focus on the Latin America region
+              </li>
+              <li>
+                Tackling{" "}
+                <Link to="http://www.brac.net/>">blockchain strategy</Link>{" "}
+                within the world’s largest development agency
+              </li>
+              <li>
+                <Link to="https://gigaconnect.org/">
+                  Decentralizing the internet connectivity ecosystem
+                </Link>
+                , creating stronger infrastructures, and delivering better
+                services to communities.
+              </li>
+            </ul>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={15}
+            i={15}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is included in the Fellowship?"
+          >
+            <ul>
+              <li>Networking and community-building</li>
+              <li>Guidance</li>
+              <li>Mentorship</li>
+              <li>Potential funding</li>
+              <li>Exposure</li>
+            </ul>
+          </AccordionSection>
+          <HR />
+
+          <AccordionSection
+            key={13}
+            i={13}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What makes a good Fellow? Do I need to be a developer?"
+          >
+            <p>
+              There is no formal criteria for becoming a Fellow. All applicants
+              will be reviewed based on the content of the materials submitted.
+            </p>
+            <p>
+            Applications from all technical and non-technical backgrounds are
+            encouraged. Some familiarity with web3/Ethereum concepts is expected,
+            but not required.
+            </p>
+          </AccordionSection>
+          <HR />
+
           <H2>About Ethereum</H2>
           <HR />
           <AccordionSection
@@ -159,207 +333,6 @@ const FAQPage = () => {
             </p>
           </AccordionSection>
           <HR />
-          <AccordionSection
-            key={5}
-            i={5}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is Ethereum not able to solve?"
-          >
-            <p>
-              While Ethereum can reindustrialize everything from voting to
-              supply-chain tracing, not all applications will be compatible with
-              a decentralized approach, and that’s okay.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={6}
-            i={6}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How is Ethereum different from Bitcoin?"
-          >
-            <p>
-              Bitcoin is a blockchain technology that serves strictly as a
-              currency. Ethereum is also a blockchain technology, but its code
-              allows it to serve as an open-source platform and operating
-              system, on top of which other applications can be built. These
-              decentralized applications built on Ethereum have been coined
-              "dApps".
-            </p>
-          </AccordionSection>
-          <HR />
-          <H2>About the Program</H2>
-          <HR />
-
-          <AccordionSection
-            key={10}
-            i={10}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is the Ethereum Foundation Fellowship Program?"
-          >
-            <p>
-              The Ethereum Foundation Fellowship Program is a fellowship wherein
-              the Ethereum Foundation provides changemakers around the world
-              with the expertise, resources, and support necessary to
-              incorporate Ethereum into their development work in developing
-              countries.
-            </p>
-          </AccordionSection>
-
-          <HR />
-          <AccordionSection
-            key={18}
-            i={18}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Who is a Fellow?"
-          >
-            <p>
-              Our selection of Fellows is not based not on blockchain or
-              Ethereum knowledge, but on the individual’s impact, leadership and
-              entrepreneurship abilities. Fellows must commit to the formal
-              program duration of 9 months.
-            </p>
-          </AccordionSection>
-
-          <HR />
-          <AccordionSection
-            key={8}
-            i={8}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What are the key dates of the program?"
-          >
-            <p>Program Duration: April 12, 2021 - December 31, 2021</p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={9}
-            i={9}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is the duration of the Fellowship program?"
-          >
-            <p>
-              The Fellowship Program is 9 months, however Fellows are expected
-              to contribute to the Ethereum community and as alumni of the
-              program beyond the official program dates.
-            </p>
-          </AccordionSection>
-          <HR />
-
-          <AccordionSection
-            key={11}
-            i={11}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What kinds of challenges should I expect throughout this Fellowship?"
-          >
-            <p>
-              Throughout the Fellowship, you will be challenged to learn & grow
-              with the help of our Mentors. We understand that there will be an
-              initial learning curve, and we’re here to help you in every step
-              of the journey.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={12}
-            i={12}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is the time commitment?"
-          >
-            <p>
-              The Fellowship is not a full-time commitment, but active and
-              engaged participation is key to creating a meaningful Fellowship
-              experience. Fellows commit to:
-            </p>
-            <ul>
-              <li>Spend at least 10 hours per week on their project</li>
-              <li>Document their journey (including monthly reports)</li>
-              <li>Participate in cohort-wide activities on a monthly basis</li>
-            </ul>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={14}
-            i={14}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What are some examples of Fellowship projects?"
-          >
-            <p>
-              This list of examples is by no means comprehensive and the
-              possibilities are boundless. The projects included in the pilot
-              program include:
-            </p>
-            <ul>
-              <li>
-                Implementing blockchain in{" "}
-                <Link to="https://acreafrica.com/">
-                  agricultural microinsurance
-                </Link>{" "}
-                in Kenya
-              </li>
-              <li>
-                Accelerating the{" "}
-                <Link to="https://os.city/en/">
-                  meaningful adoption of blockchain in governments
-                </Link>{" "}
-                with a focus on the Latin America region
-              </li>
-              <li>
-                Tackling{" "}
-                <Link to="http://www.brac.net/>">blockchain strategy</Link>{" "}
-                within the world’s largest development agency
-              </li>
-              <li>
-                <Link to="https://gigaconnect.org/">
-                  Decentralizing the internet connectivity ecosystem
-                </Link>
-                , creating stronger infrastructures, and delivering better
-                services to communities.
-              </li>
-            </ul>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={15}
-            i={15}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is included in the Fellowship?"
-          >
-            <ul>
-              <li>Networking and community-building</li>
-              <li>Guidance</li>
-              <li>Mentorship</li>
-              <li>Potential funding</li>
-              <li>Exposure</li>
-            </ul>
-          </AccordionSection>
-
-          <HR />
-          <AccordionSection
-            key={17}
-            i={17}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is a changemaker?"
-          >
-            <p>
-              A changemaker is someone (or a group of people) who has already
-              created impact in their region, or someone who has a project that
-              works to solve social, economic and environmental challenges with
-              Ethereum.
-            </p>
-          </AccordionSection>
-          <HR />
-
           <H2>Media</H2>
 
           <HR />
