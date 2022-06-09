@@ -66,7 +66,7 @@ const REFERRALSOURCE = [
   "Other (please specify)",
 ]
 
-const defaultRequiredFields = [
+const requiredFields = [
   "lastName",
   "POCisAuthorisedSignatory",
   "authorisedSignatoryInformation",
@@ -100,10 +100,17 @@ const defaultRequiredFields = [
   "memeDescription",
 ]
 
+const emailFields = ["contactEmail"]
+
+const urlFields = ["resumeLink", "introVideoLink", "projectPreviousWork"]
+
 const RequiredError = () => <ErrorMessage>Field is required</ErrorMessage>
+const EmailError = () => (
+  <ErrorMessage>Please provide a valid email address</ErrorMessage>
+)
+const UrlError = () => <ErrorMessage>Ensure link is a valid URL</ErrorMessage>
 
 const DevconGrantsForm = () => {
-  const [requiredFields, setRequiredFields] = useState(defaultRequiredFields)
   const [formState, setFormState] = useState({
     isPending: false,
     round: { value: "Road to Devcon Event Grants" },
@@ -127,30 +134,30 @@ const DevconGrantsForm = () => {
     gender: { value: "", isTouched: false, isValid: false },
     country: { value: "", isTouched: false, isValid: false },
     timezone: { value: "", isTouched: false, isValid: false },
-    socialNetworks: { value: "", isTouched: false, isValid: false },
+    socialNetworks: { value: "", isTouched: false, isValid: true }, // optional
     title: { value: "", isTouched: false, isValid: false },
     isAffiliated: { value: "", isTouched: false, isValid: false },
-    affiliatedOrg: { value: "", isTouched: false, isValid: false },
+    affiliatedOrg: { value: "", isTouched: false, isValid: true }, // optional
     ethKnowledge: { value: "", isTouched: false, isValid: false },
     resumeLink: { value: "", isTouched: false, isValid: false },
     introVideoLink: { value: "", isTouched: false, isValid: false },
     projectResearchIdea: { value: "", isTouched: false, isValid: false },
     projectName: { value: "", isTouched: false, isValid: false },
     projectDescription: { value: "", isTouched: false, isValid: false },
-    projectPreviousWork: { value: "", isTouched: false, isValid: false },
+    projectPreviousWork: { value: "", isTouched: false, isValid: true }, // optional
     projectLeaderReasons: { value: "", isTouched: false, isValid: false },
     projectGoals: { value: "", isTouched: false, isValid: false },
-    proposedTimeline: { value: "", isTouched: false, isValid: true },
-    requestedAmount: { value: "", isTouched: false, isValid: true },
-    problemBeingSolved: { value: "", isTouched: false, isValid: true },
-    isYourProjectPublicGood: { value: "", isTouched: false, isValid: true },
-    projectReasons: { value: "", isTouched: false, isValid: true },
-    plansForBroaderCommunity: { value: "", isTouched: false, isValid: true },
-    plansForScaling: { value: "", isTouched: false, isValid: true },
-    repeatApplicant: { value: "", isTouched: false, isValid: true },
-    referralSource: { value: "", isTouched: false, isValid: true },
+    proposedTimeline: { value: "", isTouched: false, isValid: false },
+    requestedAmount: { value: "", isTouched: false, isValid: false },
+    problemBeingSolved: { value: "", isTouched: false, isValid: false },
+    isYourProjectPublicGood: { value: "", isTouched: false, isValid: false },
+    projectReasons: { value: "", isTouched: false, isValid: false },
+    plansForBroaderCommunity: { value: "", isTouched: false, isValid: false },
+    plansForScaling: { value: "", isTouched: false, isValid: false },
+    repeatApplicant: { value: "", isTouched: false, isValid: false },
+    referralSource: { value: "", isTouched: false, isValid: false },
     referralSourceIfOther: { value: "", isTouched: false, isValid: false },
-    additionalInfo: { value: "", isTouched: false, isValid: false },
+    additionalInfo: { value: "", isTouched: false, isValid: true }, // optional
     firstReferenceContact: { value: "", isTouched: false, isValid: false },
     secondReferenceContact: { value: "", isTouched: false, isValid: false },
     memeDescription: { value: "", isTouched: false, isValid: false },
@@ -190,19 +197,18 @@ const DevconGrantsForm = () => {
     name: "referralSource",
   }))
 
-  const isEmailValid = () => {
+  const isEmailValid = email => {
     try {
-      validateEmail(formState.contactEmail.value)
+      validateEmail(email)
       return true
     } catch (error) {
       return false
     }
   }
 
-  const isUrlValid = () => {
-    const { value } = formState.eventLink
+  const isUrlValid = url => {
     const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/
-    return value === "" || value.match(re)
+    return url === "" || url.match(re)
   }
 
   const handleCheckBoxChange = event => {
@@ -217,14 +223,7 @@ const DevconGrantsForm = () => {
     const { value, name } = event.target
     const snapshot = { ...formState }
     snapshot[name].value = value
-    snapshot[name].isValid =
-      name === "contactEmail"
-        ? isEmailValid()
-        : name === "eventLink"
-        ? isUrlValid()
-        : requiredFields.includes(name)
-        ? value !== ""
-        : true
+    snapshot[name].isValid = isFieldValid(name, value)
     setFormState(snapshot)
   }
 
@@ -289,6 +288,22 @@ const DevconGrantsForm = () => {
     isFormValid() && submitInquiry()
   }
 
+  const isFieldValid = (name, value) => {
+    if (emailFields.includes(name)) {
+      return isEmailValid(value)
+    }
+
+    if (urlFields.includes(name)) {
+      return isUrlValid(value)
+    }
+
+    if (requiredFields.includes(name)) {
+      return value !== ""
+    }
+
+    return true
+  }
+
   const isFormValid = () => {
     if (isDev()) {
       return true
@@ -296,6 +311,14 @@ const DevconGrantsForm = () => {
 
     for (const field of requiredFields) {
       if (!formState[field]?.isValid) return false
+    }
+
+    if (!emailFields.every(field => isEmailValid(formState[field]))) {
+      return false
+    }
+
+    if (!urlFields.every(field => isUrlValid(formState[field]))) {
+      return false
     }
 
     return true
@@ -399,9 +422,7 @@ const DevconGrantsForm = () => {
         />
         <ErrorDiv>
           {formState.contactEmail.isTouched &&
-            !formState.contactEmail.isValid && (
-              <ErrorMessage>Please provide a valid email address</ErrorMessage>
-            )}
+            !formState.contactEmail.isValid && <EmailError />}
         </ErrorDiv>
       </StyledLabel>
       <StyledLabel>
@@ -596,7 +617,7 @@ const DevconGrantsForm = () => {
         />
         <ErrorDiv>
           {formState.resumeLink.isTouched && !formState.resumeLink.isValid && (
-            <RequiredError />
+            <UrlError />
           )}
         </ErrorDiv>
       </StyledLabel>
@@ -623,7 +644,7 @@ const DevconGrantsForm = () => {
         />
         <ErrorDiv>
           {formState.introVideoLink.isTouched &&
-            !formState.introVideoLink.isValid && <RequiredError />}
+            !formState.introVideoLink.isValid && <UrlError />}
         </ErrorDiv>
       </StyledLabel>
       <StyledLabel>
@@ -638,8 +659,8 @@ const DevconGrantsForm = () => {
           required
         />
         <ErrorDiv>
-          {formState.introVideoLink.isTouched &&
-            !formState.introVideoLink.isValid && <RequiredError />}
+          {formState.projectResearchIdea.isTouched &&
+            !formState.projectResearchIdea.isValid && <RequiredError />}
         </ErrorDiv>
       </StyledLabel>
       <StyledLabel>
@@ -708,6 +729,10 @@ const DevconGrantsForm = () => {
           maxLength="255"
           onBlur={handleTouched}
         />
+        <ErrorDiv>
+          {formState.projectPreviousWork.isTouched &&
+            !formState.projectPreviousWork.isValid && <UrlError />}
+        </ErrorDiv>
       </StyledLabel>
       <StyledLabel>
         <span>
