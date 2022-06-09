@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { useToasts } from "react-toast-notifications"
 import Select from "react-select"
 
-// import { validateEmail } from "../utils/validate-email"
 import {
   Form,
   Label,
@@ -15,9 +14,12 @@ import {
   Button,
   Required,
 } from "../components/SharedStyledComponents"
+
 import { colorRed } from "../utils/styles"
-import { TIMEZONE_OPTIONS } from "../constants"
+import validateEmail from "../utils/validate-email"
 import isDev from "../utils/isDev"
+
+import { TIMEZONE_OPTIONS } from "../constants"
 
 const StyledForm = styled(Form)`
   margin-top: 2rem;
@@ -28,6 +30,7 @@ const StyledSelect = styled(Select)`
 `
 
 const StyledLabel = styled(Label)`
+  display: ${({ display = true }) => (display ? "flex" : "none")};
   margin-bottom: 2.5rem;
 `
 
@@ -63,7 +66,7 @@ const REFERRALSOURCE = [
   "Other (please specify)",
 ]
 
-const requiredFields = [
+const defaultRequiredFields = [
   "lastName",
   "POCisAuthorisedSignatory",
   "authorisedSignatoryInformation",
@@ -97,7 +100,10 @@ const requiredFields = [
   "memeDescription",
 ]
 
+const RequiredError = () => <ErrorMessage>Field is required</ErrorMessage>
+
 const DevconGrantsForm = () => {
+  const [requiredFields, setRequiredFields] = useState(defaultRequiredFields)
   const [formState, setFormState] = useState({
     isPending: false,
     round: { value: "Road to Devcon Event Grants" },
@@ -150,6 +156,8 @@ const DevconGrantsForm = () => {
     memeDescription: { value: "", isTouched: false, isValid: false },
   })
 
+  const [isAffiliated, setIsAffiliated] = useState(false)
+
   const { addToast } = useToasts()
 
   const isAffiliatedOptions = YESNO.map(option => ({
@@ -184,7 +192,7 @@ const DevconGrantsForm = () => {
 
   const isEmailValid = () => {
     try {
-      // validateEmail(formState.contactEmail.value)
+      validateEmail(formState.contactEmail.value)
       return true
     } catch (error) {
       return false
@@ -195,19 +203,6 @@ const DevconGrantsForm = () => {
     const { value } = formState.eventLink
     const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/
     return value === "" || value.match(re)
-  }
-
-  const isCityValid = () => {
-    if (formState.inPerson.value === "Online") return true
-    return formState.city.value.length > 0
-  }
-
-  const isDateValid = () => {
-    const [month, day, year] = formState.eventDate.value.split("/")
-    const currentDate = new Date()
-    const inputDate = new Date(year, month - 1, day)
-
-    return inputDate > currentDate
   }
 
   const handleCheckBoxChange = event => {
@@ -227,10 +222,6 @@ const DevconGrantsForm = () => {
         ? isEmailValid()
         : name === "eventLink"
         ? isUrlValid()
-        : name === "city"
-        ? isCityValid()
-        : name === "eventDate"
-        ? isDateValid()
         : requiredFields.includes(name)
         ? value !== ""
         : true
@@ -306,13 +297,12 @@ const DevconGrantsForm = () => {
     for (const field of requiredFields) {
       if (!formState[field]?.isValid) return false
     }
+
     return true
   }
 
   const isButtonDisabled = !isFormValid() || formState.isPending
   const buttonText = formState.isPending ? "Submitting..." : "Submit"
-
-  const RequiredError = () => <ErrorMessage>Field is required</ErrorMessage>
 
   return (
     <StyledForm onSubmit={handleSubmit}>
@@ -542,7 +532,10 @@ const DevconGrantsForm = () => {
         </span>
         <StyledSelect
           options={isAffiliatedOptions}
-          onChange={handleSelectChange}
+          onChange={option => {
+            setIsAffiliated(option.value === YESNO[0])
+            handleSelectChange(option)
+          }}
           onBlur={e => handleTouched(e, "isAffiliated")}
           required
         />
@@ -551,7 +544,7 @@ const DevconGrantsForm = () => {
             !formState.isAffiliated.isValid && <RequiredError />}
         </ErrorDiv>
       </StyledLabel>
-      <StyledLabel>
+      <StyledLabel display={isAffiliated}>
         <span>
           If yes, what is your role in the organization? And what is its
           website?
