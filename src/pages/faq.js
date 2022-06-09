@@ -95,7 +95,7 @@ const FAQPage = () => {
             <p>
             Fellows will be part of a small forum for leaders who, during the course of six months,
             drive their own projects that address a particular enabler or blocker for Ethereum
-            becoming a universal public good.
+            becoming a public good that acts as a foundational layer for other public goods.
             </p>
             <p>
             While there are some cohort-wide activities, it is a self-directed, self-driven program.
@@ -115,7 +115,8 @@ const FAQPage = () => {
           >
             <p>
               A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem.
-
+              It doesn't have to directly integrate with Ethereum to qualify, but needs to
+              be on-balance 'good' for the ecosystem and future Ethereum community.
               </p>
               <p>
               The project can be just an idea, in early stages, or already ongoing.
@@ -260,7 +261,8 @@ const FAQPage = () => {
             headerText="What is Ethereum?"
           >
             <p>
-              Ethereum is a global, open-source platform for decentralized
+              Ethereum is a general-purpose blockchain that has become
+              a global, open-source platform for decentralized
               applications. On Ethereum, you can write code that controls
               digital value, runs exactly as programmed, and is accessible
               anywhere in the world.
@@ -315,24 +317,7 @@ const FAQPage = () => {
             </p>
           </AccordionSection>
           <HR />
-          <AccordionSection
-            key={4}
-            i={4}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Why would someone use Ethereum?"
-          >
-            <p>
-              Ethereum is a decentralized system, which means it is not
-              controlled by any single governing entity. Ethereum opens the door
-              to a global financial system where an Internet connection is all
-              you need to access applications, products and services that
-              operate in a trustless manner. Anyone can interact with the
-              Ethereum network and participate in this digital economy, without
-              the need for third parties and without the risk of censorship.
-            </p>
-          </AccordionSection>
-          <HR />
+
           <H2>Media</H2>
 
           <HR />
