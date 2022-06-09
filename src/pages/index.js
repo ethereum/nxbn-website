@@ -230,7 +230,7 @@ class IndexPage extends React.Component {
               <Section>
                 <p>
                 The Ethereum Foundation Fellowship Program is a small forum for leaders who, during the course of 6 months,
-                drive their own projects that help Ethereum become a universal public good for billions of people.
+                drive their own projects that regard Ethereum as a public good destined to help billions of people coordinate and thrive.
 
                 </p>
                 <p>
@@ -398,7 +398,7 @@ class IndexPage extends React.Component {
               </Center>
 
               <ButtonContainer>
-                <ButtonLink to="https://forms.gle/iKYQA1LNEBoc59Wh7">
+                <ButtonLink to="https://https://effellowship.paperform.co/">
                   Contact Us
                 </ButtonLink>
               </ButtonContainer>

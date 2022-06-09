@@ -134,7 +134,7 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Program Duration: August 2022 to January 2023</p>
+            <p>Program Duration: September 2022 to March 2023</p>
 
             <p>Fellows will also be invited to travel to {" "} <Link to="https://devcon.org/"> Devcon6 on October 11-14 in Bogotá, Colombia</Link>{" "} </p>
           </AccordionSection>
