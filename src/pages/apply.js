@@ -16,7 +16,7 @@ import {
 } from "../components/SharedStyledComponents"
 
 import { colorRed } from "../utils/styles"
-import validateEmail from "../utils/validate-email"
+import validateEmail from "../utils/validateEmail"
 import isDev from "../utils/isDev"
 
 import { TIMEZONE_OPTIONS } from "../constants"
@@ -430,9 +430,6 @@ const DevconGrantsForm = () => {
         <span>
           Which gender pronoun do you use? <Required>*</Required>
         </span>
-        <div>
-          <small>(If “other”, please describe)</small>
-        </div>
         <StyledSelect
           options={genderOptions}
           onChange={handleSelectChange}

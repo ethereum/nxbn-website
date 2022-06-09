@@ -112,6 +112,19 @@ export const handler = async function(event) {
 
   console.log({ application })
 
+  try {
+    await addRowToSpreadsheet(
+      {
+        id: googleSpreadsheetId,
+        sheetName: googleSheetName,
+      },
+      application
+    )
+  } catch (err) {
+    // as this is something internal we don't want to show this error to the user
+    console.log(err)
+  }
+
   return {
     statusCode: 200,
     body: JSON.stringify({ status: "ok" }),
