@@ -99,12 +99,18 @@ const requiredFields = [
   "referralSourceIfOther",
   "firstReferenceContact",
   "secondReferenceContact",
+  "memeLink",
   "memeDescription",
 ]
 
 const emailFields = ["contactEmail"]
 
-const urlFields = ["resumeLink", "introVideoLink", "projectPreviousWork"]
+const urlFields = [
+  "resumeLink",
+  "introVideoLink",
+  "projectPreviousWork",
+  "memeLink",
+]
 
 const RequiredError = () => <ErrorMessage>Field is required</ErrorMessage>
 const EmailError = () => (
@@ -162,6 +168,7 @@ const DevconGrantsForm = () => {
     additionalInfo: { value: "", isTouched: false, isValid: true }, // optional
     firstReferenceContact: { value: "", isTouched: false, isValid: false },
     secondReferenceContact: { value: "", isTouched: false, isValid: false },
+    memeLink: { value: "", isTouched: false, isValid: false },
     memeDescription: { value: "", isTouched: false, isValid: false },
   })
 
@@ -216,7 +223,7 @@ const DevconGrantsForm = () => {
 
   const isUrlValid = url => {
     const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/
-    return url === "" || url.match(re)
+    return url === "" || !!url.match(re)
   }
 
   const handleCheckBoxChange = event => {
@@ -297,35 +304,39 @@ const DevconGrantsForm = () => {
   }
 
   const isFieldValid = (name, value) => {
-    if (emailFields.includes(name)) {
-      return isEmailValid(value)
+    let valid = true
+
+    if (valid && requiredFields.includes(name)) {
+      valid = value !== ""
     }
 
-    if (urlFields.includes(name)) {
-      return isUrlValid(value)
+    if (valid && emailFields.includes(name)) {
+      valid = isEmailValid(value)
     }
 
-    if (requiredFields.includes(name)) {
-      return value !== ""
+    if (valid && urlFields.includes(name)) {
+      valid = isUrlValid(value)
     }
 
-    return true
+    return valid
   }
 
   const isFormValid = () => {
     if (isDev()) {
-      return true
+      // return true
     }
 
     for (const field of requiredFields) {
-      if (!formState[field]?.isValid) return false
+      if (!formState[field]?.isValid) {
+        return false
+      }
     }
 
-    if (!emailFields.every(field => isEmailValid(formState[field]))) {
+    if (!emailFields.every(field => isEmailValid(formState[field].value))) {
       return false
     }
 
-    if (!urlFields.every(field => isUrlValid(formState[field]))) {
+    if (!urlFields.every(field => isUrlValid(formState[field].value))) {
       return false
     }
 
@@ -1046,15 +1057,33 @@ const DevconGrantsForm = () => {
       </StyledLabel>
       <StyledLabel>
         <span>
-          Insert a link to your favorite meme, and describe why it’s your
-          favorite <Required>*</Required>
+          Insert a link to your favorite meme <Required>*</Required>
+        </span>
+        <Input
+          type="text"
+          name="memeLink"
+          value={formState.memeLink?.value}
+          onChange={handleInputChange}
+          maxLength="255"
+          onBlur={handleTouched}
+          required
+        />
+        <ErrorDiv>
+          {formState.memeLink.isTouched && !formState.memeLink.isValid && (
+            <UrlError />
+          )}
+        </ErrorDiv>
+      </StyledLabel>
+      <StyledLabel>
+        <span>
+          Describe why it’s your favorite <Required>*</Required>
         </span>
         <Input
           type="text"
           name="memeDescription"
           value={formState.memeDescription?.value}
           onChange={handleInputChange}
-          maxLength="20"
+          maxLength="255"
           onBlur={handleTouched}
           required
         />
