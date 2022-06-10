@@ -20,7 +20,7 @@ import validateEmail from "../utils/validateEmail"
 import isDev from "../utils/isDev"
 import * as styles from "../utils/styles"
 
-import { TIMEZONE_OPTIONS } from "../constants"
+import { COUNTRY_OPTIONS, TIMEZONE_OPTIONS } from "../constants"
 
 const StyledForm = styled(Form)`
   margin: 2rem auto;
@@ -192,6 +192,12 @@ const DevconGrantsForm = () => {
     value: option,
     label: option,
     name: "gender",
+  }))
+
+  const countryOptions = COUNTRY_OPTIONS.map(({ value, label }) => ({
+    value,
+    label,
+    name: "country",
   }))
 
   const timezoneOptions = TIMEZONE_OPTIONS.map(({ value, label }) => ({
@@ -492,13 +498,10 @@ const DevconGrantsForm = () => {
             most time if it’s not your country of origin
           </small>
         </div>
-        <Input
-          type="text"
-          name="country"
-          value={formState.country.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
+        <StyledSelect
+          options={countryOptions}
+          onChange={handleSelectChange}
+          onBlur={e => handleTouched(e, "country")}
           required
         />
         <ErrorDiv>
