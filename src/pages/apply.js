@@ -21,6 +21,7 @@ import isDev from "../utils/isDev"
 import * as styles from "../utils/styles"
 
 import { COUNTRY_OPTIONS, TIMEZONE_OPTIONS } from "../constants"
+import { faBullseye } from "@fortawesome/free-solid-svg-icons"
 
 const StyledForm = styled(Form)`
   margin: 2rem auto;
@@ -83,6 +84,7 @@ const requiredFields = [
   "resumeLink",
   "introVideoLink",
   "projectResearchIdea",
+  "projectStatusOther",
   "projectName",
   "projectDescription",
   "projectLeaderReasons",
@@ -150,6 +152,7 @@ const DevconGrantsForm = () => {
     resumeLink: { value: "", isTouched: false, isValid: false },
     introVideoLink: { value: "", isTouched: false, isValid: false },
     projectResearchIdea: { value: "", isTouched: false, isValid: false },
+    projectStatusOther: { value: "", isTouched: false, isValid: false },
     projectName: { value: "", isTouched: false, isValid: false },
     projectDescription: { value: "", isTouched: false, isValid: false },
     projectPreviousWork: { value: "", isTouched: false, isValid: true }, // optional
@@ -173,6 +176,7 @@ const DevconGrantsForm = () => {
   })
 
   const [isAffiliated, setIsAffiliated] = useState(false)
+  const [isProjectStatusOther, setIsProjectStatusOther] = useState(false)
 
   const { addToast } = useToasts()
 
@@ -332,7 +336,16 @@ const DevconGrantsForm = () => {
       return true
     }
 
-    for (const field of requiredFields) {
+    // Filter conditional fields if they are not selected
+    const requiredFieldsWOConditionals = requiredFields.filter(field => {
+      if (field === "projectStatusOther" && !isProjectStatusOther) {
+        return false
+      }
+
+      return true
+    })
+
+    for (const field of requiredFieldsWOConditionals) {
       if (!formState[field]?.isValid) {
         return false
       }
@@ -679,13 +692,35 @@ const DevconGrantsForm = () => {
         </span>
         <StyledSelect
           options={projectResearchIdeaOptions}
-          onChange={handleSelectChange}
+          onChange={option => {
+            // is Other option selected?
+            setIsProjectStatusOther(option.value === PROJECTRESEARCHIDEA[3])
+            handleSelectChange(option)
+          }}
           onBlur={e => handleTouched(e, "projectResearchIdea")}
           required
         />
         <ErrorDiv>
           {formState.projectResearchIdea.isTouched &&
             !formState.projectResearchIdea.isValid && <RequiredError />}
+        </ErrorDiv>
+      </StyledLabel>
+      <StyledLabel display={isProjectStatusOther}>
+        <span>
+          If "Other" selected, please describe <Required>*</Required>
+        </span>
+        <Input
+          type="text"
+          name="projectStatusOther"
+          value={formState.projectStatusOther.value}
+          onChange={handleInputChange}
+          maxLength="255"
+          onBlur={handleTouched}
+          required
+        />
+        <ErrorDiv>
+          {formState.projectStatusOther.isTouched &&
+            !formState.projectStatusOther.isValid && <RequiredError />}
         </ErrorDiv>
       </StyledLabel>
       <StyledLabel>
