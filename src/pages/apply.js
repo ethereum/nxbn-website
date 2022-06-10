@@ -18,11 +18,13 @@ import {
 import { colorRed } from "../utils/styles"
 import validateEmail from "../utils/validateEmail"
 import isDev from "../utils/isDev"
+import * as styles from "../utils/styles"
 
 import { TIMEZONE_OPTIONS } from "../constants"
 
 const StyledForm = styled(Form)`
-  margin-top: 2rem;
+  margin: 2rem auto;
+  max-width: ${styles.screenSizeXL};
 `
 
 const StyledSelect = styled(Select)`
