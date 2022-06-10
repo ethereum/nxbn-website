@@ -175,6 +175,12 @@ const DevconGrantsForm = () => {
     name: "isAffiliated",
   }))
 
+  const repeatApplicantOptions = YESNO.map(option => ({
+    value: option,
+    label: option,
+    name: "repeatApplicant",
+  }))
+
   const genderOptions = GENDER_TYPES.map(option => ({
     value: option,
     label: option,
@@ -606,8 +612,11 @@ const DevconGrantsForm = () => {
       </StyledLabel>
       <StyledLabel>
         <span>
-          Upload your Resumé <Required>*</Required>
+          Insert a link to your Resumé <Required>*</Required>
         </span>
+        <div>
+          <small>Please make sure that the link is accessible</small>
+        </div>
         <Input
           type="text"
           name="resumeLink"
@@ -625,9 +634,9 @@ const DevconGrantsForm = () => {
       </StyledLabel>
       <StyledLabel>
         <span>
-          Upload a 3 minute video - In a 3 minute video, please let us know
-          about you and your project. Why are you interested in Ethereum and the
-          Ethereum Foundation Fellowship Program? <Required>*</Required>
+          Insert a link to a 3 minute video - In a 3 minute video, please let us
+          know about you and your project. Why are you interested in Ethereum
+          and the Ethereum Foundation Fellowship Program? <Required>*</Required>
         </span>
         <div>
           <small>
@@ -928,16 +937,20 @@ const DevconGrantsForm = () => {
         </ErrorDiv>
       </StyledLabel>
       <StyledLabel>
-        <Checkbox>
-          <CheckboxInput
-            type="checkbox"
-            name="repeatApplicant"
-            defaultChecked={formState.repeatApplicant.value}
-            onChange={handleCheckBoxChange}
-          />
+        <span>
           Have you previously applied as a Fellow candidate or for any grants at
-          the Ethereum Foundation?
-        </Checkbox>
+          the Ethereum Foundation? <Required>*</Required>
+        </span>
+        <StyledSelect
+          options={repeatApplicantOptions}
+          onChange={handleSelectChange}
+          onBlur={e => handleTouched(e, "repeatApplicant")}
+          required
+        />
+        <ErrorDiv>
+          {formState.repeatApplicant.isTouched &&
+            !formState.repeatApplicant.isValid && <RequiredError />}
+        </ErrorDiv>
       </StyledLabel>
       <StyledLabel>
         <span>
@@ -1033,10 +1046,9 @@ const DevconGrantsForm = () => {
       </StyledLabel>
       <StyledLabel>
         <span>
-          Attach your favorite meme, and describe why it’s your favorite{" "}
-          <Required>*</Required>
+          Insert a link to your favorite meme, and describe why it’s your
+          favorite <Required>*</Required>
         </span>
-        {/* TODO: upload meme image */}
         <Input
           type="text"
           name="memeDescription"
