@@ -1,3 +1,5 @@
+export const FELLOWSHIP_EMAIL = "fellowship@ethereum.org"
+
 // timezones
 export const TIMEZONE_OPTIONS = [
   {
