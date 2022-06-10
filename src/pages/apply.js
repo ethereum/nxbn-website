@@ -329,7 +329,7 @@ const DevconGrantsForm = () => {
 
   const isFormValid = () => {
     if (isDev()) {
-      // return true
+      return true
     }
 
     for (const field of requiredFields) {
