@@ -13,6 +13,8 @@ import {
   TextArea,
   Button,
   Required,
+  Center,
+  H2,
 } from "../components/SharedStyledComponents"
 
 import { colorRed } from "../utils/styles"
@@ -366,781 +368,790 @@ const DevconGrantsForm = () => {
   const buttonText = formState.isPending ? "Submitting..." : "Submit"
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
-      <StyledLabel>
-        <span>First Name</span>
-        <Input
-          type="text"
-          name="firstName"
-          value={formState.firstName?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-        />
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Last name/ preferred name/ pseudonym <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            If you have indicated in the first question your first name, then
-            please indicate your family name. If you prefer, on the other hand,
-            that we use your preferred name or pseudonym, please write it down
-            here and leave the first question bank.
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="lastName"
-          value={formState.lastName.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.lastName.isTouched && !formState.lastName.isValid && (
-            <RequiredError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <Checkbox>
-          <CheckboxInput
-            type="checkbox"
-            name="POCisAuthorisedSignatory"
-            defaultChecked={formState.POCisAuthorisedSignatory.value}
-            onChange={handleCheckBoxChange}
+    <>
+      <Center>
+        <H2>
+          Thank you for your interest in the Fellowship Program. Please fill out
+          the form below.
+        </H2>
+      </Center>
+      <StyledForm onSubmit={handleSubmit}>
+        <StyledLabel>
+          <span>First Name</span>
+          <Input
+            type="text"
+            name="firstName"
+            value={formState.firstName?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+          />
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Last name/ preferred name/ pseudonym <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              If you have indicated in the first question your first name, then
+              please indicate your family name. If you prefer, on the other
+              hand, that we use your preferred name or pseudonym, please write
+              it down here and leave the first question bank.
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="lastName"
+            value={formState.lastName.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
             required
           />
-          Is the point of contact also the authorised signatory?
-        </Checkbox>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Name, job title, and email address of the authorised signatory{" "}
-          <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            (e.g. John Smith, CEO, john@mycompany.com. This is the person who
-            will sign the contract. They must be someone who can sign contracts
-            on behalf of the entity.)
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="authorisedSignatoryInformation"
-          value={formState.authorisedSignatoryInformation.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.authorisedSignatoryInformation.isTouched &&
-            !formState.authorisedSignatoryInformation.isValid && (
+          <ErrorDiv>
+            {formState.lastName.isTouched && !formState.lastName.isValid && (
               <RequiredError />
             )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Email <Required>*</Required>
-        </span>
-        <Input
-          type="email"
-          name="contactEmail"
-          value={formState.contactEmail.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.contactEmail.isTouched &&
-            !formState.contactEmail.isValid && <EmailError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Phone number <Required>*</Required>
-        </span>
-        <div>
-          <small>Phone number with country code (format - eg.: +1)</small>
-        </div>
-        <Input
-          type="text"
-          name="phone"
-          value={formState.phone.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.phone.isTouched && !formState.phone.isValid && (
-            <RequiredError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Which gender pronoun do you use? <Required>*</Required>
-        </span>
-        <StyledSelect
-          options={genderOptions}
-          onChange={handleSelectChange}
-          onBlur={e => handleTouched(e, "gender")}
-          required
-        />
-        <ErrorDiv>
-          {formState.gender.isTouched && !formState.gender.isValid && (
-            <RequiredError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Country <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            Please provide the current country you’re located in or spend the
-            most time if it’s not your country of origin
-          </small>
-        </div>
-        <StyledSelect
-          options={countryOptions}
-          onChange={handleSelectChange}
-          onBlur={e => handleTouched(e, "country")}
-          required
-        />
-        <ErrorDiv>
-          {formState.country.isTouched && !formState.country.isValid && (
-            <RequiredError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Time Zone <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            Please choose your current time zone to help us schedule calls.
-          </small>
-        </div>
-        <StyledSelect
-          options={timezoneOptions}
-          onChange={handleSelectChange}
-          onBlur={e => handleTouched(e, "timezone")}
-          required
-        />
-        <ErrorDiv>
-          {formState.timezone.isTouched && !formState.timezone.isValid && (
-            <RequiredError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>Social network(s)</span>
-        <div>
-          <small>
-            Please indicate your preferred social network(s) handle(s)
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="socialNetworks"
-          value={formState.socialNetworks.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-        />
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          What is your current occupation? <Required>*</Required>
-        </span>
-        <Input
-          type="text"
-          name="title"
-          value={formState.title.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.title.isTouched && !formState.title.isValid && (
-            <RequiredError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Are you affiliated with any organization(s)? <Required>*</Required>
-        </span>
-        <StyledSelect
-          options={isAffiliatedOptions}
-          onChange={option => {
-            setIsAffiliated(option.value === YESNO[0])
-            handleSelectChange(option)
-          }}
-          onBlur={e => handleTouched(e, "isAffiliated")}
-          required
-        />
-        <ErrorDiv>
-          {formState.isAffiliated.isTouched &&
-            !formState.isAffiliated.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel display={isAffiliated}>
-        <span>
-          If yes, what is your role in the organization? And what is its
-          website?
-        </span>
-        <Input
-          type="text"
-          name="affiliatedOrg"
-          value={formState.affiliatedOrg.value}
-          onChange={handleInputChange}
-          maxLength="100"
-          onBlur={handleTouched}
-        />
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Describe your familiarity and understanding of Ethereum or other
-          blockchains. <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            We value sincerity. Please rest assured that your (lack) knowledge
-            about blockchain is not detrimental to becoming a Fellow. (max 300
-            words)
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="ethKnowledge"
-          value={formState.ethKnowledge.value}
-          onChange={handleInputChange}
-          maxLength="100"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.ethKnowledge.isTouched &&
-            !formState.ethKnowledge.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Insert a link to your Resumé <Required>*</Required>
-        </span>
-        <div>
-          <small>Please make sure that the link is accessible</small>
-        </div>
-        <Input
-          type="text"
-          name="resumeLink"
-          value={formState.resumeLink.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.resumeLink.isTouched && !formState.resumeLink.isValid && (
-            <UrlError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Insert a link to a 3 minute video - In a 3 minute video, please let us
-          know about you and your project. Why are you interested in Ethereum
-          and the Ethereum Foundation Fellowship Program? <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            Please describe why you would like to be considered for the
-            Fellowship Program.
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="introVideoLink"
-          value={formState.introVideoLink.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.introVideoLink.isTouched &&
-            !formState.introVideoLink.isValid && <UrlError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Do you already have a project, research topic, or idea?{" "}
-          <Required>*</Required>
-        </span>
-        <StyledSelect
-          options={projectResearchIdeaOptions}
-          onChange={option => {
-            // is Other option selected?
-            setIsProjectStatusOther(option.value === PROJECTRESEARCHIDEA[3])
-            handleSelectChange(option)
-          }}
-          onBlur={e => handleTouched(e, "projectResearchIdea")}
-          required
-        />
-        <ErrorDiv>
-          {formState.projectResearchIdea.isTouched &&
-            !formState.projectResearchIdea.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel display={isProjectStatusOther}>
-        <span>
-          If "Other" selected, please describe <Required>*</Required>
-        </span>
-        <Input
-          type="text"
-          name="projectStatusOther"
-          value={formState.projectStatusOther.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.projectStatusOther.isTouched &&
-            !formState.projectStatusOther.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Project name <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            This should be a concise description of the title of your project.
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="projectName"
-          value={formState.projectName.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.projectName.isTouched &&
-            !formState.projectName.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Please describe what your idea/project is. <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            Please describe your innovative idea, the impact that this project
-            has on Ethereum reaching the next billion, how Ethereum is/will be
-            used and the problem you’re trying to address. Do indicate the name
-            of the project, how long you have been working on this (if
-            applicable) and with whom.
-          </small>
-        </div>
-        <TextArea
-          name="projectDescription"
-          value={formState.projectDescription.value}
-          onChange={handleInputChange}
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.projectDescription.isTouched &&
-            !formState.projectDescription.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Please provide other projects or research papers (ideally public
-          and/or open-source), and engagements. If your project has an
-          open-source code repository, or if you want to share other open-source
-          contributions you’ve made please include it.
-        </span>
-        <div>
-          <small>Any links for us to check out?</small>
-        </div>
-        <Input
-          type="text"
-          name="projectPreviousWork"
-          value={formState.projectPreviousWork?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-        />
-        <ErrorDiv>
-          {formState.projectPreviousWork.isTouched &&
-            !formState.projectPreviousWork.isValid && <UrlError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Why are you the right person to carry out this project? What makes you
-          unique? <Required>*</Required>
-        </span>
-        <div>
-          <small>(max 300 words)</small>
-        </div>
-        <Input
-          type="text"
-          name="projectLeaderReasons"
-          value={formState.projectLeaderReasons?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.projectLeaderReasons.isTouched &&
-            !formState.projectLeaderReasons.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Project goals & success factors <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            How do you define and measure success for this
-            project/research/idea? (max 300 words)
-          </small>
-        </div>
-        <TextArea
-          name="projectGoals"
-          value={formState.projectGoals.value}
-          onChange={handleInputChange}
-        />
-        <ErrorDiv>
-          {formState.projectGoals.isTouched &&
-            !formState.projectGoals.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          The fellowship duration is 6 months. What do you imagine accomplishing
-          during these 6 months? And what are your plans for after the
-          fellowship? <Required>*</Required>
-        </span>
-        <div>
-          <small>(max 300 words)</small>
-        </div>
-        <TextArea
-          name="proposedTimeline"
-          value={formState.proposedTimeline.value}
-          onChange={handleInputChange}
-        />
-        <ErrorDiv>
-          {formState.proposedTimeline.isTouched &&
-            !formState.proposedTimeline.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          What resources or support will you require to achieve your
-          project/research/idea? <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            Please describe ways the Ethereum Foundation can best support the
-            goals of your project/research/idea.
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="requestedAmount"
-          value={formState.requestedAmount?.value}
-          onChange={handleInputChange}
-          maxLength="20"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.requestedAmount.isTouched &&
-            !formState.requestedAmount.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          What are the main beneficiaries/target population of the project and
-          where are they located? How do you foresee the ripple effect?{" "}
-          <Required>*</Required>
-        </span>
-        <div>
-          <small>(max 300 words)</small>
-        </div>
-        <TextArea
-          name="problemBeingSolved"
-          value={formState.problemBeingSolved.value}
-          onChange={handleInputChange}
-        />
-        <ErrorDiv>
-          {formState.requestedAmount.isTouched &&
-            !formState.requestedAmount.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          How does your project/idea benefit the Ethereum ecosystem and
-          community? <Required>*</Required>
-        </span>
-        <div>
-          <small>(max 300 words)</small>
-        </div>
-        <TextArea
-          name="isYourProjectPublicGood"
-          value={formState.isYourProjectPublicGood.value}
-          onChange={handleInputChange}
-        />
-        <ErrorDiv>
-          {formState.isYourProjectPublicGood.isTouched &&
-            !formState.isYourProjectPublicGood.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Why do you personally care about the issue/project? And why are you
-          choosing to use Ethereum? <Required>*</Required>
-        </span>
-        <div>
-          <small>(max 300 words)</small>
-        </div>
-        <Input
-          type="text"
-          name="projectReasons"
-          value={formState.projectReasons?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.projectReasons.isTouched &&
-            !formState.projectReasons.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          How do you plan to share your project with the broader community?{" "}
-          <Required>*</Required>
-        </span>
-        <div>
-          <small>(max 300 words)</small>
-        </div>
-        <Input
-          type="text"
-          name="plansForBroaderCommunity"
-          value={formState.plansForBroaderCommunity?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.plansForBroaderCommunity.isTouched &&
-            !formState.plansForBroaderCommunity.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          What is your strategy for scaling the impact of your idea? What will
-          be different in 5-10 years if you are successful? On the other hand,
-          if not selected as a Fellow this year, how would your
-          project/research/idea progress? <Required>*</Required>
-        </span>
-        <div>
-          <small>(max 300 words)</small>
-        </div>
-        <Input
-          type="text"
-          name="plansForScaling"
-          value={formState.plansForScaling?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.plansForScaling.isTouched &&
-            !formState.plansForScaling.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Have you previously applied as a Fellow candidate or for any grants at
-          the Ethereum Foundation? <Required>*</Required>
-        </span>
-        <StyledSelect
-          options={repeatApplicantOptions}
-          onChange={handleSelectChange}
-          onBlur={e => handleTouched(e, "repeatApplicant")}
-          required
-        />
-        <ErrorDiv>
-          {formState.repeatApplicant.isTouched &&
-            !formState.repeatApplicant.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          How did you hear about this Fellowship program? <Required>*</Required>
-        </span>
-        <StyledSelect
-          options={referralSourceOptions}
-          onChange={handleSelectChange}
-          onBlur={e => handleTouched(e, "referralSource")}
-          required
-        />
-        <ErrorDiv>
-          {formState.referralSource.isTouched &&
-            !formState.referralSource.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Please specify the source <Required>*</Required>
-        </span>
-        <Input
-          type="text"
-          name="referralSourceIfOther"
-          value={formState.referralSourceIfOther?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.referralSourceIfOther.isTouched &&
-            !formState.referralSourceIfOther.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Is there anything else you would like us to know or do you have any
-          questions?
-        </span>
-        <TextArea
-          name="additionalInfo"
-          value={formState.additionalInfo.value}
-          onChange={handleInputChange}
-        />
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          First Reference contact details <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            Please provide a referee contact information, including name, email
-            address, relationship
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="firstReferenceContact"
-          value={formState.firstReferenceContact?.value}
-          onChange={handleInputChange}
-          maxLength="20"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.firstReferenceContact.isTouched &&
-            !formState.firstReferenceContact.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Second Reference contact details <Required>*</Required>
-        </span>
-        <div>
-          <small>
-            Please provide a referee contact information, including name, email
-            address, relationship
-          </small>
-        </div>
-        <Input
-          type="text"
-          name="secondReferenceContact"
-          value={formState.secondReferenceContact?.value}
-          onChange={handleInputChange}
-          maxLength="20"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.secondReferenceContact.isTouched &&
-            !formState.secondReferenceContact.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Insert a link to your favorite meme <Required>*</Required>
-        </span>
-        <Input
-          type="text"
-          name="memeLink"
-          value={formState.memeLink?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.memeLink.isTouched && !formState.memeLink.isValid && (
-            <UrlError />
-          )}
-        </ErrorDiv>
-      </StyledLabel>
-      <StyledLabel>
-        <span>
-          Describe why it’s your favorite <Required>*</Required>
-        </span>
-        <Input
-          type="text"
-          name="memeDescription"
-          value={formState.memeDescription?.value}
-          onChange={handleInputChange}
-          maxLength="255"
-          onBlur={handleTouched}
-          required
-        />
-        <ErrorDiv>
-          {formState.memeDescription.isTouched &&
-            !formState.memeDescription.isValid && <RequiredError />}
-        </ErrorDiv>
-      </StyledLabel>
-      <div>
-        <StyledButton disabled={isButtonDisabled} onClick={handleSubmit}>
-          {buttonText}
-        </StyledButton>
-        {!isFormValid() && (
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <Checkbox>
+            <CheckboxInput
+              type="checkbox"
+              name="POCisAuthorisedSignatory"
+              defaultChecked={formState.POCisAuthorisedSignatory.value}
+              onChange={handleCheckBoxChange}
+              required
+            />
+            Is the point of contact also the authorised signatory?
+          </Checkbox>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Name, job title, and email address of the authorised signatory{" "}
+            <Required>*</Required>
+          </span>
           <div>
-            <small>Fill out all required fields before submitting</small>
+            <small>
+              (e.g. John Smith, CEO, john@mycompany.com. This is the person who
+              will sign the contract. They must be someone who can sign
+              contracts on behalf of the entity.)
+            </small>
           </div>
-        )}
-      </div>
-    </StyledForm>
+          <Input
+            type="text"
+            name="authorisedSignatoryInformation"
+            value={formState.authorisedSignatoryInformation.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.authorisedSignatoryInformation.isTouched &&
+              !formState.authorisedSignatoryInformation.isValid && (
+                <RequiredError />
+              )}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Email <Required>*</Required>
+          </span>
+          <Input
+            type="email"
+            name="contactEmail"
+            value={formState.contactEmail.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.contactEmail.isTouched &&
+              !formState.contactEmail.isValid && <EmailError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Phone number <Required>*</Required>
+          </span>
+          <div>
+            <small>Phone number with country code (format - eg.: +1)</small>
+          </div>
+          <Input
+            type="text"
+            name="phone"
+            value={formState.phone.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.phone.isTouched && !formState.phone.isValid && (
+              <RequiredError />
+            )}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Which gender pronoun do you use? <Required>*</Required>
+          </span>
+          <StyledSelect
+            options={genderOptions}
+            onChange={handleSelectChange}
+            onBlur={e => handleTouched(e, "gender")}
+            required
+          />
+          <ErrorDiv>
+            {formState.gender.isTouched && !formState.gender.isValid && (
+              <RequiredError />
+            )}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Country <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              Please provide the current country you’re located in or spend the
+              most time if it’s not your country of origin
+            </small>
+          </div>
+          <StyledSelect
+            options={countryOptions}
+            onChange={handleSelectChange}
+            onBlur={e => handleTouched(e, "country")}
+            required
+          />
+          <ErrorDiv>
+            {formState.country.isTouched && !formState.country.isValid && (
+              <RequiredError />
+            )}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Time Zone <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              Please choose your current time zone to help us schedule calls.
+            </small>
+          </div>
+          <StyledSelect
+            options={timezoneOptions}
+            onChange={handleSelectChange}
+            onBlur={e => handleTouched(e, "timezone")}
+            required
+          />
+          <ErrorDiv>
+            {formState.timezone.isTouched && !formState.timezone.isValid && (
+              <RequiredError />
+            )}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>Social network(s)</span>
+          <div>
+            <small>
+              Please indicate your preferred social network(s) handle(s)
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="socialNetworks"
+            value={formState.socialNetworks.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+          />
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            What is your current occupation? <Required>*</Required>
+          </span>
+          <Input
+            type="text"
+            name="title"
+            value={formState.title.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.title.isTouched && !formState.title.isValid && (
+              <RequiredError />
+            )}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Are you affiliated with any organization(s)? <Required>*</Required>
+          </span>
+          <StyledSelect
+            options={isAffiliatedOptions}
+            onChange={option => {
+              setIsAffiliated(option.value === YESNO[0])
+              handleSelectChange(option)
+            }}
+            onBlur={e => handleTouched(e, "isAffiliated")}
+            required
+          />
+          <ErrorDiv>
+            {formState.isAffiliated.isTouched &&
+              !formState.isAffiliated.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel display={isAffiliated}>
+          <span>
+            If yes, what is your role in the organization? And what is its
+            website?
+          </span>
+          <Input
+            type="text"
+            name="affiliatedOrg"
+            value={formState.affiliatedOrg.value}
+            onChange={handleInputChange}
+            maxLength="100"
+            onBlur={handleTouched}
+          />
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Describe your familiarity and understanding of Ethereum or other
+            blockchains. <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              We value sincerity. Please rest assured that your (lack) knowledge
+              about blockchain is not detrimental to becoming a Fellow. (max 300
+              words)
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="ethKnowledge"
+            value={formState.ethKnowledge.value}
+            onChange={handleInputChange}
+            maxLength="100"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.ethKnowledge.isTouched &&
+              !formState.ethKnowledge.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Insert a link to your Resumé <Required>*</Required>
+          </span>
+          <div>
+            <small>Please make sure that the link is accessible</small>
+          </div>
+          <Input
+            type="text"
+            name="resumeLink"
+            value={formState.resumeLink.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.resumeLink.isTouched &&
+              !formState.resumeLink.isValid && <UrlError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Insert a link to a 3 minute video - In a 3 minute video, please let
+            us know about you and your project. Why are you interested in
+            Ethereum and the Ethereum Foundation Fellowship Program?{" "}
+            <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              Please describe why you would like to be considered for the
+              Fellowship Program.
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="introVideoLink"
+            value={formState.introVideoLink.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.introVideoLink.isTouched &&
+              !formState.introVideoLink.isValid && <UrlError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Do you already have a project, research topic, or idea?{" "}
+            <Required>*</Required>
+          </span>
+          <StyledSelect
+            options={projectResearchIdeaOptions}
+            onChange={option => {
+              // is Other option selected?
+              setIsProjectStatusOther(option.value === PROJECTRESEARCHIDEA[3])
+              handleSelectChange(option)
+            }}
+            onBlur={e => handleTouched(e, "projectResearchIdea")}
+            required
+          />
+          <ErrorDiv>
+            {formState.projectResearchIdea.isTouched &&
+              !formState.projectResearchIdea.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel display={isProjectStatusOther}>
+          <span>
+            If "Other" selected, please describe <Required>*</Required>
+          </span>
+          <Input
+            type="text"
+            name="projectStatusOther"
+            value={formState.projectStatusOther.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.projectStatusOther.isTouched &&
+              !formState.projectStatusOther.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Project name <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              This should be a concise description of the title of your project.
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="projectName"
+            value={formState.projectName.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.projectName.isTouched &&
+              !formState.projectName.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Please describe what your idea/project is. <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              Please describe your innovative idea, the impact that this project
+              has on Ethereum reaching the next billion, how Ethereum is/will be
+              used and the problem you’re trying to address. Do indicate the
+              name of the project, how long you have been working on this (if
+              applicable) and with whom.
+            </small>
+          </div>
+          <TextArea
+            name="projectDescription"
+            value={formState.projectDescription.value}
+            onChange={handleInputChange}
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.projectDescription.isTouched &&
+              !formState.projectDescription.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Please provide other projects or research papers (ideally public
+            and/or open-source), and engagements. If your project has an
+            open-source code repository, or if you want to share other
+            open-source contributions you’ve made please include it.
+          </span>
+          <div>
+            <small>Any links for us to check out?</small>
+          </div>
+          <Input
+            type="text"
+            name="projectPreviousWork"
+            value={formState.projectPreviousWork?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+          />
+          <ErrorDiv>
+            {formState.projectPreviousWork.isTouched &&
+              !formState.projectPreviousWork.isValid && <UrlError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Why are you the right person to carry out this project? What makes
+            you unique? <Required>*</Required>
+          </span>
+          <div>
+            <small>(max 300 words)</small>
+          </div>
+          <Input
+            type="text"
+            name="projectLeaderReasons"
+            value={formState.projectLeaderReasons?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.projectLeaderReasons.isTouched &&
+              !formState.projectLeaderReasons.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Project goals & success factors <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              How do you define and measure success for this
+              project/research/idea? (max 300 words)
+            </small>
+          </div>
+          <TextArea
+            name="projectGoals"
+            value={formState.projectGoals.value}
+            onChange={handleInputChange}
+          />
+          <ErrorDiv>
+            {formState.projectGoals.isTouched &&
+              !formState.projectGoals.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            The fellowship duration is 6 months. What do you imagine
+            accomplishing during these 6 months? And what are your plans for
+            after the fellowship? <Required>*</Required>
+          </span>
+          <div>
+            <small>(max 300 words)</small>
+          </div>
+          <TextArea
+            name="proposedTimeline"
+            value={formState.proposedTimeline.value}
+            onChange={handleInputChange}
+          />
+          <ErrorDiv>
+            {formState.proposedTimeline.isTouched &&
+              !formState.proposedTimeline.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            What resources or support will you require to achieve your
+            project/research/idea? <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              Please describe ways the Ethereum Foundation can best support the
+              goals of your project/research/idea.
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="requestedAmount"
+            value={formState.requestedAmount?.value}
+            onChange={handleInputChange}
+            maxLength="20"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.requestedAmount.isTouched &&
+              !formState.requestedAmount.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            What are the main beneficiaries/target population of the project and
+            where are they located? How do you foresee the ripple effect?{" "}
+            <Required>*</Required>
+          </span>
+          <div>
+            <small>(max 300 words)</small>
+          </div>
+          <TextArea
+            name="problemBeingSolved"
+            value={formState.problemBeingSolved.value}
+            onChange={handleInputChange}
+          />
+          <ErrorDiv>
+            {formState.requestedAmount.isTouched &&
+              !formState.requestedAmount.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            How does your project/idea benefit the Ethereum ecosystem and
+            community? <Required>*</Required>
+          </span>
+          <div>
+            <small>(max 300 words)</small>
+          </div>
+          <TextArea
+            name="isYourProjectPublicGood"
+            value={formState.isYourProjectPublicGood.value}
+            onChange={handleInputChange}
+          />
+          <ErrorDiv>
+            {formState.isYourProjectPublicGood.isTouched &&
+              !formState.isYourProjectPublicGood.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Why do you personally care about the issue/project? And why are you
+            choosing to use Ethereum? <Required>*</Required>
+          </span>
+          <div>
+            <small>(max 300 words)</small>
+          </div>
+          <Input
+            type="text"
+            name="projectReasons"
+            value={formState.projectReasons?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.projectReasons.isTouched &&
+              !formState.projectReasons.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            How do you plan to share your project with the broader community?{" "}
+            <Required>*</Required>
+          </span>
+          <div>
+            <small>(max 300 words)</small>
+          </div>
+          <Input
+            type="text"
+            name="plansForBroaderCommunity"
+            value={formState.plansForBroaderCommunity?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.plansForBroaderCommunity.isTouched &&
+              !formState.plansForBroaderCommunity.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            What is your strategy for scaling the impact of your idea? What will
+            be different in 5-10 years if you are successful? On the other hand,
+            if not selected as a Fellow this year, how would your
+            project/research/idea progress? <Required>*</Required>
+          </span>
+          <div>
+            <small>(max 300 words)</small>
+          </div>
+          <Input
+            type="text"
+            name="plansForScaling"
+            value={formState.plansForScaling?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.plansForScaling.isTouched &&
+              !formState.plansForScaling.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Have you previously applied as a Fellow candidate or for any grants
+            at the Ethereum Foundation? <Required>*</Required>
+          </span>
+          <StyledSelect
+            options={repeatApplicantOptions}
+            onChange={handleSelectChange}
+            onBlur={e => handleTouched(e, "repeatApplicant")}
+            required
+          />
+          <ErrorDiv>
+            {formState.repeatApplicant.isTouched &&
+              !formState.repeatApplicant.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            How did you hear about this Fellowship program?{" "}
+            <Required>*</Required>
+          </span>
+          <StyledSelect
+            options={referralSourceOptions}
+            onChange={handleSelectChange}
+            onBlur={e => handleTouched(e, "referralSource")}
+            required
+          />
+          <ErrorDiv>
+            {formState.referralSource.isTouched &&
+              !formState.referralSource.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Please specify the source <Required>*</Required>
+          </span>
+          <Input
+            type="text"
+            name="referralSourceIfOther"
+            value={formState.referralSourceIfOther?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.referralSourceIfOther.isTouched &&
+              !formState.referralSourceIfOther.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Is there anything else you would like us to know or do you have any
+            questions?
+          </span>
+          <TextArea
+            name="additionalInfo"
+            value={formState.additionalInfo.value}
+            onChange={handleInputChange}
+          />
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            First Reference contact details <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              Please provide a referee contact information, including name,
+              email address, relationship
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="firstReferenceContact"
+            value={formState.firstReferenceContact?.value}
+            onChange={handleInputChange}
+            maxLength="20"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.firstReferenceContact.isTouched &&
+              !formState.firstReferenceContact.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Second Reference contact details <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              Please provide a referee contact information, including name,
+              email address, relationship
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="secondReferenceContact"
+            value={formState.secondReferenceContact?.value}
+            onChange={handleInputChange}
+            maxLength="20"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.secondReferenceContact.isTouched &&
+              !formState.secondReferenceContact.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Insert a link to your favorite meme <Required>*</Required>
+          </span>
+          <Input
+            type="text"
+            name="memeLink"
+            value={formState.memeLink?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.memeLink.isTouched && !formState.memeLink.isValid && (
+              <UrlError />
+            )}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Describe why it’s your favorite <Required>*</Required>
+          </span>
+          <Input
+            type="text"
+            name="memeDescription"
+            value={formState.memeDescription?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.memeDescription.isTouched &&
+              !formState.memeDescription.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <div>
+          <StyledButton disabled={isButtonDisabled} onClick={handleSubmit}>
+            {buttonText}
+          </StyledButton>
+          {!isFormValid() && (
+            <div>
+              <small>Fill out all required fields before submitting</small>
+            </div>
+          )}
+        </div>
+      </StyledForm>
+    </>
   )
 }
 
