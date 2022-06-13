@@ -237,7 +237,7 @@ const FAQPage = () => {
             i={13}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What makes a good Fellow? Do I need to be a developer?"
+            headerText="What makes a good Fellow? Do I need to be a developer? Do I need to have an organization?"
           >
             <p>
               There is no formal criteria for becoming a Fellow. All applicants
@@ -247,6 +247,9 @@ const FAQPage = () => {
             Applications from all technical and non-technical backgrounds are
             encouraged. Some familiarity with web3/Ethereum concepts is expected,
             but not required.
+            </p>
+            <p>
+            Fellows need not be affiliated with any organization or team. Independent individuals are welcome to apply.
             </p>
           </AccordionSection>
           <HR />

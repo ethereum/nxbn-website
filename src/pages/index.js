@@ -230,7 +230,7 @@ class IndexPage extends React.Component {
               <Section>
                 <p>
                 The Ethereum Foundation Fellowship Program is a small forum for leaders who, during the course of 6 months,
-                drive their own projects that regard Ethereum as a public good destined to help billions of people coordinate and thrive.
+                drive their own projects that use Ethereum as a public good destined to help billions of people coordinate and thrive.
 
                 </p>
                 <p>
@@ -314,6 +314,7 @@ class IndexPage extends React.Component {
                     His project tested and showcased Ethereum’s potential in
                     enabling the viability and sustainability of products and
                     services that target the bottom of the wealth pyramid.
+                    {" "}<Link to="https://blog.ethereum.org/2021/12/07/fellows-spotlight-on-kenya/"> Read more about Benson's work here.</Link>
                   </p>
                 </Profile>
                 <Profile>
@@ -335,7 +336,7 @@ class IndexPage extends React.Component {
                     During the Fellowship Program, he and his team worked with
                     the government of Argentina and created strategies to advance
                     the meaningful adoption of blockchain in the public sector
-                    in Latin America.
+                    in Latin America. {" "}<Link to="https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity/"> Read more about Chuy's work here.</Link>
                   </p>
                 </Profile>
                 <Profile>
