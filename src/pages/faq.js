@@ -170,6 +170,7 @@ const FAQPage = () => {
               <li>Documenting their journey, and writing
               a reflective blogpost after the fellowship is complete</li>
               <li>Participating in cohort-wide activities on a monthly basis</li>
+              <li>Showcase their projects/research in relevant local, regional, or global conferences</li>
             </ul>
           </AccordionSection>
           <HR />
