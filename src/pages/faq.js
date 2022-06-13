@@ -242,6 +242,7 @@ const FAQPage = () => {
             <p>
               There is no formal criteria for becoming a Fellow. All applicants
               will be reviewed based on the content of the materials submitted.
+              Final candidates will be asked for a short follow-up interview following selection.
             </p>
             <p>
             Applications from all technical and non-technical backgrounds are
