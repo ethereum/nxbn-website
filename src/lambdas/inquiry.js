@@ -42,6 +42,7 @@ export const handler = async function(event) {
     additionalInfo,
     firstReferenceContact,
     secondReferenceContact,
+    memeLink,
     memeDescription,
   } = JSON.parse(event.body)
   const {
@@ -93,6 +94,7 @@ export const handler = async function(event) {
     Additional_Information__c: additionalInfo,
     firstReferenceContact,
     secondReferenceContact,
+    memeLink,
     memeDescription,
   }
 
