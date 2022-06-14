@@ -23,7 +23,6 @@ import isDev from "../utils/isDev"
 import * as styles from "../utils/styles"
 
 import { COUNTRY_OPTIONS, TIMEZONE_OPTIONS } from "../constants"
-import { faBullseye } from "@fortawesome/free-solid-svg-icons"
 
 const StyledForm = styled(Form)`
   margin: 2rem auto;
@@ -773,6 +772,7 @@ const DevconGrantsForm = () => {
             value={formState.projectDescription.value}
             onChange={handleInputChange}
             onBlur={handleTouched}
+            maxLength="32768"
             required
           />
           <ErrorDiv>
@@ -839,6 +839,7 @@ const DevconGrantsForm = () => {
             name="projectGoals"
             value={formState.projectGoals.value}
             onChange={handleInputChange}
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.projectGoals.isTouched &&
@@ -858,6 +859,7 @@ const DevconGrantsForm = () => {
             name="proposedTimeline"
             value={formState.proposedTimeline.value}
             onChange={handleInputChange}
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.proposedTimeline.isTouched &&
@@ -902,6 +904,7 @@ const DevconGrantsForm = () => {
             name="problemBeingSolved"
             value={formState.problemBeingSolved.value}
             onChange={handleInputChange}
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.requestedAmount.isTouched &&
@@ -920,6 +923,7 @@ const DevconGrantsForm = () => {
             name="isYourProjectPublicGood"
             value={formState.isYourProjectPublicGood.value}
             onChange={handleInputChange}
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.isYourProjectPublicGood.isTouched &&
@@ -1053,6 +1057,7 @@ const DevconGrantsForm = () => {
             name="additionalInfo"
             value={formState.additionalInfo.value}
             onChange={handleInputChange}
+            maxLength="32768"
           />
         </StyledLabel>
         <StyledLabel>
