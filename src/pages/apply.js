@@ -166,7 +166,7 @@ const DevconGrantsForm = () => {
     projectReasons: { value: "", isTouched: false, isValid: false },
     plansForBroaderCommunity: { value: "", isTouched: false, isValid: false },
     plansForScaling: { value: "", isTouched: false, isValid: false },
-    repeatApplicant: { value: "", isTouched: false, isValid: false },
+    repeatApplicant: { value: false, isTouched: false, isValid: false },
     referralSource: { value: "", isTouched: false, isValid: false },
     referralSourceIfOther: { value: "", isTouched: false, isValid: false },
     additionalInfo: { value: "", isTouched: false, isValid: true }, // optional
@@ -254,7 +254,13 @@ const DevconGrantsForm = () => {
   }
 
   const handleSelectChange = selectedOption => {
-    const { name, value } = selectedOption
+    let { name, value } = selectedOption
+
+    if (name === "repeatApplicant") {
+      // convert this value into a boolean
+      value = value === YESNO[0]
+    }
+
     const snapshot = { ...formState }
     snapshot[name].value = value
     snapshot[name].isValid = value !== "" || !requiredFields.includes(name)
