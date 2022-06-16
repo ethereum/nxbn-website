@@ -50,7 +50,7 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   font-weight: bold;
   padding-top: 32px;
-  text-align: center;
+  text-align: left;
 `
 
 export const HR = styled.hr`
@@ -233,5 +233,12 @@ export const Center = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+`
+export const Left = styled.div`
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
   flex-direction: column;
 `
