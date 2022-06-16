@@ -244,7 +244,7 @@ class IndexPage extends React.Component {
                    who will become the future of web3.
                 </p>
               </Section>
-              <Link to="https://fellowship.ethereum.foundation/apply">
+              <Link to="/apply/">
                 <Box>
                   <p className="title">
                     Now accepting applications to the 2022 Fellowship Program
@@ -278,7 +278,7 @@ class IndexPage extends React.Component {
                 or individuals under-represented in the Ethereum ecosystem today.
                 </p>
                 <p>
-                Got additional questions not answered in {" "}<Link to="https://fellowship.ethereum.foundation/faq">the FAQs</Link>?
+                Got additional questions not answered in {" "}<Link to="/faq/">the FAQs</Link>?
                 Send us a message through the "contact us" link at the bottom of the page.
                 </p>
               </BigSection>
@@ -391,7 +391,7 @@ class IndexPage extends React.Component {
                 <p>
                   If you would like to become an EF fellow in the 2022 cohort,
                   {" "}
-                  <Link to="https://fellowship.ethereum.foundation/apply"> Apply Now!</Link>{" "}
+                  <Link to="/apply/"> Apply Now!</Link>{" "}
                 </p>
                 <p>
                 For all other inquires, click below to contact us
