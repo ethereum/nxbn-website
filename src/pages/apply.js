@@ -93,7 +93,7 @@ const requiredFields = [
   "gender",
   "country",
   "timezone",
-  "title",
+  "affiliatedOrg",
   "ethKnowledge",
   "resumeLink",
   "introVideoLink",
@@ -155,9 +155,9 @@ const ApplicationForm = () => {
     country: { value: "", isTouched: false, isValid: false },
     timezone: { value: "", isTouched: false, isValid: false },
     socialNetworks: { value: "", isTouched: false, isValid: true }, // optional
-    title: { value: "", isTouched: false, isValid: false },
-    affiliatedOrg: { value: "", isTouched: false, isValid: true }, // optional
+    affiliatedOrg: { value: "", isTouched: false, isValid: false },
     roleOrg: { value: "", isTouched: false, isValid: true }, // optional
+    occupation: { value: "", isTouched: false, isValid: true }, // optional
     websiteOrg: { value: "", isTouched: false, isValid: true }, // optional
     ethKnowledge: { value: "", isTouched: false, isValid: false },
     resumeLink: { value: "", isTouched: false, isValid: false },
@@ -560,7 +560,8 @@ const ApplicationForm = () => {
           <span>Social network(s)</span>
           <div>
             <small>
-              Please indicate your preferred social network(s) handle(s)
+              Please indicate your preferred social network(s) and its/ their
+              handle(s).
             </small>
           </div>
           <Input
@@ -571,25 +572,6 @@ const ApplicationForm = () => {
             maxLength="255"
             onBlur={handleTouched}
           />
-        </StyledLabel>
-        <StyledLabel>
-          <span>
-            What is your current occupation? <Required>*</Required>
-          </span>
-          <Input
-            type="text"
-            name="title"
-            value={formState.title.value}
-            onChange={handleInputChange}
-            maxLength="255"
-            onBlur={handleTouched}
-            required
-          />
-          <ErrorDiv>
-            {formState.title.isTouched && !formState.title.isValid && (
-              <RequiredError />
-            )}
-          </ErrorDiv>
         </StyledLabel>
         <StyledLabel>
           <span>
@@ -608,6 +590,7 @@ const ApplicationForm = () => {
             onChange={handleInputChange}
             maxLength="255"
             onBlur={handleTouched}
+            required
           />
           <ErrorDiv>
             {formState.affiliatedOrg.isTouched &&
@@ -622,6 +605,22 @@ const ApplicationForm = () => {
             value={formState.roleOrg.value}
             onChange={handleInputChange}
             maxLength="255"
+            onBlur={handleTouched}
+          />
+        </StyledLabel>
+        <StyledLabel>
+          <span>What is your usual occupation?</span>
+          <div>
+            <small>
+              Only respond if your usual occupation is different from above.
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="occupation"
+            value={formState.occupation.value}
+            onChange={handleInputChange}
+            maxLength="100"
             onBlur={handleTouched}
           />
         </StyledLabel>
@@ -813,13 +812,13 @@ const ApplicationForm = () => {
           <div>
             <small>Any links for us to check out?</small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="projectPreviousWork"
-            value={formState.projectPreviousWork?.value}
+            value={formState.projectPreviousWork.value}
             onChange={handleInputChange}
-            maxLength="255"
             onBlur={handleTouched}
+            maxLength="32768"
+            required
           />
           <ErrorDiv>
             {formState.projectPreviousWork.isTouched &&

@@ -17,9 +17,9 @@ export const handler = async function(event) {
     country,
     timezone,
     socialNetworks,
-    title,
     affiliatedOrg,
     roleOrg,
+    occupation,
     websiteOrg,
     ethKnowledge,
     resumeLink,
@@ -70,9 +70,9 @@ export const handler = async function(event) {
     npsp__CompanyCountry__c: country,
     Time_Zone__c: timezone,
     Social_Network__c: socialNetworks,
-    Title: title,
     Company: affiliatedOrg,
-    // roleOrg,
+    Title: roleOrg,
+    Occupation__c: occupation,
     Website: websiteOrg,
     Ethereum_Knowledge__c: ethKnowledge,
     Resume_Link__c: resumeLink,
@@ -132,6 +132,9 @@ export const handler = async function(event) {
           Proactive_Community_Grants_Round__c: "Fellowship Program 2022", // this value is hardwired, depending on the type of grant round
           RecordTypeId: SF_RECORD_TYPE_GRANTS_ROUND,
         }
+
+        // TODO: For testing purposes!! remove it later
+        console.log({ lead })
 
         // Single record creation
         conn.sobject("Lead").create(lead, async (err, ret) => {
