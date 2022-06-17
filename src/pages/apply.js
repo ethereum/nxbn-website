@@ -66,14 +66,6 @@ const Title = styled(H2)`
   margin-right: 1rem;
 `
 
-const TwoColumn = styled.div`
-  display: flex;
-
-  *:first-child {
-    margin-right: 50px;
-  }
-`
-
 const GENDER_TYPES = ["She/Her", "Him/His", "They/Them", "Other"]
 
 const YES_NO = ["Yes", "No"]
@@ -387,38 +379,44 @@ const ApplicationForm = () => {
         </Title>
       </Center>
       <StyledForm onSubmit={handleSubmit}>
-        <TwoColumn>
-          <StyledLabel>
-            <span>First Name</span>
-            <Input
-              type="text"
-              name="firstName"
-              value={formState.firstName?.value}
-              onChange={handleInputChange}
-              maxLength="255"
-              onBlur={handleTouched}
-            />
-          </StyledLabel>
-          <StyledLabel>
-            <span>
-              Last name/ preferred name/ pseudonym <Required>*</Required>
-            </span>
-            <Input
-              type="text"
-              name="lastName"
-              value={formState.lastName.value}
-              onChange={handleInputChange}
-              maxLength="255"
-              onBlur={handleTouched}
-              required
-            />
-            <ErrorDiv>
-              {formState.lastName.isTouched && !formState.lastName.isValid && (
-                <RequiredError />
-              )}
-            </ErrorDiv>
-          </StyledLabel>
-        </TwoColumn>
+        <StyledLabel>
+          <span>First Name</span>
+          <Input
+            type="text"
+            name="firstName"
+            value={formState.firstName?.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+          />
+        </StyledLabel>
+        <StyledLabel>
+          <span>
+            Last name/ preferred name/ pseudonym <Required>*</Required>
+          </span>
+          <div>
+            <small>
+              If you have indicated in the first question your first name, then
+              please indicate your family name. If you prefer, on the other
+              hand, that we use your preferred name or pseudonym, please write
+              it down here and leave the first question bank.
+            </small>
+          </div>
+          <Input
+            type="text"
+            name="lastName"
+            value={formState.lastName.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+            required
+          />
+          <ErrorDiv>
+            {formState.lastName.isTouched && !formState.lastName.isValid && (
+              <RequiredError />
+            )}
+          </ErrorDiv>
+        </StyledLabel>
         <StyledLabel>
           <Checkbox>
             <CheckboxInput
