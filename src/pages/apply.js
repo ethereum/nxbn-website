@@ -175,6 +175,7 @@ const DevconGrantsForm = () => {
   })
 
   const [isApplyingAsOther, setIsApplyingAsOther] = useState(false)
+  const [isReferralSourceOther, setIsReferralSourceOther] = useState(false)
 
   const { addToast } = useToasts()
 
@@ -337,6 +338,10 @@ const DevconGrantsForm = () => {
     // Filter conditional fields if they are not selected
     const requiredFieldsWOConditionals = requiredFields.filter(field => {
       if (field === "applyingAsOther" && !isApplyingAsOther) {
+        return false
+      }
+
+      if (field === "referralSourceIfOther" && !isReferralSourceOther) {
         return false
       }
 
@@ -1025,7 +1030,11 @@ const DevconGrantsForm = () => {
           </span>
           <StyledSelect
             options={referralSourceOptions}
-            onChange={handleSelectChange}
+            onChange={option => {
+              // is Other option selected?
+              setIsReferralSourceOther(option.value === REFERRALSOURCE[3])
+              handleSelectChange(option)
+            }}
             onBlur={e => handleTouched(e, "referralSource")}
             required
           />
@@ -1034,7 +1043,7 @@ const DevconGrantsForm = () => {
               !formState.referralSource.isValid && <RequiredError />}
           </ErrorDiv>
         </StyledLabel>
-        <StyledLabel>
+        <StyledLabel display={isReferralSourceOther}>
           <span>
             If Other, please specify the source <Required>*</Required>
           </span>
