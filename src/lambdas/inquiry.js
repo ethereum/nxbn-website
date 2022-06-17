@@ -24,7 +24,6 @@ export const handler = async function(event) {
     ethKnowledge,
     resumeLink,
     introVideoLink,
-    projectResearchIdea,
     projectName,
     projectDescription,
     projectPreviousWork,
@@ -115,57 +114,60 @@ export const handler = async function(event) {
     }
   }, {})
 
-  conn.login(
-    SF_PROD_USERNAME,
-    `${SF_PROD_PASSWORD}${SF_PROD_SECURITY_TOKEN}`,
-    err => {
-      if (err) {
-        console.error(err)
-        return {
-          statusCode: 400,
-          body: JSON.stringify({ status: "fail" }),
-        }
-      }
-
-      const lead = {
-        ...application,
-        Proactive_Community_Grants_Round__c: "Fellowship Program 2022", // this value is hardwired, depending on the type of grant round
-        RecordTypeId: SF_RECORD_TYPE_GRANTS_ROUND,
-      }
-
-      // Single record creation
-      conn.sobject("Lead").create(lead, async (err, ret) => {
-        if (err || !ret.success) {
+  return new Promise(resolve => {
+    conn.login(
+      SF_PROD_USERNAME,
+      `${SF_PROD_PASSWORD}${SF_PROD_SECURITY_TOKEN}`,
+      err => {
+        if (err) {
           console.error(err)
-          return {
+          resolve({
             statusCode: 400,
             body: JSON.stringify({ status: "fail" }),
+          })
+        }
+
+        const lead = {
+          ...application,
+          Proactive_Community_Grants_Round__c: "Fellowship Program 2022", // this value is hardwired, depending on the type of grant round
+          RecordTypeId: SF_RECORD_TYPE_GRANTS_ROUND,
+        }
+
+        // Single record creation
+        conn.sobject("Lead").create(lead, async (err, ret) => {
+          console.log(3)
+          if (err || !ret.success) {
+            console.error(err)
+            resolve({
+              statusCode: 400,
+              body: JSON.stringify({ status: "fail" }),
+            })
           }
-        }
 
-        // send submission data to a google spreadsheet
-        try {
-          await addRowToSpreadsheet(
-            {
-              id: googleSpreadsheetId,
-              sheetName: googleSheetName,
-            },
-            lead
+          // send submission data to a google spreadsheet
+          try {
+            await addRowToSpreadsheet(
+              {
+                id: googleSpreadsheetId,
+                sheetName: googleSheetName,
+              },
+              lead
+            )
+          } catch (err) {
+            // as this is something internal we don't want to show this error to the user
+            console.log(err)
+          }
+
+          console.log(
+            `Fellowship Program 2022 with ID: ${ret.id} has been created!`
           )
-        } catch (err) {
-          // as this is something internal we don't want to show this error to the user
-          console.log(err)
-        }
 
-        console.log(
-          `Fellowship Program 2022 with ID: ${ret.id} has been created!`
-        )
-
-        return {
-          statusCode: 200,
-          body: JSON.stringify({ status: "ok" }),
-        }
-      })
-    }
-  )
+          resolve({
+            statusCode: 200,
+            body: JSON.stringify({ status: "ok" }),
+          })
+        })
+      }
+    )
+  })
 }
