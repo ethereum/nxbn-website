@@ -72,16 +72,16 @@ const TwoColumn = styled.div`
 
 const GENDER_TYPES = ["She/Her", "Him/His", "They/Them", "Other"]
 
-const YESNO = ["Yes", "No"]
+const YES_NO = ["Yes", "No"]
 
-const STAGEOFPROJECT = [
+const STAGE_OF_PROJECT = [
   "Yes, I have a project/research being implemented",
   "Yes, I have a project idea but it is in its early stages",
   "No, I have an idea, but the project/research is not currently being implemented",
   "Other",
 ]
 
-const REFERRALSOURCE = [
+const REFERRAL_SOURCE = [
   "Social media",
   "Blog post",
   "Through my network - someone shared the opportunity with me",
@@ -137,7 +137,7 @@ const EmailError = () => (
 )
 const UrlError = () => <ErrorMessage>Ensure link is a valid URL</ErrorMessage>
 
-const DevconGrantsForm = () => {
+const ApplicationForm = () => {
   const [formState, setFormState] = useState({
     isPending: false,
     round: { value: "Road to Devcon Event Grants" },
@@ -197,7 +197,7 @@ const DevconGrantsForm = () => {
 
   const { addToast } = useToasts()
 
-  const repeatApplicantOptions = YESNO.map(option => ({
+  const repeatApplicantOptions = YES_NO.map(option => ({
     value: option,
     label: option,
     name: "repeatApplicant",
@@ -221,13 +221,13 @@ const DevconGrantsForm = () => {
     name: "timezone",
   }))
 
-  const stageOfProjectOptions = STAGEOFPROJECT.map(option => ({
+  const stageOfProjectOptions = STAGE_OF_PROJECT.map(option => ({
     value: option,
     label: option,
     name: "stageOfProject",
   }))
 
-  const referralSourceOptions = REFERRALSOURCE.map(option => ({
+  const referralSourceOptions = REFERRAL_SOURCE.map(option => ({
     value: option,
     label: option,
     name: "referralSource",
@@ -268,7 +268,7 @@ const DevconGrantsForm = () => {
 
     if (name === "repeatApplicant") {
       // convert this value into a boolean
-      value = value === YESNO[0]
+      value = value === YES_NO[0]
     }
 
     const snapshot = { ...formState }
@@ -735,7 +735,7 @@ const DevconGrantsForm = () => {
             options={stageOfProjectOptions}
             onChange={option => {
               // is Other option selected?
-              setIsApplyingAsOther(option.value === STAGEOFPROJECT[3])
+              setIsApplyingAsOther(option.value === STAGE_OF_PROJECT[3])
               handleSelectChange(option)
             }}
             onBlur={e => handleTouched(e, "stageOfProject")}
@@ -1043,7 +1043,7 @@ const DevconGrantsForm = () => {
             options={referralSourceOptions}
             onChange={option => {
               // is Other option selected?
-              setIsReferralSourceOther(option.value === REFERRALSOURCE[3])
+              setIsReferralSourceOther(option.value === REFERRAL_SOURCE[3])
               handleSelectChange(option)
             }}
             onBlur={e => handleTouched(e, "referralSource")}
@@ -1164,4 +1164,4 @@ const DevconGrantsForm = () => {
   )
 }
 
-export default DevconGrantsForm
+export default ApplicationForm
