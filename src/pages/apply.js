@@ -24,9 +24,13 @@ import * as styles from "../utils/styles"
 
 import { COUNTRY_OPTIONS, TIMEZONE_OPTIONS } from "../constants"
 
+const Container = styled.div`
+  max-width: ${styles.screenSizeXL};
+  margin: 0 auto;
+`
+
 const StyledForm = styled(Form)`
   margin: 2rem auto;
-  max-width: ${styles.screenSizeXL};
 `
 
 const StyledSelect = styled(Select)`
@@ -50,6 +54,11 @@ const ErrorDiv = styled.div`
 
 const StyledButton = styled(Button)`
   margin-bottom: 1rem;
+`
+
+const Title = styled(H2)`
+  margin-left: 1rem;
+  margin-right: 1rem;
 `
 
 const GENDER_TYPES = ["She/Her", "Him/His", "They/Them", "Other"]
@@ -369,12 +378,12 @@ const DevconGrantsForm = () => {
   const buttonText = formState.isPending ? "Submitting..." : "Submit"
 
   return (
-    <>
+    <Container>
       <Center>
-        <H2>
+        <Title>
           Thank you for your interest in the Fellowship Program. Please fill out
           the form below.
-        </H2>
+        </Title>
       </Center>
       <StyledForm onSubmit={handleSubmit}>
         <StyledLabel>
@@ -1149,7 +1158,7 @@ const DevconGrantsForm = () => {
           )}
         </div>
       </StyledForm>
-    </>
+    </Container>
   )
 }
 

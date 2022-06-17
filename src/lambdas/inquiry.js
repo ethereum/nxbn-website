@@ -78,7 +78,6 @@ export const handler = async function(event) {
     Ethereum_Knowledge__c: ethKnowledge,
     Resume_Link__c: resumeLink,
     Video_Link__c: introVideoLink,
-    Stage_of_Project__c: projectResearchIdea,
     Project_Name__c: projectName,
     Project_Description__c: projectDescription,
     Previous_Work__c: projectPreviousWork,
