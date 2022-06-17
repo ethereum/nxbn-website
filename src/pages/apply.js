@@ -66,8 +66,6 @@ const Title = styled(H2)`
   margin-right: 1rem;
 `
 
-const GENDER_TYPES = ["She/Her", "Him/His", "They/Them", "Other"]
-
 const YES_NO = ["Yes", "No"]
 
 const STAGE_OF_PROJECT = [
@@ -189,12 +187,6 @@ const ApplicationForm = () => {
   const [isReferralSourceOther, setIsReferralSourceOther] = useState(false)
 
   const { addToast } = useToasts()
-
-  const genderOptions = GENDER_TYPES.map(option => ({
-    value: option,
-    label: option,
-    name: "gender",
-  }))
 
   const countryOptions = COUNTRY_OPTIONS.map(({ value, label }) => ({
     value: label, // sending the label as value
@@ -501,11 +493,13 @@ const ApplicationForm = () => {
           <span>
             Which gender pronoun do you use? <Required>*</Required>
           </span>
-          <StyledSelect
-            options={genderOptions}
-            onChange={handleSelectChange}
-            onBlur={e => handleTouched(e, "gender")}
-            required
+          <Input
+            type="text"
+            name="gender"
+            value={formState.gender.value}
+            onChange={handleInputChange}
+            maxLength="20"
+            onBlur={handleTouched}
           />
           <ErrorDiv>
             {formState.gender.isTouched && !formState.gender.isValid && (
@@ -794,7 +788,7 @@ const ApplicationForm = () => {
             value={formState.projectDescription.value}
             onChange={handleInputChange}
             onBlur={handleTouched}
-            maxLength="32768"
+            maxLength="2000"
             required
           />
           <ErrorDiv>
