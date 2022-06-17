@@ -197,7 +197,7 @@ const ApplicationForm = () => {
   }))
 
   const countryOptions = COUNTRY_OPTIONS.map(({ value, label }) => ({
-    value,
+    value: label, // sending the label as value
     label,
     name: "country",
   }))
