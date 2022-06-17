@@ -15,6 +15,10 @@ import {
   Required,
   Center,
   H2,
+  RadioContainer,
+  RadioPrompt,
+  RadioInputContainer,
+  RadioLabel,
 } from "../components/SharedStyledComponents"
 
 import { colorRed } from "../utils/styles"
@@ -140,9 +144,6 @@ const UrlError = () => <ErrorMessage>Ensure link is a valid URL</ErrorMessage>
 const ApplicationForm = () => {
   const [formState, setFormState] = useState({
     isPending: false,
-    round: { value: "Road to Devcon Event Grants" },
-    category: { value: "Community & education" },
-    exploreOrProject: { value: "project" },
     // form fields
     firstName: { value: "", isTouched: false, isValid: false },
     lastName: { value: "", isTouched: false, isValid: false },
@@ -197,12 +198,6 @@ const ApplicationForm = () => {
 
   const { addToast } = useToasts()
 
-  const repeatApplicantOptions = YES_NO.map(option => ({
-    value: option,
-    label: option,
-    name: "repeatApplicant",
-  }))
-
   const genderOptions = GENDER_TYPES.map(option => ({
     value: option,
     label: option,
@@ -256,7 +251,11 @@ const ApplicationForm = () => {
   }
 
   const handleInputChange = event => {
-    const { value, name } = event.target
+    let { value, name } = event.target
+    if (name === "repeatApplicant") {
+      // convert this value into a boolean
+      value = value === YES_NO[0]
+    }
     const snapshot = { ...formState }
     snapshot[name].value = value
     snapshot[name].isValid = isFieldValid(name, value)
@@ -265,12 +264,6 @@ const ApplicationForm = () => {
 
   const handleSelectChange = selectedOption => {
     let { name, value } = selectedOption
-
-    if (name === "repeatApplicant") {
-      // convert this value into a boolean
-      value = value === YES_NO[0]
-    }
-
     const snapshot = { ...formState }
     snapshot[name].value = value
     snapshot[name].isValid = value !== "" || !requiredFields.includes(name)
@@ -287,9 +280,8 @@ const ApplicationForm = () => {
   const submitInquiry = async () => {
     setFormState({ ...formState, isPending: true })
     const stateFields = Object.keys(formState)
-    const formStateFields = stateFields.filter(field => formState[field].value)
     const formData = {}
-    for (const field of formStateFields) {
+    for (const field of stateFields) {
       formData[field] = formState[field].value
     }
 
@@ -1019,16 +1011,34 @@ const ApplicationForm = () => {
           </ErrorDiv>
         </StyledLabel>
         <StyledLabel>
-          <span>
-            Have you previously applied as a Fellow candidate or for any grants
-            at the Ethereum Foundation? <Required>*</Required>
-          </span>
-          <StyledSelect
-            options={repeatApplicantOptions}
-            onChange={handleSelectChange}
-            onBlur={e => handleTouched(e, "repeatApplicant")}
-            required
-          />
+          <RadioContainer>
+            <RadioPrompt>
+              Have you previously applied as a Fellow candidate or for any
+              grants at the Ethereum Foundation? <Required>*</Required>
+            </RadioPrompt>
+            <RadioInputContainer>
+              <RadioLabel>
+                <Input
+                  type="radio"
+                  name="repeatApplicant"
+                  value={YES_NO[0]}
+                  onChange={handleInputChange}
+                />
+                <div>{YES_NO[0]}</div>
+              </RadioLabel>
+            </RadioInputContainer>
+            <RadioInputContainer>
+              <RadioLabel>
+                <Input
+                  type="radio"
+                  name="repeatApplicant"
+                  value={YES_NO[1]}
+                  onChange={handleInputChange}
+                />
+                <div>{YES_NO[1]}</div>
+              </RadioLabel>
+            </RadioInputContainer>
+          </RadioContainer>
           <ErrorDiv>
             {formState.repeatApplicant.isTouched &&
               !formState.repeatApplicant.isValid && <RequiredError />}
