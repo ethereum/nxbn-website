@@ -839,15 +839,14 @@ const DevconGrantsForm = () => {
             you unique? <Required>*</Required>
           </span>
           <div>
-            <small>(max 300 words)</small>
+            <small>(max 1,000 characters)</small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="projectLeaderReasons"
-            value={formState.projectLeaderReasons?.value}
+            value={formState.projectLeaderReasons.value}
             onChange={handleInputChange}
-            maxLength="255"
             onBlur={handleTouched}
+            maxLength="1000"
             required
           />
           <ErrorDiv>
