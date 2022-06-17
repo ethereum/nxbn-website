@@ -56,7 +56,7 @@ const GENDER_TYPES = ["She/Her", "Him/His", "They/Them", "Other"]
 
 const YESNO = ["Yes", "No"]
 
-const PROJECTRESEARCHIDEA = [
+const STAGEOFPROJECT = [
   "Yes, I have a project/research being implemented",
   "Yes, I have a project idea but it is in its early stages",
   "No, I have an idea, but the project/research is not currently being implemented",
@@ -64,7 +64,7 @@ const PROJECTRESEARCHIDEA = [
 ]
 
 const REFERRALSOURCE = [
-  "Social media channels",
+  "Social media",
   "Blog post",
   "Through my network - someone shared the opportunity with me",
   "Other (please specify)",
@@ -80,12 +80,11 @@ const requiredFields = [
   "country",
   "timezone",
   "title",
-  "isAffiliated",
   "ethKnowledge",
   "resumeLink",
   "introVideoLink",
-  "projectResearchIdea",
-  "projectStatusOther",
+  "stageOfProject",
+  "applyingAsOther",
   "projectName",
   "projectDescription",
   "projectLeaderReasons",
@@ -102,17 +101,16 @@ const requiredFields = [
   "referralSourceIfOther",
   "firstReferenceContact",
   "secondReferenceContact",
-  "memeLink",
-  "memeDescription",
+  "meme",
 ]
 
 const emailFields = ["contactEmail"]
 
 const urlFields = [
+  "websiteOrg",
   "resumeLink",
   "introVideoLink",
   "projectPreviousWork",
-  "memeLink",
 ]
 
 const RequiredError = () => <ErrorMessage>Field is required</ErrorMessage>
@@ -147,13 +145,14 @@ const DevconGrantsForm = () => {
     timezone: { value: "", isTouched: false, isValid: false },
     socialNetworks: { value: "", isTouched: false, isValid: true }, // optional
     title: { value: "", isTouched: false, isValid: false },
-    isAffiliated: { value: "", isTouched: false, isValid: false },
     affiliatedOrg: { value: "", isTouched: false, isValid: true }, // optional
+    roleOrg: { value: "", isTouched: false, isValid: true }, // optional
+    websiteOrg: { value: "", isTouched: false, isValid: true }, // optional
     ethKnowledge: { value: "", isTouched: false, isValid: false },
     resumeLink: { value: "", isTouched: false, isValid: false },
     introVideoLink: { value: "", isTouched: false, isValid: false },
-    projectResearchIdea: { value: "", isTouched: false, isValid: false },
-    projectStatusOther: { value: "", isTouched: false, isValid: false },
+    stageOfProject: { value: "", isTouched: false, isValid: false },
+    applyingAsOther: { value: "", isTouched: false, isValid: false },
     projectName: { value: "", isTouched: false, isValid: false },
     projectDescription: { value: "", isTouched: false, isValid: false },
     projectPreviousWork: { value: "", isTouched: false, isValid: true }, // optional
@@ -172,20 +171,12 @@ const DevconGrantsForm = () => {
     additionalInfo: { value: "", isTouched: false, isValid: true }, // optional
     firstReferenceContact: { value: "", isTouched: false, isValid: false },
     secondReferenceContact: { value: "", isTouched: false, isValid: false },
-    memeLink: { value: "", isTouched: false, isValid: false },
-    memeDescription: { value: "", isTouched: false, isValid: false },
+    meme: { value: "", isTouched: false, isValid: false },
   })
 
-  const [isAffiliated, setIsAffiliated] = useState(false)
-  const [isProjectStatusOther, setIsProjectStatusOther] = useState(false)
+  const [isApplyingAsOther, setIsApplyingAsOther] = useState(false)
 
   const { addToast } = useToasts()
-
-  const isAffiliatedOptions = YESNO.map(option => ({
-    value: option,
-    label: option,
-    name: "isAffiliated",
-  }))
 
   const repeatApplicantOptions = YESNO.map(option => ({
     value: option,
@@ -211,10 +202,10 @@ const DevconGrantsForm = () => {
     name: "timezone",
   }))
 
-  const projectResearchIdeaOptions = PROJECTRESEARCHIDEA.map(option => ({
+  const stageOfProjectOptions = STAGEOFPROJECT.map(option => ({
     value: option,
     label: option,
-    name: "projectResearchIdea",
+    name: "stageOfProject",
   }))
 
   const referralSourceOptions = REFERRALSOURCE.map(option => ({
@@ -345,7 +336,7 @@ const DevconGrantsForm = () => {
 
     // Filter conditional fields if they are not selected
     const requiredFieldsWOConditionals = requiredFields.filter(field => {
-      if (field === "projectStatusOther" && !isProjectStatusOther) {
+      if (field === "applyingAsOther" && !isApplyingAsOther) {
         return false
       }
 
@@ -595,35 +586,55 @@ const DevconGrantsForm = () => {
         </StyledLabel>
         <StyledLabel>
           <span>
-            Are you affiliated with any organization(s)? <Required>*</Required>
+            What is your affiliated organization(s)? <Required>*</Required>
           </span>
-          <StyledSelect
-            options={isAffiliatedOptions}
-            onChange={option => {
-              setIsAffiliated(option.value === YESNO[0])
-              handleSelectChange(option)
-            }}
-            onBlur={e => handleTouched(e, "isAffiliated")}
-            required
-          />
-          <ErrorDiv>
-            {formState.isAffiliated.isTouched &&
-              !formState.isAffiliated.isValid && <RequiredError />}
-          </ErrorDiv>
-        </StyledLabel>
-        <StyledLabel display={isAffiliated}>
-          <span>
-            If yes, what is your role in the organization? And what is its
-            website?
-          </span>
+          <div>
+            <small>
+              What is the name of the organization you are affiliated with? If
+              you are not affiliated with an organization, simply put "N/A".
+            </small>
+          </div>
           <Input
             type="text"
             name="affiliatedOrg"
             value={formState.affiliatedOrg.value}
             onChange={handleInputChange}
-            maxLength="100"
+            maxLength="255"
             onBlur={handleTouched}
           />
+          <ErrorDiv>
+            {formState.affiliatedOrg.isTouched &&
+              !formState.affiliatedOrg.isValid && <RequiredError />}
+          </ErrorDiv>
+        </StyledLabel>
+        <StyledLabel>
+          <span>What is your role in your organization?</span>
+          <Input
+            type="text"
+            name="roleOrg"
+            value={formState.roleOrg.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+          />
+        </StyledLabel>
+        <StyledLabel>
+          <span>Organization website</span>
+          <div>
+            <small>What is your organization's website?</small>
+          </div>
+          <Input
+            type="text"
+            name="websiteOrg"
+            value={formState.websiteOrg.value}
+            onChange={handleInputChange}
+            maxLength="255"
+            onBlur={handleTouched}
+          />
+          <ErrorDiv>
+            {formState.websiteOrg.isTouched &&
+              !formState.websiteOrg.isValid && <UrlError />}
+          </ErrorDiv>
         </StyledLabel>
         <StyledLabel>
           <span>
@@ -633,17 +644,16 @@ const DevconGrantsForm = () => {
           <div>
             <small>
               We value sincerity. Please rest assured that your (lack) knowledge
-              about blockchain is not detrimental to becoming a Fellow. (max 300
-              words)
+              about blockchain is not detrimental to b1ecoming a Fellow. (max
+              1000 characters)
             </small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="ethKnowledge"
             value={formState.ethKnowledge.value}
             onChange={handleInputChange}
-            maxLength="100"
             onBlur={handleTouched}
+            maxLength="32768"
             required
           />
           <ErrorDiv>
@@ -674,15 +684,15 @@ const DevconGrantsForm = () => {
         </StyledLabel>
         <StyledLabel>
           <span>
-            Insert a link to a 3 minute video - In a 3 minute video, please let
-            us know about you and your project. Why are you interested in
-            Ethereum and the Ethereum Foundation Fellowship Program?{" "}
-            <Required>*</Required>
+            Please insert a link to a 3 minute video - In a 3 minute video,
+            please let us know about you and your project. Why are you
+            interested in Ethereum and the Ethereum Foundation Fellowship
+            Program? <Required>*</Required>
           </span>
           <div>
             <small>
               Please describe why you would like to be considered for the
-              Fellowship Program.
+              Fellowship Program. Please make sure the link is accesible.
             </small>
           </div>
           <Input
@@ -705,36 +715,36 @@ const DevconGrantsForm = () => {
             <Required>*</Required>
           </span>
           <StyledSelect
-            options={projectResearchIdeaOptions}
+            options={stageOfProjectOptions}
             onChange={option => {
               // is Other option selected?
-              setIsProjectStatusOther(option.value === PROJECTRESEARCHIDEA[3])
+              setIsApplyingAsOther(option.value === STAGEOFPROJECT[3])
               handleSelectChange(option)
             }}
-            onBlur={e => handleTouched(e, "projectResearchIdea")}
+            onBlur={e => handleTouched(e, "stageOfProject")}
             required
           />
           <ErrorDiv>
-            {formState.projectResearchIdea.isTouched &&
-              !formState.projectResearchIdea.isValid && <RequiredError />}
+            {formState.stageOfProject.isTouched &&
+              !formState.stageOfProject.isValid && <RequiredError />}
           </ErrorDiv>
         </StyledLabel>
-        <StyledLabel display={isProjectStatusOther}>
+        <StyledLabel display={isApplyingAsOther}>
           <span>
             If "Other" selected, please describe <Required>*</Required>
           </span>
           <Input
             type="text"
-            name="projectStatusOther"
-            value={formState.projectStatusOther.value}
+            name="applyingAsOther"
+            value={formState.applyingAsOther.value}
             onChange={handleInputChange}
             maxLength="255"
             onBlur={handleTouched}
             required
           />
           <ErrorDiv>
-            {formState.projectStatusOther.isTouched &&
-              !formState.projectStatusOther.isValid && <RequiredError />}
+            {formState.applyingAsOther.isTouched &&
+              !formState.applyingAsOther.isValid && <RequiredError />}
           </ErrorDiv>
         </StyledLabel>
         <StyledLabel>
@@ -883,14 +893,11 @@ const DevconGrantsForm = () => {
               goals of your project/research/idea.
             </small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="requestedAmount"
-            value={formState.requestedAmount?.value}
+            value={formState.requestedAmount.value}
             onChange={handleInputChange}
-            maxLength="20"
-            onBlur={handleTouched}
-            required
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.requestedAmount.isTouched &&
@@ -944,14 +951,11 @@ const DevconGrantsForm = () => {
           <div>
             <small>(max 300 words)</small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="projectReasons"
-            value={formState.projectReasons?.value}
+            value={formState.projectReasons.value}
             onChange={handleInputChange}
-            maxLength="255"
-            onBlur={handleTouched}
-            required
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.projectReasons.isTouched &&
@@ -966,14 +970,11 @@ const DevconGrantsForm = () => {
           <div>
             <small>(max 300 words)</small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="plansForBroaderCommunity"
-            value={formState.plansForBroaderCommunity?.value}
+            value={formState.plansForBroaderCommunity.value}
             onChange={handleInputChange}
-            maxLength="255"
-            onBlur={handleTouched}
-            required
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.plansForBroaderCommunity.isTouched &&
@@ -990,14 +991,11 @@ const DevconGrantsForm = () => {
           <div>
             <small>(max 300 words)</small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="plansForScaling"
-            value={formState.plansForScaling?.value}
+            value={formState.plansForScaling.value}
             onChange={handleInputChange}
-            maxLength="255"
-            onBlur={handleTouched}
-            required
+            maxLength="32768"
           />
           <ErrorDiv>
             {formState.plansForScaling.isTouched &&
@@ -1038,7 +1036,7 @@ const DevconGrantsForm = () => {
         </StyledLabel>
         <StyledLabel>
           <span>
-            Please specify the source <Required>*</Required>
+            If Other, please specify the source <Required>*</Required>
           </span>
           <Input
             type="text"
@@ -1116,39 +1114,19 @@ const DevconGrantsForm = () => {
         </StyledLabel>
         <StyledLabel>
           <span>
-            Insert a link to your favorite meme <Required>*</Required>
+            Insert a link to your favorite meme and describe why it's your
+            favorite. <Required>*</Required>
           </span>
-          <Input
-            type="text"
-            name="memeLink"
-            value={formState.memeLink?.value}
+          <TextArea
+            name="meme"
+            value={formState.meme.value}
             onChange={handleInputChange}
-            maxLength="255"
-            onBlur={handleTouched}
-            required
+            maxLength="32768"
           />
           <ErrorDiv>
-            {formState.memeLink.isTouched && !formState.memeLink.isValid && (
-              <UrlError />
+            {formState.meme.isTouched && !formState.meme.isValid && (
+              <RequiredError />
             )}
-          </ErrorDiv>
-        </StyledLabel>
-        <StyledLabel>
-          <span>
-            Describe why it’s your favorite <Required>*</Required>
-          </span>
-          <Input
-            type="text"
-            name="memeDescription"
-            value={formState.memeDescription?.value}
-            onChange={handleInputChange}
-            maxLength="255"
-            onBlur={handleTouched}
-            required
-          />
-          <ErrorDiv>
-            {formState.memeDescription.isTouched &&
-              !formState.memeDescription.isValid && <RequiredError />}
           </ErrorDiv>
         </StyledLabel>
         <div>
