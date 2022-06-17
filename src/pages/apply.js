@@ -649,8 +649,8 @@ const DevconGrantsForm = () => {
           <div>
             <small>
               We value sincerity. Please rest assured that your (lack) knowledge
-              about blockchain is not detrimental to b1ecoming a Fellow. (max
-              1000 characters)
+              about blockchain is not detrimental to becoming a Fellow. (max
+              1,000 characters)
             </small>
           </div>
           <TextArea
@@ -658,7 +658,7 @@ const DevconGrantsForm = () => {
             value={formState.ethKnowledge.value}
             onChange={handleInputChange}
             onBlur={handleTouched}
-            maxLength="32768"
+            maxLength="1000"
             required
           />
           <ErrorDiv>
@@ -853,14 +853,14 @@ const DevconGrantsForm = () => {
           <div>
             <small>
               How do you define and measure success for this
-              project/research/idea? (max 300 words)
+              project/research/idea? (max 1,000 characters)
             </small>
           </div>
           <TextArea
             name="projectGoals"
             value={formState.projectGoals.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.projectGoals.isTouched &&
@@ -874,13 +874,13 @@ const DevconGrantsForm = () => {
             after the fellowship? <Required>*</Required>
           </span>
           <div>
-            <small>(max 300 words)</small>
+            <small>(max 1,000 characters)</small>
           </div>
           <TextArea
             name="proposedTimeline"
             value={formState.proposedTimeline.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.proposedTimeline.isTouched &&
@@ -916,13 +916,13 @@ const DevconGrantsForm = () => {
             <Required>*</Required>
           </span>
           <div>
-            <small>(max 300 words)</small>
+            <small>(max 1,000 characters)</small>
           </div>
           <TextArea
             name="problemBeingSolved"
             value={formState.problemBeingSolved.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.requestedAmount.isTouched &&
@@ -935,13 +935,13 @@ const DevconGrantsForm = () => {
             community? <Required>*</Required>
           </span>
           <div>
-            <small>(max 300 words)</small>
+            <small>(max 1,000 characters)</small>
           </div>
           <TextArea
             name="isYourProjectPublicGood"
             value={formState.isYourProjectPublicGood.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.isYourProjectPublicGood.isTouched &&
@@ -954,13 +954,13 @@ const DevconGrantsForm = () => {
             choosing to use Ethereum? <Required>*</Required>
           </span>
           <div>
-            <small>(max 300 words)</small>
+            <small>(max 1,000 characters)</small>
           </div>
           <TextArea
             name="projectReasons"
             value={formState.projectReasons.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.projectReasons.isTouched &&
@@ -973,13 +973,13 @@ const DevconGrantsForm = () => {
             <Required>*</Required>
           </span>
           <div>
-            <small>(max 300 words)</small>
+            <small>(max 1,000 characters)</small>
           </div>
           <TextArea
             name="plansForBroaderCommunity"
             value={formState.plansForBroaderCommunity.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.plansForBroaderCommunity.isTouched &&
@@ -994,13 +994,13 @@ const DevconGrantsForm = () => {
             project/research/idea progress? <Required>*</Required>
           </span>
           <div>
-            <small>(max 300 words)</small>
+            <small>(max 1,000 characters)</small>
           </div>
           <TextArea
             name="plansForScaling"
             value={formState.plansForScaling.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.plansForScaling.isTouched &&
