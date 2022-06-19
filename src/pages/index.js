@@ -254,7 +254,7 @@ class IndexPage extends React.Component {
                       the next billion users,
                     {" "}
                     <span to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
-                      apply to become a fellow before July 11th 2022!
+                      apply to become a fellow before July 22nd 2022!
                     </span>
                   </p>
                 </Box>
