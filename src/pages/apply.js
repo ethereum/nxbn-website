@@ -491,7 +491,7 @@ const ApplicationForm = () => {
         </StyledLabel>
         <StyledLabel>
           <span>
-            Which gender pronoun do you use? <Required>*</Required>
+            How do you like to be referred to? <Required>*</Required>
           </span>
           <div>
             <small>
