@@ -809,14 +809,14 @@ const ApplicationForm = () => {
             open-source contributions you’ve made please include it.
           </span>
           <div>
-            <small>Any links for us to check out?</small>
+            <small>Any links for us to check out? (max 1,000 characters)</small>
           </div>
           <TextArea
             name="projectPreviousWork"
             value={formState.projectPreviousWork.value}
             onChange={handleInputChange}
             onBlur={handleTouched}
-            maxLength="32768"
+            maxLength="1000"
             required
           />
           <ErrorDiv>
@@ -1083,11 +1083,14 @@ const ApplicationForm = () => {
             Is there anything else you would like us to know or do you have any
             questions?
           </span>
+          <div>
+            <small>(max 1,000 characters)</small>
+          </div>
           <TextArea
             name="additionalInfo"
             value={formState.additionalInfo.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
         </StyledLabel>
         <StyledLabel>
@@ -1143,11 +1146,14 @@ const ApplicationForm = () => {
             Insert a link to your favorite meme and describe why it's your
             favorite. <Required>*</Required>
           </span>
+          <div>
+            <small>(max 1,000 characters)</small>
+          </div>
           <TextArea
             name="meme"
             value={formState.meme.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.meme.isTouched && !formState.meme.isValid && (
