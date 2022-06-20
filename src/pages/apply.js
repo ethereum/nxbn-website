@@ -173,7 +173,7 @@ const ApplicationForm = () => {
 
   const { addToast } = useToasts()
 
-  const countryOptions = COUNTRY_OPTIONS.map(({ value, label }) => ({
+  const countryOptions = COUNTRY_OPTIONS.map(({ label }) => ({
     value: label, // sending the label as value
     label,
     name: "country",
@@ -361,7 +361,7 @@ const ApplicationForm = () => {
           <Input
             type="text"
             name="firstName"
-            value={formState.firstName?.value}
+            value={formState.firstName.value}
             onChange={handleInputChange}
             maxLength="255"
             onBlur={handleTouched}
@@ -1027,7 +1027,7 @@ const ApplicationForm = () => {
           <Input
             type="text"
             name="referralSourceIfOther"
-            value={formState.referralSourceIfOther?.value}
+            value={formState.referralSourceIfOther.value}
             onChange={handleInputChange}
             maxLength="255"
             onBlur={handleTouched}
@@ -1088,7 +1088,7 @@ const ApplicationForm = () => {
           </div>
           <TextArea
             name="secondReferenceContact"
-            value={formState.secondReferenceContact?.value}
+            value={formState.secondReferenceContact.value}
             onChange={handleInputChange}
             onBlur={handleTouched}
             maxLength="255"
