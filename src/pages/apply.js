@@ -1060,16 +1060,15 @@ const ApplicationForm = () => {
           <div>
             <small>
               Please provide a referee contact information, including name,
-              email address, relationship
+              email address, relationship (max 1,000 characters)
             </small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="firstReferenceContact"
-            value={formState.firstReferenceContact?.value}
+            value={formState.firstReferenceContact.value}
             onChange={handleInputChange}
-            maxLength="20"
             onBlur={handleTouched}
+            maxLength="1000"
             required
           />
           <ErrorDiv>
@@ -1084,16 +1083,15 @@ const ApplicationForm = () => {
           <div>
             <small>
               Please provide a referee contact information, including name,
-              email address, relationship
+              email address, relationship (max 1,000 characters)
             </small>
           </div>
-          <Input
-            type="text"
+          <TextArea
             name="secondReferenceContact"
             value={formState.secondReferenceContact?.value}
             onChange={handleInputChange}
-            maxLength="20"
             onBlur={handleTouched}
+            maxLength="1000"
             required
           />
           <ErrorDiv>
