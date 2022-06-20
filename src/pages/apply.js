@@ -18,7 +18,6 @@ import {
   RadioInputContainer,
   RadioLabel,
 } from "../components/SharedStyledComponents"
-import { screenSizeL } from "../utils/styles"
 
 import { colorRed } from "../utils/styles"
 import validateEmail from "../utils/validateEmail"
@@ -34,7 +33,7 @@ const Container = styled.div`
 
 const StyledForm = styled(Form)`
   margin: 2rem auto;
-  max-width: ${screenSizeL};
+  max-width: ${styles.screenSizeM};
 `
 
 const StyledSelect = styled(Select)`
