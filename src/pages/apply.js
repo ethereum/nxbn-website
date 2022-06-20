@@ -71,7 +71,7 @@ const YES_NO = ["Yes", "No"]
 const STAGE_OF_PROJECT = [
   "Yes, I have a project/research being implemented",
   "Yes, I have a project idea but it is in its early stages",
-  "No, I have an idea, but the project/research is not currently being implemented",
+  "Yes, I have an idea, but the project/research is not currently being implemented",
   "Other",
 ]
 
@@ -493,6 +493,11 @@ const ApplicationForm = () => {
           <span>
             Which gender pronoun do you use? <Required>*</Required>
           </span>
+          <div>
+            <small>
+              He/she/they/other option that you wish to elaborate on
+            </small>
+          </div>
           <Input
             type="text"
             name="gender"
@@ -889,14 +894,14 @@ const ApplicationForm = () => {
           <div>
             <small>
               Please describe ways the Ethereum Foundation can best support the
-              goals of your project/research/idea.
+              goals of your project/research/idea. (max 1,000 characters)
             </small>
           </div>
           <TextArea
             name="requestedAmount"
             value={formState.requestedAmount.value}
             onChange={handleInputChange}
-            maxLength="32768"
+            maxLength="1000"
           />
           <ErrorDiv>
             {formState.requestedAmount.isTouched &&
