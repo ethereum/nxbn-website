@@ -33,7 +33,10 @@ const Container = styled.div`
 
 const StyledForm = styled(Form)`
   margin: 2rem auto;
-  max-width: ${styles.screenSizeM};
+  max-width: ${styles.screenSizeL};
+  @media (max-width: ${styles.screenSizeXL}) {
+    max-width: ${styles.screenSizeM};
+  }
 `
 
 const StyledSelect = styled(Select)`
