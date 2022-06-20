@@ -110,6 +110,7 @@ const MobileNavBackground = styled(motion.div)`
 const navItems = [
   { to: "/", text: "Home" },
   { to: "/faq/", text: "FAQ" },
+  { to: "/apply/", text: "Apply" },
 ]
 
 const Nav = ({ hasShadow }) => {

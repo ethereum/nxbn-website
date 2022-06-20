@@ -76,120 +76,6 @@ const FAQPage = () => {
         </PageHeader>
         <PageBody>
           <FakeLink onClick={toggleAll}>{toggleAllText}</FakeLink>
-          <H2>About Ethereum</H2>
-          <HR />
-          <AccordionSection
-            key={0}
-            i={0}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is Ethereum?"
-          >
-            <p>
-              Ethereum is a global, open-source platform for decentralized
-              applications. On Ethereum, you can write code that controls
-              digital value, runs exactly as programmed, and is accessible
-              anywhere in the world.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={1}
-            i={1}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Where can I learn more about Ethereum?"
-          >
-            <p>
-              If you wish to find out more about Ethereum, please visit{" "}
-              <Link to="https://ethereum.org">Ethereum.org</Link>.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={2}
-            i={2}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is the Ethereum Foundation?"
-          >
-            <p>
-              The Ethereum Foundation (EF) is a non-profit organization
-              dedicated to supporting Ethereum and related technologies. As part
-              of a large community of organizations, individuals, and companies
-              that support the network, our mission is to do what only we can to
-              help ensure success for Ethereum in the long-term. The
-              Foundation's role is to allocate resources to critical projects,
-              to be a valued voice within the Ethereum ecosystem, and to
-              advocate for Ethereum to the outside world.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={3}
-            i={3}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How is Ethereum currently being used?"
-          >
-            <p>
-              Ethereum is used for impactful cases such as identity solutions,
-              international record-keeping & decentralized finance, as well as
-              more entertaining cases such as collectibles and games. If you are
-              interested in learning more, please visit{" "}
-              <Link to="https://ethereum.org">Ethereum.org</Link>.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={4}
-            i={4}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="Why would someone use Ethereum?"
-          >
-            <p>
-              Ethereum is a decentralized system, which means it is not
-              controlled by any single governing entity. Ethereum opens the door
-              to a global financial system where an Internet connection is all
-              you need to access applications, products and services that
-              operate in a trustless manner. Anyone can interact with the
-              Ethereum network and participate in this digital economy, without
-              the need for third parties and without the risk of censorship.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={5}
-            i={5}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is Ethereum not able to solve?"
-          >
-            <p>
-              While Ethereum can reindustrialize everything from voting to
-              supply-chain tracing, not all applications will be compatible with
-              a decentralized approach, and that’s okay.
-            </p>
-          </AccordionSection>
-          <HR />
-          <AccordionSection
-            key={6}
-            i={6}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="How is Ethereum different from Bitcoin?"
-          >
-            <p>
-              Bitcoin is a blockchain technology that serves strictly as a
-              currency. Ethereum is also a blockchain technology, but its code
-              allows it to serve as an open-source platform and operating
-              system, on top of which other applications can be built. These
-              decentralized applications built on Ethereum have been coined
-              "dApps".
-            </p>
-          </AccordionSection>
-          <HR />
           <H2>About the Program</H2>
           <HR />
 
@@ -201,11 +87,21 @@ const FAQPage = () => {
             headerText="What is the Ethereum Foundation Fellowship Program?"
           >
             <p>
-              The Ethereum Foundation Fellowship Program is a fellowship wherein
-              the Ethereum Foundation provides changemakers around the world
-              with the expertise, resources, and support necessary to
-              incorporate Ethereum into their development work in developing
-              countries.
+            The Ethereum Foundation Fellowship Program is focused on identifying
+            and supporting unique and talented individuals helping to enable
+            Ethereum's relevance and breaking down barriers to entry for people
+            and communities not currently part of the Ethereum ecosystem.
+            </p>
+            <p>
+            Fellows will be part of a small forum for leaders who, during the course of six months,
+            drive their own projects that address a particular enabler or blocker for Ethereum
+            becoming a public good that acts as a foundational layer for other public goods.
+            </p>
+            <p>
+            While there are some cohort-wide activities, it is a self-directed, self-driven program.
+            Depending on the needs of each Fellow and their project, different support is provided,
+            including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network.
+            Fellows’ work will be highlighted to showcase the impact and value of Ethereum and its community.
             </p>
           </AccordionSection>
 
@@ -215,13 +111,18 @@ const FAQPage = () => {
             i={18}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="Who is a Fellow?"
+            headerText="What kinds of projects qualify?"
           >
             <p>
-              Our selection of Fellows is not based not on blockchain or
-              Ethereum knowledge, but on the individual’s impact, leadership and
-              entrepreneurship abilities. Fellows must commit to the formal
-              program duration of 9 months.
+              A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem.
+              It doesn't have to directly integrate with Ethereum to qualify, but needs to
+              be on-balance 'good' for the ecosystem and future Ethereum community.
+              </p>
+              <p>
+              The project can be just an idea, in early stages, or already ongoing.
+              It can be building an application, research, community building, or organizational program/initiative.
+              Whatever it is, the project must enable the flourishing of regions, populations, or communities
+              that are underrepresented in the existing Ethereum ecosystem.
             </p>
           </AccordionSection>
 
@@ -233,7 +134,9 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Program Duration: April 12, 2021 - December 31, 2021</p>
+            <p>Program Duration: September 2022 to March 2023</p>
+
+            <p>Fellows will also be invited to travel to {" "} <Link to="https://devcon.org/"> Devcon6 on October 11-14 in Bogotá, Colombia</Link>{" "} </p>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -244,28 +147,13 @@ const FAQPage = () => {
             headerText="What is the duration of the Fellowship program?"
           >
             <p>
-              The Fellowship Program is 9 months, however Fellows are expected
-              to contribute to the Ethereum community and as alumni of the
+              The Fellowship Program is 6 months. However Fellows are expected
+              to contribute to the Ethereum community as alumni of the
               program beyond the official program dates.
             </p>
           </AccordionSection>
           <HR />
 
-          <AccordionSection
-            key={11}
-            i={11}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What kinds of challenges should I expect throughout this Fellowship?"
-          >
-            <p>
-              Throughout the Fellowship, you will be challenged to learn & grow
-              with the help of our Mentors. We understand that there will be an
-              initial learning curve, and we’re here to help you in every step
-              of the journey.
-            </p>
-          </AccordionSection>
-          <HR />
           <AccordionSection
             key={12}
             i={12}
@@ -274,14 +162,15 @@ const FAQPage = () => {
             headerText="What is the time commitment?"
           >
             <p>
-              The Fellowship is not a full-time commitment, but active and
-              engaged participation is key to creating a meaningful Fellowship
-              experience. Fellows commit to:
+              Fellows are not required to work on their project full-time, but Fellows commit to:
             </p>
             <ul>
-              <li>Spend at least 10 hours per week on their project</li>
-              <li>Document their journey (including monthly reports)</li>
-              <li>Participate in cohort-wide activities on a monthly basis</li>
+              <li>Defining goals for their project and driving it forward in a measurable way
+              during the 6 month program period.</li>
+              <li>Documenting their journey, and writing
+              a reflective blogpost after the fellowship is complete</li>
+              <li>Participating in cohort-wide activities on a monthly basis</li>
+              <li>Showcase their projects/research in relevant local, regional, or global conferences</li>
             </ul>
           </AccordionSection>
           <HR />
@@ -342,20 +231,94 @@ const FAQPage = () => {
               <li>Exposure</li>
             </ul>
           </AccordionSection>
-
           <HR />
+
           <AccordionSection
-            key={17}
-            i={17}
+            key={13}
+            i={13}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What is a changemaker?"
+            headerText="What makes a good Fellow? Do I need to be a developer? Do I need to have an organization?"
           >
             <p>
-              A changemaker is someone (or a group of people) who has already
-              created impact in their region, or someone who has a project that
-              works to solve social, economic and environmental challenges with
-              Ethereum.
+              There is no formal criteria for becoming a Fellow. All applicants
+              will be reviewed based on the content of the materials submitted.
+              Final candidates will be asked for a short follow-up interview following selection.
+            </p>
+            <p>
+            Applications from all technical and non-technical backgrounds are
+            encouraged. Some familiarity with web3/Ethereum concepts is expected,
+            but not required.
+            </p>
+            <p>
+            Fellows need not be affiliated with any organization or team. Independent individuals are welcome to apply.
+            </p>
+          </AccordionSection>
+          <HR />
+
+          <H2>About Ethereum</H2>
+          <HR />
+          <AccordionSection
+            key={0}
+            i={0}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is Ethereum?"
+          >
+            <p>
+              Ethereum is a general-purpose blockchain that has become
+              a global, open-source platform for decentralized
+              applications. On Ethereum, you can write code that controls
+              digital value, runs exactly as programmed, and is accessible
+              anywhere in the world.
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={1}
+            i={1}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="Where can I learn more about Ethereum?"
+          >
+            <p>
+              If you wish to find out more about Ethereum, please visit{" "}
+              <Link to="https://ethereum.org">Ethereum.org</Link>.
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={2}
+            i={2}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is the Ethereum Foundation?"
+          >
+            <p>
+              The Ethereum Foundation (EF) is a non-profit organization
+              dedicated to supporting Ethereum and related technologies. As part
+              of a large community of organizations, individuals, and companies
+              that support the network, our mission is to do what only we can to
+              help ensure success for Ethereum in the long-term. The
+              Foundation's role is to allocate resources to critical projects,
+              to be a valued voice within the Ethereum ecosystem, and to
+              advocate for Ethereum to the outside world.
+            </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={3}
+            i={3}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="How is Ethereum currently being used?"
+          >
+            <p>
+              Ethereum is used for impactful cases such as identity solutions,
+              international record-keeping & decentralized finance, as well as
+              more entertaining cases such as collectibles and games. If you are
+              interested in learning more, please visit{" "}
+              <Link to="https://ethereum.org">Ethereum.org</Link>.
             </p>
           </AccordionSection>
           <HR />

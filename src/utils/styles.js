@@ -17,6 +17,7 @@ export const colorGreenLight = "#91ae56"
 export const colorGreenLighter = "#9dce66"
 export const colorGreenLightest = "#b5d665"
 export const colorWhite = "#FFFFFF"
+export const colorRed = "#FF0000"
 
 // screens
 export const screenSizeXS = "320px"
