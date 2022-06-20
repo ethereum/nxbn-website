@@ -118,12 +118,7 @@ const requiredFields = [
 
 const emailFields = ["contactEmail"]
 
-const urlFields = [
-  "websiteOrg",
-  "resumeLink",
-  "introVideoLink",
-  "projectPreviousWork",
-]
+const urlFields = ["websiteOrg", "resumeLink", "introVideoLink"]
 
 const RequiredError = () => <ErrorMessage>Field is required</ErrorMessage>
 const EmailError = () => (
@@ -418,7 +413,7 @@ const ApplicationForm = () => {
               onChange={handleCheckBoxChange}
               required
             />
-            Is the point of contact also the authorised signatory?
+            Is the point of contact also the authorized signatory?
           </Checkbox>
         </StyledLabel>
         <StyledLabel>
@@ -505,6 +500,7 @@ const ApplicationForm = () => {
             onChange={handleInputChange}
             maxLength="20"
             onBlur={handleTouched}
+            required
           />
           <ErrorDiv>
             {formState.gender.isTouched && !formState.gender.isValid && (
@@ -817,12 +813,7 @@ const ApplicationForm = () => {
             onChange={handleInputChange}
             onBlur={handleTouched}
             maxLength="1000"
-            required
           />
-          <ErrorDiv>
-            {formState.projectPreviousWork.isTouched &&
-              !formState.projectPreviousWork.isValid && <UrlError />}
-          </ErrorDiv>
         </StyledLabel>
         <StyledLabel>
           <span>
@@ -859,7 +850,9 @@ const ApplicationForm = () => {
             name="projectGoals"
             value={formState.projectGoals.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.projectGoals.isTouched &&
@@ -879,7 +872,9 @@ const ApplicationForm = () => {
             name="proposedTimeline"
             value={formState.proposedTimeline.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.proposedTimeline.isTouched &&
@@ -901,7 +896,9 @@ const ApplicationForm = () => {
             name="requestedAmount"
             value={formState.requestedAmount.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.requestedAmount.isTouched &&
@@ -921,11 +918,13 @@ const ApplicationForm = () => {
             name="problemBeingSolved"
             value={formState.problemBeingSolved.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
-            {formState.requestedAmount.isTouched &&
-              !formState.requestedAmount.isValid && <RequiredError />}
+            {formState.problemBeingSolved.isTouched &&
+              !formState.problemBeingSolved.isValid && <RequiredError />}
           </ErrorDiv>
         </StyledLabel>
         <StyledLabel>
@@ -940,7 +939,9 @@ const ApplicationForm = () => {
             name="isYourProjectPublicGood"
             value={formState.isYourProjectPublicGood.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.isYourProjectPublicGood.isTouched &&
@@ -959,7 +960,9 @@ const ApplicationForm = () => {
             name="projectReasons"
             value={formState.projectReasons.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.projectReasons.isTouched &&
@@ -978,7 +981,9 @@ const ApplicationForm = () => {
             name="plansForBroaderCommunity"
             value={formState.plansForBroaderCommunity.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.plansForBroaderCommunity.isTouched &&
@@ -999,7 +1004,9 @@ const ApplicationForm = () => {
             name="plansForScaling"
             value={formState.plansForScaling.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.plansForScaling.isTouched &&
@@ -1019,6 +1026,8 @@ const ApplicationForm = () => {
                   name="repeatApplicant"
                   value={YES_NO[0]}
                   onChange={handleInputChange}
+                  onBlur={handleTouched}
+                  required
                 />
                 <div>{YES_NO[0]}</div>
               </RadioLabel>
@@ -1030,6 +1039,7 @@ const ApplicationForm = () => {
                   name="repeatApplicant"
                   value={YES_NO[1]}
                   onChange={handleInputChange}
+                  onBlur={handleTouched}
                 />
                 <div>{YES_NO[1]}</div>
               </RadioLabel>
@@ -1153,7 +1163,9 @@ const ApplicationForm = () => {
             name="meme"
             value={formState.meme.value}
             onChange={handleInputChange}
+            onBlur={handleTouched}
             maxLength="1000"
+            required
           />
           <ErrorDiv>
             {formState.meme.isTouched && !formState.meme.isValid && (
