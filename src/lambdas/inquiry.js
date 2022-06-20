@@ -9,8 +9,6 @@ export const handler = async function(event) {
   const {
     firstName,
     lastName,
-    POCisAuthorisedSignatory,
-    authorisedSignatoryInformation,
     contactEmail,
     phone,
     gender,
@@ -62,8 +60,6 @@ export const handler = async function(event) {
   const form = {
     FirstName: firstName,
     LastName: lastName,
-    POC_is_authorised_signatory__c: POCisAuthorisedSignatory,
-    Authorised_Signatory_Information__c: authorisedSignatoryInformation,
     Email: contactEmail,
     Phone: phone,
     Gender_Pronoun__c: gender,

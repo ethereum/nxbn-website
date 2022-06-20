@@ -95,8 +95,6 @@ const REFERRAL_SOURCE = [
 
 const requiredFields = [
   "lastName",
-  "POCisAuthorisedSignatory",
-  "authorisedSignatoryInformation",
   "contactEmail",
   "phone",
   "gender",
@@ -143,16 +141,6 @@ const ApplicationForm = () => {
     // form fields
     firstName: { value: "", isTouched: false, isValid: false },
     lastName: { value: "", isTouched: false, isValid: false },
-    POCisAuthorisedSignatory: {
-      value: true,
-      isTouched: false,
-      isValid: true,
-    },
-    authorisedSignatoryInformation: {
-      value: "",
-      isTouched: false,
-      isValid: false,
-    },
     contactEmail: { value: "", isTouched: false, isValid: false },
     phone: { value: "", isTouched: false, isValid: false },
     gender: { value: "", isTouched: false, isValid: false },
@@ -413,46 +401,6 @@ const ApplicationForm = () => {
             {formState.lastName.isTouched && !formState.lastName.isValid && (
               <RequiredError />
             )}
-          </ErrorDiv>
-        </StyledLabel>
-        <StyledLabel>
-          <Checkbox>
-            <CheckboxInput
-              type="checkbox"
-              name="POCisAuthorisedSignatory"
-              defaultChecked={formState.POCisAuthorisedSignatory.value}
-              onChange={handleCheckBoxChange}
-              required
-            />
-            Is the point of contact also the authorized signatory?
-          </Checkbox>
-        </StyledLabel>
-        <StyledLabel>
-          <span>
-            Name, job title, and email address of the authorised signatory{" "}
-            <Required>*</Required>
-          </span>
-          <div>
-            <small>
-              (e.g. John Smith, CEO, john@mycompany.com. This is the person who
-              will sign the contract. They must be someone who can sign
-              contracts on behalf of the entity.)
-            </small>
-          </div>
-          <Input
-            type="text"
-            name="authorisedSignatoryInformation"
-            value={formState.authorisedSignatoryInformation.value}
-            onChange={handleInputChange}
-            maxLength="255"
-            onBlur={handleTouched}
-            required
-          />
-          <ErrorDiv>
-            {formState.authorisedSignatoryInformation.isTouched &&
-              !formState.authorisedSignatoryInformation.isValid && (
-                <RequiredError />
-              )}
           </ErrorDiv>
         </StyledLabel>
         <StyledLabel>
