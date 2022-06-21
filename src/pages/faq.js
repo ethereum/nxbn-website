@@ -87,21 +87,26 @@ const FAQPage = () => {
             headerText="What is the Ethereum Foundation Fellowship Program?"
           >
             <p>
-            The Ethereum Foundation Fellowship Program is focused on identifying
-            and supporting unique and talented individuals helping to enable
-            Ethereum's relevance and breaking down barriers to entry for people
-            and communities not currently part of the Ethereum ecosystem.
+              The Ethereum Foundation Fellowship Program is focused on
+              identifying and supporting unique and talented individuals helping
+              to enable Ethereum's relevance and breaking down barriers to entry
+              for people and communities not currently part of the Ethereum
+              ecosystem.
             </p>
             <p>
-            Fellows will be part of a small forum for leaders who, during the course of six months,
-            drive their own projects that address a particular enabler or blocker for Ethereum
-            becoming a public good that acts as a foundational layer for other public goods.
+              Fellows will be part of a small forum for leaders who, during the
+              course of six months, drive their own projects that address a
+              particular enabler or blocker for Ethereum becoming a public good
+              that acts as a foundational layer for other public goods.
             </p>
             <p>
-            While there are some cohort-wide activities, it is a self-directed, self-driven program.
-            Depending on the needs of each Fellow and their project, different support is provided,
-            including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network.
-            Fellows’ work will be highlighted to showcase the impact and value of Ethereum and its community.
+              While there are some cohort-wide activities, it is a
+              self-directed, self-driven program. Depending on the needs of each
+              Fellow and their project, different support is provided, including
+              financial support, PR opportunities, mentorship, technical advice,
+              and access to the Ethereum Foundation network. Fellows’ work will
+              be highlighted to showcase the impact and value of Ethereum and
+              its community.
             </p>
           </AccordionSection>
 
@@ -114,15 +119,18 @@ const FAQPage = () => {
             headerText="What kinds of projects qualify?"
           >
             <p>
-              A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem.
-              It doesn't have to directly integrate with Ethereum to qualify, but needs to
-              be on-balance 'good' for the ecosystem and future Ethereum community.
-              </p>
-              <p>
-              The project can be just an idea, in early stages, or already ongoing.
-              It can be building an application, research, community building, or organizational program/initiative.
-              Whatever it is, the project must enable the flourishing of regions, populations, or communities
-              that are underrepresented in the existing Ethereum ecosystem.
+              A Fellow candidate must have a project that is mutually
+              cooperative with the Ethereum ecosystem. It doesn't have to
+              directly integrate with Ethereum to qualify, but needs to be
+              on-balance 'good' for the ecosystem and future Ethereum community.
+            </p>
+            <p>
+              The project can be just an idea, in early stages, or already
+              ongoing. It can be building an application, research, community
+              building, or organizational program/initiative. Whatever it is,
+              the project must enable the flourishing of regions, populations,
+              or communities that are underrepresented in the existing Ethereum
+              ecosystem.
             </p>
           </AccordionSection>
 
@@ -136,7 +144,13 @@ const FAQPage = () => {
           >
             <p>Program Duration: September 2022 to March 2023</p>
 
-            <p>Fellows will also be invited to travel to {" "} <Link to="https://devcon.org/"> Devcon6 on October 11-14 in Bogotá, Colombia</Link>{" "} </p>
+            <p>
+              Fellows will also be invited to travel to{" "}
+              <Link to="https://devcon.org/">
+                {" "}
+                Devcon6 on October 11-14 in Bogotá, Colombia
+              </Link>{" "}
+            </p>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -148,8 +162,8 @@ const FAQPage = () => {
           >
             <p>
               The Fellowship Program is 6 months. However Fellows are expected
-              to contribute to the Ethereum community as alumni of the
-              program beyond the official program dates.
+              to contribute to the Ethereum community as alumni of the program
+              beyond the official program dates.
             </p>
           </AccordionSection>
           <HR />
@@ -162,15 +176,25 @@ const FAQPage = () => {
             headerText="What is the time commitment?"
           >
             <p>
-              Fellows are not required to work on their project full-time, but Fellows commit to:
+              Fellows are not required to work on their project full-time, but
+              Fellows commit to:
             </p>
             <ul>
-              <li>Defining goals for their project and driving it forward in a measurable way
-              during the 6 month program period.</li>
-              <li>Documenting their journey, and writing
-              a reflective blogpost after the fellowship is complete</li>
-              <li>Participating in cohort-wide activities on a monthly basis</li>
-              <li>Showcase their projects/research in relevant local, regional, or global conferences</li>
+              <li>
+                Defining goals for their project and driving it forward in a
+                measurable way during the 6 month program period.
+              </li>
+              <li>
+                Documenting their journey, and writing a reflective blogpost
+                after the fellowship is complete
+              </li>
+              <li>
+                Participating in cohort-wide activities on a monthly basis
+              </li>
+              <li>
+                Showcase their projects/research in relevant local, regional, or
+                global conferences
+              </li>
             </ul>
           </AccordionSection>
           <HR />
@@ -196,14 +220,14 @@ const FAQPage = () => {
               </li>
               <li>
                 Accelerating the{" "}
-                <Link to="https://os.city/en/">
+                <Link to="https://os.city/">
                   meaningful adoption of blockchain in governments
                 </Link>{" "}
                 with a focus on the Latin America region
               </li>
               <li>
                 Tackling{" "}
-                <Link to="http://www.brac.net/>">blockchain strategy</Link>{" "}
+                <Link to="https://www.brac.net/>">blockchain strategy</Link>{" "}
                 within the world’s largest development agency
               </li>
               <li>
@@ -243,15 +267,17 @@ const FAQPage = () => {
             <p>
               There is no formal criteria for becoming a Fellow. All applicants
               will be reviewed based on the content of the materials submitted.
-              Final candidates will be asked for a short follow-up interview following selection.
+              Final candidates will be asked for a short follow-up interview
+              following selection.
             </p>
             <p>
-            Applications from all technical and non-technical backgrounds are
-            encouraged. Some familiarity with web3/Ethereum concepts is expected,
-            but not required.
+              Applications from all technical and non-technical backgrounds are
+              encouraged. Some familiarity with web3/Ethereum concepts is
+              expected, but not required.
             </p>
             <p>
-            Fellows need not be affiliated with any organization or team. Independent individuals are welcome to apply.
+              Fellows need not be affiliated with any organization or team.
+              Independent individuals are welcome to apply.
             </p>
           </AccordionSection>
           <HR />
@@ -266,11 +292,10 @@ const FAQPage = () => {
             headerText="What is Ethereum?"
           >
             <p>
-              Ethereum is a general-purpose blockchain that has become
-              a global, open-source platform for decentralized
-              applications. On Ethereum, you can write code that controls
-              digital value, runs exactly as programmed, and is accessible
-              anywhere in the world.
+              Ethereum is a general-purpose blockchain that has become a global,
+              open-source platform for decentralized applications. On Ethereum,
+              you can write code that controls digital value, runs exactly as
+              programmed, and is accessible anywhere in the world.
             </p>
           </AccordionSection>
           <HR />

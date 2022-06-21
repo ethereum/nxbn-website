@@ -229,19 +229,23 @@ class IndexPage extends React.Component {
             <Copy id="welcome">
               <Section>
                 <p>
-                The Ethereum Foundation Fellowship Program is a small forum for leaders who, during the course of 6 months,
-                drive their own projects that use Ethereum as a public good destined to help billions of people coordinate and thrive.
-
+                  The Ethereum Foundation Fellowship Program is a small forum
+                  for leaders who, during the course of 6 months, drive their
+                  own projects that use Ethereum as a public good destined to
+                  help billions of people coordinate and thrive.
                 </p>
                 <p>
                   Ethereum has already reached <dfn>millions</dfn> of people,
-                  but to reach the next <dfn>billion</dfn>,
-                  Ethereum must overcome many gaps in representation across cultures, nationalities, and economic classes.
-                   </p>
-                   <p>
-                   The Fellowship Program is about bridging these gaps by identifying and supporting unique and talented individuals
-                   helping to enable Ethereum’s relevance and breaking down barriers to entry for those underrepresented people and communities
-                   who will become the future of web3.
+                  but to reach the next <dfn>billion</dfn>, Ethereum must
+                  overcome many gaps in representation across cultures,
+                  nationalities, and economic classes.
+                </p>
+                <p>
+                  The Fellowship Program is about bridging these gaps by
+                  identifying and supporting unique and talented individuals
+                  helping to enable Ethereum’s relevance and breaking down
+                  barriers to entry for those underrepresented people and
+                  communities who will become the future of web3.
                 </p>
               </Section>
               <Link to="/apply/">
@@ -250,9 +254,8 @@ class IndexPage extends React.Component {
                     Now accepting applications to the 2022 Fellowship Program
                   </p>
                   <p className="teaser">
-                      If you are working on a project that can help Ethereum reach
-                      the next billion users,
-                    {" "}
+                    If you are working on a project that can help Ethereum reach
+                    the next billion users,{" "}
                     <span to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
                       apply to become a fellow before July 17th 2022!
                     </span>
@@ -266,28 +269,31 @@ class IndexPage extends React.Component {
                 </Left>
 
                 <p>
-                A Fellow is a leader committed to their own project that helps Ethereum
-                become a tool of and for the next billion. Their project could be
-                a decentralized app, a piece of research, a community building initiative,
-                or something else entirely. Some projects might be part of a lifelong quest of the Fellow;
-                others could be a brand new idea that is just getting started.
+                  A Fellow is a leader committed to their own project that helps
+                  Ethereum become a tool of and for the next billion. Their
+                  project could be a decentralized app, a piece of research, a
+                  community building initiative, or something else entirely.
+                  Some projects might be part of a lifelong quest of the Fellow;
+                  others could be a brand new idea that is just getting started.
                 </p>
                 <p>
-                Whatever the project, whomever the Fellow, the Fellowship Program is focused
-                on public goods that enable the flourishing of populations, communities,
-                or individuals under-represented in the Ethereum ecosystem today.
+                  Whatever the project, whomever the Fellow, the Fellowship
+                  Program is focused on public goods that enable the flourishing
+                  of populations, communities, or individuals under-represented
+                  in the Ethereum ecosystem today.
                 </p>
                 <p>
-                Got additional questions not answered in {" "}<Link to="/faq/">the FAQs</Link>?
-                Send us a message through the "contact us" link at the bottom of the page.
+                  Got additional questions not answered in{" "}
+                  <Link to="/faq/">the FAQs</Link>? Send us a message through
+                  the "contact us" link at the bottom of the page.
                 </p>
               </BigSection>
 
               <Section>
-              <Left>
-                <H2>Fellowship Program Alumni</H2>
-              </Left>
-              <FellowsMap>
+                <Left>
+                  <H2>Fellowship Program Alumni</H2>
+                </Left>
+                <FellowsMap>
                   <StaticImage
                     src="../images/EF-FP-world-map.jpg"
                     alt="Fellows World Map"
@@ -296,25 +302,28 @@ class IndexPage extends React.Component {
                   />
                 </FellowsMap>
                 <Profile>
-                <StaticImage
-                  className="img"
-                  src="../images/EF-FP-headshots-Benson.jpg"
-                  alt="Fellow: Benson Njuguna"
-                  placeholder="blurred"
-                  objectFit="contain"
-                  layout="fixed"
-                  width="350"
-                />
+                  <StaticImage
+                    className="img"
+                    src="../images/EF-FP-headshots-Benson.jpg"
+                    alt="Fellow: Benson Njuguna"
+                    placeholder="blurred"
+                    objectFit="contain"
+                    layout="fixed"
+                    width="350"
+                  />
                   <p className="description">
                     <b>Benson Njuguna</b>{" "}
                     <Link to="https://acreafrica.com/">(Acre Africa)</Link>
-                    worked to implement blockchain solutions to a
-                    microinsurance product that protects thousands of
-                    small-scale farmers in Kenya from extreme weather events.
-                    His project tested and showcased Ethereum’s potential in
-                    enabling the viability and sustainability of products and
-                    services that target the bottom of the wealth pyramid.
-                    {" "}<Link to="https://blog.ethereum.org/2021/12/07/fellows-spotlight-on-kenya/"> Read more about Benson's work here.</Link>
+                    worked to implement blockchain solutions to a microinsurance
+                    product that protects thousands of small-scale farmers in
+                    Kenya from extreme weather events. His project tested and
+                    showcased Ethereum’s potential in enabling the viability and
+                    sustainability of products and services that target the
+                    bottom of the wealth pyramid.{" "}
+                    <Link to="https://blog.ethereum.org/2021/12/07/fellows-spotlight-on-kenya/">
+                      {" "}
+                      Read more about Benson's work here.
+                    </Link>
                   </p>
                 </Profile>
                 <Profile>
@@ -329,14 +338,18 @@ class IndexPage extends React.Component {
                   />
                   <p className="description">
                     <b>Chuy Cepeda</b>{" "}
-                    <Link to="https://os.city/en/">(OS.City)</Link> worked
-                    with municipal and national governments to create an
-                    Ethereum wallet app in Spanish for citizens, with a vision to
-                    one-day hold government-issued documents (like permits and IDs).
+                    <Link to="https://os.city/">(OS.City)</Link> worked with
+                    municipal and national governments to create an Ethereum
+                    wallet app in Spanish for citizens, with a vision to one-day
+                    hold government-issued documents (like permits and IDs).
                     During the Fellowship Program, he and his team worked with
-                    the government of Argentina and created strategies to advance
-                    the meaningful adoption of blockchain in the public sector
-                    in Latin America. {" "}<Link to="https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity/"> Read more about Chuy's work here.</Link>
+                    the government of Argentina and created strategies to
+                    advance the meaningful adoption of blockchain in the public
+                    sector in Latin America.{" "}
+                    <Link to="https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity/">
+                      {" "}
+                      Read more about Chuy's work here.
+                    </Link>
                   </p>
                 </Profile>
                 <Profile>
@@ -351,10 +364,10 @@ class IndexPage extends React.Component {
                   />
                   <p className="description">
                     <b>Kuldeep Bandhu Aryal</b>{" "}
-                    <Link to="http://www.brac.net/">(BRAC)</Link> sought to build a
-                    blockchain and crypto strategy for BRAC - the world’s
-                    largest NGO based in Bangladesh that annually serves over
-                    100 million people. His project - which also involves
+                    <Link to="http://www.brac.net/">(BRAC)</Link> sought to
+                    build a blockchain and crypto strategy for BRAC - the
+                    world’s largest NGO based in Bangladesh that annually serves
+                    over 100 million people. His project - which also involves
                     multiple experiments using blockchain - could serve as a
                     model for other social enterprises and the development
                     sector at large.
@@ -373,8 +386,8 @@ class IndexPage extends React.Component {
                   <p className="description">
                     <b>Naroa Zurutuza</b>{" "}
                     <Link to="https://gigaconnect.org/">(Giga)</Link> explored
-                    Ethereum-based solutions as part of Giga's effort to
-                    connect every school to the internet. By helping to provide today’s
+                    Ethereum-based solutions as part of Giga's effort to connect
+                    every school to the internet. By helping to provide today’s
                     most important public good to billions of currently
                     unconnected people, Naroa envisioned many roles that
                     blockchain can play, from increasing accountability of
@@ -384,22 +397,17 @@ class IndexPage extends React.Component {
                 </Profile>
               </Section>
 
-
-
               <Center>
                 <H2 id="contact">We want to hear from you!</H2>
                 <p>
-                  If you would like to become an EF fellow in the 2022 cohort,
-                  {" "}
+                  If you would like to become an EF fellow in the 2022 cohort,{" "}
                   <Link to="/apply/"> Apply Now!</Link>{" "}
                 </p>
-                <p>
-                For all other inquires, click below to contact us
-                </p>
+                <p>For all other inquires, click below to contact us</p>
               </Center>
 
               <ButtonContainer>
-                <ButtonLink to="https://https://effellowship.paperform.co/">
+                <ButtonLink to="https://effellowship.paperform.co/">
                   Contact Us
                 </ButtonLink>
               </ButtonContainer>
