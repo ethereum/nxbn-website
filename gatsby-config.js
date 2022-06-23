@@ -5,7 +5,7 @@ const matomoUrl = "https://matomo.ethereum.org"
 module.exports = {
   siteMetadata: {
     title: `Ethereum Foundation Fellowship Program`,
-    description: `Ethereum Foundation’s social impact initiative for Changemakers. Solve social, economic & environmental challenges in developing countries and emerging markets.`,
+    description: `Ethereum Foundation’s impact initiative for changemakers. Make Ethereum a public good for the next Billion.`,
     url: siteUrl,
     siteUrl, // for sitemap generation
     author: `@ethereum`,
