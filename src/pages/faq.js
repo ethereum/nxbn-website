@@ -227,7 +227,7 @@ const FAQPage = () => {
               </li>
               <li>
                 Tackling{" "}
-                <Link to="https://www.brac.net/>">blockchain strategy</Link>{" "}
+                <Link to="https://www.brac.net/">blockchain strategy</Link>{" "}
                 within the world’s largest development agency
               </li>
               <li>
@@ -360,7 +360,7 @@ const FAQPage = () => {
           >
             <p>
               For interview requests, please fill out{" "}
-              <Link to="https://bit.ly/3nt9Sm1">this form</Link>.
+              <Link to="https://effellowship.paperform.co/">this form</Link>.
             </p>
           </AccordionSection>
           <HR />
