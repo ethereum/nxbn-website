@@ -73,7 +73,7 @@ const YES_NO = ["Yes", "No"]
 const STAGE_OF_PROJECT = [
   "Yes, I have a project/research being implemented",
   "Yes, I have a project idea but it is in its early stages",
-  "Yes, I have an idea, but the project/research is not currently being implemented",
+  "Yes, I have an idea, but the project/research is not implemented",
   "Other",
 ]
 
