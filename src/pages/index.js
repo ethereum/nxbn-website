@@ -397,7 +397,7 @@ class IndexPage extends React.Component {
                 </Profile>
               </Section>
 
-	    <Link to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
+	    <Link to="https://blog.ethereum.org/2022/06/21/fellowship-cohort-2-applications-roundup/">
                 <Box>
                   <p className="subtitle">Our Blog</p>
                   <p className="title">
