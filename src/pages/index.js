@@ -397,6 +397,26 @@ class IndexPage extends React.Component {
                 </Profile>
               </Section>
 
+	    <Link to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
+                <Box>
+                  <p className="subtitle">Our Blog</p>
+                  <p className="title">
+                    Fellowship Program: Cohort #2 Applications Open
+                  </p>
+                  <p className="author">
+                    Posted by Team Next Billion on June 21, 2022
+                  </p>
+                  <p className="teaser">
+                    The developers, designers, artists, farmers, bankers, students, politicians, entertainers and even lawyers who use and depend on 
+	    	Ethereum create a living ecosystem coordinating around a core protocol,
+	    evolving and re-wiring relationships of trust, hopefully in the interest of public good...{" "}
+                    <span to="https://blog.ethereum.org/2022/06/21/fellowship-cohort-2-applications-roundup/">
+                      Read more
+                    </span>
+                  </p>
+                </Box>
+              </Link>
+
               <Center>
                 <H2 id="contact">We want to hear from you!</H2>
                 <p>
