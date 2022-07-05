@@ -288,7 +288,7 @@ class IndexPage extends React.Component {
 	    		Join our Office Hours session on July 13th at 15:00 CEST! Office Hours are a chance to connect 
 	    		directly with Team Next Billion and clarify any questions you may have about the Fellowship Program
 	    		or any doubts you have in filling out the application form. Anyone considering applying for 
-	    		The fellowship program is welcome to join. You can {" "}
+	    		the Fellowship program is welcome to join. You can {" "}
 	    		<Link to="https://fp-officehours.paperform.co/">sign up here.</Link>
 	    	</p>
               </BigSection>
