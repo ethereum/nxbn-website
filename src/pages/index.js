@@ -285,7 +285,7 @@ class IndexPage extends React.Component {
                 <p>
                   Got additional questions not answered in{" "}
                   <Link to="/faq/">the FAQs</Link>? 
-	    		Join our Office Hours session on July 13th at 15:00 CEST! Office Hours are a chance to connect 
+	    		Join our Office Hours session on July 12th at 15:00 CEST! Office Hours are a chance to connect 
 	    		directly with Team Next Billion and clarify any questions you may have about the Fellowship Program
 	    		or any doubts you have in filling out the application form. Anyone considering applying for 
 	    		the Fellowship program is welcome to join. You can {" "}
