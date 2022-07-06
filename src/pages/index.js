@@ -284,9 +284,13 @@ class IndexPage extends React.Component {
                 </p>
                 <p>
                   Got additional questions not answered in{" "}
-                  <Link to="/faq/">the FAQs</Link>? Send us a message through
-                  the "contact us" link at the bottom of the page.
-                </p>
+                  <Link to="/faq/">the FAQs</Link>? 
+	    		Join our Office Hours session on July 13th at 15:00 CEST! Office Hours are a chance to connect 
+	    		directly with Team Next Billion and clarify any questions you may have about the Fellowship Program
+	    		or any doubts you have in filling out the application form. Anyone considering applying for 
+	    		the Fellowship program is welcome to join. You can {" "}
+	    		<Link to="https://fp-officehours.paperform.co/">sign up here.</Link>
+	    	</p>
               </BigSection>
 
               <Section>
