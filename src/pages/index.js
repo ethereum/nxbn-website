@@ -251,13 +251,13 @@ class IndexPage extends React.Component {
               <Link to="/apply/">
                 <Box>
                   <p className="title">
-                    Now accepting applications to the 2022 Fellowship Program
+                    DEADLINE EXTENDED for applications to the 2022 Fellowship Program
                   </p>
                   <p className="teaser">
                     If you are working on a project that can help Ethereum reach
                     the next billion users,{" "}
                     <span to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
-                      apply to become a fellow before July 17th 2022!
+                      apply to become a fellow before July 24th 2022!
                     </span>
                   </p>
                 </Box>
