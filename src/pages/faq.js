@@ -133,9 +133,22 @@ const FAQPage = () => {
               ecosystem.
             </p>
           </AccordionSection>
-
           <HR />
-          <AccordionSection
+
+           <AccordionSection
+            key={20}
+            i={20}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="I am building on an L2. Should I apply?"
+          >
+            <p>
+	  	Yes, Layer 2 projects are eligible.
+            </p>
+          </AccordionSection>
+          <HR />
+
+         <AccordionSection
             key={8}
             i={8}
             expanded={expanded}
@@ -313,6 +326,21 @@ const FAQPage = () => {
           </AccordionSection>
           <HR />
           <AccordionSection
+            key={23}
+            i={23}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is Ethereum?"
+          >
+            <p>
+              Ethereum is a general-purpose blockchain that has become a global,
+              open-source platform for decentralized applications. On Ethereum,
+              you can write code that controls digital value, runs exactly as
+              programmed, and is accessible anywhere in the world.
+            </p>
+          </AccordionSection>
+          <HR />
+ 	  <AccordionSection
             key={2}
             i={2}
             expanded={expanded}
@@ -345,6 +373,22 @@ const FAQPage = () => {
               interested in learning more, please visit{" "}
               <Link to="https://ethereum.org">Ethereum.org</Link>.
             </p>
+          </AccordionSection>
+          <HR />
+      <AccordionSection
+            key={4}
+            i={4}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="What is a public good?"
+          >
+          <p>
+  	  <Link to="https://en.wikipedia.org/wiki/Public_good_(economics)">
+  	  The full definition of a public good is complicated.</Link> 
+  	  But in the context of Ethereum and the Fellowship Program, we can say that 
+  	  public goods solve a problem or benefit a community by providing value that can be 
+  	  used by anyone, and that can be reproduced/replicated in a wide variety of places/contexts. 
+	  </p>
           </AccordionSection>
           <HR />
 
