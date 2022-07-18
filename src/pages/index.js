@@ -282,6 +282,15 @@ class IndexPage extends React.Component {
                   of populations, communities, or individuals under-represented
                   in the Ethereum ecosystem today.
                 </p>
+	    <p>
+                  Got additional questions not answered in{" "}
+                  <Link to="/faq/">the FAQs</Link>?
+	    		Join our Office Hours session on July 19th at 06:00 UTC! Office Hours are a chance to connect
+	    		directly with Team Next Billion and clarify any questions you may have about the Fellowship Program
+	    		or any doubts you have in filling out the application form. Anyone considering applying for
+	    		the Fellowship program is welcome to join. You can {" "}
+	    		<Link to="https://fp-officehours.paperform.co/">sign up here.</Link>
+	    	</p>
               </BigSection>
 
               <Section>
