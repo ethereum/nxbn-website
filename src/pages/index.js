@@ -248,21 +248,7 @@ class IndexPage extends React.Component {
                   communities who will become the future of web3.
                 </p>
               </Section>
-              <Link to="/apply/">
-                <Box>
-                  <p className="title">
-                    DEADLINE EXTENDED for applications to the 2022 Fellowship Program
-                  </p>
-                  <p className="teaser">
-                    If you are working on a project that can help Ethereum reach
-                    the next billion users,{" "}
-                    <span to="https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/">
-                      apply to become a fellow before July 24th 2022!
-                    </span>
-                  </p>
-                </Box>
-              </Link>
-
+              
               <BigSection>
                 <Left>
                   <H2>Eligibility of Projects and Candidates</H2>
@@ -415,8 +401,7 @@ class IndexPage extends React.Component {
               <Center>
                 <H2 id="contact">We want to hear from you!</H2>
                 <p>
-                  If you would like to become an EF fellow in the 2022 cohort,{" "}
-                  <Link to="/apply/"> Apply Now!</Link>{" "}
+                Applications are now closed for the 2022 cohort.
                 </p>
                 <p>For all other inquires, click below to contact us</p>
               </Center>
