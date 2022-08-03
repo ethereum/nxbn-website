@@ -248,7 +248,7 @@ class IndexPage extends React.Component {
                   communities who will become the future of web3.
                 </p>
               </Section>
-              
+
               <BigSection>
                 <Left>
                   <H2>Eligibility of Projects and Candidates</H2>
@@ -294,7 +294,7 @@ class IndexPage extends React.Component {
                   />
                   <p className="description">
                     <b>Benson Njuguna</b>{" "}
-                    <Link to="https://acreafrica.com/">(Acre Africa)</Link>
+                    <Link to="https://acreafrica.com/">(Acre Africa)</Link>{" "}
                     worked to implement blockchain solutions to a microinsurance
                     product that protects thousands of small-scale farmers in
                     Kenya from extreme weather events. His project tested and
@@ -378,7 +378,7 @@ class IndexPage extends React.Component {
                 </Profile>
               </Section>
 
-	    <Link to="https://blog.ethereum.org/2022/06/21/fellowship-cohort-2-applications-roundup/">
+              <Link to="https://blog.ethereum.org/2022/06/21/fellowship-cohort-2-applications-roundup/">
                 <Box>
                   <p className="subtitle">Our Blog</p>
                   <p className="title">
@@ -388,9 +388,12 @@ class IndexPage extends React.Component {
                     Posted by Team Next Billion on June 21, 2022
                   </p>
                   <p className="teaser">
-                    The developers, designers, artists, farmers, bankers, students, politicians, entertainers and even lawyers who use and depend on 
-	    	Ethereum create a living ecosystem coordinating around a core protocol,
-	    evolving and re-wiring relationships of trust, hopefully in the interest of public good...{" "}
+                    The developers, designers, artists, farmers, bankers,
+                    students, politicians, entertainers and even lawyers who use
+                    and depend on Ethereum create a living ecosystem
+                    coordinating around a core protocol, evolving and re-wiring
+                    relationships of trust, hopefully in the interest of public
+                    good...{" "}
                     <span to="https://blog.ethereum.org/2022/06/21/fellowship-cohort-2-applications-roundup/">
                       Read more
                     </span>
@@ -400,9 +403,7 @@ class IndexPage extends React.Component {
 
               <Center>
                 <H2 id="contact">We want to hear from you!</H2>
-                <p>
-                Applications are now closed for the 2022 cohort.
-                </p>
+                <p>Applications are now closed for the 2022 cohort.</p>
                 <p>For all other inquires, click below to contact us</p>
               </Center>
 
