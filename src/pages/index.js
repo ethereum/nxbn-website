@@ -330,29 +330,6 @@ class IndexPage extends React.Component {
                 <Profile>
                   <StaticImage
                     className="img"
-                    src="../images/headshots/geoffrey.png"
-                    alt="Fellow: Geoffrey See"
-                    placeholder="blurred"
-                    objectFit="contain"
-                    layout="fixed"
-                    width="300"
-                  />
-                  <p className="description">
-                    <b>Geoffrey See </b>
-                    is co-founder of startup 
-                    {" "}
-                    <Link to="https://www.poko.fund/">Poko. </Link>
-                     He has extensive experience working on the legal and regulatory side of the blockchain, 
-                     as well as in an entrepreneurial education initiative and the burgeoning field of DAOs. 
-                     For his fellowship project, Geoffrey will be exploring the interface 
-                     between DAOs and governments, specifically how governments looking to 
-                     create new frameworks and legislation can learn about the unique needs 
-                     and capabilities of decentralized organizations.
-                  </p>
-                </Profile>
-                <Profile>
-                  <StaticImage
-                    className="img"
                     src="../images/headshots/karam.png"
                     alt="Fellow: Karam Alhamad"
                     placeholder="blurred"
@@ -433,7 +410,103 @@ class IndexPage extends React.Component {
                     and how the scouts might employ novel coordination mechanisms for grassroots organization.
                   </p>
                 </Profile>
-
+                <Center>
+                  <H2>Fellowship Program Alumni</H2>
+                </Center>
+                <Profile>
+                  <StaticImage
+                    className="img"
+                    src="../images/EF-FP-headshots-Benson.jpg"
+                    alt="Fellow: Benson Njuguna"
+                    placeholder="blurred"
+                    objectFit="contain"
+                    layout="fixed"
+                    width="350"
+                  />
+                  <p className="description">
+                    <b>Benson Njuguna</b>{" "}
+                    <Link to="https://acreafrica.com/">(Acre Africa)</Link>{" "}
+                    worked to implement blockchain solutions to a microinsurance
+                    product that protects thousands of small-scale farmers in
+                    Kenya from extreme weather events. His project tested and
+                    showcased Ethereum’s potential in enabling the viability and
+                    sustainability of products and services that target the
+                    bottom of the wealth pyramid.{" "}
+                    <Link to="https://blog.ethereum.org/2021/12/07/fellows-spotlight-on-kenya/">
+                      {" "}
+                      Read more about Benson's work here.
+                    </Link>
+                  </p>
+                </Profile>
+                <Profile>
+                  <StaticImage
+                    className="img"
+                    src="../images/EF-FP-headshots-Chuy.jpg"
+                    alt="Fellow: Chuy Cepada"
+                    placeholder="blurred"
+                    objectFit="contain"
+                    layout="fixed"
+                    width="350"
+                  />
+                  <p className="description">
+                    <b>Chuy Cepeda</b>{" "}
+                    <Link to="https://os.city/">(OS.City)</Link> worked with
+                    municipal and national governments to create an Ethereum
+                    wallet app in Spanish for citizens, with a vision to one-day
+                    hold government-issued documents (like permits and IDs).
+                    During the Fellowship Program, he and his team worked with
+                    the government of Argentina and created strategies to
+                    advance the meaningful adoption of blockchain in the public
+                    sector in Latin America.{" "}
+                    <Link to="https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity/">
+                      {" "}
+                      Read more about Chuy's work here.
+                    </Link>
+                  </p>
+                </Profile>
+                <Profile>
+                  <StaticImage
+                    className="img"
+                    src="../images/EF-FP-headshots-Kuldeep.jpg"
+                    alt="Fellow: Kuldeep Bandhu Aryal"
+                    placeholder="blurred"
+                    objectFit="contain"
+                    layout="fixed"
+                    width="350"
+                  />
+                  <p className="description">
+                    <b>Kuldeep Bandhu Aryal</b>{" "}
+                    <Link to="http://www.brac.net/">(BRAC)</Link> sought to
+                    build a blockchain and crypto strategy for BRAC - the
+                    world’s largest NGO based in Bangladesh that annually serves
+                    over 100 million people. His project - which also involves
+                    multiple experiments using blockchain - could serve as a
+                    model for other social enterprises and the development
+                    sector at large.
+                  </p>
+                </Profile>
+                <Profile>
+                  <StaticImage
+                    className="img"
+                    src="../images/EF-FP-headshots-Naroa.jpg"
+                    alt="Fellow: Naroa Zurutuza"
+                    placeholder="blurred"
+                    objectFit="contain"
+                    layout="fixed"
+                    width="350"
+                  />
+                  <p className="description">
+                    <b>Naroa Zurutuza</b>{" "}
+                    <Link to="https://gigaconnect.org/">(Giga)</Link> explored
+                    Ethereum-based solutions as part of Giga's effort to connect
+                    every school to the internet. By helping to provide today’s
+                    most important public good to billions of currently
+                    unconnected people, Naroa envisioned many roles that
+                    blockchain can play, from increasing accountability of
+                    service providers and financing connectivity infrastructures
+                    to an access point to the global economy and marketplaces.
+                  </p>
+                </Profile>
               </Section>
 
               <Link to="https://blog.ethereum.org/2022/11/07/devcon-vi-scholars-wrapup">
