@@ -330,29 +330,6 @@ class IndexPage extends React.Component {
                 <Profile>
                   <StaticImage
                     className="img"
-                    src="../images/headshots/geoffrey.png"
-                    alt="Fellow: Geoffrey See"
-                    placeholder="blurred"
-                    objectFit="contain"
-                    layout="fixed"
-                    width="300"
-                  />
-                  <p className="description">
-                    <b>Geoffrey See </b>
-                    is co-founder of startup 
-                    {" "}
-                    <Link to="https://www.poko.fund/">Poko. </Link>
-                     He has extensive experience working on the legal and regulatory side of the blockchain, 
-                     as well as in an entrepreneurial education initiative and the burgeoning field of DAOs. 
-                     For his fellowship project, Geoffrey will be exploring the interface 
-                     between DAOs and governments, specifically how governments looking to 
-                     create new frameworks and legislation can learn about the unique needs 
-                     and capabilities of decentralized organizations.
-                  </p>
-                </Profile>
-                <Profile>
-                  <StaticImage
-                    className="img"
                     src="../images/headshots/karam.png"
                     alt="Fellow: Karam Alhamad"
                     placeholder="blurred"
