@@ -17,7 +17,7 @@ const StyledNav = styled(motion.nav)`
   z-index: 100;
   background: ${styles.colorWhite};
   width: calc(100% - 30px); /* account for Border */
-  padding: 15px 15px 10px 15px;
+  padding: 15px 15px 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,8 +148,10 @@ const Nav = ({ hasShadow }) => {
       {/* Desktop */}
       <NavLinks>
         {navItems.map((item, idx) => {
+          const url = typeof window !== 'undefined' ? window.location.pathname : '';
+
           return (
-            <NavLink to={item.to} key={idx}>
+            <NavLink to={item.to} key={idx} active={url === item.to} isPartiallyActive={false}>
               {item.text}
             </NavLink>
           )

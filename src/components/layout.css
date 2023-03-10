@@ -1,5 +1,5 @@
 html {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
@@ -202,7 +202,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: "Work Sans", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
