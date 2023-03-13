@@ -44,9 +44,9 @@ class IndexPage extends React.Component {
     return (
       <>
         <PageMetadata
-          title="Ethereum Foundation Fellowship Program"
+          title="Ethereum Next Billion Fellowship Program"
           useTitleTemplate={false}
-          description="Ethereum Foundation’s impact initiative for changemakers. Make Ethereum a public good for the next Billion."
+          description="Make Ethereum a public good for the next Billion."
         />
         <div>
           <HeroIllustration>
@@ -61,6 +61,10 @@ class IndexPage extends React.Component {
           <PageBody>
             <Copy id="welcome">
               <Section>
+                <blockquote cite="William Gibson">"The Future is already here; it’s just not very evenly distributed yet</blockquote>
+                <p>
+                  The future is hard to predict, but glimpses of it can be found in the stories of extraordinary individuals using new tools to solve today's most challenging problems. 
+                </p>
                 <p>
                   The Ethereum Foundation Fellowship Program is a small forum
                   for leaders who, during the course of 6 months, drive their
@@ -68,17 +72,13 @@ class IndexPage extends React.Component {
                   help billions of people coordinate and thrive.
                 </p>
                 <p>
+
+                </p>
+                <p>
                   Ethereum has already reached <dfn>millions</dfn> of people,
                   but to reach the next <dfn>billion</dfn>, Ethereum must
                   overcome many gaps in representation across cultures,
                   nationalities, and economic classes.
-                </p>
-                <p>
-                  The Fellowship Program is about bridging these gaps by
-                  identifying and supporting unique and talented individuals
-                  helping to enable Ethereum’s relevance and breaking down
-                  barriers to entry for those underrepresented people and
-                  communities who will become the future of web3.
                 </p>
               </Section>
 
