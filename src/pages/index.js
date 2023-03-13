@@ -61,25 +61,28 @@ class IndexPage extends React.Component {
           <PageBody>
             <Copy id="welcome">
               <Section>
-                <blockquote cite="William Gibson">"The Future is already here; it’s just not very evenly distributed yet</blockquote>
                 <p>
-                  The future is hard to predict, but glimpses of it can be found in the stories of extraordinary individuals using new tools to solve today's most challenging problems. 
+                  We believe that it's possible to use Ethereum to improve 
+                  the lives of billions of people. But we need more than just 
+                  technology -- we need new ways of thinking about how humans 
+                  interact with each other and with their environment. 
+                  We need new stories to tell, new visions for a better future, 
+                  and new ways of expressing our values in code.
                 </p>
                 <p>
-                  The Ethereum Foundation Fellowship Program is a small forum
-                  for leaders who, during the course of 6 months, drive their
-                  own projects that use Ethereum as a public good destined to
-                  help billions of people coordinate and thrive.
+                  The Next Billion Fellowship at the Ethereum Foundation is 
+                  a search for stories. Stories that inspire us to focus on 
+                  the important things, to find balance and fairness in the 
+                  way we go about solving our problems, to push deeper into 
+                  the mysteries of human cooperation.
                 </p>
                 <p>
-
+                  During the course of 6 months, Fellows receive support to 
+                  drive their own projects, and tell their own stories of
+                  Ethereum-enabled public goods destined to help billions
+                  coordinate and thrive. 
                 </p>
-                <p>
-                  Ethereum has already reached <dfn>millions</dfn> of people,
-                  but to reach the next <dfn>billion</dfn>, Ethereum must
-                  overcome many gaps in representation across cultures,
-                  nationalities, and economic classes.
-                </p>
+                
               </Section>
 
               <Section>
@@ -90,23 +93,31 @@ class IndexPage extends React.Component {
                 <p>
                   A Fellow is a leader committed to their own project that helps
                   Ethereum become a tool of and for the next billion. Their
-                  project could be a decentralized app, a piece of research, a
-                  community building initiative, or something else entirely.
-                  Some projects might be part of a lifelong quest of the Fellow;
-                  others could be a brand new idea that is just getting started.
+                  project could be a decentralized app, a piece of research, an 
+                  organizational initiative, or something else entirely.
+                  There are no strict requirements for Next Billion Fellowship 
+                  projects, save one: earnesty.
                 </p>
                 <p>
-                  Whatever the project, whomever the Fellow, the Fellowship
-                  Program is focused on public goods that enable the flourishing
-                  of populations, communities, or individuals under-represented
-                  in the Ethereum ecosystem today.
+                  Whatever the project, whomever the Fellow, the program seeks to 
+                  enable the flourishing of populations, communities, or 
+                  individuals under-represented in the Ethereum ecosystem today. 
+                  The Fellowship is neither the beginning nor the end of 
+                  a Fellow's journey, but it may provide the support needed to 
+                  encourage more ambitious, long-term goals and mindset. 
                 </p>
               </Section>
             </Copy>
 
             <Apply>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                We are looking for changemakers, visionaries, pragmatists, and creatives working on ambitious projects.
+              </p>
+              <p>
+              Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
+              </p>
+              <p>
+                Applications will be considered until the program begins in late June, 2023.
               </p>
               <ButtonLink to="https://effellowship.paperform.co/">
                 Apply

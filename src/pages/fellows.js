@@ -105,10 +105,9 @@ const Fellows = () => {
             <p className="description">
               <b>Abhishek Bhattacharya </b>is a co-founder at
               {" "}<Link to="https://bru.finance/">Brú Finance</Link>{" "}.
-              Brú Finance works with a partner organization called Whrrl,
-              which provides harvest-time loans to 18,000+ farmers across India.
-              Whrrl uses a permissioned private blockchain, but for his Fellowship project,
-              Abhishek will be overseeing and learning from the launch of a new system to
+              Brú Finance is a new platform that aims to provide harvest-time loans 
+              for farmers in India. For his Fellowship project,
+              Abhishek will be overseeing and learning from the launch of Brú's platform to
               a public chain that utilizes decentralized liquidity for the farmers,
               and exploring what this system could look like at a global scale.
             </p>
