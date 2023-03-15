@@ -326,11 +326,11 @@ const FAQPage = () => {
                 1st Session: April 5th @ 2pm UTC
               </li>
               <li>2nd Session: April 19th at 6am UTC</li>
+            </ul>
+            <p>Please <Link to="https://officehours-effp3.paperform.co">submit your questions</Link> for Office Hours in advance</p>
             <p>
               For any general questions, you can also write to us <Link to="https://effellowship.paperform.co/">by filling out this form</Link>
             </p>
-            </ul>
-            <p>Please <Link to="https://officehours-effp3.paperform.co">submit your questions</Link> for Office Hours in advance</p>
 
           </AccordionSection>
           <HR />
