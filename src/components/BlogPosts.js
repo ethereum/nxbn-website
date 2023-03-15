@@ -1,26 +1,39 @@
 import React from 'react';
 import { Center, H2 } from "./SharedStyledComponents"
 import styled from "styled-components"
+import { screenSizeIntM } from '../utils/styles';
 
 const BlogContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: min(700px, 100%);
+  width: min(1200px, 100%);
   padding: 0px 32px;
   overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+
+  @media (max-width: ${screenSizeIntM}px) {
+    grid-template-columns: 1fr;
+  }
 `
 
-const BlogPost = styled.div`
-  flex-basis: 400px;
-  flex-shrink: 1;
-  margin-bottom: 12px;
+const BlogPost = styled.a`
+  position: relative;
+
+  &:hover {
+    p {
+      &:first-of-type {
+        text-decoration: underline;
+      }
+    }
+  }
 `;
 
 const Image = styled.img`
   border-radius: 10px;
   margin-bottom: 8px;
+  object-fit: cover;
+  aspect-ratio: 400 / 200;
 `;
 
 const PostTitle = styled.p`
@@ -61,7 +74,7 @@ const BlogPosts = (props) => {
           const monthName = monthNames[date.getMonth()]
 
           return (
-            <BlogPost key={blog.id}>
+            <BlogPost href={blog.permaLink} key={blog.id}>
               <Image src={blog.imageUrl} alt={`Blog post image for post titled ${blog.title}`} />
               <PostTitle>{blog.title}</PostTitle>
               <PostDate>{monthName} {day}, {year}</PostDate>

@@ -7,15 +7,56 @@ import {
   Center,
   H2,
 } from "../components/SharedStyledComponents"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
+import horzLogo from "../images/fellowship-program-logo.svg"
+import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import BlogPosts from "../components/BlogPosts"
+import { screenSizeS, colorGrayLight } from "../utils/styles"
 import { graphql } from "gatsby"
 
+const Header = styled.h3`
+  text-align: center;
+  margin-top: 8px;
+  color: ${colorGrayLight};
+  @media (max-width: 340px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+`
+
+const HorizontalLogo = styled.img`
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  @media (max-width: ${screenSizeS}) {
+    display: none;
+  }
+`
+
+const VerticalLogo = styled.img`
+  display: none;
+  @media (max-width: ${screenSizeS}) {
+    /* width: 200px; */
+    display: block;
+    margin: 2rem auto;
+  }
+  @media (max-width: 340px) {
+    width: 140px;
+    display: block;
+    margin: 2rem auto;
+  }
+`
+
 const HeroIllustration = styled.div`
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background: radial-gradient(50% 50% at 50% 50%, #F9FFFC 0%, #DEF9FF 100%);
   border-radius: 30px;
-  height: 600px;
+  height: min(65vh, 600px);
   margin: 0px 15px;
   overflow: hidden;
 `;
@@ -50,39 +91,51 @@ class IndexPage extends React.Component {
         />
         <div>
           <HeroIllustration>
-            <StaticImage
+            <HorizontalLogo
+              src={horzLogo}
+              alt="Ethereum Foundation Fellowship Program Horizontal Logo"
+            />
+            <VerticalLogo
+              src={vertLogo}
+              alt="Ethereum Foundation Fellowship Program Vertical Logo"
+            />
+            <Header>An Ethereum Foundation Initiative</Header>
+
+            {/* 
+              TODO: Add illustration when ready
+              <StaticImage
               src="../images/fellowship_schoolyard.png"
               alt="Fellows World Map"
               placeholder="blurred"
               layout="constrained"
-            />
+            /> */}
           </HeroIllustration>
 
           <PageBody>
             <Copy id="welcome">
               <Section>
                 <p>
-                  We believe that it's possible to use Ethereum to improve 
-                  the lives of billions of people. But we need more than just 
-                  technology -- we need new ways of thinking about how humans 
-                  interact with each other and with their environment. 
-                  We need new stories to tell, new visions for a better future, 
+                  We believe that it's possible to use Ethereum to improve
+                  the lives of billions of people. But we need more than just
+                  technology -- we need new ways of thinking about how humans
+                  interact with each other and with their environment.
+                  We need new stories to tell, new visions for a better future,
                   and new ways of expressing our values in code.
                 </p>
                 <p>
-                  The Next Billion Fellowship at the Ethereum Foundation is 
-                  a search for stories. Stories that inspire us to focus on 
-                  the important things, to find balance and fairness in the 
-                  way we go about solving our problems, to push deeper into 
+                  The Next Billion Fellowship at the Ethereum Foundation is
+                  a search for stories. Stories that inspire us to focus on
+                  the important things, to find balance and fairness in the
+                  way we go about solving our problems, to push deeper into
                   the mysteries of human cooperation.
                 </p>
                 <p>
-                  During the course of 6 months, Fellows receive support to 
+                  During the course of 6 months, Fellows receive support to
                   drive their own projects, and tell their own stories of
                   Ethereum-enabled public goods destined to help billions
-                  coordinate and thrive. 
+                  coordinate and thrive.
                 </p>
-                
+
               </Section>
 
               <Section>
@@ -93,18 +146,18 @@ class IndexPage extends React.Component {
                 <p>
                   A Fellow is a leader committed to their own project that helps
                   Ethereum become a tool of and for the next billion. Their
-                  project could be a decentralized app, a piece of research, an 
+                  project could be a decentralized app, a piece of research, an
                   organizational initiative, or something else entirely.
-                  There are no strict requirements for Next Billion Fellowship 
+                  There are no strict requirements for Next Billion Fellowship
                   projects, save one: earnesty.
                 </p>
                 <p>
-                  Whatever the project, whomever the Fellow, the program seeks to 
-                  enable the flourishing of populations, communities, or 
-                  individuals under-represented in the Ethereum ecosystem today. 
-                  The Fellowship is neither the beginning nor the end of 
-                  a Fellow's journey, but it may provide the support needed to 
-                  encourage more ambitious, long-term goals and mindset. 
+                  Whatever the project, whomever the Fellow, the program seeks to
+                  enable the flourishing of populations, communities, or
+                  individuals under-represented in the Ethereum ecosystem today.
+                  The Fellowship is neither the beginning nor the end of
+                  a Fellow's journey, but it may provide the support needed to
+                  encourage more ambitious, long-term goals and mindset.
                 </p>
               </Section>
             </Copy>
@@ -114,7 +167,7 @@ class IndexPage extends React.Component {
                 We are looking for changemakers, visionaries, pragmatists, and creatives working on ambitious projects.
               </p>
               <p>
-              Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
+                Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
               </p>
               <p>
                 Applications will be considered until the program begins in late June, 2023.
