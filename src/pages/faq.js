@@ -233,6 +233,17 @@ const FAQPage = () => {
                 that utilize decentralized liquidity to smooth out farmer income
               </li>
               <li>
+                {" "}
+                <Link to="https://zefi.com/en">Researching how blockchains can solve problems</Link>{" "} 
+                in conflict and humanitarian settings
+              </li>
+              <li>
+                {" "}
+                <Link to="https://marcus.am/mint">Exploring the real-world barriers</Link>{" "}
+                to physical asset financing in LatAm
+              </li>
+              <li>Exploring the trustless transfer of assets after death through a legal lens</li>
+              <li>
                 Using smart contracts for {" "}
                 <Link to="https://bloinx.io/">informal savings circles</Link>{" "}
                 in Latin America
@@ -291,12 +302,14 @@ const FAQPage = () => {
               Independent individuals are welcome to apply.
             </p>
           </AccordionSection>
+          <HR />
           <AccordionSection
-             key={9}
+            key={9}
             i={9}
             expanded={expanded}
             setExpanded={setExpanded}
-            headertext="Where do I find out about the selection process?">
+            headerText="How can I find out about the selection process?"
+          >
             <p>
               Applications will be reviewed on a rolling basis until the program start date. 
               At least 2 interviews will be held with short-listed candidates, and we 
@@ -310,12 +323,15 @@ const FAQPage = () => {
             </p>
             <ul>
               <li>
-                March *sometime*
+                1st Session: April 5th @ 2pm UTC
               </li>
-              <li>April 5th at 06:00 UTC</li>
-              <li>Is May too late?</li>
+              <li>2nd Session: April 19th at 6am UTC</li>
+            <p>
+              For any general questions, you can also write to us <Link to="https://effellowship.paperform.co/">by filling out this form</Link>
+            </p>
             </ul>
             <p>Please <Link to="https://officehours-effp3.paperform.co">submit your questions</Link> for Office Hours in advance</p>
+
           </AccordionSection>
           <HR />
 

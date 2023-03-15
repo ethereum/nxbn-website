@@ -170,9 +170,9 @@ class IndexPage extends React.Component {
                 Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
               </p>
               <p>
-                Applications will be considered until the program begins in late June, 2023.
+                Applications will be considered until the deadline of April 28, 2023.
               </p>
-              <ButtonLink to="https://effellowship.paperform.co/">
+              <ButtonLink to="https://nextbillionfellowship.paperform.co/">
                 Apply
               </ButtonLink>
             </Apply>
