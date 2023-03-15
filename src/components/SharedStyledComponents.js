@@ -40,8 +40,10 @@ export const PageHeader = styled.div`
 
 export const H1 = styled.h1`
   margin-bottom: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+
   @media (max-width: 480px) {
-    font-size: 1.8rem;
     padding: 0 16px;
     text-align: center;
   }
@@ -51,6 +53,7 @@ export const H2 = styled.h2`
   font-weight: bold;
   padding-top: 32px;
   text-align: left;
+  font-size: 20px;
 `
 
 export const HR = styled.hr`
@@ -195,23 +198,17 @@ export const Button = styled.button`
 export const ButtonLink = styled(Link)`
   display: inline-block;
   line-height: 1.5;
-  font-weight: bold;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #99CD66 1.14%, #1BABCA 100%);
   color: ${styles.colorWhite};
-  background: ${styles.colorBlueLight};
-  border: 1px solid ${styles.colorBlueLight};
   font-size: 1.1rem;
-  padding: 15px 30px;
-  transition: all 0.3s ease 0s;
+  padding: 8px 30px;
 
   &:hover {
-    background: ${styles.colorBlue};
+    background: linear-gradient(20deg, #99CD66 1.14%, #1BABCA 100%);
     color: ${styles.colorWhite};
-  }
-
-  @media (max-width: ${styles.screenSizeS}) {
-    width: 100%;
+    font-weight: 500;
   }
 `
 

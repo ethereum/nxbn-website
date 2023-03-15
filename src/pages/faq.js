@@ -84,12 +84,12 @@ const FAQPage = () => {
             i={10}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="What is the Ethereum Foundation Fellowship Program?"
+            headerText="What is the Next Billion Fellowship Program?"
           >
             <p>
-              The Ethereum Foundation Fellowship Program is focused on
+              The Ethereum Next Billion Fellowship Program is focused on
               identifying and supporting unique and talented individuals helping
-              to enable Ethereum's relevance and breaking down barriers to entry
+              to demystify Ethereum's relevance and break down barriers to entry
               for people and communities not currently part of the Ethereum
               ecosystem.
             </p>
@@ -126,11 +126,11 @@ const FAQPage = () => {
             </p>
             <p>
               The project can be just an idea, in early stages, or already
-              ongoing. It can be building an application, research, community
-              building, or organizational program/initiative. Whatever it is,
-              the project must enable the flourishing of regions, populations,
-              or communities that are underrepresented in the existing Ethereum
-              ecosystem.
+              ongoing. It can be building an application, research, or an organizational 
+              program/initiative. Whatever it is, the project must enable the 
+              flourishing of regions, populations, or communities 
+              that are underrepresented in the existing Ethereum
+              ecosystem today.
             </p>
           </AccordionSection>
           <HR />
@@ -143,7 +143,7 @@ const FAQPage = () => {
             headerText="I am building on an L2. Should I apply?"
           >
             <p>
-	  	Yes, Layer 2 projects are eligible.
+	  	Yes, Layer 2 (and even in some cases side-chain) projects are eligible.
             </p>
           </AccordionSection>
           <HR />
@@ -155,32 +155,13 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Program Duration: September 2022 to March 2023</p>
-
-            <p>
-              Fellows will also be invited to travel to{" "}
-              <Link to="https://devcon.org/">
-                {" "}
-                Devcon6 on October 11-14 in Bogotá, Colombia
-              </Link>{" "}
+            <p>Program Duration: June 2023 - December 2023</p>
+            <p>While the official duration of the fellowship is six months, we expect 
+              and hope fellows remain consistent contributors to the Ethereum community as alumni.
             </p>
+
           </AccordionSection>
           <HR />
-          <AccordionSection
-            key={9}
-            i={9}
-            expanded={expanded}
-            setExpanded={setExpanded}
-            headerText="What is the duration of the Fellowship program?"
-          >
-            <p>
-              The Fellowship Program is 6 months. However Fellows are expected
-              to contribute to the Ethereum community as alumni of the program
-              beyond the official program dates.
-            </p>
-          </AccordionSection>
-          <HR />
-
           <AccordionSection
             key={12}
             i={12}
@@ -205,9 +186,13 @@ const FAQPage = () => {
                 Participating in cohort-wide activities on a monthly basis
               </li>
               <li>
-                Showcase their projects/research in relevant local, regional, or
+                Sharing their projects/research in relevant local, regional, or
                 global conferences
               </li>
+            <p>
+              Regarding time commitment, 
+              expect to dedicate around 20 hours per month to the Fellowship.
+            </p>
             </ul>
           </AccordionSection>
           <HR />
@@ -219,9 +204,8 @@ const FAQPage = () => {
             headerText="What are some examples of Fellowship projects?"
           >
             <p>
-              This list of examples is by no means comprehensive and the
-              possibilities are boundless. The projects included in the pilot
-              program include:
+              There are no boundaries to what a Fellowship project can look like. 
+              Here you can find examples of projects from previous cohorts. 
             </p>
             <ul>
               <li>
@@ -244,13 +228,31 @@ const FAQPage = () => {
                 within the world’s largest development agency
               </li>
               <li>
-                <Link to="https://gigaconnect.org/">
-                  Decentralizing the internet connectivity ecosystem
-                </Link>
-                , creating stronger infrastructures, and delivering better
-                services to communities.
+                {" "}
+                <Link to="https://bru.finance/">Harvest-time loans</Link>{" "}
+                that utilize decentralized liquidity to smooth out farmer income
               </li>
-            </ul>
+              <li>
+                {" "}
+                <Link to="https://zefi.com/en">Researching how blockchains can solve problems</Link>{" "} 
+                in conflict and humanitarian settings
+              </li>
+              <li>
+                {" "}
+                <Link to="https://marcus.am/mint">Exploring the real-world barriers</Link>{" "}
+                to physical asset financing in LatAm
+              </li>
+              <li>Exploring the trustless transfer of assets after death through a legal lens</li>
+              <li>
+                Using smart contracts for {" "}
+                <Link to="https://bloinx.io/">informal savings circles</Link>{" "}
+                in Latin America
+              </li>
+               <li>
+                Bringing web3 to {" "}
+                <Link to="https://www.scout.org/">the global scouting movement</Link>{" "}
+              </li>
+           </ul>
           </AccordionSection>
           <HR />
           <AccordionSection
@@ -262,11 +264,18 @@ const FAQPage = () => {
           >
             <ul>
               <li>Networking and community-building</li>
-              <li>Guidance</li>
-              <li>Mentorship</li>
-              <li>Potential funding</li>
-              <li>Exposure</li>
+              <li>Advisory and strategic guidance</li>
+              <li>Technical and practical mentorship</li>
+              <li>A modest stipend for travel and project expenses</li>
+              <li>Exposure to Ethereum and domain-specific events</li>
             </ul>
+            <p>
+            The Fellowship is not a venture capital or incubator program. 
+            Direct project funding will be considered on a case-by-case basis, 
+            but in most cases will be referred to the <Link to="https://esp.ethereum.foundation">
+              the Ecosystem Support Program.
+            </Link>
+            </p>
           </AccordionSection>
           <HR />
 
@@ -292,6 +301,37 @@ const FAQPage = () => {
               Fellows need not be affiliated with any organization or team.
               Independent individuals are welcome to apply.
             </p>
+          </AccordionSection>
+          <HR />
+          <AccordionSection
+            key={9}
+            i={9}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="How can I find out about the selection process?"
+          >
+            <p>
+              Applications will be reviewed on a rolling basis until the program start date. 
+              At least 2 interviews will be held with short-listed candidates, and we 
+              expect acceptance messages to go out by the end of June. All applicants will be 
+              notified by email about the outcome of their application.
+            </p>
+            <p>
+              There will be two <b>Office Hours sessions</b>, where the Next Billion team can 
+              answer any questions you may have about the Fellowship program or the 
+              application process. 
+            </p>
+            <ul>
+              <li>
+                1st Session: April 5th @ 2pm UTC
+              </li>
+              <li>2nd Session: April 19th at 6am UTC</li>
+            </ul>
+            <p>Please <Link to="https://officehours-effp3.paperform.co">submit your questions</Link> for Office Hours in advance</p>
+            <p>
+              For any general questions, you can also write to us <Link to="https://effellowship.paperform.co/">by filling out this form</Link>
+            </p>
+
           </AccordionSection>
           <HR />
 

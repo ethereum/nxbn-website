@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Work Sans\:100,300,400,500,600,700`],
+        fonts: [`Libre Franklin\:100,300,400,500,600,700`],
       },
     },
     {

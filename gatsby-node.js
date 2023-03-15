@@ -2,6 +2,8 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const Parser = require('rss-parser');
+const crypto = require('crypto');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -16,6 +18,48 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
+
+exports.sourceNodes = async ({ actions }) => {
+  const { createNode } = actions;
+
+  const parser = new Parser({
+    customFields: {
+      item: ['description'],
+    },
+  })
+
+  const feed = await parser.parseURL('https://blog.ethereum.org/en/next-billion/feed.xml')
+
+  feed.items.forEach(blogPost => {
+    const blogPostNode = {
+      // Gatsby wants this...
+      id: blogPost.title,
+      parent: `__SOURCE__`,
+      internal: {
+        type: `BlogPost`
+      },
+
+      // Actually useful props
+      title: blogPost.title,
+      description: blogPost.description,
+      date: blogPost.pubDate ? new Date(blogPost.pubDate).getTime() : 0,
+      body: blogPost['content:encoded'] || blogPost.description,
+      permaLink: blogPost.link,
+      imageUrl: blogPost.enclosure ? blogPost['enclosure'].url : '',
+    }
+
+    // Gatsby also wants this...
+    const contentDigest = crypto
+      .createHash(`md5`)
+      .update(JSON.stringify(blogPostNode))
+      .digest(`hex`);
+
+    blogPostNode.internal.contentDigest = contentDigest;
+
+    createNode(blogPostNode);
+  })
+}
+
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions

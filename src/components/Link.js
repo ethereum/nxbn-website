@@ -36,9 +36,10 @@ const InternalLink = styled(GatsbyLink)`
   }
 `
 
-const Link = ({ to, href, children, className, isPartiallyActive = true }) => {
+const Link = ({ to, href, children, className, active, isPartiallyActive = true }) => {
   // markdown pages pass `href`, not `to`
   to = to || href
+  className = active ? `active ${className}` : className;
 
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
