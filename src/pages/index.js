@@ -25,7 +25,8 @@ const Header = styled.h3`
 `
 
 const HorizontalLogo = styled.img`
-  width: 450px;
+  width: 80%;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -99,7 +100,6 @@ class IndexPage extends React.Component {
               src={vertLogo}
               alt="Ethereum Foundation Fellowship Program Vertical Logo"
             />
-            <Header>An Ethereum Foundation Initiative</Header>
 
             {/* 
               TODO: Add illustration when ready
