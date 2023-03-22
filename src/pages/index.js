@@ -127,7 +127,7 @@ class IndexPage extends React.Component {
                   a search for stories. Stories that inspire us to focus on
                   the important things, to find balance and fairness in the
                   way we go about solving our problems, to push deeper into
-                  the mysteries of human cooperation.
+                  the mysteries of human cooperation. 
                 </p>
                 <p>
                   During the course of 6 months, Fellows receive support to
