@@ -1,8 +1,6 @@
 const siteUrl = `https://fellowship.ethereum.foundation`
 const matomoSiteId = "28"
-const matomoUrl = "https://matomo.ethereum.org"
-const matomoSecondaryUrl = "https://ethereumfoundation.matomo.cloud/matomo.php"
-const matomoSecondarySiteId = "13"
+const matomoUrl = "https://ethereumfoundation.matomo.cloud/matomo.php"
 
 module.exports = {
   siteMetadata: {
@@ -22,12 +20,6 @@ module.exports = {
         siteId: matomoSiteId,
         matomoUrl: matomoUrl,
         siteUrl,
-        additionalTrackers: [
-          {
-            siteId: matomoSecondarySiteId,
-            trackerUrl: matomoSecondaryUrl,
-          },
-        ],
       },
     },
     {
