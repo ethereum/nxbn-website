@@ -317,6 +317,9 @@ const FAQPage = () => {
               notified by email about the outcome of their application.
             </p>
             <p>
+              June Update: FP3 evaluations have taken longer than expected. Announcements will now be made at the beginning of July. Thank you for your patience and understanding. 
+            </p>
+            <p>
               There will be two <b>Office Hours sessions</b>, where the Next Billion team can 
               answer any questions you may have about the Fellowship program or the 
               application process. 

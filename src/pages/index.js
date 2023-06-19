@@ -170,7 +170,7 @@ class IndexPage extends React.Component {
                 Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
               </p>
               <p>
-                Applications for Cohort 3 are now closed. Please check back in a few months...
+                Applications for Cohort 3 are now closed. Evaluations have taken longer than expected; Cohort 3 announcements will come in early July.
               </p>
               <ButtonLink to="https://effellowship.paperform.co/">
                 Get in contact with us anyway
