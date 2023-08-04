@@ -8,12 +8,13 @@ import {
   Center,
   H2,
 } from "../components/SharedStyledComponents"
-// import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 import horzLogo from "../images/fellowship-program-logo.svg"
 import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import BlogPosts from "../components/BlogPosts"
 import { screenSizeS, colorGrayLight } from "../utils/styles"
 import { graphql } from "gatsby"
+
 
 const Header = styled.h3`
   text-align: center;
