@@ -65,6 +65,49 @@ const HeroIllustration = styled.div`
 const Copy = styled.div`
   margin-bottom: 56px;
 `
+const Profile = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  line-height: 1.6em;
+  margin-bottom: 60px;
+
+  > .img {
+    width: 50%;
+
+    @media (max-width: ${styles.screenSizeM}) {
+      min-width: 65%;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: ${styles.screenSizeS}) {
+      min-width: 100%;
+    }
+  }
+
+  > .description {
+    margin-left: 32px;
+    flex-basis: 50%;
+    flex-shrink: 1;
+    margin: 0px;
+    margin-left: 32px;
+
+    @media (max-width: ${styles.screenSizeM}) {
+      margin-left: 0px;
+    }
+  }
+
+  @media (max-width: ${styles.screenSizeM}) {
+    flex-direction: column;
+  }
+
+  > * {
+    @media (max-width: ${styles.screenSizeM}) {
+      width: 100%;
+    }
+  }
+`
 
 const Apply = styled.div`
   background: radial-gradient(50% 50% at 50% 50%, #F5FFFA 0%, #DEF9FF 100%);
