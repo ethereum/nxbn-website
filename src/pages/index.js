@@ -1,5 +1,4 @@
 import React from "react"
-import * as styles from "../utils/styles"
 import styled from "styled-components"
 import PageMetadata from "../components/PageMetadata"
 import {
@@ -13,7 +12,7 @@ import Link from "../components/Link"
 import horzLogo from "../images/fellowship-program-logo.svg"
 import vertLogo from "../images/fellowship-program-logo-vertical.svg"
 import BlogPosts from "../components/BlogPosts"
-import { screenSizeS, colorGrayLight } from "../utils/styles"
+import { screenSizeS, screenSizeM, colorGrayLight } from "../utils/styles"
 import { graphql } from "gatsby"
 
 
@@ -79,12 +78,12 @@ const Profile = styled.div`
   > .img {
     width: 50%;
 
-    @media (max-width: ${styles.screenSizeM}) {
+    @media (max-width: ${screenSizeM}) {
       min-width: 65%;
       margin-bottom: 16px;
     }
 
-    @media (max-width: ${styles.screenSizeS}) {
+    @media (max-width: ${screenSizeS}) {
       min-width: 100%;
     }
   }
@@ -96,17 +95,17 @@ const Profile = styled.div`
     margin: 0px;
     margin-left: 32px;
 
-    @media (max-width: ${styles.screenSizeM}) {
+    @media (max-width: ${screenSizeM}) {
       margin-left: 0px;
     }
   }
 
-  @media (max-width: ${styles.screenSizeM}) {
+  @media (max-width: ${screenSizeM}) {
     flex-direction: column;
   }
 
   > * {
-    @media (max-width: ${styles.screenSizeM}) {
+    @media (max-width: ${screenSizeM}) {
       width: 100%;
     }
   }
