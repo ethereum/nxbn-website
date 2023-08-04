@@ -139,7 +139,7 @@ class IndexPage extends React.Component {
               </Section>
             <Section>
               <Center>
-                <ModifiedH2>Fellowship Program Cohort 3</ModifiedH2>
+                <H2>Fellowship Program Cohort 3</H2>
              </Center>
              <Profile>
                 <StaticImage
