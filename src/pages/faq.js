@@ -303,41 +303,38 @@ const FAQPage = () => {
             </p>
           </AccordionSection>
           <HR />
+
           <AccordionSection
-            key={9}
+             key={9}
             i={9}
             expanded={expanded}
             setExpanded={setExpanded}
-            headerText="How can I find out about the selection process?"
+            headerText="I want to stay in the loop about the Next Billion Fellows and related news. How can I find out more about it?"
           >
             <p>
-              Applications will be reviewed on a rolling basis until the program start date. 
-              At least 2 interviews will be held with short-listed candidates, and we 
-              expect acceptance messages to go out by the end of June. All applicants will be 
-              notified by email about the outcome of their application.
+              You can subscribe to receive updates from our <Link to="TODO: add google groups"> Google group</Link>
             </p>
-            <p>
-              June Update: FP3 evaluations have taken longer than expected. Announcements will now be made at the beginning of July. Thank you for your patience and understanding. 
-            </p>
-            <p>
-              There will be two <b>Office Hours sessions</b>, where the Next Billion team can 
-              answer any questions you may have about the Fellowship program or the 
-              application process. 
-            </p>
-            <ul>
-              <li>
-                1st Session: April 5th @ 2pm UTC
-              </li>
-              <li>2nd Session: April 19th at 6am UTC</li>
-            </ul>
-            <p>Please <Link to="https://officehours-effp3.paperform.co">submit your questions</Link> for Office Hours in advance</p>
-            <p>
-              For any general questions, you can also write to us <Link to="https://effellowship.paperform.co/">by filling out this form</Link>
-            </p>
-
           </AccordionSection>
           <HR />
 
+          <AccordionSection
+            key={11}
+            i={11}
+            expanded={expanded}
+            setExpanded={setExpanded}
+            headerText="I would like to get more involved with the Ethereum community. Where can I start?"
+          >
+            <p>
+            You can start by visiting the Ethereum.org - a public, open-source resource for the Ethereum community that anyone can contribute to. 
+            There you’ll also find <Link to="https://ethereum.org/en/community/get-involved/">ways to get involved.</Link>
+            </p>
+            <p>
+              Devconnect is happening this year in Istanbul, from 13th to 19th November. 
+              Anyone can organize or attend an event - view the full schedule <Link to="https://devconnect.org/">here.</Link>
+            </p>
+          </AccordionSection>
+          <HR />
+          
           <H2>About Ethereum</H2>
           <HR />
           <AccordionSection

@@ -107,7 +107,7 @@ const Fellows = () => {
               {" "}<Link to="https://bru.finance/">Brú Finance</Link>{" "}.
               Brú Finance is a new platform that aims to provide harvest-time loans 
               for farmers in India. For his Fellowship project,
-              Abhishek will be overseeing and learning from the launch of Brú's platform to
+              Abhishek learned from the launch of Brú's platform to
               a public chain that utilizes decentralized liquidity for the farmers,
               and exploring what this system could look like at a global scale.
             </p>
@@ -130,8 +130,8 @@ const Fellows = () => {
               (also known as cundinas, susu, hui, arisan, quiniela, stokvel, and others around the world) – informal savings circles.
               Gabriela is convinced that blockchain can have real benefit
               for the unbanked population of the world, and that savings circles are one good starting mechanism.
-              During her Fellowship, Gabriela will conduct pilots in Mexico and Venezuela
-              and use the research to help improve Bloinx for larger scales.
+              During her Fellowship, Gabriela conducted pilots in Mexico and Venezuela
+              and used the research to help improve Bloinx for larger scales.
             </p>
           </Profile>
           <Profile>
@@ -151,7 +151,7 @@ const Fellows = () => {
               <Link to="https://zefi.com/en">ZeFi, </Link>
               an educational platform and community focused on fostering blockchain education
               and research custom-fit for the Syrian context. For the Fellowship,
-              Karam will conduct research that increases practical and culturally-sensitive understandings of
+              Karam conducted research that increases practical and culturally-sensitive understandings of
               how blockchains can solve problems in conflict settings.
             </p>
           </Profile>
@@ -170,12 +170,10 @@ const Fellows = () => {
               is  a Guatemalan entrepreneur working to address today's pressing challenges.
               He is currently a Founder-in-Residence at Europe's leading accelerator, Entrepreneur First,
               where he is drawing on the power of web3 to empower marginalized communities.
-              Through his work with
-              {" "}
-              <Link to="https://www.laminapop.com/">Lamina POP, </Link>
-              a low-cost housing design project in Guatemala, Marcus will be
-              exploring the real-world barriers to physical asset financing for DeFi,
-              and will apply his findings to develop a possible solution for housing finance.
+              With a focus in Guatemala, Marcus
+              explored the real-world barriers to physical asset financing for DeFi,
+              and compiled his finding into 
+              the {" "} <Link to="https://marcus.mirror.xyz/nFmYxl7DkZF655eCFz7Z4QlrOZ5ycg7Ny5gDcMpQ-tQ"> "Last Mile DeFi Report"</Link>.
             </p>
           </Profile>
           <Profile>
@@ -193,7 +191,7 @@ const Fellows = () => {
               is a legal researcher and technologist based in the Cayman Islands. Mary has been exploring a pressing question:
               If life-extension technology doesn’t pan out over the next few decades, what happens to your crypto when you die?
               Currently there is no trustless or decentralized solution to this question, and this presents a problem.
-              Mary’s fellowship will explore what new cryptographic mechanisms
+              Mary’s fellowship explored what new cryptographic mechanisms
               might enable us to trustlessly transfer assets after death, in a way that is legally compliant.
             </p>
           </Profile>
