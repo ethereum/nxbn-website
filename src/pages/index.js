@@ -323,7 +323,7 @@ class IndexPage extends React.Component {
                 Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
               </p>
 
-              <ButtonLink to="TODO: put link">
+              <ButtonLink to="https://groups.google.com/a/ethereum.org/g/nextbillion-fellowship-updates">
                 Subscribe to receive updates
               </ButtonLink>
             </Apply>
@@ -340,7 +340,7 @@ class IndexPage extends React.Component {
                 <p style={{ textAlign: 'center' }}>Stay tuned and get updates on the Next Billion Fellowship Program and related news!</p>
 
 
-                <ButtonLink to="">
+                <ButtonLink to="https://groups.google.com/a/ethereum.org/g/nextbillion-fellowship-updates">
                   Sign me up.
                 </ButtonLink>
               </Center>
