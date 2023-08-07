@@ -155,7 +155,7 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Program Duration: June 2023 - December 2023</p>
+            <p>Program Duration: July 2023 - January 2024</p>
             <p>While the official duration of the fellowship is six months, we expect 
               and hope fellows remain consistent contributors to the Ethereum community as alumni.
             </p>

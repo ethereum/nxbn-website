@@ -212,7 +212,10 @@ const Fellows = () => {
               <Link to="https://www.scout.org/">World Organization of the Scout Movement </Link>
               with 57+ million members from around the globe. To get the Scout Movement ready for web3, he is embarking on an ambitious project involving
               digitalising badges, exploring DAOs for different levels of the Movement,
-              and how the scouts might employ novel coordination mechanisms for grassroots organization.
+              and how the scouts might employ novel coordination mechanisms for grassroots organization. You can read more about 
+              Mihajlo's work 
+              {" "}
+              <Link to="https://blog.ethereum.org/2023/05/01/scouting-future-movement"> in this blogpost.</Link>
             </p>
           </Profile>
           <Center>
