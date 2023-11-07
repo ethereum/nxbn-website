@@ -175,10 +175,7 @@ class IndexPage extends React.Component {
                   the mysteries of human cooperation. 
                 </p>
                 <p>
-                  During the course of 6 months, Fellows receive support to
-                  drive their own projects, and tell their own stories of
-                  Ethereum-enabled public goods destined to help billions
-                  coordinate and thrive.
+                  The Next Billion Fellowship Program is a small forum for visionary storytellers committed to a 6-month journey of igniting change. Your quest is to unveil the untapped potential of Ethereum and its transformative role in enhancing lives and solving coordination failures. By doing so, you strive to eliminate the barriers to entry for those who have yet to experience the Ethereum ecosystem. 
                 </p>
 
               </Section>
