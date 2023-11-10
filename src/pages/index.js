@@ -160,25 +160,30 @@ class IndexPage extends React.Component {
             <Copy id="welcome">
               <Section>
                 <p>
-                  We believe that it's possible to use Ethereum to improve
-                  the lives of billions of people. But we need more than just
-                  technology -- we need new ways of thinking about how humans
-                  interact with each other and with their environment.
-                  We need new stories to tell, new visions for a better future,
-                  and new ways of expressing our values in code.
+                  The Ethereum narrative is an always-evolving protocol with many
+                 uncharted territories we have yet to witness. You are working
+                   on unveiling the untapped potential of Ethereum and its transformative
+                     role in enhancing lives and solving coordination failures within your own community.
                 </p>
                 <p>
-                  The Next Billion Fellowship at the Ethereum Foundation is
-                  a search for stories. Stories that inspire us to focus on
-                  the important things, to find balance and fairness in the
-                  way we go about solving our problems, to push deeper into
-                  the mysteries of human cooperation. 
+                  The Next Billion Fellowship Program is a forum to showcase the role that Ethereum can play in
+                       people’s lives. Whether you’re working to bring insurance or loans to small-holder farmers, 
+                       creating Scout badges and verifiable credentials, or developing impact certificates for investigative 
+                       journalists, you demonstrate how Ethereum can resolve coordination challenges within your community, whether
+                         on a small or grand scale.  
                 </p>
                 <p>
-                  During the course of 6 months, Fellows receive support to
-                  drive their own projects, and tell their own stories of
-                  Ethereum-enabled public goods destined to help billions
-                  coordinate and thrive.
+                  During the course of 6 months, you will be part of a small forum of visionary storytellers who are committed to igniting
+                           change in their own communities. Your project can take many forms – be it an application, a groundbreaking research
+                             endeavor, or an organizational metamorphosis that showcases the potential of public goods and extends its reach to
+                               previously untouched communities. The program is self-guided but coupled with mentorship, guidance, and tailored support. 
+                                 The Next Billion Team will connect you with our network, assist in amplifying your story, and offer financial support, 
+                                 if required, in the form of a stipend or project assistance.
+                </p>
+                <p>
+                    We will conduct two office hours (Dec 6th, at 4 pm UTC and Jan 9th, at 6 am UTC) to help you clarify any questions about the program
+                                 or application process. Apply to attend the office hours session here. <Link to="https://officehours-nxbnfp4.paperform.co"> office hours session here. </Link>
+Submit your application by January 15, 2024 (Monday)!             
                 </p>
 
               </Section>
