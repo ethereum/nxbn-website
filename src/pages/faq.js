@@ -155,7 +155,7 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Program Duration: April to September, 2024</p>
+            <p>Program Duration: April to October, 2024</p>
             <p>While the official duration of the fellowship is six months, we expect 
               and hope fellows remain consistent contributors to the Ethereum community as alumni.
             </p>
@@ -191,7 +191,7 @@ const FAQPage = () => {
               </li>
             <p>
               Regarding time commitment, 
-              expect to dedicate around 20 hours per month to the Fellowship.
+              expect to dedicate around 20 hours per month to the Fellowship, including time to work on status updates, meetings with the NxBn team, and a monthly cohort-wide call.
             </p>
             </ul>
           </AccordionSection>
