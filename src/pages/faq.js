@@ -155,7 +155,7 @@ const FAQPage = () => {
             setExpanded={setExpanded}
             headerText="What are the key dates of the program?"
           >
-            <p>Program Duration: July 2023 - January 2024</p>
+            <p>Program Duration: April to September, 2024</p>
             <p>While the official duration of the fellowship is six months, we expect 
               and hope fellows remain consistent contributors to the Ethereum community as alumni.
             </p>
@@ -226,11 +226,6 @@ const FAQPage = () => {
                 Tackling{" "}
                 <Link to="https://www.brac.net/">blockchain strategy</Link>{" "}
                 within the world’s largest development agency
-              </li>
-              <li>
-                {" "}
-                <Link to="https://bru.finance/">Harvest-time loans</Link>{" "}
-                that utilize decentralized liquidity to smooth out farmer income
               </li>
               <li>
                 {" "}
@@ -312,7 +307,7 @@ const FAQPage = () => {
             headerText="I want to stay in the loop about the Next Billion Fellows and related news. How can I find out more about it?"
           >
             <p>
-              You can subscribe to receive updates from our <Link to="TODO: add google groups"> Google group</Link>
+              You can subscribe to receive updates from our <Link to="https://groups.google.com/a/ethereum.org/g/nextbillion-fellowship-updates"> Google group</Link>
             </p>
           </AccordionSection>
           <HR />
@@ -327,10 +322,6 @@ const FAQPage = () => {
             <p>
             You can start by visiting the Ethereum.org - a public, open-source resource for the Ethereum community that anyone can contribute to. 
             There you’ll also find <Link to="https://ethereum.org/en/community/get-involved/">ways to get involved.</Link>
-            </p>
-            <p>
-              Devconnect is happening this year in Istanbul, from 13th to 19th November. 
-              Anyone can organize or attend an event - view the full schedule <Link to="https://devconnect.org/">here.</Link>
             </p>
           </AccordionSection>
           <HR />
