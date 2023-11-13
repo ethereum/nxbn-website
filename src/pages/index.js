@@ -204,6 +204,18 @@ class IndexPage extends React.Component {
                   encourage more ambitious, long-term goals and mindset.
                 </p>
               </Section>
+              <Section>
+                <Center>
+                  <H2>Office Hours</H2>
+                </Center>
+
+                <p>
+                  If you would like to know more about the Fellowship program, there will be two office hours sessions (December 6th at 4pm UTC, and January 9th at 6am UTC) to help you clarify any questions you may have about the program.
+                  To sign up for the office hours sessions, you can <Link to="https://officehours-nxbnfp4.paperform.co">sign up here.</Link>
+                </p>
+              </Section>
+
+
             </Copy>
 
             <Apply>
@@ -219,19 +231,6 @@ class IndexPage extends React.Component {
                 Apply for the NxBn Fellowship cohort 4
               </ButtonLink>
             </Apply>
-              <Copy>
-              <Section>
-                <Center>
-                  <H2>Office Hours</H2>
-                </Center>
-
-                <p>
-                  If you would like to know more about the Fellowship program, there will be two office hours sessions (December 6th at 4pm UTC, and January 9th at 6am UTC) to help you clarify any questions you may have about the program.
-                  To sign up for the office hours sessions, you can <Link to="https://officehours-nxbnfp4.paperform.co">sign up here.</Link>
-                </p>
-              </Section>
-            </Copy>
-
           </PageBody>
 
           <BlogPosts
