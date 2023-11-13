@@ -213,11 +213,24 @@ class IndexPage extends React.Component {
               <p>
                 Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
               </p>
+              <p>Submit your application by January 15th, 2024</p>
 
-              <ButtonLink to="https://groups.google.com/a/ethereum.org/g/nextbillion-fellowship-updates">
-                Subscribe to receive updates
+              <ButtonLink to="link-to-application">
+                Apply for the NxBn Fellowship cohort 4
               </ButtonLink>
             </Apply>
+              <Section>
+                <Center>
+                  <H2>Office Hours</H2>
+                </Center>
+
+                <p>
+                  If you would like to know more about the Fellowship program, there will be two office hours sessions (December 6th at 4pm UTC, and January 9th at 6am UTC) to help you clarify any questions you may have about the program.
+                  To sign up for the office hours sessions, you can <Link to="https://officehours-nxbnfp4.paperform.co">sign up here.</Link>
+                </p>
+              </Section>
+            </Copy>
+
           </PageBody>
 
           <BlogPosts
