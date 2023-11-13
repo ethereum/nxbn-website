@@ -219,6 +219,7 @@ class IndexPage extends React.Component {
                 Apply for the NxBn Fellowship cohort 4
               </ButtonLink>
             </Apply>
+              <Copy>
               <Section>
                 <Center>
                   <H2>Office Hours</H2>
