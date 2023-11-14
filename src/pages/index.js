@@ -227,7 +227,7 @@ class IndexPage extends React.Component {
               </p>
               <p>Submit your application by January 15th, 2024</p>
 
-              <ButtonLink to="link-to-application">
+              <ButtonLink to="https://nxtbn4.paperform.co/">
                 Apply for the NxBn Fellowship cohort 4
               </ButtonLink>
             </Apply>

@@ -123,7 +123,7 @@ const Fellows = () => {
                   width="300"
                 />
                 <p className="description">
-                  Devansh Mehta, co-founder of VoiceDeck, is interested in mapping out public good impact space. 
+                  Devansh Mehta, co-founder of <Link to="https://voicedeck.org/">VoiceDeck</Link>, is interested in mapping out public good impact space. 
                   Impact methodologies and markets for environmental use cases are well-documented mechanisms, 
                   but sometimes ‘impact’ wanders into more subjective territory: 
                   Investigative journalism, for example, is undoubtedly a public good. 
