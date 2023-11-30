@@ -9,7 +9,7 @@ const NotFoundPage = () => {
       <PageMetadata title="Page not found" />
       <PageBodyNoBanner>
         <h1>Page not found</h1>
-        <p>You just hit a route that doesn't exist... the sadness.</p>
+        <p>You just hit a route that doesn't exist.... seek another page, in another place.</p>
       </PageBodyNoBanner>
     </>
   )
