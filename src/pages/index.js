@@ -225,7 +225,7 @@ class IndexPage extends React.Component {
               <p>
                 Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
               </p>
-              <p>Submit your application by January 15th, 2024</p>
+              <p>Submit your application by January 22nd, 2024</p>
 
               <ButtonLink to="https://nxtbn4.paperform.co/">
                 Apply for the NxBn Fellowship cohort 4
