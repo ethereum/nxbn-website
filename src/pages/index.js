@@ -225,9 +225,11 @@ class IndexPage extends React.Component {
               <p>
                 Next Billion Fellows should be on a personal quest, and should be able to represent their project's context in public.
               </p>
-              <p>Applications are now closed for cohort 4</p>
+              <p>Cohort 4 stories will be announced in April</p>
 
-            
+              <ButtonLink to="https://nxtbn4.paperform.co/">
+                Applications are now closed for cohort 4
+              </ButtonLink>
             </Apply>
           </PageBody>
 
