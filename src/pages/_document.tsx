@@ -1,9 +1,7 @@
-// TODO: setup chakra
-// import { ColorModeScript } from '@chakra-ui/react';
-import { Html, Head, Main, NextScript } from 'next/document';
+import { ColorModeScript } from '@chakra-ui/react'
+import { Html, Head, Main, NextScript } from 'next/document'
 
-// TODO: add theme file and setup theme
-// import theme from '../theme';
+import theme from '@/@chakra-ui/theme'
 
 export default function Document() {
   return (
@@ -14,10 +12,10 @@ export default function Document() {
       </Head>
 
       <body>
-        {/* <ColorModeScript initialColorMode={theme.config.initialColorMode} /> */}
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Main />
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }
