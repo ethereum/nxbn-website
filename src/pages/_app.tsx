@@ -1,18 +1,18 @@
-// TODO: implement chakra
-// import { ChakraProvider, localStorageManager } from '@chakra-ui/react';
-import { AppProps } from 'next/app';
+import { AppProps } from 'next/app'
 
 import { RootLayout } from "@/layouts"
+import { ChakraProvider } from '@chakra-ui/react'
 
-// TODO: implement theme
-// import theme from '../theme';
+import theme from '@/@chakra-ui/theme'
 
 export default function App({ Component, pageProps }: AppProps) {
   // TODO: implement matomo
 
   return (
-    <RootLayout>
-      <Component {...pageProps} />
-    </RootLayout>
-  );
+    <ChakraProvider theme={theme}>
+      <RootLayout>
+        <Component {...pageProps} />
+      </RootLayout>
+    </ChakraProvider>
+  )
 }
