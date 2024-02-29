@@ -3,7 +3,7 @@ import { extendBaseTheme } from '@chakra-ui/react';
 import type { ThemeConfig } from "@chakra-ui/react"
 
 // import components from "./components"
-// import foundations from "./foundations"
+import { colors, fonts, textStyles } from "@/@chakra-ui/foundations"
 // import semanticTokens from "./semanticTokens"
 // import styles from "./styles"
 
@@ -19,7 +19,15 @@ const config: ThemeConfig = {
  * https://github.com/chakra-ui/chakra-ui/tree/main/packages/theme/src
  */
 const theme = {
+  colors,
   config,
+  fonts,
+  semanticTokens: {
+    colors: {
+      body: { _light: 'background', _dark: 'background' },
+      bg: { _light: 'background', _dark: 'background' }
+    }
+  },
   styles: {
     global: () => ({
       body: {
@@ -28,14 +36,7 @@ const theme = {
       }
     })
   },
-//   ...foundations,
-  semanticTokens: {
-    colors: {
-      body: { _light: '#1451A9', _dark: '#1451A9' },
-      bg: { _light: '#1451A9', _dark: '#1451A9' }
-    }
-  },
-//   components,
+  textStyles,
 }
 
 export default extendBaseTheme(theme)
