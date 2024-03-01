@@ -22,16 +22,10 @@ const theme = {
   colors,
   config,
   fonts,
-  semanticTokens: {
-    colors: {
-      body: { _light: 'background', _dark: 'background' },
-      bg: { _light: 'background', _dark: 'background' }
-    }
-  },
   styles: {
     global: () => ({
       body: {
-        bg: 'bg',
+        background: 'background',
         transition: 'all 200ms linear !important'
       }
     })
