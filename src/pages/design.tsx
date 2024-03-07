@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 
 import {
   H1,
@@ -25,6 +25,15 @@ const DesignPage = () => {
       <H5 variant="action">H5 action</H5>
       <H6>H6 Normal</H6>
       <H6 variant="action">H6 action</H6>
+      <Text>Body Regular</Text>
+      <Text as="b" >Body Bold</Text>
+      <Text><Text as="i">Body Italic</Text></Text>
+      <Text variant="small">Body Small</Text>
+      <Text as="b" variant="small">Body Bold Small</Text>
+      <Text><Text as="i" variant="small">Body Italic Small</Text></Text>
+      <Text variant="big">Body Big</Text>
+      <Text as="b" variant="big">Body Bold Big</Text>
+      <Text><Text as="i" variant="big">Body Italic Big</Text></Text>
     </Box>
   )
 }

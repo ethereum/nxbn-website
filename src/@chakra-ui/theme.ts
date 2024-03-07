@@ -1,7 +1,7 @@
 import { extendBaseTheme } from '@chakra-ui/react';
 import type { ThemeConfig } from "@chakra-ui/react"
 
-import { Heading } from '@/@chakra-ui/components'
+import { Heading, Text } from '@/@chakra-ui/components'
 import { colors, fonts, textStyles } from "@/@chakra-ui/foundations"
 
 const config: ThemeConfig = {
@@ -18,7 +18,8 @@ const config: ThemeConfig = {
 const theme = {
   colors,
   components: {
-    Heading
+    Heading,
+    Text,
   },
   config,
   fonts,
