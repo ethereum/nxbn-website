@@ -1,11 +1,8 @@
-// TODO: SETUP CHAKRA CONFIG
 import { extendBaseTheme } from '@chakra-ui/react';
 import type { ThemeConfig } from "@chakra-ui/react"
 
-// import components from "./components"
+import { Heading } from '@/@chakra-ui/components'
 import { colors, fonts, textStyles } from "@/@chakra-ui/foundations"
-// import semanticTokens from "./semanticTokens"
-// import styles from "./styles"
 
 const config: ThemeConfig = {
   initialColorMode: "system",
@@ -20,6 +17,9 @@ const config: ThemeConfig = {
  */
 const theme = {
   colors,
+  components: {
+    Heading
+  },
   config,
   fonts,
   styles: {
