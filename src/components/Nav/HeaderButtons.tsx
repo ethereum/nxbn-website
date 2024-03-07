@@ -13,6 +13,7 @@ const HeaderButtons = () => {
   return (
     <Center display={{base: "none", md: "flex"}}>
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
+        <Link href="/"><Text>Home</Text></Link>
         <Link href={FELLOWSHIP_PAGE}><Text>Fellowship</Text></Link>
         <Link href={SCHOLAR_PAGE}><Text>Scholar</Text></Link>
         <Link href={ABOUT_PAGE}><Text>About</Text></Link>

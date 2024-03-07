@@ -34,10 +34,12 @@ const Header = () => {
         px={{ base: 5, md: 16}}
         py={5}
         h={20}
-        bg={"rgba(2, 34, 46, 0.71)"}
+        mt={4}
+        bg={"rgba(0, 0, 0, 0.60)"}
         alignItems={{ base: "center", md: "normal" }}
         justifyContent="space-between"
         width="100%"
+        borderRadius="60px"
       >
         <Box
           onClick={isOpen ? undefined : () => router.push('/')}

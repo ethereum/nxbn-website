@@ -1,17 +1,37 @@
+import { useMemo } from "react"
 import NextLink from "next/link"
 import {
+  Icon,
   Link as ChakraLink,
+  VisuallyHidden,
 } from "@chakra-ui/react"
+import { RxExternalLink } from "react-icons/rx"
+
+import { isExternal } from "@/utils/url"
 
 const Link = ({ children, href }) => {
+  const isExternalValue = useMemo(() => isExternal(href), [href])
+
   return (
     <ChakraLink
+      isExternal={isExternalValue}
       href={href}
       as={NextLink}
-      color="body"
-      _hover={{ borderBottom: "1px solid #B3E678" }}
+      textStyle="link-text"
     >
       {children}
+      <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+      {
+        isExternalValue && (
+          <Icon
+            as={RxExternalLink}
+            boxSize="6"
+            p="1"
+            verticalAlign="middle"
+            me="-1"
+          />
+        )
+      }
     </ChakraLink>
   )
 }
