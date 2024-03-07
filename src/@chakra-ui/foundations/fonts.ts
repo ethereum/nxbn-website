@@ -3,5 +3,6 @@ export const fonts = {
   heading: '"Roboto Slab", monospace',
   button: '"Roboto", monospace',
   code: '"JetBrains Mono", monospace',
-  body: '"Roboto", monospace'
+  body: '"Roboto", monospace',
+  link: '"Roboto Slab", monospace',
 }
