@@ -2,7 +2,7 @@
 export const FELLOWSHIP_PAGE = '/fellowship'
 export const SCHOLAR_PAGE = '/scholar'
 export const ABOUT_PAGE = '/about'
-export const BLOG_PAGE = '/blog'
+export const BLOG_PAGE = 'https://blog.ethereum.org'
 
 // Footer links
 export const ETHEREUM_DOT_ORG_LINK = "https://ethereum.org/"

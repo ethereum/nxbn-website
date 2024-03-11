@@ -22,22 +22,25 @@ const Footer = () => {
         py={2}
         justifyContent="space-between"
         px={{ base: 5, md: 16 }}
+        flexDir={{ base: "column", lg: "row" }}
       >
-        <LogoIcon  />
+        <Flex
+          margin={{ base: "auto", lg: 0}}
+          mb={{ base: 8, lg: 0}}
+        >
+          <LogoIcon  />
+        </Flex>
         <Center>
-          <Flex textAlign="right" gap={{
-                base:2,
-              }} flexDirection={"column"}>
+          <Flex
+            textAlign={{ base: "center", lg: "right" }}
+            gap={2}
+            flexDirection={"column"}
+          >
             <Flex 
-              flexDirection={{
-                base: "column",
-                lg: "row"
-              }}
+              flexDirection="row"
+              flexWrap={"wrap"}
               width="100%"
-              gap={{
-                base: 2,
-                md: 4
-              }}
+              gap={4}
             >
               <Link href={ETHEREUM_DOT_ORG_LINK}>
                 Ethereum.org
@@ -55,7 +58,7 @@ const Footer = () => {
                 Cookie Policy
               </Link>
             </Flex>
-            <Text textStyle="footer-text">@ 2024 Ethereum Foundation. All rights reserved.</Text>
+            <Text textStyle="footer-text">© 2024 Ethereum Foundation. All rights reserved.</Text>
           </Flex>
         </Center>
       </Flex>
