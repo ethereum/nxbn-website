@@ -49,5 +49,50 @@ export const textStyles = {
       borderBottom: "1px solid #B3E678",
       color: "action"
     },
+  },
+  'drawer-link': {
+    color: "body",
+    fontFamily: "link",
+    fontSize: 30,
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "150%",
+    letterSpacing: "0.6px"
+  },
+  'drawer-link-active': {
+    color: "#E5FFC7",
+    borderBottom: "1px solid #E5FFC7",
+    fontFamily: "link",
+    fontSize: 30,
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "150%",
+    letterSpacing: "0.6px"
+  },
+  'header-link': {
+    fontFamily: "link",
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "150%",
+    color: "body",
+    borderBottom: "1px solid transparent",
+    _hover: {
+      borderBottom: "1px solid #B3E678",
+      color: "action"
+    },
+  },
+  'header-link-active': {
+    fontFamily: "link",
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "150%",
+    color: "#E5FFC7",
+    borderBottom: "1px solid #E5FFC7",
+    _hover: {
+      borderBottom: "1px solid #B3E678",
+      color: "action"
+    },
   }
 }

@@ -2,25 +2,11 @@ import { createIcon } from '@chakra-ui/react';
 
 export const CloseIcon = createIcon({
   displayName: 'CloseIcon',
-  viewBox: '0 0 28 29',
+  viewBox: '0 0 24 24',
   path: (
-    <svg width={28} height={29} fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <rect
-        x={2.33252}
-        y={0.711426}
-        width={36}
-        height={3}
-        transform='rotate(45 2.33252 0.711426)'
-        fill='white'
-      />
-      <rect
-        x={27.7881}
-        y={2.83252}
-        width={36}
-        height={3}
-        transform='rotate(135 27.7881 2.83252)'
-        fill='white'
-      />
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M23 1L1 23" stroke="#9DCE64"/>
+      <path d="M1 1L23 23" stroke="#9DCE64"/>
     </svg>
   )
 })
