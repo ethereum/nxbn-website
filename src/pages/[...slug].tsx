@@ -1,8 +1,16 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+
+import { getContentPaths } from '@/utils/getContentPaths'
  
 interface Props {
   mdxSource: MDXRemoteSerializeResult
+}
+
+export const getStaticPaths = () => {
+  const paths = getContentPaths('/')
+
+  return { paths: paths, fallback: true }
 }
 
 export async function getStaticProps() {
@@ -12,7 +20,6 @@ export async function getStaticProps() {
   // const mdxSource = await serialize(mdxText)
   // return { props: { mdxSource } }
   const mdxSource = await serialize('Hello, *world*!')
-  console.log()
   return { props: { mdxSource}}
 }
 
