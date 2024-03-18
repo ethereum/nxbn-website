@@ -1,7 +1,14 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 
+import remarkGfm from "remark-gfm"
+
 import { getContentPaths } from '@/utils/getContentPaths'
+import { getContentBySlug } from '@/utils/md'
+
+import rehypeHeadingIds from "@/utils/rehypeHeadingIds"
+import remarkInferToc from '@/utils/remarkInferToc'
+import { remapTableOfContents } from "@/utils/toc"
  
 interface Props {
   mdxSource: MDXRemoteSerializeResult
@@ -13,14 +20,37 @@ export const getStaticPaths = () => {
   return { paths: paths, fallback: true }
 }
 
-export async function getStaticProps() {
-  // MDX text - can be from a local file, database, CMS, fetch, anywhere...
-  // const res = await fetch('https:...')
-  // const mdxText = await res.text()
-  // const mdxSource = await serialize(mdxText)
-  // return { props: { mdxSource } }
-  const mdxSource = await serialize('Hello, *world*!')
-  return { props: { mdxSource}}
+export const getStaticProps = async (context) => {
+  const slug = `/${context.params.slug.join("/")}/`
+  const markdown = getContentBySlug(slug)
+
+  let tocNodeItems = []
+  const tocCallback = (toc): void => {
+    tocNodeItems = "items" in toc ? toc.items : []
+  }
+  const mdxSource = await serialize(markdown.content,  {
+    mdxOptions: {
+      remarkPlugins: [
+        remarkGfm,
+        [remarkInferToc, { callback: tocCallback }],
+      ],
+      rehypePlugins: [
+        // TODO: Add rehype image support
+        [rehypeHeadingIds]
+      ],
+    },
+  })
+
+  const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
+
+  return {
+    props: {
+      frontmatter: markdown.frontmatter,
+      mdxSource,
+      slug,
+      tocItems,
+    }
+  }
 }
 
 const ContentPage = ({ mdxSource }: Props) =>  {
