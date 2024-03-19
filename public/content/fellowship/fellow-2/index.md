@@ -1,6 +1,7 @@
 ---
-title: test title
-description: test description
+title: test 2 title
+description: test 2 description
+layout: fellow
 ---
 
 # Test 2

@@ -3,12 +3,17 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 import remarkGfm from "remark-gfm"
 
+import { FellowLayout } from '@/layouts'
+
 import { getContentPaths } from '@/utils/getContentPaths'
 import { getContentBySlug } from '@/utils/md'
-
 import rehypeHeadingIds from "@/utils/rehypeHeadingIds"
 import remarkInferToc from '@/utils/remarkInferToc'
 import { remapTableOfContents } from "@/utils/toc"
+
+export const layoutMapping = {
+  fellow: FellowLayout
+}
  
 interface Props {
   mdxSource: MDXRemoteSerializeResult
@@ -46,6 +51,7 @@ export const getStaticProps = async (context) => {
   return {
     props: {
       frontmatter: markdown.frontmatter,
+      layout: markdown.frontmatter.layout,
       mdxSource,
       slug,
       tocItems,
@@ -55,6 +61,23 @@ export const getStaticProps = async (context) => {
 
 const ContentPage = ({ mdxSource }: Props) =>  {
   return <MDXRemote {...mdxSource} />
+}
+
+ContentPage.getLayout = (page) => {
+  const {
+    slug,
+    frontmatter,
+    layout,
+    tocItems,
+  } = page.props
+  const layoutProps = {
+    slug,
+    frontmatter,
+    tocItems,
+  }
+  const Layout = layoutMapping[layout]
+
+  return <Layout {...layoutProps}>{page}</Layout>
 }
 
 export default ContentPage
