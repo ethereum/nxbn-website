@@ -29,6 +29,14 @@ export const textStyles = {
     fontWeight: 500,
     letterSpacing: "0.42px"
   },
+  'base-text': {
+    fontFamily: 'body',
+    fontWeight: 300,
+    fontStyle: "normal",
+    fontSize: 16,
+    lineHeight: '150%',
+    color: "body"
+  },
   'footer-text': {
     fontFamily: 'body',
     fontWeight: 300,

@@ -6,3 +6,5 @@ layout: fellow
 
 # Test 2
 test 2
+
+![test test](./testimage.png)
