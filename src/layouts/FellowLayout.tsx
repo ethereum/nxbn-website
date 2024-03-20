@@ -27,7 +27,7 @@ export const FellowLayout = ({ children, frontmatter }) => {
           <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1">
             {children}
           </Box>
-          <Box w="300px">
+          <Box w="300px" display={{ base: 'none', md: 'block' }}>
             <Text>Table of contents</Text>
           </Box>
         </Flex>

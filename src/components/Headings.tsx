@@ -5,6 +5,7 @@ export const H1 = ({ children, ...props }) => {
     <Heading
       as="h1"
       textStyle="h1"
+      wordBreak="break-word"
       {...props}
     >
       {children}
@@ -17,6 +18,7 @@ export const H2 = ({ children, ...props }) => {
     <Heading
       as="h2"
       textStyle="h2"
+      wordBreak="break-word"
       {...props}
     >
       {children}
@@ -29,6 +31,7 @@ export const H3 = ({ children, ...props }) => {
     <Heading
       as="h3"
       textStyle="h3"
+      wordBreak="break-word"
       {...props}
     >
       {children}
@@ -41,6 +44,7 @@ export const H4 = ({ children, ...props }) => {
     <Heading
       as="h4"
       textStyle="h4"
+      wordBreak="break-word"
       {...props}
     >
       {children}
@@ -53,6 +57,7 @@ export const H5 = ({ children, ...props }) => {
     <Heading
       as="h5"
       textStyle="h5"
+      wordBreak="break-word"
       {...props}
     >
       {children}
@@ -65,6 +70,7 @@ export const H6 = ({ children, ...props }) => {
     <Heading
       as="h6"
       textStyle="h6"
+      wordBreak="break-word"
       {...props}
     >
       {children}
