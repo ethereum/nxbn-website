@@ -25,7 +25,7 @@ const Header1 = (props) => {
 
 const Header2 = (props) => {
   return (
-    <H2 color="action" {...props} />
+    <H2 color="action" {...props} mt={16} />
   )
 }
 
@@ -55,7 +55,7 @@ const Header6 = (props) => {
 
 const Paragraph = (props) => {
   return (
-    <Text textStyle="base-text" {...props} />
+    <Text textStyle="base-text" {...props} mb={6} />
   )
 }
 

@@ -1,10 +1,11 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Flex, Text } from '@chakra-ui/react'
 
 import StarsImage from '@/public/images/stars.png'
 
 import ContentContainer from '@/components/ContentContainer'
 import { Image } from '@/components/Image'
 import FellowLayoutHero from '@/components/Heroes/FellowLayoutHero'
+import { MARKDOWN_CONTENT_MAX_WIDTH } from '@/utils/constants'
 
 export const FellowLayout = ({ children, frontmatter }) => {
   const { title, fellowName, country, tags, image } = frontmatter
@@ -22,7 +23,14 @@ export const FellowLayout = ({ children, frontmatter }) => {
           tags={tags}
           image={image}
         />
-        {children}
+        <Flex px={{base: 6 , md: 16}} gap={16} pt={4} justifyContent="space-between">
+          <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1">
+            {children}
+          </Box>
+          <Box w="300px">
+            <Text>Table of contents</Text>
+          </Box>
+        </Flex>
       </ContentContainer>
     </>
   )

@@ -6,7 +6,7 @@ import { Image, type ImageProps } from "@/components/Image"
 
 import { toPosixPath } from "@/utils/relativePath"
 
-import { CONTENT_IMAGES_MAX_WIDTH } from "@/utils/constants"
+import { MARKDOWN_CONTENT_MAX_WIDTH } from "@/utils/constants"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
   width: string
@@ -30,9 +30,9 @@ const MarkdownImage = ({
   const transformedSrc = toPosixPath(src.toString())
 
   // keep the size of the images proportional to the max width constraint
-  if (imageWidth > CONTENT_IMAGES_MAX_WIDTH) {
-    imageWidth = CONTENT_IMAGES_MAX_WIDTH
-    imageHeight = CONTENT_IMAGES_MAX_WIDTH / imageAspectRatio
+  if (imageWidth > MARKDOWN_CONTENT_MAX_WIDTH) {
+    imageWidth = MARKDOWN_CONTENT_MAX_WIDTH
+    imageHeight = MARKDOWN_CONTENT_MAX_WIDTH / imageAspectRatio
   }
 
   const fileExt = extname(transformedSrc).toLowerCase()

@@ -13,4 +13,4 @@ export const COOKIE_POLICY_PAGE = '/cookie-policy' // TODO: GET LINK/CONTENT FOR
 
 export const CONTENT_DIR = 'public/content'
 
-export const CONTENT_IMAGES_MAX_WIDTH = 800
+export const MARKDOWN_CONTENT_MAX_WIDTH = 800
