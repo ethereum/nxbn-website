@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 
 import StarsImage from '@/public/images/stars.png'
 
@@ -7,6 +7,7 @@ import { Image } from '@/components/Image'
 import FellowLayoutHero from '@/components/Heroes/FellowLayoutHero'
 import { MARKDOWN_CONTENT_MAX_WIDTH } from '@/utils/constants'
 import TableOfContents from '@/components/TableOfContents'
+import { H3 } from '@/components/Headings'
 
 export const FellowLayout = ({ children, frontmatter, tocItems }) => {
   const { title, fellowName, country, tags, image } = frontmatter
@@ -45,6 +46,17 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
           </Box>
         </Flex>
       </ContentContainer>
+      <Box
+        py={16}
+        bg="backgroundHighlight"
+      >
+        <ContentContainer>
+          <Box px={{base: 6 , md: 16}}>
+            <H3 color="action">Meet more fellows</H3>
+            {/* TODO: Implement component for more fellows */}
+          </Box>
+        </ContentContainer>
+      </Box>
     </>
   )
 }
