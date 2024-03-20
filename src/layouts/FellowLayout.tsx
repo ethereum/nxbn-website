@@ -6,8 +6,9 @@ import ContentContainer from '@/components/ContentContainer'
 import { Image } from '@/components/Image'
 import FellowLayoutHero from '@/components/Heroes/FellowLayoutHero'
 import { MARKDOWN_CONTENT_MAX_WIDTH } from '@/utils/constants'
+import TableOfContents from '@/components/TableOfContents'
 
-export const FellowLayout = ({ children, frontmatter }) => {
+export const FellowLayout = ({ children, frontmatter, tocItems }) => {
   const { title, fellowName, country, tags, image } = frontmatter
 
   return (
@@ -23,12 +24,24 @@ export const FellowLayout = ({ children, frontmatter }) => {
           tags={tags}
           image={image}
         />
-        <Flex px={{base: 6 , md: 16}} gap={16} pt={4} justifyContent="space-between">
+        <Flex
+          px={{base: 6 , md: 16}}
+          gap={16}
+          pt={4}
+          pb={16}
+          justifyContent="space-between"
+        >
           <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1">
             {children}
           </Box>
-          <Box w="300px" display={{ base: 'none', md: 'block' }}>
-            <Text>Table of contents</Text>
+          <Box
+            w="300px"
+            display={{ base: 'none', md: 'block' }}
+            position="sticky"
+            top="20px"
+            alignSelf="start"
+          >
+            <TableOfContents tocItems={tocItems} />
           </Box>
         </Flex>
       </ContentContainer>
