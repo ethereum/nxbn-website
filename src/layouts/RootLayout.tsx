@@ -1,7 +1,8 @@
 import { Container } from "@chakra-ui/react"
 
-import Header from "@/components/Nav/Header"
-import Footer from "@/components/Footer"
+import ContentContainer from "@/components/ContentContainer"
+import Header from "@/components/Nav/Header/Header"
+import Footer from "@/components/Nav/Footer/Footer"
 
 export const RootLayout = ({
   children
@@ -9,10 +10,14 @@ export const RootLayout = ({
 
   // TODO: implement RootLayout
   return (
-    <Container mx="auto" maxW="1536px">
-      <Header />
+    <Container>
+      <ContentContainer>
+        <Header />
+      </ContentContainer>
       {children}
-      <Footer />
+      <ContentContainer>
+        <Footer />
+      </ContentContainer>
     </Container>
   )
 }

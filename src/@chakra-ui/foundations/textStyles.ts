@@ -29,6 +29,32 @@ export const textStyles = {
     fontWeight: 500,
     letterSpacing: "0.42px"
   },
+  'fellow-title': {
+    fontFamily: 'heading',
+    fontSize: 58,
+    fontWeight: 400,
+    fontStyle: "normal",
+    lineHeight: "normal",
+    letterSpacing: "2.9px",
+    m: 0
+  },
+  'tag': {
+    fontFamily: 'heading',
+    fontSize: 14,
+    fontStyle: "normal",
+    fontWeight: 700,
+    lineHeight: "150%",
+    letterSpacing: "-0.154px",
+    textTransform: "uppercase",
+  },
+  'base-text': {
+    fontFamily: 'body',
+    fontWeight: 300,
+    fontStyle: "normal",
+    fontSize: 16,
+    lineHeight: '150%',
+    color: "body"
+  },
   'footer-text': {
     fontFamily: 'body',
     fontWeight: 300,
