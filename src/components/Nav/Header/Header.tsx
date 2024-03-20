@@ -14,7 +14,7 @@ import {
 import { useRouter } from "next/router"
 
 import { CloseIcon, HamburgerIcon, LogoIcon } from "@/components/icons"
-import HeaderButtons from "@/components/Nav/HeaderButtons"
+import HeaderButtons from "@/components/Nav/Header/HeaderButtons"
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()

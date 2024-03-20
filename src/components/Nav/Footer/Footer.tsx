@@ -21,7 +21,7 @@ const Footer = () => {
       <Flex
         py={2}
         justifyContent="space-between"
-        px={{ base: 5, md: 16 }}
+        px={5}
         flexDir={{ base: "column", lg: "row" }}
       >
         <Flex
