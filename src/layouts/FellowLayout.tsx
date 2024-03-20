@@ -52,7 +52,7 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
       >
         <ContentContainer>
           <Box px={{base: 6 , md: 16}}>
-            <H3 color="action">Meet more fellows</H3>
+            <H3 variant="action">Meet more fellows</H3>
             {/* TODO: Implement component for more fellows */}
           </Box>
         </ContentContainer>

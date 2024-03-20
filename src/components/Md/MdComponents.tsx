@@ -19,37 +19,37 @@ import MarkdownImage from '@/components/Md/MarkdownImage'
 
 const Header1 = (props) => {
   return (
-    <H1 color="action" {...props} />
+    <H1 variant="action" {...props} />
   )
 }
 
 const Header2 = (props) => {
   return (
-    <H2 color="action" {...props} mt={16} />
+    <H2 variant="action" {...props} mt={16} />
   )
 }
 
 const Header3 = (props) => {
   return (
-    <H3 color="action" {...props} />
+    <H3 variant="action" {...props} />
   )
 }
 
 const Header4 = (props) => {
   return (
-    <H4 color="action" {...props} />
+    <H4 variant="action" {...props} />
   )
 }
 
 const Header5 = (props) => {
   return (
-    <H5 color="action" {...props} />
+    <H5 variant="action" {...props} />
   )
 }
 
 const Header6 = (props) => {
   return (
-    <H6 color="action" {...props} />
+    <H6 variant="action" {...props} />
   )
 }
 
