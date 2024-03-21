@@ -1,4 +1,4 @@
-import { Center, Flex } from '@chakra-ui/react'
+import { Box, Center, Flex } from '@chakra-ui/react'
 import { StaticImageData } from 'next/image'
 
 import { Image } from '@/components/Image'
@@ -19,9 +19,50 @@ const ImageSplitContent = ({
 }: ImageSplitContentProps) => {
   const imageBorderRadiusOptions = {
     round: 180,
-    left: 'xl',
-    right: 'xl',
+    left: '120px 400px',
+    right: '400px 120px',
     none: 'none'
+  }
+
+  const wrapperStyle = {
+    'left': {
+      position: 'relative',
+      display: 'inline-block',
+      borderRadius: imageBorderRadiusOptions[imageBorder],
+      '::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        borderRadius: imageBorderRadiusOptions[imageBorder],
+        border: '7px solid #034057', // Adjust based on your color needs
+        mixBlendMode: 'multiply',
+        boxSizing: 'border-box',
+        opacity: 0.1
+      }
+    },
+    'right': {
+      position: 'relative',
+      display: 'inline-block',
+      borderRadius: imageBorderRadiusOptions[imageBorder],
+      '::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        borderRadius: imageBorderRadiusOptions[imageBorder],
+        border: '7px solid #034057', // Adjust based on your color needs
+        mixBlendMode: 'multiply',
+        boxSizing: 'border-box',
+        opacity: 0.1
+      }
+    },
+    round: {},
+    none: {},
   }
 
   return (
@@ -35,11 +76,13 @@ const ImageSplitContent = ({
       }}
     >
       <Center w='380px' margin='auto'>
-        <Image
-          src={image}
-          alt=""
-          borderRadius={imageBorderRadiusOptions[imageBorder]}
-        />
+        <Box sx={wrapperStyle[imageBorder]}>
+          <Image
+            src={image}
+            alt=""
+            borderRadius={imageBorderRadiusOptions[imageBorder]}
+          />
+        </Box>
       </Center>
       <Center w="auto" flex={1}>
         {children}

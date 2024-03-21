@@ -7,8 +7,6 @@ import Footer from "@/components/Nav/Footer/Footer"
 export const RootLayout = ({
   children
 }: any) => {
-
-  // TODO: implement RootLayout
   return (
     <Container>
       <ContentContainer>
