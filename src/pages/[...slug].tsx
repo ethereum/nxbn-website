@@ -4,7 +4,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGfm from "remark-gfm"
 import { join } from 'path'
 
-import { FellowLayout } from '@/layouts'
+import { CookieLayout, FellowLayout } from '@/layouts'
 
 import MdComponents from '@/components/Md/MdComponents'
 
@@ -16,7 +16,8 @@ import remarkInferToc from '@/utils/remarkInferToc'
 import { remapTableOfContents } from "@/utils/toc"
 
 export const layoutMapping = {
-  fellow: FellowLayout
+  fellow: FellowLayout,
+  cookie: CookieLayout
 }
  
 interface Props {

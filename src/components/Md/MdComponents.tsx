@@ -59,6 +59,12 @@ const Paragraph = (props) => {
   )
 }
 
+const ListItemStyled = (props) => {
+  return (
+    <ListItem textStyle="base-text" {...props} />
+  )
+}
+
 // All base html element components
 export const htmlElements = {
   a: Link,
@@ -71,7 +77,7 @@ export const htmlElements = {
   h6: Header6,
   p: Paragraph,
   img: MarkdownImage,
-  li: ListItem,
+  li: ListItemStyled,
   ol: OrderedList,
   ul: UnorderedList,
   // pre: Pre,
