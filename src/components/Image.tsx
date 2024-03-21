@@ -35,10 +35,6 @@ const DefaultNextImage = (props: ImageProps) => {
   return <NextImage placeholder={hasBlurData ? "blur" : "empty"} {...props}  />
 }
 
-/**
- * TODO: replace this component with import { Image } from "@chakra-ui/next-js"
- * once https://github.com/vercel/next.js/issues/52216 is fixed
- */
 export const Image: ChakraComponent<"img", NextImageProps> = chakra(DefaultNextImage, {
   shouldForwardProp: (prop) => (imageProps as string[]).includes(prop),
 })

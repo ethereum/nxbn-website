@@ -55,7 +55,7 @@ const Header6 = (props) => {
 
 const Paragraph = (props) => {
   return (
-    <Text textStyle="base-text" {...props} mb={6} />
+    <Text textStyle="base-text" {...props} />
   )
 }
 
