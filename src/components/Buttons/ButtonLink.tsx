@@ -1,14 +1,15 @@
-import {
-  Button as ChakraButton,
-  ButtonProps as ChakraButtonProps,
-} from '@chakra-ui/react'
+import { Link } from '@chakra-ui/react'
 
-import Link from '@/components/Link'
-
-// TODO: Implement ButtonLink component
-const ButtonLink = ({...props}) => {
+const ButtonLink = ({ ...props }) => {
   return (
-    <ChakraButton as={Link} {...props} />
+    <Link
+      bg="action"
+      px={10}
+      py={2}
+      borderRadius='3000px'
+      textStyle='button-link'
+      {...props}
+    />
   )
 }
 
