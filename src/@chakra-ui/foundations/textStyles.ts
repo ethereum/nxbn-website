@@ -120,5 +120,14 @@ export const textStyles = {
       borderBottom: "1px solid #B3E678",
       color: "action"
     },
+  },
+  'button-link': {
+    fontFamily: 'heading',
+    fontSize: 18,
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "150%",
+    letterSpacing: "0.26px",
+    color: "#034057",
   }
 }
