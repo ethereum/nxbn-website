@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app'
 
-import { RootLayout } from "@/layouts"
+import { RootLayout } from "@/layouts/RootLayout"
 import { ChakraProvider } from '@chakra-ui/react'
 
 import theme from '@/@chakra-ui/theme'

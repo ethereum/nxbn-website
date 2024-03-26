@@ -16,6 +16,7 @@ import { useRouter } from "next/router"
 import { CloseIcon, HamburgerIcon, LogoIcon } from "@/components/icons"
 import HeaderButtons from "@/components/Nav/Header/HeaderButtons"
 
+// TODO: Make sticky on scroll
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const router = useRouter()
