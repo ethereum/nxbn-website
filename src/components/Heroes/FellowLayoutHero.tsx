@@ -29,7 +29,7 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
         />
         <Center>
           <Box>
-            <Text textStyle="base-text" fontWeight="600" color="body">
+            <Text textStyle="base-text" fontWeight="600" color="body" m={0}>
               {fellowName}
             </Text>
             <Text textStyle="base-text" fontSize="18" color="body">

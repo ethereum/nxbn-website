@@ -4,7 +4,8 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGfm from "remark-gfm"
 import { join } from 'path'
 
-import { CookieLayout, FellowLayout } from '@/layouts'
+import { CookieLayout } from '@/layouts/CookieLayout'
+import { FellowLayout } from '@/layouts/FellowLayout'
 
 import MdComponents from '@/components/Md/MdComponents'
 

@@ -78,25 +78,15 @@ export const htmlElements = {
   p: Paragraph,
   img: MarkdownImage,
   li: ListItemStyled,
-  ol: OrderedList,
-  ul: UnorderedList,
-  // pre: Pre,
-  // hr: HR,
-}
-
-// All custom React components
-export const reactComponents = {
-  // ContentContainer,
-  // Divider,
-  // Page,
+  // ol: OrderedList, // TODO: Implement
+  // hr: HR, // TODO: Implement
 }
 
 /**
  * All base markdown components as default export
  */
 const MdComponents = {
-  ...htmlElements,
-  ...reactComponents,
+  ...htmlElements
 }
 
 export default MdComponents
