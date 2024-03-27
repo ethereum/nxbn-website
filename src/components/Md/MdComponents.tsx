@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   ListItem,
   OrderedList,
   Text,
@@ -65,6 +66,17 @@ const ListItemStyled = (props) => {
   )
 }
 
+export const HR = () => (
+  <Divider
+    mt={8}
+    mb={4}
+    display="inline-block"
+    position="inherit"
+    height="1px"
+    bg="action"
+  />
+)
+
 // All base html element components
 export const htmlElements = {
   a: Link,
@@ -78,8 +90,9 @@ export const htmlElements = {
   p: Paragraph,
   img: MarkdownImage,
   li: ListItemStyled,
-  // ol: OrderedList, // TODO: Implement
-  // hr: HR, // TODO: Implement
+  ol: OrderedList,
+  ul: UnorderedList,
+  hr: HR,
 }
 
 /**
