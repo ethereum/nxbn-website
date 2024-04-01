@@ -1,39 +1,26 @@
 ---
 layout: fellow
-title: Fair Finance for Web3 workers
-fellowName: Name Name
-country: Country
-image: /content/fellowship/name/name-headshot.png
+title: LatAm Empowerment
+fellowName: Marcus
+country: Guatemala
+image: /content/fellowship/name/marcus-headshot.png
 tags:
-    - tag
-    - tag
-    - tag
+  - america-latin
+  - defi
+  - research
 ---
+Among many things, crypto's promise is to create new, more equitable economic models that can benefit everyone, not just the wealthy and powerful. Some see DeFi’s promise as being able to provide financial services to those who may not have access to traditional financial instruments in emerging economies around the world, including some of the world’s most disenfranchised communities.
 
-![](./testimage1.png)
+If you're reading this, chances are that you're optimistic about the potential of technology to address some of these problems. Maybe that means decentralized networks that **fundamentally revolutionize** the way we interact with ourselves, each other, and systems of power. Or maybe it simply means apps that use new and more accurate types of digital information to assess someone's creditworthiness so they can get a decent interest rate on a small loan. I think the reality will be somewhere in-between.
 
-## Introduction
 
-I’m building Copra, a DeFi lending protocol that facilitates on-chain credit to entities with on-chain revenues and income. Today, the reality is that most who earn in crypto are still those institutions and individuals within the crypto space, and in the short-term Copra will be focusing on those audiences. However, that is still very far from the full potential and the full mission of the project. As DeFi will be the new financial system of the world, crypto will be the new payment medium in the real economy including to receive income and revenue among individuals and businesses. This will be the unlock for Copra ultimate mission, which is to provide financially-underserved individuals and businesses in the real economy, particularly in emerging countries, with the credit that they deserve.
+I have spent the last few months actively exploring ways to break down this barrier of financial empowerment by leveraging the power of Ethereum. My goal is to research a number of viable solutions powered by cryptographic technologies for financial inclusion and access to credit to ultimately enable human flourishing across Guatemala and beyond.
 
-Many financial institutions, big and small, new and old, had attempted to serve the financially underserved in the region only to fall short. Large traditional financial institutions have thick bureaucracy and outdated operational systems that ultimately limit innovations and damper speed of execution. Some emerging fintech lending companies that pledged to fight loan sharks effectively became loan sharks themselves by imposing predatory interest rates and unethical debt collection processes. There is only so much the current centralised financial systems with its technology limitations can do to truly bring financial inclusion to the billions of financially underserved people all around the globe.
+I have been researching which money legos might be useful in a place like Puntarenas and throughout the rest of Guatemala. In particular, I have been exploring the barriers to adoption and potential solutions that could be used to unlock peer-to-peer lending for those without access to more equitable financial mechanisms.
 
-![test test](./testimage.png)
+To date, as a part of my research I have spoken with members of hundreds of crypto projects including those leading DeFi protocols, DAOs, identity and scaling solutions, and other core developers, designers, wallet builders. Additionally, I've held conversations and interviews with local leading projects, government offices, and international NGOs throughout Guatemala and other emerging economies to understand where they may see crypto acting as a catalyst for new means of coordination and equitable financial services.
 
-## Our Research
+This research has been incredibly insightful and has allowed me to gain a better understanding of the current state of DeFi and the wider crypto ecosystem’s potential in emerging economies.
 
-DeFi overcollateralized lending protocols such as Aave and Compound were among the first credit primitives built on top of the Ethereum blockchain. This opens the notion of the possibilities for more complex lending protocols that could serve more than the crypto traders audience by taking other forms or collaterals or even by being undercollateralized. In particular, some types of credit protocols aim to lend to real world borrowers in emerging markets, and they are typically trying to achieve this by raising lending capital from their DeFi protocol and then channelling the funds off-chain to financing companies in the real world that they are partnering with.
-
-Although the mission to bring credit access to emerging market borrowers through DeFi-sourced capital that is cheaper in cost is commendable, some of those protocols' practical implementations in reality have proven to be problematic. Given those credit protocols are unable to reach the end borrowers directly, they are forced to partner with off-chain centralised financing companies to distribute the lending capital to the end borrowers. Inevitably, some centralised trust is being put on the financing company partners and unfortunately there is no guarantee that those partners are behaving in good faith, particularly those operating in developing nations. Many reporting or auditing could be done to hopefully increase transparency, but given that inherently those financing company partners are off-chain entities, there is no verifiable transparency like in smart contract codes. As a result, in many occurrences, the benefit of lower cost of lending capital from DeFi are not delivered to the end borrowers as their interest rates are still astronomically high because all the extra margins are absorbed by the financing company partners themselves. Even worse, fraud by the financing company partners could and did happen that resulted in broad negative impact. There is no doubt that there is immense opportunity in channelling the capital in DeFi into billions of underserved borrowers in emerging markets, but finding the correct model and executing it properly have been proven to be key.
-
-### Our Research 2
-
-DeFi overcollateralized lending protocols such as Aave and Compound were among the first credit primitives built on top of the Ethereum blockchain. This opens the notion of the possibilities for more complex lending protocols that could serve more than the crypto traders audience by taking other forms or collaterals or even by being undercollateralized. In particular, some types of credit protocols aim to lend to real world borrowers in emerging markets, and they are typically trying to achieve this by raising lending capital from their DeFi protocol and then channelling the funds off-chain to financing companies in the real world that they are partnering with.
-
-Although the mission to bring credit access to emerging market borrowers through DeFi-sourced capital that is cheaper in cost is commendable, some of those protocols' practical implementations in reality have proven to be problematic. Given those credit protocols are unable to reach the end borrowers directly, they are forced to partner with off-chain centralised financing companies to distribute the lending capital to the end borrowers. Inevitably, some centralised trust is being put on the financing company partners and unfortunately there is no guarantee that those partners are behaving in good faith, particularly those operating in developing nations. Many reporting or auditing could be done to hopefully increase transparency, but given that inherently those financing company partners are off-chain entities, there is no verifiable transparency like in smart contract codes. As a result, in many occurrences, the benefit of lower cost of lending capital from DeFi are not delivered to the end borrowers as their interest rates are still astronomically high because all the extra margins are absorbed by the financing company partners themselves. Even worse, fraud by the financing company partners could and did happen that resulted in broad negative impact. There is no doubt that there is immense opportunity in channelling the capital in DeFi into billions of underserved borrowers in emerging markets, but finding the correct model and executing it properly have been proven to be key.
-
-#### Our Research 3
-
-DeFi overcollateralized lending protocols such as Aave and Compound were among the first credit primitives built on top of the Ethereum blockchain. This opens the notion of the possibilities for more complex lending protocols that could serve more than the crypto traders audience by taking other forms or collaterals or even by being undercollateralized. In particular, some types of credit protocols aim to lend to real world borrowers in emerging markets, and they are typically trying to achieve this by raising lending capital from their DeFi protocol and then channelling the funds off-chain to financing companies in the real world that they are partnering with.
-
-Although the mission to bring credit access to emerging market borrowers through DeFi-sourced capital that is cheaper in cost is commendable, some of those protocols' practical implementations in reality have proven to be problematic. Given those credit protocols are unable to reach the end borrowers directly, they are forced to partner with off-chain centralised financing companies to distribute the lending capital to the end borrowers. Inevitably, some centralised trust is being put on the financing company partners and unfortunately there is no guarantee that those partners are behaving in good faith, particularly those operating in developing nations. Many reporting or auditing could be done to hopefully increase transparency, but given that inherently those financing company partners are off-chain entities, there is no verifiable transparency like in smart contract codes. As a result, in many occurrences, the benefit of lower cost of lending capital from DeFi are not delivered to the end borrowers as their interest rates are still astronomically high because all the extra margins are absorbed by the financing company partners themselves. Even worse, fraud by the financing company partners could and did happen that resulted in broad negative impact. There is no doubt that there is immense opportunity in channelling the capital in DeFi into billions of underserved borrowers in emerging markets, but finding the correct model and executing it properly have been proven to be key.
+---
+https://blog.ethereum.org/2023/02/06/empower-latam-ethereum-fellows
