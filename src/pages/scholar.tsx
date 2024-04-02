@@ -8,6 +8,7 @@ import {
 import ContentContainer from '@/components/ContentContainer'
 import FAQ, { type Question } from '@/components/FAQ'
 import ImageSplitContent from '@/components/ImageSplitContent'
+import PreviousEditions from '@/components/PreviousEditions'
 
 import TempImage from '@/public/images/temp.png'
 
@@ -64,6 +65,15 @@ const ScholarPage = () => {
       <ContentContainer>
         <FAQ questions={FAQQuestions} />
       </ContentContainer>
+
+      <Box
+        py={16}
+        bg="backgroundHighlight"
+      >
+        <ContentContainer>
+          <PreviousEditions />
+        </ContentContainer>
+      </Box>
     </>
   )
 }
