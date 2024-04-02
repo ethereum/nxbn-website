@@ -9,7 +9,7 @@ export const RootLayout = ({
 }: any) => {
   return (
     <Container>
-      <ContentContainer>
+      <ContentContainer position='sticky' top={4}>
         <Header />
       </ContentContainer>
       {children}
