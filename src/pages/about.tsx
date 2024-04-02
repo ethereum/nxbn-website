@@ -8,31 +8,41 @@ import {
 import ContentContainer from '@/components/ContentContainer'
 import ImageSplitContent from '@/components/ImageSplitContent'
 
+import AboutHeroImage from '@/public/images/about/hero.png'
 import TempImage from '@/public/images/temp.png'
 
 const AboutPage = () => {
   return (
     <> 
-      <ImageHero />
-      <Box>
-        <H1>AboutPage</H1>
-      </Box>
-      <ContentContainer mb={8}>
-        <ImageSplitContent
-          image={TempImage}
-          imageBorder='round'
-          imageSide='right'
-        >
-          <Box gap={8}>
-            <H2>Stories over narrative</H2>
-            <Text>
-              Protocols like Ethereum are often explained in the context of Big Narratives about human ingenuity, collaboration, and society. But it’s hard to imagine a future in those heroic terms.
-            </Text>
-            <Text>
-              It’s the small stories that provide perspective into the soul of that protocol, and allow us to see what human coordination might look like someday.
-            </Text>
+      <ImageHero heroImage={AboutHeroImage}>
+        <Box w="100%"  bg='linear-gradient(180deg, #001121 0%, #056589 100%)' pt="-200px">
+          <Box px={{ base: 8, md: 16 }}>
+            <H1 variant="action" mt="-70px">Time for coordination</H1>
+            <Box maxW="515px">
+              <Text>Ethereum’s next billion users are part of a generation of humans that, for better or worse, will inherit the earth over the next 100 years.</Text>
+              <Text>Through initiatives that take a long-term and holistic approach to human development and coordination, our mission is to lay groundwork for the next billion problem solvers.</Text>
+              <Text>There will be</Text>
+            </Box>
           </Box>
-        </ImageSplitContent>
+          <ImageSplitContent
+              image={TempImage}
+              imageBorder='round'
+              imageSide='right'
+            >
+              <Box gap={8}>
+                <H2>Stories over narrative</H2>
+                <Text>
+                  Protocols like Ethereum are often explained in the context of Big Narratives about human ingenuity, collaboration, and society. But it’s hard to imagine a future in those heroic terms.
+                </Text>
+                <Text>
+                  It’s the small stories that provide perspective into the soul of that protocol, and allow us to see what human coordination might look like someday.
+                </Text>
+              </Box>
+            </ImageSplitContent>
+        </Box>
+      </ImageHero>
+      <ContentContainer mb={8}>
+
         <ImageSplitContent
           image={TempImage}
           imageBorder='round'

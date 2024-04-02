@@ -75,7 +75,7 @@ const ImageSplitContent = ({
         md: imageSide === 'left' ? 'row' : 'row-reverse'
       }}
     >
-      <Center w='380px' margin='auto'>
+      <Center maxW='380px' margin='auto'>
         <Box sx={wrapperStyle[imageBorder]}>
           <Image
             src={image}
