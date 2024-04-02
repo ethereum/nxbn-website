@@ -9,7 +9,9 @@ import ContentContainer from '@/components/ContentContainer'
 import FAQ, { type Question } from '@/components/FAQ'
 import ImageSplitContent from '@/components/ImageSplitContent'
 import PreviousEditions from '@/components/PreviousEditions'
+import ImageHero from '@/components/Heroes/ImageHero'
 
+import ScholarClosedHeroImage from '@/public/images/scholar/scholar-hero-closed.png'
 import TempImage from '@/public/images/temp.png'
 
 const FAQQuestions: Question[] = [
@@ -30,9 +32,11 @@ const FAQQuestions: Question[] = [
 const ScholarClosed = () => {
   return (
     <>
-      <Box>
-        <H1>ScholarPage Closed</H1>
-      </Box>
+      <ImageHero heroImage={ScholarClosedHeroImage}>
+      <Box w="100%"  bg='linear-gradient(180deg, #001121 0%, #056589 100%)' pt="-200px">
+        <Text>test</Text>
+        </Box>
+      </ImageHero>
       <ContentContainer>
         <ImageSplitContent
           image={TempImage}

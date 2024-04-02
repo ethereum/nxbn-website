@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Center, Divider, Text } from '@chakra-ui/react'
 
 import ButtonLink from '@/components/Buttons/ButtonLink'
 import {
@@ -7,9 +7,13 @@ import {
 } from "@/components/Headings"
 import ContentContainer from '@/components/ContentContainer'
 import FAQ, { type Question } from '@/components/FAQ'
+import { Image } from '@/components/Image'
 import ImageSplitContent from '@/components/ImageSplitContent'
 import PreviousEditions from '@/components/PreviousEditions'
+import ImageHero from '@/components/Heroes/ImageHero'
 
+import EthGlypth from '@/public/images/scholar/eth-glyph.png'
+import ScholarOpenHeroImage from '@/public/images/scholar/scholar-hero-open.png'
 import TempImage from '@/public/images/temp.png'
 
 const FAQQuestions: Question[] = [
@@ -30,9 +34,28 @@ const FAQQuestions: Question[] = [
 const ScholarOpen = () => {
   return (
     <>
-      <Box>
-        <H1>ScholarPage Open</H1>
-      </Box>
+      <ImageHero heroImage={ScholarOpenHeroImage}>
+        <Box w="100%" bg='linear-gradient(180deg, #001121 0%, #056589 100%)'  mt="-20%">
+          <Center gap={8} flexDir='column' px={8} textAlign='center'>
+            <Center flexDir='column'>
+              <Image src={EthGlypth} alt="" w="82px" />
+              <H2 textAlign='center'>Devcon SEA Scholars</H2>
+            </Center>
+            <Box maxW='515px'>
+              <Text>
+                Come learn, connect, and grow with the Ethereum ecosystem. November 9-17th in Bangkok, Thailand.
+              </Text>
+            </Box>
+            <Box>
+              <ButtonLink href='/'>Apply</ButtonLink>
+            </Box>
+            <Box>
+              <ButtonLink href='/'>Devcon website</ButtonLink>
+            </Box>
+          </Center>
+          <Divider my={12} color="action" borderTop="1px solid" />
+        </Box>
+      </ImageHero>
 
       <ContentContainer>
         <Box px={{ base: 8, md: 16 }} gap={8}>
