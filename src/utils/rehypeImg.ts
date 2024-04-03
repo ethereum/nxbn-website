@@ -11,15 +11,15 @@ interface Options {
 }
 
 type ImageNode = {
-  type: 'element'
-  tagName: 'img'
+  type: "element"
+  tagName: "img"
   properties: {
     src: string
     height?: number
     width?: number
     aspectRatio?: number
     blurDataURL?: string
-    placeholder?: 'blur' | 'empty'
+    placeholder?: "blur" | "empty"
   }
 }
 

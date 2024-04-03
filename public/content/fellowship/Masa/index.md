@@ -5,9 +5,9 @@ fellowName: Name Name
 country: Country
 image: /content/fellowship/name/name-headshot.png
 tags:
-    - tag
-    - tag
-    - tag
+  - tag
+  - tag
+  - tag
 ---
 
 ![](./testimage1.png)

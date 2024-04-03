@@ -1,32 +1,32 @@
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { serialize } from "next-mdx-remote/serialize"
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"
 
 import remarkGfm from "remark-gfm"
-import { join } from 'path'
+import { join } from "path"
 
-import { CookieLayout } from '@/layouts/CookieLayout'
-import { FellowLayout } from '@/layouts/FellowLayout'
+import { CookieLayout } from "@/layouts/CookieLayout"
+import { FellowLayout } from "@/layouts/FellowLayout"
 
-import MdComponents from '@/components/Md/MdComponents'
+import MdComponents from "@/components/Md/MdComponents"
 
-import { getContentPaths } from '@/utils/getContentPaths'
-import { getContentBySlug } from '@/utils/md'
+import { getContentPaths } from "@/utils/getContentPaths"
+import { getContentBySlug } from "@/utils/md"
 import rehypeHeadingIds from "@/utils/rehypeHeadingIds"
 import rehypeImg from "@/utils/rehypeImg"
-import remarkInferToc from '@/utils/remarkInferToc'
+import remarkInferToc from "@/utils/remarkInferToc"
 import { remapTableOfContents } from "@/utils/toc"
 
 export const layoutMapping = {
   fellow: FellowLayout,
-  cookie: CookieLayout
+  cookie: CookieLayout,
 }
- 
+
 interface Props {
   mdxSource: MDXRemoteSerializeResult
 }
 
 export const getStaticPaths = () => {
-  const paths = getContentPaths('/')
+  const paths = getContentPaths("/")
 
   return { paths: paths, fallback: true }
 }
@@ -42,16 +42,13 @@ export const getStaticProps = async (context) => {
 
   const mdPath = join("/content", slug)
   const mdDir = join("public", mdPath)
-  
-  const mdxSource = await serialize(markdown.content,  {
+
+  const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
-      remarkPlugins: [
-        remarkGfm,
-        [remarkInferToc, { callback: tocCallback }],
-      ],
+      remarkPlugins: [remarkGfm, [remarkInferToc, { callback: tocCallback }]],
       rehypePlugins: [
         [rehypeImg, { dir: mdDir, srcPath: mdPath }],
-        [rehypeHeadingIds]
+        [rehypeHeadingIds],
       ],
     },
   })
@@ -65,21 +62,16 @@ export const getStaticProps = async (context) => {
       mdxSource,
       slug,
       tocItems,
-    }
+    },
   }
 }
 
-const ContentPage = ({ mdxSource }: Props) =>  {
+const ContentPage = ({ mdxSource }: Props) => {
   return <MDXRemote {...mdxSource} components={MdComponents} />
 }
 
 ContentPage.getLayout = (page) => {
-  const {
-    slug,
-    frontmatter,
-    layout,
-    tocItems,
-  } = page.props
+  const { slug, frontmatter, layout, tocItems } = page.props
   const layoutProps = {
     slug,
     frontmatter,

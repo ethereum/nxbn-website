@@ -21,7 +21,6 @@ const HamburgerButton = ({
   onToggle,
   ...props
 }: HamburgerProps) => {
-
   return (
     <IconButton
       onClick={onToggle}
