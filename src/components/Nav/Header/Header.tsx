@@ -9,7 +9,7 @@ import {
   Flex,
   Menu,
   MenuButton,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 
@@ -34,18 +34,18 @@ const Header = () => {
           borderRadius="60px"
         >
           <Box
-            onClick={isOpen ? undefined : () => router.push('/')}
-            cursor={isOpen ? 'default' : 'pointer'}
+            onClick={isOpen ? undefined : () => router.push("/")}
+            cursor={isOpen ? "default" : "pointer"}
           >
             <LogoIcon />
           </Box>
-          <Box display={{ base: 'block', md: 'none' }}>
+          <Box display={{ base: "block", md: "none" }}>
             <Box>
-              <Menu id='menu-button'>
+              <Menu id="menu-button">
                 {!isOpen && (
                   <MenuButton
                     as={IconButton}
-                    aria-label='Menu'
+                    aria-label="Menu"
                     icon={<HamburgerIcon />}
                     onClick={onOpen}
                   />
@@ -54,15 +54,20 @@ const Header = () => {
                 {isOpen && (
                   <MenuButton
                     as={IconButton}
-                    aria-label='Close menu'
+                    aria-label="Close menu"
                     icon={<CloseIcon />}
                     onClick={onClose}
                   />
                 )}
               </Menu>
             </Box>
-                
-            <Drawer onClose={onClose} isOpen={isOpen} size='full' placement="start">
+
+            <Drawer
+              onClose={onClose}
+              isOpen={isOpen}
+              size="full"
+              placement="start"
+            >
               <DrawerOverlay />
               <DrawerContent bg={"actionHighlight"} px={5}>
                 <Flex
@@ -75,10 +80,10 @@ const Header = () => {
                   width="100%"
                 >
                   <Box>
-                    <Menu id='menu-button'>
+                    <Menu id="menu-button">
                       <MenuButton
                         as={IconButton}
-                        aria-label='Close menu'
+                        aria-label="Close menu"
                         icon={<CloseIcon />}
                         onClick={onClose}
                       />
@@ -92,7 +97,7 @@ const Header = () => {
             </Drawer>
           </Box>
 
-          <Center display={{base: 'none', md: 'flex'}}>
+          <Center display={{ base: "none", md: "flex" }}>
             <HeaderButtons />
           </Center>
         </Flex>

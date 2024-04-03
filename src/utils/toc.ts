@@ -62,19 +62,14 @@ const parseItem = (item) => {
  * @returns Modified array of ToCItem objects
  */
 
-export const remapTableOfContents = (
-  tocNodeItems,
-  compiledSource: string
-) => {
+export const remapTableOfContents = (tocNodeItems, compiledSource: string) => {
   const h1Count = Array.from(compiledSource.matchAll(h1RegEx)).length
   if (h1Count > 1 && "url" in tocNodeItems[0]) {
     console.warn("More than one h1 found in file at id:", tocNodeItems[0].url)
   }
-  const items = (
+  const items =
     h1Count > 0 && "items" in tocNodeItems[0]
       ? tocNodeItems[0].items
       : tocNodeItems
-  )
   return items.map(parseItem)
 }
-  

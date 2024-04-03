@@ -1,12 +1,19 @@
-import { Box } from '@chakra-ui/react'
+import { Box } from "@chakra-ui/react"
 
-import { Image } from '@/components/Image'
+import { Image } from "@/components/Image"
 
-const ImageHero = ({children, heroImage}) => {
+const ImageHero = ({ children, heroImage }) => {
   return (
     <>
-     <Box mt={-16}>
-        <Image src={heroImage} alt="" w='100%' minH="415px" maxH="730px" objectFit='cover' />
+      <Box mt={-16}>
+        <Image
+          src={heroImage}
+          alt=""
+          w="100%"
+          minH="415px"
+          maxH="730px"
+          objectFit="cover"
+        />
       </Box>
       {children}
     </>

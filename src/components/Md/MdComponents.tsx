@@ -5,65 +5,42 @@ import {
   OrderedList,
   Text,
   UnorderedList,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react"
 
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-} from '@/components/Headings'
-import Link from '@/components/Link'
-import MarkdownImage from '@/components/Md/MarkdownImage'
+import { H1, H2, H3, H4, H5, H6 } from "@/components/Headings"
+import Link from "@/components/Link"
+import MarkdownImage from "@/components/Md/MarkdownImage"
 
 const Header1 = (props) => {
-  return (
-    <H1 variant="action" {...props} />
-  )
+  return <H1 variant="action" {...props} />
 }
 
 const Header2 = (props) => {
-  return (
-    <H2 variant="action" {...props} mt={16} />
-  )
+  return <H2 variant="action" {...props} mt={16} />
 }
 
 const Header3 = (props) => {
-  return (
-    <H3 variant="action" {...props} />
-  )
+  return <H3 variant="action" {...props} />
 }
 
 const Header4 = (props) => {
-  return (
-    <H4 variant="action" {...props} />
-  )
+  return <H4 variant="action" {...props} />
 }
 
 const Header5 = (props) => {
-  return (
-    <H5 variant="action" {...props} />
-  )
+  return <H5 variant="action" {...props} />
 }
 
 const Header6 = (props) => {
-  return (
-    <H6 variant="action" {...props} />
-  )
+  return <H6 variant="action" {...props} />
 }
 
 const Paragraph = (props) => {
-  return (
-    <Text textStyle="base-text" {...props} />
-  )
+  return <Text textStyle="base-text" {...props} />
 }
 
 const ListItemStyled = (props) => {
-  return (
-    <ListItem textStyle="base-text" {...props} />
-  )
+  return <ListItem textStyle="base-text" {...props} />
 }
 
 export const HR = () => (
@@ -99,7 +76,7 @@ export const htmlElements = {
  * All base markdown components as default export
  */
 const MdComponents = {
-  ...htmlElements
+  ...htmlElements,
 }
 
 export default MdComponents

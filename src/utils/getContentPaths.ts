@@ -1,7 +1,7 @@
-import fs from 'fs'
+import fs from "fs"
 import { join } from "path"
 
-import { CONTENT_DIR } from '@/utils/constants'
+import { CONTENT_DIR } from "@/utils/constants"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -16,10 +16,10 @@ export const getContentPaths = (dirName: string) => {
     } else {
       files.push(`/${dirName}/${file.name}`)
     }
-  } 
+  }
 
   return files
-    .map(file => file.replace('.md', ''))
-    .map(file => file.replace('/index', ''))
-    .map(file => file.replace(/\/+/g, '/'))
-};
+    .map((file) => file.replace(".md", ""))
+    .map((file) => file.replace("/index", ""))
+    .map((file) => file.replace(/\/+/g, "/"))
+}
