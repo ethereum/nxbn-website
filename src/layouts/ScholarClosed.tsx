@@ -33,8 +33,11 @@ const ScholarClosed = () => {
   return (
     <>
       <ImageHero heroImage={ScholarClosedHeroImage}>
-      <Box w="100%"  bg='linear-gradient(180deg, #001121 0%, #056589 100%)' pt="-200px">
-        <Text>test</Text>
+        <Box w="100%"  bg='linear-gradient(180deg, #001121 0%, #056589 100%)' pt="-200px" mt="-10%" zIndex={1}>
+          <Box px={{ base: 8, md: 16 }}>
+            <H1 variant="action" maxW="650px">Devcon SEA Scholars Program</H1>
+            <Text maxW="500px">Money doesn't solve everything, but it can pay for flights, hotels, and visa costs.</Text>
+          </Box>
         </Box>
       </ImageHero>
       <ContentContainer>

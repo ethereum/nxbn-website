@@ -35,8 +35,8 @@ const ScholarOpen = () => {
   return (
     <>
       <ImageHero heroImage={ScholarOpenHeroImage}>
-        <Box w="100%" bg='linear-gradient(180deg, #001121 0%, #056589 100%)'  mt="-20%">
-          <Center gap={8} flexDir='column' px={8} textAlign='center'>
+        <Box w="100%" bg='linear-gradient(180deg, #001121 0%, #056589 100%)'  mt="-15%">
+            <Center gap={8} flexDir='column' px={{ base: 8, md: 16 }} textAlign='center'>
             <Center flexDir='column'>
               <Image src={EthGlypth} alt="" w="82px" />
               <H2 textAlign='center'>Devcon SEA Scholars</H2>
