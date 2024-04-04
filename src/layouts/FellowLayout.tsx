@@ -1,6 +1,6 @@
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex } from "@chakra-ui/react"
 
-import StarsImage from '@/public/images/stars.png'
+import StarsImage from "@/public/images/stars.png"
 
 import ContentContainer from '@/components/ContentContainer'
 import { Image } from '@/components/Image'
@@ -15,8 +15,8 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
 
   return (
     <>
-      <Box pos='absolute' zIndex={-1} top={-4} left={0} right={0}>
-        <Image src={StarsImage} alt="Stars" w='100%' />
+      <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
+        <Image src={StarsImage} alt="Stars" w="100%" />
       </Box>
       <ContentContainer>
         <FellowLayoutHero
@@ -27,7 +27,7 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
           image={image}
         />
         <Flex
-          px={{base: 6 , md: 16}}
+          px={{ base: 6, md: 16 }}
           gap={16}
           pt={4}
           pb={16}
@@ -38,7 +38,7 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
           </Box>
           <Box
             w="300px"
-            display={{ base: 'none', md: 'block' }}
+            display={{ base: "none", md: "block" }}
             position="sticky"
             top="20px"
             alignSelf="start"
@@ -47,12 +47,9 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
           </Box>
         </Flex>
       </ContentContainer>
-      <Box
-        py={16}
-        bg="backgroundHighlight"
-      >
+      <Box py={16} bg="backgroundHighlight">
         <ContentContainer>
-          <Box px={{base: 6 , md: 16}}>
+          <Box px={{ base: 6, md: 16 }}>
             <H3 variant="action">Meet more fellows</H3>
             <Flex gap={12}>
               <Box flex={1}>

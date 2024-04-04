@@ -1,4 +1,3 @@
-
 import { toc } from "mdast-util-toc"
 import { visit } from "unist-util-visit"
 
@@ -8,10 +7,7 @@ const remarkInferToc = (options) => {
     ...options,
   }
 
-  const processToC = (
-    node,
-    current
-  ) => {
+  const processToC = (node, current) => {
     if (!node) {
       return {}
     }

@@ -10,6 +10,7 @@ tags:
   - america-latin
   - america-central
 ---
+
 ## Upgrading Bureaucracy
 
 From birth certificates to driver’s licenses and academic records, when we are asked to identify who we are as citizens, this is about sharing our personal information or credentials, usually notarized by the government of the place we come from. Depending on where that is, those records could be located in a fancy networked database (as is the case for [Estonian citizens](https://e-estonia.com/solutions/e-identity/smart-id/)), but more likely _what we need when we need an ‘official identity’_ actually resides in the specialized passport printers of a stuffy government building, or spread about in filing cabinets of various state bank branches, or maybe it’s nowhere at all!
@@ -36,6 +37,6 @@ My short-term vision is to be able to offer citizens the possibility to own thei
 
 In the long term, I hope that we can all work together to rethink governance and identity. We are starting by rethinking and reinventing the way governments, individuals and companies interact among themselves; in a decentralized digital world, interactions are not state or market-centric, but community and citizen-oriented. This implies a new ecosystemic vision where the government, startups, academia and civil organizations jointly explore public problems, seek (and transfer) appropriate solutions and feed on their learnings. It is not the state hiring suppliers, but the state interacting with other actors to solve society’s most pressing problems. I believe a new digital identity is one step that will allow governments, citizens, and communities to get the most out of blockchain technology, fostering prosperity through a network of citizen-centric digital services.
 
-
 ---
+
 https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity

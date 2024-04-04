@@ -6,9 +6,9 @@ country: Country
 image: /content/fellowship/name/name-headshot.png
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
-    - tag
-    - tag
-    - tag
+  - tag
+  - tag
+  - tag
 ---
 
 ![](./testimage1.png)

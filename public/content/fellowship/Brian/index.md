@@ -10,6 +10,7 @@ tags:
   - NFT
   - asia-southeast
 ---
+
 ## Introduction
 
 I’m building Copra, a DeFi lending protocol that facilitates on-chain credit to entities with on-chain revenues and income. Today, the reality is that most who earn in crypto are still those institutions and individuals within the crypto space, and in the short-term Copra will be focusing on those audiences. However, that is still very far from the full potential and the full mission of the project. As DeFi will be the new financial system of the world, crypto will be the new payment medium in the real economy including to receive income and revenue among individuals and businesses. This will be the unlock for Copra ultimate mission, which is to provide financially-underserved individuals and businesses in the real economy, particularly in emerging countries, with the credit that they deserve.

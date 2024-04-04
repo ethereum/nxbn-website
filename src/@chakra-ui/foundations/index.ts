@@ -1,3 +1,3 @@
-export * from './colors'
-export * from './fonts'
-export * from './textStyles'
+export * from "./colors"
+export * from "./fonts"
+export * from "./textStyles"
