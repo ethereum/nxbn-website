@@ -1,10 +1,18 @@
-import { Box, Image, Flex, Text } from '@chakra-ui/react'
-import { H3, H4, H5 } from '@/components/Headings'
-import ButtonLink from './Buttons/ButtonLink'
+import { Box, Image, Flex, Text } from "@chakra-ui/react"
+import { H3, H4, H5 } from "@/components/Headings"
+import ButtonLink from "./Buttons/ButtonLink"
 
-const FellowCard = ({title, description, image, fellowName, country, tags, href}) => {
+const FellowCard = ({
+  title,
+  description,
+  image,
+  fellowName,
+  country,
+  tags,
+  href,
+}) => {
   return (
-    <Flex mt={6} mb={12} gap={7}>
+    <Flex mt={6} mb={12} gap={7} flexDir={{ base: "column", md: "row" }}>
       <Image
         src={image}
         w={28}
@@ -23,7 +31,13 @@ const FellowCard = ({title, description, image, fellowName, country, tags, href}
           <Flex>
             {tags.map((tag) => {
               return (
-                <Text key={tag} textStyle="tag" color="actionHover" fontSize={10} p={1}>
+                <Text
+                  key={tag}
+                  textStyle="tag"
+                  color="actionHover"
+                  fontSize={10}
+                  p={1}
+                >
                   {tag}
                 </Text>
               )
@@ -31,9 +45,7 @@ const FellowCard = ({title, description, image, fellowName, country, tags, href}
           </Flex>
         </Box>
         <Box>
-          <H5 mb={2}>
-            {title}
-          </H5>
+          <H5 mb={2}>{title}</H5>
           <Text textStyle="base-text" color="body">
             {description}
           </Text>

@@ -2,16 +2,27 @@ import { Box, Flex } from "@chakra-ui/react"
 
 import StarsImage from "@/public/images/stars.png"
 
-import ContentContainer from '@/components/ContentContainer'
-import { Image } from '@/components/Image'
-import FellowLayoutHero from '@/components/Heroes/FellowLayoutHero'
-import { MARKDOWN_CONTENT_MAX_WIDTH } from '@/utils/constants'
-import TableOfContents from '@/components/TableOfContents'
-import { H3 } from '@/components/Headings'
-import FellowCard from '@/components/FellowCard'
+import ContentContainer from "@/components/ContentContainer"
+import { Image } from "@/components/Image"
+import FellowLayoutHero from "@/components/Heroes/FellowLayoutHero"
+import { MARKDOWN_CONTENT_MAX_WIDTH } from "@/utils/constants"
+import TableOfContents from "@/components/TableOfContents"
+import { H3 } from "@/components/Headings"
+import FellowCard from "@/components/FellowCard"
 
-export const FellowLayout = ({ children, frontmatter, tocItems }) => {
-  const { title, fellowName, country, tags, image, description, href } = frontmatter
+export const FellowLayout = ({
+  children,
+  frontmatter,
+  tocItems,
+  allFellowsFrontmatter,
+}) => {
+  const { index, title, fellowName, country, tags, image, description, href } =
+    frontmatter
+
+  const meetMoreFellows = [
+    allFellowsFrontmatter[index - 1],
+    allFellowsFrontmatter[index + 1],
+  ]
 
   return (
     <>
@@ -51,27 +62,27 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
         <ContentContainer>
           <Box px={{ base: 6, md: 16 }}>
             <H3 variant="action">Meet more fellows</H3>
-            <Flex gap={12}>
+            <Flex gap={12} flexDir={{ base: "column", lg: "row" }}>
               <Box flex={1}>
                 <FellowCard
-                  title={title}
-                  fellowName={fellowName}
-                  country={country}
-                  tags={tags}
-                  image={image}
-                  description={description}
-                  href={href}
+                  title={meetMoreFellows[0].title}
+                  fellowName={meetMoreFellows[0].fellowName}
+                  country={meetMoreFellows[0].country}
+                  tags={meetMoreFellows[0].tags}
+                  image={meetMoreFellows[0].image}
+                  description={meetMoreFellows[0].description}
+                  href={meetMoreFellows[0].href}
                 />
               </Box>
               <Box flex={1}>
                 <FellowCard
-                  title={title}
-                  fellowName={fellowName}
-                  country={country}
-                  tags={tags}
-                  image={image}
-                  description={description}
-                  href={href}
+                  title={meetMoreFellows[1].title}
+                  fellowName={meetMoreFellows[1].fellowName}
+                  country={meetMoreFellows[1].country}
+                  tags={meetMoreFellows[1].tags}
+                  image={meetMoreFellows[1].image}
+                  description={meetMoreFellows[1].description}
+                  href={meetMoreFellows[1].href}
                 />
               </Box>
             </Flex>

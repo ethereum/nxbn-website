@@ -10,7 +10,7 @@ import { FellowLayout } from "@/layouts/FellowLayout"
 import MdComponents from "@/components/Md/MdComponents"
 
 import { getContentPaths } from "@/utils/getContentPaths"
-import { getContentBySlug } from "@/utils/md"
+import { getAllFellowsFrontmatter, getContentBySlug } from "@/utils/md"
 import rehypeHeadingIds from "@/utils/rehypeHeadingIds"
 import rehypeImg from "@/utils/rehypeImg"
 import remarkInferToc from "@/utils/remarkInferToc"
@@ -34,6 +34,7 @@ export const getStaticPaths = () => {
 export const getStaticProps = async (context) => {
   const slug = `/${context.params.slug.join("/")}/`
   const markdown = getContentBySlug(slug)
+  const allFellowsFrontmatter = getAllFellowsFrontmatter()
 
   let tocNodeItems = []
   const tocCallback = (toc): void => {
@@ -62,6 +63,7 @@ export const getStaticProps = async (context) => {
       mdxSource,
       slug,
       tocItems,
+      allFellowsFrontmatter,
     },
   }
 }
@@ -71,11 +73,13 @@ const ContentPage = ({ mdxSource }: Props) => {
 }
 
 ContentPage.getLayout = (page) => {
-  const { slug, frontmatter, layout, tocItems } = page.props
+  const { slug, frontmatter, layout, tocItems, allFellowsFrontmatter } =
+    page.props
   const layoutProps = {
     slug,
     frontmatter,
     tocItems,
+    allFellowsFrontmatter,
   }
   const Layout = layoutMapping[layout]
 

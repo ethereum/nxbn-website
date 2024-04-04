@@ -1,9 +1,10 @@
 ---
+index: 8
 layout: fellow
 title: LatAm Empowerment
 fellowName: Marcus
 country: Guatemala
-image: /content/fellowship/name/marcus-headshot.png
+image: /content/fellowship/Marcus/marcus-headshot.png
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - america-latin

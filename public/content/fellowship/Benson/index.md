@@ -1,9 +1,10 @@
 ---
+index: 1
 layout: fellow
 title: Microinsurance for Every Farmer
 fellowName: Benson
 country: Kenya
-image: /content/fellowship/name/benson-headshot.png
+image: /content/fellowship/Benson/benson-headshot-logo.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - farmers
