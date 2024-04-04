@@ -8,9 +8,10 @@ import FellowLayoutHero from '@/components/Heroes/FellowLayoutHero'
 import { MARKDOWN_CONTENT_MAX_WIDTH } from '@/utils/constants'
 import TableOfContents from '@/components/TableOfContents'
 import { H3 } from '@/components/Headings'
+import FellowCard from '@/components/FellowCard'
 
 export const FellowLayout = ({ children, frontmatter, tocItems }) => {
-  const { title, fellowName, country, tags, image } = frontmatter
+  const { title, fellowName, country, tags, image, description, href } = frontmatter
 
   return (
     <>
@@ -53,7 +54,30 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
         <ContentContainer>
           <Box px={{base: 6 , md: 16}}>
             <H3 variant="action">Meet more fellows</H3>
-            {/* TODO: Implement component for more fellows */}
+            <Flex gap={12}>
+              <Box flex={1}>
+                <FellowCard
+                  title={title}
+                  fellowName={fellowName}
+                  country={country}
+                  tags={tags}
+                  image={image}
+                  description={description}
+                  href={href}
+                />
+              </Box>
+              <Box flex={1}>
+                <FellowCard
+                  title={title}
+                  fellowName={fellowName}
+                  country={country}
+                  tags={tags}
+                  image={image}
+                  description={description}
+                  href={href}
+                />
+              </Box>
+            </Flex>
           </Box>
         </ContentContainer>
       </Box>

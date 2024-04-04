@@ -3,7 +3,8 @@ layout: fellow
 title: Fair Lending for Web3 workers
 fellowName: Brian
 country: Indonesia
-image: /content/fellowship/name/name-headshot.png
+image: /content/fellowship/Brian/brian-headshot.jpeg
+description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - defi
   - NFT
