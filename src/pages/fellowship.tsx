@@ -1,9 +1,11 @@
-import { Box } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 
 import FAQ, { type Question } from "@/components/FAQ"
 import ImageHero from "@/components/Heroes/ImageHero"
 import { H1 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
+
+import FellowshipHeroImage from "@/public/images/fellowship/fellowship-hero.png"
 
 const FAQQuestions: Question[] = [
   {
@@ -33,13 +35,24 @@ const FAQQuestions: Question[] = [
 const FellowshipPage = () => {
   return (
     <>
-      <ImageHero />
-      <Box>
-        <H1>FellowshipPage</H1>
+      <Box bg='linear-gradient(180deg, #011E3B 0%, #035A7A 56.67%)'>
+        <ImageHero heroImage={FellowshipHeroImage}>
+          <Box px={{base: 8, md: 16}} pb={16}>
+            <H1 variant="action">The Next Billion Fellowship</H1>
+            <Flex gap={{base: 8, md: 16}} flexDir={{ base: 'column', md: 'row'}}>
+              <Text m={0}>
+                A Fellow is a leader committed to their own project that helps Ethereum become a tool of and for the next billion. Their project could be a decentralized app, a piece of research, an organizational initiative, or something else entirely. There are no strict requirements for Next Billion Fellowship projects, save one: earnesty.
+              </Text>
+              <Text>
+                Whatever the project, whomever the Fellow, the program seeks to enable the flourishing of populations, communities, or individuals under-represented in the Ethereum ecosystem today. The Fellowship is neither the beginning nor the end of a Fellow's journey, but it may provide the support needed to encourage more ambitious, long-term goals and mindset.
+              </Text>
+            </Flex>
+          </Box>
+        </ImageHero>
+        <ContentContainer mb={8}>
+          <FAQ questions={FAQQuestions} />
+        </ContentContainer>
       </Box>
-      <ContentContainer mb={8}>
-        <FAQ questions={FAQQuestions} />
-      </ContentContainer>
     </>
   )
 }
