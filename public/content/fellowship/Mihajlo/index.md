@@ -4,6 +4,7 @@ title: Scouting for the Future
 fellowName: Mihajlo
 country: Serbia
 image: /content/fellowship/name/mihajlo-headshot.png
+description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - identity
   - europe-east
