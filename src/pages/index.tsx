@@ -11,6 +11,7 @@ import HomeHero from "@/components/Heroes/HomeHero"
 import TempImage from "@/public/images/temp.png"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
+import WhoAreNextBillion from "@/components/WhoAreNextBillion"
 
 import StarsImage from "@/public/images/stars.png"
 
@@ -81,6 +82,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
           </Box>
         </ImageSplitContent>
       </ContentContainer>
+      <WhoAreNextBillion />
       <ContentContainer mb={8}>
         <Box px={{ base: 8, md: 16 }} gap={8}>
           <H2 variant="action">Our blog updates</H2>
