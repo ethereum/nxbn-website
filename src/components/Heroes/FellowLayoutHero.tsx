@@ -11,9 +11,9 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
         <H1 textStyle="fellow-title">{title}</H1>
       </Box>
       <Flex gap={4}>
-        {tags.map((tag) => {
+        {tags.map((tag, index) => {
           return (
-            <Text key={tag} textStyle="tag" color="actionHover">
+            <Text key={index} textStyle="tag" color="actionHover">
               {tag}
             </Text>
           )
