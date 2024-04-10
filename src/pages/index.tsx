@@ -1,4 +1,5 @@
 import { Box, Text } from "@chakra-ui/react"
+import Parser from "rss-parser"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import { H1, H2 } from "@/components/Headings"
@@ -6,8 +7,30 @@ import ContentContainer from "@/components/ContentContainer"
 import ImageSplitContent from "@/components/ImageSplitContent"
 
 import TempImage from "@/public/images/temp.png"
+import { getAllFellowsFrontmatter } from "@/utils/md"
+import BlogFeed from "@/components/BlogFeed"
 
-const HomePage = () => {
+export const getStaticProps = async () => {
+  const parser = new Parser({
+    customFields: {
+      item: ["description"],
+    },
+  })
+
+  const feed = await parser.parseURL(
+    "https://blog.ethereum.org/en/next-billion/feed.xml"
+  )
+  const allFellowsFrontmatter = getAllFellowsFrontmatter()
+
+  return {
+    props: {
+      allFellowsFrontmatter,
+      blogs: feed.items,
+    },
+  }
+}
+
+const HomePage = ({ allFellowsFrontmatter, blogs }) => {
   return (
     <>
       <Box>
@@ -52,6 +75,12 @@ const HomePage = () => {
             <ButtonLink href="/scholars">Learn more</ButtonLink>
           </Box>
         </ImageSplitContent>
+      </ContentContainer>
+      <ContentContainer mb={8}>
+        <Box px={{ base: 8, md: 16 }} gap={8}>
+          <H2 variant="action">Our blog updates</H2>
+          <BlogFeed blogs={blogs} />
+        </Box>
       </ContentContainer>
     </>
   )
