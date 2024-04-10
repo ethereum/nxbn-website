@@ -12,30 +12,56 @@ export const textStyles = {
   h3: {
     fontSize: 30,
     fontWeight: 500,
-    letterSpacing: "0.9px"
+    letterSpacing: "0.9px",
   },
   h4: {
     fontSize: 24,
     fontWeight: 500,
-    letterSpacing: "0.72px"
+    letterSpacing: "0.72px",
   },
   h5: {
     fontSize: 16,
     fontWeight: 500,
-    letterSpacing: "0.48px"
+    letterSpacing: "0.48px",
   },
   h6: {
     fontSize: 14,
     fontWeight: 500,
-    letterSpacing: "0.42px"
+    letterSpacing: "0.42px",
   },
-  'footer-text': {
-    fontFamily: 'body',
+  "fellow-title": {
+    fontFamily: "heading",
+    fontSize: 58,
+    fontWeight: 400,
+    fontStyle: "normal",
+    lineHeight: "normal",
+    letterSpacing: "2.9px",
+    m: 0,
+  },
+  tag: {
+    fontFamily: "heading",
+    fontSize: 14,
+    fontStyle: "normal",
+    fontWeight: 700,
+    lineHeight: "150%",
+    letterSpacing: "-0.154px",
+    textTransform: "uppercase",
+  },
+  "base-text": {
+    fontFamily: "body",
+    fontWeight: 300,
+    fontStyle: "normal",
+    fontSize: 16,
+    lineHeight: "150%",
+    color: "body",
+  },
+  "footer-text": {
+    fontFamily: "body",
     fontWeight: 300,
     fontSyle: "normal",
     fontSize: 14,
-    lineHeight: '150%',
-    color: "body"
+    lineHeight: "150%",
+    color: "body",
   },
   "link-text": {
     fontFamily: "link",
@@ -47,19 +73,19 @@ export const textStyles = {
     borderBottom: "1px solid transparent",
     _hover: {
       borderBottom: "1px solid #B3E678",
-      color: "action"
+      color: "action",
     },
   },
-  'drawer-link': {
+  "drawer-link": {
     color: "body",
     fontFamily: "link",
     fontSize: 30,
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "150%",
-    letterSpacing: "0.6px"
+    letterSpacing: "0.6px",
   },
-  'drawer-link-active': {
+  "drawer-link-active": {
     color: "#E5FFC7",
     borderBottom: "1px solid #E5FFC7",
     fontFamily: "link",
@@ -67,9 +93,9 @@ export const textStyles = {
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "150%",
-    letterSpacing: "0.6px"
+    letterSpacing: "0.6px",
   },
-  'header-link': {
+  "header-link": {
     fontFamily: "link",
     fontSize: 16,
     fontStyle: "normal",
@@ -79,10 +105,10 @@ export const textStyles = {
     borderBottom: "1px solid transparent",
     _hover: {
       borderBottom: "1px solid #B3E678",
-      color: "action"
+      color: "action",
     },
   },
-  'header-link-active': {
+  "header-link-active": {
     fontFamily: "link",
     fontSize: 16,
     fontStyle: "normal",
@@ -92,7 +118,16 @@ export const textStyles = {
     borderBottom: "1px solid #E5FFC7",
     _hover: {
       borderBottom: "1px solid #B3E678",
-      color: "action"
+      color: "action",
     },
-  }
+  },
+  "button-link": {
+    fontFamily: "heading",
+    fontSize: 18,
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "150%",
+    letterSpacing: "0.26px",
+    color: "#034057",
+  },
 }

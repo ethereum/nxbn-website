@@ -1,8 +1,8 @@
 export const fonts = {
   // set base fonts as fallback
-  heading: '"Roboto Slab", monospace',
-  button: '"Roboto", monospace',
+  heading: "var(--font-roboto_slab), monospace",
+  button: "var(--font-roboto), monospace",
   code: '"JetBrains Mono", monospace',
-  body: '"Roboto", monospace',
-  link: '"Roboto Slab", monospace',
+  body: "var(--font-roboto), monospace",
+  link: "var(--font-roboto_slab), monospace",
 }
