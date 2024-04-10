@@ -1,130 +1,199 @@
-'use client';
+"use client"
 
 // Documentation
 // https://vasturiano.github.io/three-globe/
 // https://threejs.org/docs/index.html#api/en/
 
+import { Box, Center, Divider, Image, Flex, Text } from "@chakra-ui/react"
+import { useEffect, useRef } from "react"
+import ThreeGlobe from "three-globe"
+import { AmbientLight, WebGLRenderer, Scene, PerspectiveCamera } from "three"
+import { useState } from "react"
 
-// components/GlobeComponent.js
-import { useEffect, useRef } from 'react';
-import ThreeGlobe from 'three-globe';
-import { AmbientLight, BoxGeometry, Mesh, MeshBasicMaterial, MeshLambertMaterial, SphereGeometry, WebGLRenderer, Scene, PerspectiveCamera, OrthographicCamera } from 'three';
-import { useState } from 'react'
+import { ArrowIcon } from "@/components/icons"
+import { H4 } from "@/components/Headings"
 
-const locations = [
-  { lat: 64.1466, long: -21.9426, size: 10, color: "red" }, // Reykjavik, Iceland
-  { lat: -33.9249, long: 18.4241, size: 10,color: "green" }, // Cape Town, South Africa
-  { lat: -54.8019, long: -68.3030, size: 10,color: "blue" }, // Ushuaia, Argentina
-  { lat: 35.0116, long: 135.7681, size: 10,color: "yellow" }, // Kyoto, Japan
-  { lat: 44.4280, long: -110.5885, size: 10,color: "orange" } // Yellowstone National Park, USA
-];
+const lerp = (start, end, alpha) => start + (end - start) * alpha
 
-const Globe = () => {
-  const globeContainerRef = useRef(null);
-  const globeRef = useRef(null);
-  const width = 500;
-  const height = 500;
-
-  const [location, setLocation] = useState(locations[0]);
-
-//   setInterval(() => {
-//     const randomLocation = locations[Math.floor(Math.random() * locations.length)];
-//     setLocation(randomLocation);
-//   }
-//   , 10000);
-
-  // Convert latitude and longitude to a position on the globe
-  function latLongToVector3(lat, lng, radius) {
-    const phi = (90 - lat) * (Math.PI / 180);
-    const theta = (lng + 180) * (Math.PI / 180);
-
-    const x = -(radius * Math.sin(phi) * Math.cos(theta));
-    const z = radius * Math.sin(phi) * Math.sin(theta);
-    const y = radius * Math.cos(phi);
-
-    return { x, y, z };
-  }
+const Globe = ({ allFellowsFrontmatter }) => {
+  const globeContainerRef = useRef(null)
+  const globeRef = useRef(null)
+  const [activeFellowIndex, setActiveFellowIndex] = useState(0)
+  const [targetRotation, setTargetRotation] = useState({ x: 0, y: 0 })
+  const animationRef = useRef()
 
   useEffect(() => {
-    // Only initialize the globe, scene, camera, and renderer once
     if (!globeRef.current) {
-      // Creating Three scene object
-      // https://threejs.org/docs/#api/en/scenes/Scene
-      const scene = new Scene();
+      const scene = new Scene()
+      const camera = new PerspectiveCamera(75, 1, 0.1, 1000)
 
-      const camera = new PerspectiveCamera(75, width / height, 0.1, 1000);
-      // const camera = new OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, 1, 1000 )
-
-      // Setup renderer, which renders the scene
-      // Here we set the width and height
-      // https://threejs.org/docs/#api/en/renderers/WebGLRenderer
-      const renderer = new WebGLRenderer();
+      const renderer = new WebGLRenderer({ alpha: true })
       renderer.setClearColor(0x000000, 0)
-      renderer.setSize(width, height);
+      renderer.setSize(380, 380)
 
-      globeContainerRef.current.appendChild(renderer.domElement);
+      globeContainerRef.current.appendChild(renderer.domElement)
 
-      const globe = new ThreeGlobe({alpha: true, animateIn: false})
-      .globeImageUrl("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/4013c234-b843-4331-84cd-8a86d940d26f/dcrbmun-38493001-d0cc-4bd6-9acb-2bf1109b488b.jpg")
-      .customLayerData(locations)
-      globeRef.current = globe; // Store the globe object in the ref
+      const globe = new ThreeGlobe({ alpha: true, animateIn: true })
+        .globeImageUrl("/images/map.jpg")
+        .showAtmosphere(false)
+      globeRef.current = globe
 
-      scene.add(new AmbientLight(0xffffff, 3));
-      scene.add(globe);
-      
-    //   locations.forEach(location => {
-    //       // // Add a 3D object (e.g., a cube) to the globe
-    //       // const geometry = new BoxGeometry(10, 10, 10); // Create a cube geometry
-    //       // const material = new MeshBasicMaterial({ color: 0xff0000 }); // Create a material
-    //       // const cube = new Mesh(geometry, material); // Create a mesh from the geometry and material
+      scene.add(new AmbientLight(0xffffff, 3))
+      scene.add(globe)
+      camera.position.z = 165
 
-    //       // const altitude = 1; // Altitude above the globe's surface
-    //       // const { x, y, z } = latLongToVector3(location.lat, location.long, globe.getGlobeRadius() + altitude);
-    //       // cube.position.set(x, y, z);
-    //       // cube.lookAt(globe.position); // Make the cube face the globe's center
-
-    //       // scene.add(cube);
-
-    //       const geometry = new SphereGeometry(10); // Create a sphere geometry
-    //       const material = new MeshLambertMaterial({ color: location.color })
-    //       const sphere = new Mesh(geometry, material); // Create a mesh from the geometry and material
-
-    //       const altitude = 6; // Altitude above the globe's surface
-    //       const { x, y, z } = latLongToVector3(location.lat, location.long, globe.getGlobeRadius() + altitude);
-    //       sphere.position.set(x, y, z);
-    //       scene.add(sphere)
-    //     }
-    //   );
-
-      camera.position.z = 200;
-        console.log(globe)
-        console.log(scene)
       const animate = () => {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-      };
-      animate();
+        requestAnimationFrame(animate)
+        renderer.render(scene, camera)
+      }
+      animate()
     }
-  }, []); // This effect runs once on mount
+  }, [])
 
   useEffect(() => {
-    // Define the rotation function inside this effect to ensure it has access to the current globe object
-    const rotateGlobeToCoordinates = (globe, targetLat, targetLong) => {
-      const latitudeRadians = (targetLat * Math.PI) / 180;
-      const longitudeRadians = (targetLong * Math.PI) / 180;
+    const rotateGlobeToCoordinates = (targetLat, targetLong) => {
+      const latitudeRadians = (targetLat * Math.PI) / 180
+      const longitudeRadians = (targetLong * Math.PI) / 180
 
-      // Apply the calculated rotations to the globe
-      globe.rotation.x = Math.PI / 2 - latitudeRadians;
-      globe.rotation.y = -longitudeRadians;
-    };
-
-    // Check if the globe object is available and the location prop is valid
-    if (globeRef.current && location && location.lat != null && location.long != null) {
-      rotateGlobeToCoordinates(globeRef.current, location.lat, location.long);
+      setTargetRotation({
+        x: Math.PI / 2 - latitudeRadians,
+        y: -longitudeRadians,
+      })
     }
-  }, [location]); 
 
-  return <div ref={globeContainerRef} style={{ width: width, height: height }} />;
-};
+    if (
+      globeRef.current &&
+      allFellowsFrontmatter[activeFellowIndex] &&
+      allFellowsFrontmatter[activeFellowIndex].lat != null &&
+      allFellowsFrontmatter[activeFellowIndex].lon != null
+    ) {
+      rotateGlobeToCoordinates(
+        allFellowsFrontmatter[activeFellowIndex].lat,
+        allFellowsFrontmatter[activeFellowIndex].lon
+      )
+    }
+  }, [activeFellowIndex, allFellowsFrontmatter])
 
-export default Globe;
+  useEffect(() => {
+    const animateRotation = () => {
+      if (!globeRef.current) return
+
+      // Assume globeRef.current.rotation can be directly manipulated
+      // Adjust these values according to your globe's API
+      const { x, y } = globeRef.current.rotation
+      globeRef.current.rotation.x = lerp(x, targetRotation.x, 0.1)
+      globeRef.current.rotation.y = lerp(y, targetRotation.y, 0.1)
+
+      // Continue the animation if the target hasn't been reached
+      if (x !== targetRotation.x || y !== targetRotation.y) {
+        animationRef.current = requestAnimationFrame(animateRotation)
+      }
+    }
+
+    animationRef.current = requestAnimationFrame(animateRotation)
+
+    // Cancel the animation if the component unmounts
+    return () => cancelAnimationFrame(animationRef.current)
+  }, [targetRotation])
+
+  return (
+    <Center flex={1} flexDir="column">
+      <Center>
+        <Box
+          ref={globeContainerRef}
+          width={{ base: "100%", sm: "380px" }} // 'base' applies to all sizes, 'sm' applies to screens ≥ 320px
+          maxWidth="380px" // Max width of the globe
+          height="auto" // Adjust the height accordingly
+          style={{ aspectRatio: "1 / 1" }}
+        />
+      </Center>
+      <Center>
+        <Divider
+          borderLeft="2px solid"
+          borderColor="#9DCE64"
+          m="auto"
+          mt="-190px"
+          height="245px"
+        />
+      </Center>
+      <Center>
+        <ArrowIcon
+          _hover={{ cursor: "pointer" }}
+          onClick={() => {
+            setActiveFellowIndex(
+              (activeFellowIndex - 1 + allFellowsFrontmatter.length) %
+                allFellowsFrontmatter.length
+            )
+          }}
+        />
+        <Flex
+          flex={1}
+          w={{ base: "100%", sm: "380px" }}
+          bg="backgroundHighlight"
+          borderRadius="23px"
+          p={4}
+          gap={3.5}
+        >
+          <Image
+            src={allFellowsFrontmatter[activeFellowIndex].image}
+            w="80px"
+            h="124px"
+            borderRadius="15px"
+            border="1px solid #6F9D39"
+            objectFit={"cover"}
+          />
+          <Center
+            flexDir="column"
+            justifyContent="left"
+            alignItems="left"
+            gap={2.5}
+          >
+            <Text
+              m={0}
+              textStyle="footer-text"
+              color="bodyHover"
+            >{`Fellowship Cohort ${allFellowsFrontmatter[activeFellowIndex].cohort}`}</Text>
+            <Box>
+              <H4 m={0}>
+                {allFellowsFrontmatter[activeFellowIndex].fellowName}
+              </H4>
+              <Text m={0} textStyle="footer-text">
+                {allFellowsFrontmatter[activeFellowIndex].country}
+              </Text>
+            </Box>
+            <Flex>
+              {allFellowsFrontmatter[activeFellowIndex].tags.map(
+                (tag, index) => {
+                  return (
+                    <Text
+                      key={index}
+                      textStyle="tag"
+                      color="actionHover"
+                      fontSize={10}
+                      p={1}
+                      m={0}
+                    >
+                      {tag}
+                    </Text>
+                  )
+                }
+              )}
+            </Flex>
+          </Center>
+        </Flex>
+        <ArrowIcon
+          transform="rotate(180deg)"
+          _hover={{ cursor: "pointer" }}
+          onClick={() => {
+            setActiveFellowIndex(
+              (activeFellowIndex + 1 + allFellowsFrontmatter.length) %
+                allFellowsFrontmatter.length
+            )
+          }}
+        />
+      </Center>
+    </Center>
+  )
+}
+
+export default Globe

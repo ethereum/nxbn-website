@@ -3,7 +3,10 @@ index: 3
 layout: fellow
 title: Identity Solutions for Govtech
 fellowName: Chuy
+cohort: 1
 country: Mexico
+lat: 35.0116
+lon: 135.7681
 image: /content/fellowship/Chuy/chuy-headshot-logo.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:

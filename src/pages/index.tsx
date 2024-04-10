@@ -1,21 +1,18 @@
-// pages/index.js or another component file
-import dynamic from 'next/dynamic';
-
-const GlobeComponentWithNoSSR = dynamic(() => import('../components/Map/Globe'), {
-  ssr: false, // This line is key to making sure the import is client-side only
-});
-
 import { Box, Text } from "@chakra-ui/react"
 import Parser from "rss-parser"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
-import { H1, H2 } from "@/components/Headings"
+import { H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
+import { Image } from "@/components/Image"
 import ImageSplitContent from "@/components/ImageSplitContent"
+import HomeHero from "@/components/Heroes/HomeHero"
 
 import TempImage from "@/public/images/temp.png"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
+
+import StarsImage from "@/public/images/stars.png"
 
 export const getStaticProps = async () => {
   const parser = new Parser({
@@ -40,9 +37,10 @@ export const getStaticProps = async () => {
 const HomePage = ({ allFellowsFrontmatter, blogs }) => {
   return (
     <>
-      <Box>
-        <H1>HomePage</H1>
+      <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
+        <Image src={StarsImage} alt="Stars" w="100%" />
       </Box>
+      <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
       <ContentContainer mb={8}>
         <ImageSplitContent
           image={TempImage}

@@ -3,7 +3,10 @@ index: 2
 layout: fellow
 title: Fair Lending for Web3 workers
 fellowName: Brian
+cohort: 1
 country: Indonesia
+lat: -54.8019
+lon: -68.303
 image: /content/fellowship/Brian/brian-headshot.jpeg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
