@@ -12,5 +12,8 @@ export const Text = {
     big: {
       fontSize: 18,
     },
+    action: {
+      color: "action",
+    },
   },
 }
