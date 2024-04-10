@@ -1,3 +1,10 @@
+// pages/index.js or another component file
+import dynamic from 'next/dynamic';
+
+const GlobeComponentWithNoSSR = dynamic(() => import('../components/Map/Globe'), {
+  ssr: false, // This line is key to making sure the import is client-side only
+});
+
 import { Box, Text } from "@chakra-ui/react"
 import Parser from "rss-parser"
 
