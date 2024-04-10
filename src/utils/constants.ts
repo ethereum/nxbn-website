@@ -15,3 +15,5 @@ export const CONTENT_DIR = "public/content"
 export const MARKDOWN_CONTENT_MAX_WIDTH = 800
 
 export const SCHOLAR_PROGRAM_OPEN = false
+
+export const FELLOW_LIST_PAGINATION_LIMIT = 8

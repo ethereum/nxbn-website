@@ -1,5 +1,5 @@
 import { Box, Image, Flex, Text } from "@chakra-ui/react"
-import { H3, H4, H5 } from "@/components/Headings"
+import { H3, H5 } from "@/components/Headings"
 import ButtonLink from "./Buttons/ButtonLink"
 
 const FellowCard = ({
@@ -29,10 +29,10 @@ const FellowCard = ({
             {country}
           </Text>
           <Flex>
-            {tags.map((tag) => {
+            {tags.map((tag, index) => {
               return (
                 <Text
-                  key={tag}
+                  key={index}
                   textStyle="tag"
                   color="actionHover"
                   fontSize={10}
