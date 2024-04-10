@@ -5,9 +5,11 @@ fellowName: Name Name
 country: Country
 image: /content/fellowship/name/name-headshot.png
 tags:
-    - tag
-    - tag
-    - tag
+  - tag
+  - tag
+  - tag
+  - 2021-cohort-1
+  - global
 ---
 
 ![](./testimage1.png)

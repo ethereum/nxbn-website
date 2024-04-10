@@ -5,9 +5,12 @@ fellowName: Name Name
 country: Country
 image: /content/fellowship/name/name-headshot.png
 tags:
-    - tag
-    - tag
-    - tag
+  - tag
+  - tag
+  - tag
+  - 2023-cohort-3
+  - africa-east
+  - art-and-culture
 ---
 
 ![](./testimage1.png)

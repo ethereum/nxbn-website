@@ -8,6 +8,7 @@ tags:
   - america-latin
   - defi
   - research
+  - 2022-cohort-2
 ---
 Among many things, crypto's promise is to create new, more equitable economic models that can benefit everyone, not just the wealthy and powerful. Some see DeFi’s promise as being able to provide financial services to those who may not have access to traditional financial instruments in emerging economies around the world, including some of the world’s most disenfranchised communities.
 
