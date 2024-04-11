@@ -4,9 +4,26 @@ import { useEffect, useState } from "react"
 import Link from "@/components/Link"
 
 const TableOfContents = ({ tocItems }) => {
-  const [activeHeaderId, setActiveHeaderId] = useState(null)
+  function flattenToC(items, result = [] as {title: string, url: string}[]) {
+    items.forEach(item => {
+        // Add the current item to the result list, excluding the 'items' property
+        const { title, url } = item;
+        result.push({ title, url });
 
-  const titleIds = tocItems.map((item) => item.url.substring(1))
+        // If the current item has nested items, recursively flatten them
+        if (item.items && item.items.length) {
+            flattenToC(item.items, result);
+        }
+    });
+    return result;
+}
+
+  const flattenedTocItems = flattenToC(tocItems)
+
+  const titleIds = flattenedTocItems.map((item) => item.url.substring(1))
+
+  const [activeHeaderId, setActiveHeaderId] = useState(titleIds[0])
+
   useEffect(() => {
     const checkActiveHeader = () => {
       for (const id of titleIds) {
@@ -35,7 +52,7 @@ const TableOfContents = ({ tocItems }) => {
 
   return (
     <List>
-      {tocItems.map((item) => (
+      {flattenedTocItems.map((item) => (
         <ListItem
           key={item.title}
           mb={2.5}
