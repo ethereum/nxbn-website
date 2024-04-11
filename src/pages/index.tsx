@@ -41,22 +41,22 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
         <Image src={StarsImage} alt="Stars" w="100%" />
       </Box>
       <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
-      <ContentContainer mb={8}>
+      <ContentContainer mb={16}>
         <ImageSplitContent
           image={TempImage}
           imageBorder="right"
           imageSide="right"
         >
-          <Box gap={8}>
+          <Box gap={8} >
             <H2>The Next Billion Fellowship</H2>
-            <Text>
+            <Text fontSize={18}>
               The Next Billion Fellowship at the Ethereum Foundation is a search
               for stories. Stories that inspire us to focus on the important
               things, to find balance and fairness in the way we go about
               solving our problems, to push deeper into the mysteries of human
               cooperation.
             </Text>
-            <Text>
+            <Text fontSize={18} mb={16}>
               During the course of 6 months, Fellows receive support to drive
               their own projects, and tell their own stories of Ethereum-enabled
               public goods destined to help billions coordinate and thrive.
@@ -71,7 +71,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
         >
           <Box gap={8}>
             <H2>Devcon SEA Scholars</H2>
-            <Text>
+            <Text fontSize={18} mb={16}>
               Devcon is the Ethereum conference for developers, researchers,
               thinkers, and makers. Every year, the devcon scholars program
               provides dozens of full scholarships to connect, learn, and build
