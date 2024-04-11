@@ -9,6 +9,7 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import HomeHero from "@/components/Heroes/HomeHero"
 
 import TempImage from "@/public/images/temp.png"
+import DevHome from "@/public/images/homepage/devcon_home.jpg"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 
@@ -65,7 +66,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
           </Box>
         </ImageSplitContent>
         <ImageSplitContent
-          image={TempImage}
+          image={DevHome}
           imageBorder="left"
           imageSide="left"
         >

@@ -74,7 +74,7 @@ const ImageSplitContent = ({
         lg: imageSide === "left" ? "row" : "row-reverse",
       }}
     >
-      <Center maxW="680px" margin="auto">
+      <Center maxW="540px" margin="auto">
         <Box sx={wrapperStyle[imageBorder]}>
           <Image
             src={image}
