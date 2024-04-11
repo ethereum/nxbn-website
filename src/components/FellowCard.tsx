@@ -12,20 +12,20 @@ const FellowCard = ({
   href,
 }) => {
   return (
-    <Flex mt={6} mb={12} gap={7} flexDir={{ base: "column", md: "row" }}>
+    <Flex mt={6} mb={12} gap={6} flexDir={{ base: "column", md: "row" }}>
       <Image
         src={image}
-        w={28}
-        h={28}
-        borderRadius="121.429px 68px 145.714px 68px"
-        border="0.971px solid #6F9D39"
+        w={40}
+        h={40}
+        borderRadius="250px 100px 250px 100px"
+        border="2px solid #6F9D39"
       />
       <Box gap={4}>
         <Box>
-          <H3 fontWeight="500" m={0}>
+          <H3 fontWeight="500" fontSize={36} m={0}>
             {fellowName}
           </H3>
-          <Text fontSize="14" fontWeight={300} lineHeight="150%" m={0}>
+          <Text fontSize="16" pb={1} fontWeight={300} lineHeight="150%" m={0}>
             {country}
           </Text>
           <Flex>
@@ -35,7 +35,9 @@ const FellowCard = ({
                   key={index}
                   textStyle="tag"
                   color="actionHover"
-                  fontSize={10}
+                  fontFamily= "heading"
+                  fontSize={12}
+                  letterSpacing={0.5}
                   p={1}
                 >
                   {tag}
@@ -45,7 +47,7 @@ const FellowCard = ({
           </Flex>
         </Box>
         <Box>
-          <H5 mb={2}>{title}</H5>
+          <H5 my={2} fontSize={24}>{title}</H5>
           <Text textStyle="base-text" color="body">
             {description}
           </Text>
