@@ -10,9 +10,10 @@ const ImageHero = ({ children, heroImage }) => {
           src={heroImage}
           alt=""
           w="100%"
-          minH="415px"
-          maxH="730px"
+          minH="515px"
+          maxH="830px"
           objectFit="cover"
+          objectPosition="bottom"
         />
       </Box>
       {children}
