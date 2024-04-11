@@ -1,9 +1,14 @@
 ---
+index: 10
 layout: fellow
 title: Fair Finance for Web3 workers
 fellowName: Name Name
+cohort: 1
 country: Country
-image: /content/fellowship/name/name-headshot.png
+lat: 64.1466
+lon: -21.9426
+image: /content/fellowship/Masa/masa-headshot.jpeg
+description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - tag
   - tag

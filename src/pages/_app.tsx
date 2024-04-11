@@ -1,11 +1,11 @@
-import { AppProps } from 'next/app'
+import { AppProps } from "next/app"
 
 import { RootLayout } from "@/layouts/RootLayout"
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from "@chakra-ui/react"
 
-import theme from '@/@chakra-ui/theme'
+import theme from "@/@chakra-ui/theme"
 
-import { roboto, roboto_slab } from '@/lib/fonts'
+import { roboto, roboto_slab } from "@/lib/fonts"
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout ?? ((page) => page)
@@ -21,9 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         `}
       </style>
       <ChakraProvider theme={theme}>
-        <RootLayout>
-          {getLayout(<Component {...pageProps} />)}
-        </RootLayout>
+        <RootLayout>{getLayout(<Component {...pageProps} />)}</RootLayout>
       </ChakraProvider>
     </>
   )

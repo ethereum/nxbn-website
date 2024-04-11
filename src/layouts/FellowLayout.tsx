@@ -1,21 +1,33 @@
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex } from "@chakra-ui/react"
 
-import StarsImage from '@/public/images/stars.png'
+import StarsImage from "@/public/images/stars.png"
 
-import ContentContainer from '@/components/ContentContainer'
-import { Image } from '@/components/Image'
-import FellowLayoutHero from '@/components/Heroes/FellowLayoutHero'
-import { MARKDOWN_CONTENT_MAX_WIDTH } from '@/utils/constants'
-import TableOfContents from '@/components/TableOfContents'
-import { H3 } from '@/components/Headings'
+import ContentContainer from "@/components/ContentContainer"
+import { Image } from "@/components/Image"
+import FellowLayoutHero from "@/components/Heroes/FellowLayoutHero"
+import { MARKDOWN_CONTENT_MAX_WIDTH } from "@/utils/constants"
+import TableOfContents from "@/components/TableOfContents"
+import { H3 } from "@/components/Headings"
+import FellowCard from "@/components/FellowCard"
 
-export const FellowLayout = ({ children, frontmatter, tocItems }) => {
-  const { title, fellowName, country, tags, image } = frontmatter
+export const FellowLayout = ({
+  children,
+  frontmatter,
+  tocItems,
+  allFellowsFrontmatter,
+}) => {
+  const { index, title, fellowName, country, tags, image, description, href } =
+    frontmatter
+
+  const meetMoreFellows = [
+    allFellowsFrontmatter[index - 1],
+    allFellowsFrontmatter[index + 1],
+  ]
 
   return (
     <>
-      <Box pos='absolute' zIndex={-1} top={-4} left={0} right={0}>
-        <Image src={StarsImage} alt="Stars" w='100%' />
+      <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
+        <Image src={StarsImage} alt="Stars" w="100%" />
       </Box>
       <ContentContainer>
         <FellowLayoutHero
@@ -26,7 +38,7 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
           image={image}
         />
         <Flex
-          px={{base: 6 , md: 16}}
+          px={{ base: 6, md: 16 }}
           gap={16}
           pt={4}
           pb={16}
@@ -37,7 +49,7 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
           </Box>
           <Box
             w="300px"
-            display={{ base: 'none', md: 'block' }}
+            display={{ base: "none", md: "block" }}
             position="sticky"
             top="20px"
             alignSelf="start"
@@ -46,14 +58,34 @@ export const FellowLayout = ({ children, frontmatter, tocItems }) => {
           </Box>
         </Flex>
       </ContentContainer>
-      <Box
-        py={16}
-        bg="backgroundHighlight"
-      >
+      <Box py={16} bg="backgroundHighlight">
         <ContentContainer>
-          <Box px={{base: 6 , md: 16}}>
+          <Box px={{ base: 6, md: 16 }}>
             <H3 variant="action">Meet more fellows</H3>
-            {/* TODO: Implement component for more fellows */}
+            <Flex gap={12} flexDir={{ base: "column", lg: "row" }}>
+              <Box flex={1}>
+                <FellowCard
+                  title={meetMoreFellows[0].title}
+                  fellowName={meetMoreFellows[0].fellowName}
+                  country={meetMoreFellows[0].country}
+                  tags={meetMoreFellows[0].tags}
+                  image={meetMoreFellows[0].image}
+                  description={meetMoreFellows[0].description}
+                  href={meetMoreFellows[0].href}
+                />
+              </Box>
+              <Box flex={1}>
+                <FellowCard
+                  title={meetMoreFellows[1].title}
+                  fellowName={meetMoreFellows[1].fellowName}
+                  country={meetMoreFellows[1].country}
+                  tags={meetMoreFellows[1].tags}
+                  image={meetMoreFellows[1].image}
+                  description={meetMoreFellows[1].description}
+                  href={meetMoreFellows[1].href}
+                />
+              </Box>
+            </Flex>
           </Box>
         </ContentContainer>
       </Box>

@@ -1,9 +1,14 @@
 ---
+index: 12
 layout: fellow
 title: Fair Finance for Web3 workers
 fellowName: Name Name
+cohort: 1
 country: Country
-image: /content/fellowship/name/name-headshot.png
+lat: -33.9249
+lon: 18.4241
+image: /content/fellowship/Mulenga/mulenga-headshot.jpeg
+description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - tag
   - tag

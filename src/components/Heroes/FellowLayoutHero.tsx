@@ -1,19 +1,19 @@
 import { Box, Center, Image, Flex, Text } from "@chakra-ui/react"
 
 import { Breadcrumbs } from "@/components/Breadcrumbs"
-import { H1 } from '@/components/Headings'
+import { H1 } from "@/components/Headings"
 
 const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
   return (
-    <Box px={{base: 6 , md: 16}} pt={16} pb={8}>
+    <Box px={{ base: 6, md: 16 }} pt={16} pb={8}>
       <Breadcrumbs />
       <Box my={2.5}>
         <H1 textStyle="fellow-title">{title}</H1>
       </Box>
       <Flex gap={4}>
-        {tags.map((tag) => {
+        {tags.map((tag, index) => {
           return (
-            <Text key={tag} textStyle="tag" color="actionHover">
+            <Text key={index} textStyle="tag" color="actionHover">
               {tag}
             </Text>
           )
@@ -42,4 +42,4 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
   )
 }
 
-export default FellowLayoutHero;
+export default FellowLayoutHero
