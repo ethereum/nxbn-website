@@ -12,7 +12,7 @@ import TempImage from "@/public/images/temp.png"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 
-import StarsImage from "@/public/images/stars.png"
+import StarsImage from "@/public/images/stars.jpg"
 
 export const getStaticProps = async () => {
   const parser = new Parser({
