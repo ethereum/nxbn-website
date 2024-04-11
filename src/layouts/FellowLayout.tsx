@@ -20,8 +20,8 @@ export const FellowLayout = ({
     frontmatter
 
   const meetMoreFellows = [
-    allFellowsFrontmatter[index - 1],
-    allFellowsFrontmatter[index + 1],
+    allFellowsFrontmatter[index === 0 ? allFellowsFrontmatter.length - 1 : index - 1],
+    allFellowsFrontmatter[index === allFellowsFrontmatter.length -1 ? 0 : index + 1],
   ]
 
   return (
@@ -51,7 +51,7 @@ export const FellowLayout = ({
             w="300px"
             display={{ base: "none", md: "block" }}
             position="sticky"
-            top="20px"
+            top="100px"
             alignSelf="start"
           >
             <TableOfContents tocItems={tocItems} />
