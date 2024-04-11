@@ -66,8 +66,8 @@ const ImageSplitContent = ({
 
   return (
     <Flex
-      gap={32}
-      py={32}
+      gap={24}
+      py={16}
       px={{ base: 8, md: 16 }}
       flexDir={{
         base: "column",

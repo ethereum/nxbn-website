@@ -8,8 +8,8 @@ import { Image } from "@/components/Image"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import HomeHero from "@/components/Heroes/HomeHero"
 
-import TempImage from "@/public/images/temp.png"
 import DevHome from "@/public/images/homepage/devcon_home.jpg"
+import FellowHome from "@/public/images/homepage/fellow_home.jpg"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 
@@ -44,7 +44,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
       <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
       <ContentContainer mb={16}>
         <ImageSplitContent
-          image={TempImage}
+          image={FellowHome}
           imageBorder="right"
           imageSide="right"
         >
