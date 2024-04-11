@@ -22,7 +22,7 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
       flexDir={{ base: "column", md: "row" }}
     >
       <Center flex={1}>
-        <H3>ethereum’s next billion users are here, now →</H3>
+        <H3>Ethereum’s next billion users are here, now →</H3>
       </Center>
       <GlobeComponentWithNoSSR allFellowsFrontmatter={allFellowsFrontmatter} />
     </Flex>
