@@ -31,7 +31,7 @@ const BlogFeed = ({ blogs }) => {
               {formattedDate}
             </Text>
             <Text mb={0} fontSize={18}>{blog.contentSnippet}</Text>
-            <Text color="#9DCE64" mt={4}>Read more [corwin missing the link] and link font</Text>
+            <Text color="action" mt={4}>Read more [corwin missing the link] and link font</Text>
           </Box>
         )
       })}
