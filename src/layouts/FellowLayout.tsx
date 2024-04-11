@@ -44,7 +44,7 @@ export const FellowLayout = ({
           pb={16}
           justifyContent="space-between"
         >
-          <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1">
+          <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1" sx={{ "h2:first-of-type": { mt: 0 } }}>
             {children}
           </Box>
           <Box
