@@ -10,9 +10,6 @@ lon: 18.4241
 image: /content/fellowship/Mulenga/mulenga-headshot.jpeg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
-  - tag
-  - tag
-  - tag
   - 2023-cohort-3
   - africa-east
   - art-and-culture

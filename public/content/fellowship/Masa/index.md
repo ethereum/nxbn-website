@@ -10,9 +10,6 @@ lon: -21.9426
 image: /content/fellowship/Masa/masa-headshot.jpeg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
-  - tag
-  - tag
-  - tag
   - 2022-cohort-2
   - asia
   - education

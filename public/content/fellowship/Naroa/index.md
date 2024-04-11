@@ -10,9 +10,6 @@ lon: -68.303
 image: /content/fellowship/Naroa/naroa-headshot-logo.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
-  - tag
-  - tag
-  - tag
   - 2021-cohort-1
   - global
 ---
