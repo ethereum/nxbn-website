@@ -16,6 +16,7 @@ tags:
   - NGO
   - CSO
   - aid
+  - 2022-cohort-2
 ---
 
 ![](zefi-test.png)
