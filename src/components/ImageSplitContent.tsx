@@ -66,15 +66,15 @@ const ImageSplitContent = ({
 
   return (
     <Flex
-      gap={16}
-      py={8}
+      gap={24}
+      py={16}
       px={{ base: 8, md: 16 }}
       flexDir={{
         base: "column",
-        md: imageSide === "left" ? "row" : "row-reverse",
+        lg: imageSide === "left" ? "row" : "row-reverse",
       }}
     >
-      <Center maxW="380px" margin="auto">
+      <Center maxW={{ base:"340px", md:"400px", lg:"380px", xl:"540px" }} margin="auto" zIndex={-1}>
         <Box sx={wrapperStyle[imageBorder]}>
           <Image
             src={image}

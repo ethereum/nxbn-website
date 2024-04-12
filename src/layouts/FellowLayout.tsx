@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react"
 
-import StarsImage from "@/public/images/stars.png"
+import StarsImage from "@/public/images/stars.jpg"
 
 import ContentContainer from "@/components/ContentContainer"
 import { Image } from "@/components/Image"
@@ -20,8 +20,8 @@ export const FellowLayout = ({
     frontmatter
 
   const meetMoreFellows = [
-    allFellowsFrontmatter[index - 1],
-    allFellowsFrontmatter[index + 1],
+    allFellowsFrontmatter[index === 0 ? allFellowsFrontmatter.length - 1 : index - 1],
+    allFellowsFrontmatter[index === allFellowsFrontmatter.length -1 ? 0 : index + 1],
   ]
 
   return (
@@ -44,14 +44,14 @@ export const FellowLayout = ({
           pb={16}
           justifyContent="space-between"
         >
-          <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1">
+          <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1" sx={{ "h2:first-of-type": { mt: 0 } }}>
             {children}
           </Box>
           <Box
             w="300px"
             display={{ base: "none", md: "block" }}
             position="sticky"
-            top="20px"
+            top="100px"
             alignSelf="start"
           >
             <TableOfContents tocItems={tocItems} />

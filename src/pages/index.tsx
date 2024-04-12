@@ -8,12 +8,13 @@ import { Image } from "@/components/Image"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import HomeHero from "@/components/Heroes/HomeHero"
 
-import TempImage from "@/public/images/temp.png"
+import DevHome from "@/public/images/homepage/devcon_home.jpg"
+import FellowHome from "@/public/images/homepage/fellow_home.jpg"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 import WhoAreNextBillion from "@/components/WhoAreNextBillion"
 
-import StarsImage from "@/public/images/stars.png"
+import StarsImage from "@/public/images/stars.jpg"
 
 export const getStaticProps = async () => {
   const parser = new Parser({
@@ -42,22 +43,22 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
         <Image src={StarsImage} alt="Stars" w="100%" />
       </Box>
       <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
-      <ContentContainer mb={8}>
+      <ContentContainer mb={16}>
         <ImageSplitContent
-          image={TempImage}
+          image={FellowHome}
           imageBorder="right"
           imageSide="right"
         >
-          <Box gap={8}>
+          <Box gap={8} >
             <H2>The Next Billion Fellowship</H2>
-            <Text>
+            <Text fontSize={18}>
               The Next Billion Fellowship at the Ethereum Foundation is a search
               for stories. Stories that inspire us to focus on the important
               things, to find balance and fairness in the way we go about
               solving our problems, to push deeper into the mysteries of human
               cooperation.
             </Text>
-            <Text>
+            <Text fontSize={18} mb={16}>
               During the course of 6 months, Fellows receive support to drive
               their own projects, and tell their own stories of Ethereum-enabled
               public goods destined to help billions coordinate and thrive.
@@ -66,13 +67,13 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
           </Box>
         </ImageSplitContent>
         <ImageSplitContent
-          image={TempImage}
+          image={DevHome}
           imageBorder="left"
           imageSide="left"
         >
           <Box gap={8}>
             <H2>Devcon SEA Scholars</H2>
-            <Text>
+            <Text fontSize={18} mb={16}>
               Devcon is the Ethereum conference for developers, researchers,
               thinkers, and makers. Every year, the devcon scholars program
               provides dozens of full scholarships to connect, learn, and build
@@ -85,7 +86,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
       <WhoAreNextBillion />
       <ContentContainer mb={8}>
         <Box px={{ base: 8, md: 16 }} gap={8}>
-          <H2 variant="action">Our blog updates</H2>
+          <H2 variant="action" pt={16}>Our blog updates</H2>
           <BlogFeed blogs={blogs} />
         </Box>
       </ContentContainer>

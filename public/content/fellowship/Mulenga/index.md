@@ -13,6 +13,9 @@ tags:
   - tag
   - tag
   - tag
+  - 2023-cohort-3
+  - africa-east
+  - art-and-culture
 ---
 
 ![](./testimage1.png)

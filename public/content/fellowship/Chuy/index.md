@@ -13,6 +13,7 @@ tags:
   - identity
   - america-latin
   - america-central
+  - 2021-cohort-1
 ---
 
 ## Upgrading Bureaucracy

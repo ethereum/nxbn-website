@@ -21,15 +21,17 @@ const BlogFeed = ({ blogs }) => {
             <H3 mb={0}>{blog.title}</H3>
             <Text
               variant="action"
-              fontSize={14}
               fontStyle="normal"
               fontWeight="300"
               lineHeight="150%"
-              mb={2}
+              mb={4}
+              mt={1}
+              color="#99BFCD"
             >
               {formattedDate}
             </Text>
-            <Text mb={0}>{blog.contentSnippet}</Text>
+            <Text mb={0} fontSize={18}>{blog.contentSnippet}</Text>
+            <Text color="action" mt={4} fontFamily="heading">Read more [corwin missing the link] and link font</Text>
           </Box>
         )
       })}

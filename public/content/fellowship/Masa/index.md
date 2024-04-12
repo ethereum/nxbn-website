@@ -13,6 +13,9 @@ tags:
   - tag
   - tag
   - tag
+  - 2022-cohort-2
+  - asia
+  - education
 ---
 
 ![](./testimage1.png)

@@ -14,11 +14,6 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devconnect2023,
-    stats: [
-      { label: "scholar", value: 0 },
-      { label: "kpi indication", value: 0 },
-      { label: "kpi2 indication", value: 0 },
-    ],
   },
   {
     name: "Devcon 2022",
@@ -26,11 +21,6 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devcon2022,
-    stats: [
-      { label: "scholar", value: 0 },
-      { label: "kpi indication", value: 0 },
-      { label: "kpi2 indication", value: 0 },
-    ],
   },
   {
     name: "Devconnect 2022",
@@ -38,11 +28,6 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devconnect2022,
-    stats: [
-      { label: "scholar", value: 0 },
-      { label: "kpi indication", value: 0 },
-      { label: "kpi2 indication", value: 0 },
-    ],
   },
 ]
 
@@ -87,18 +72,6 @@ const PreviousEditions = () => {
                       {edition.location}
                     </Text>
                     <Text mb={8}>{edition.description}</Text>
-                    <Flex gap={16} margin={{ base: "auto", lg: "0" }}>
-                      {edition.stats.map((stat, index) => (
-                        <Box key={index} flexDirection="column">
-                          <H3 mb={0} textAlign="center">
-                            {stat.value}
-                          </H3>
-                          <Text {...cityFontStyle} mb={0}>
-                            {stat.label}
-                          </Text>
-                        </Box>
-                      ))}
-                    </Flex>
                   </Center>
                 </Flex>
                 {index < previousEditions.length - 1 && (

@@ -13,6 +13,8 @@ tags:
   - tag
   - tag
   - tag
+  - 2021-cohort-1
+  - global
 ---
 
 ![](./testimage1.png)

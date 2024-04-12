@@ -13,6 +13,8 @@ tags:
   - identity
   - europe-east
   - DID-VC
+  - 2022-cohort-2
+  - global
 ---
 
 The Scouting movement is decentralised, with each chapter bringing its own unique skills and goals to a grassroots community focused on fostering an environment of learning, personal growth, and mutual respect. Scouts follow a general framework and guiding principles agreed upon by all members of the World Organization, but have autonomy in how they implement projects and initiatives.
