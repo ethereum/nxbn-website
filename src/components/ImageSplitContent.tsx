@@ -17,7 +17,7 @@ const ImageSplitContent = ({
   children,
 }: ImageSplitContentProps) => {
   const imageBorderRadiusOptions = {
-    round: 180,
+    round: 1800,
     left: "120px 400px",
     right: "400px 120px",
     none: "none",
@@ -66,7 +66,7 @@ const ImageSplitContent = ({
 
   return (
     <Flex
-      gap={24}
+      gap={{ base: 8, md: 18, lg: 24 }}
       py={16}
       px={{ base: 8, md: 16 }}
       flexDir={{
@@ -75,7 +75,7 @@ const ImageSplitContent = ({
       }}
     >
       <Center
-        maxW={{ base: "340px", md: "400px", lg: "380px", xl: "540px" }}
+        maxW={{ base: "340px", md: "400px", lg: "380px", xl: "460px" }}
         margin="auto"
         zIndex={-1}
       >

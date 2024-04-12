@@ -11,7 +11,7 @@ import ImageHero from "@/components/Heroes/ImageHero"
 
 import EthGlypth from "@/public/images/scholar/eth-glyph.png"
 import ScholarOpenHeroImage from "@/public/images/scholar/scholar-hero-open.jpg"
-import TempImage from "@/public/images/temp.png"
+import Artifact from "@/public/images/scholar/artifact.jpg"
 
 const FAQQuestions: Question[] = [
   {
@@ -111,7 +111,7 @@ const ScholarOpen = () => {
 
       <ContentContainer py={24}>
         <ImageSplitContent
-          image={TempImage}
+          image={Artifact}
           imageBorder="round"
           imageSide="left"
         >
