@@ -80,7 +80,7 @@ export const FellowLayout = ({
                   tags={meetMoreFellows[0].tags}
                   image={meetMoreFellows[0].image}
                   description={meetMoreFellows[0].description}
-                  href={meetMoreFellows[0].href}
+                  slug={meetMoreFellows[0].slug}
                 />
               </Box>
               <Box flex={1}>
@@ -91,7 +91,7 @@ export const FellowLayout = ({
                   tags={meetMoreFellows[1].tags}
                   image={meetMoreFellows[1].image}
                   description={meetMoreFellows[1].description}
-                  href={meetMoreFellows[1].href}
+                  slug={meetMoreFellows[1].slug}
                 />
               </Box>
             </Flex>

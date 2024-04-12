@@ -9,7 +9,7 @@ const FellowCard = ({
   fellowName,
   country,
   tags,
-  href,
+  slug,
 }) => {
   return (
     <Flex mt={6} mb={12} gap={6} flexDir={{ base: "column", md: "row" }}>
@@ -55,7 +55,7 @@ const FellowCard = ({
           </Text>
         </Box>
         <Box>
-          <ButtonLink href={`/fellow/${href}`} variant="primary">
+          <ButtonLink href={`/fellowship/${slug}`} variant="primary">
             Know more
           </ButtonLink>
         </Box>

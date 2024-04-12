@@ -18,7 +18,10 @@ export const getAllFellowsFrontmatter = () => {
     )
     const fileContents = fs.readFileSync(fullPath, "utf8")
     const { data } = matter(fileContents)
-    return data
+    return {
+      slug: slug,
+      ...data
+    }
   })
 
   allFellowsFrontmatter.sort((a, b) => {

@@ -60,7 +60,7 @@ const FellowList = ({ fellowsData }) => {
                 tags={fellow.tags}
                 image={fellow.image}
                 description={fellow.description}
-                href={fellow.href}
+                slug={fellow.slug}
               />
             </Box>
           ))}
