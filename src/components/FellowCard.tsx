@@ -35,7 +35,7 @@ const FellowCard = ({
                   key={index}
                   textStyle="tag"
                   color="actionHover"
-                  fontFamily= "heading"
+                  fontFamily="heading"
                   fontSize={12}
                   letterSpacing={0.5}
                   p={1}
@@ -47,7 +47,9 @@ const FellowCard = ({
           </Flex>
         </Box>
         <Box>
-          <H5 my={2} fontSize={24}>{title}</H5>
+          <H5 my={2} fontSize={24}>
+            {title}
+          </H5>
           <Text textStyle="base-text" color="body">
             {description}
           </Text>
