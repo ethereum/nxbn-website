@@ -76,6 +76,19 @@ export const textStyles = {
       color: "action",
     },
   },
+  'link-text-action': {
+    fontFamily: "link",
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "150%",
+    color: "action",
+    borderBottom: "1px solid transparent",
+    _hover: {
+      borderBottom: "1px solid #CFF8A0",
+      color: "actionHover",
+    },
+  },
   "drawer-link": {
     color: "body",
     fontFamily: "link",
