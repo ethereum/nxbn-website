@@ -109,7 +109,7 @@ const ScholarOpen = () => {
       </ContentContainer>
       </Box>
 
-      <ContentContainer>
+      <ContentContainer py={24}>
         <ImageSplitContent
           image={TempImage}
           imageBorder="round"
