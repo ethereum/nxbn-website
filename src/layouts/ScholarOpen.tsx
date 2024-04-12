@@ -44,30 +44,33 @@ const ScholarOpen = () => {
       <ImageHero heroImage={ScholarOpenHeroImage}>
         <Box
           w="100%"
-          bg="linear-gradient(180deg, #001121 0%, #056589 100%)"
-          mt="-15%"
+          bg="linear-gradient(180deg, #3BDFC6 30%, #3BDFC6 100%)"
+          mt={{ base:"-40%", md:"-22%", lg:"-15%" }}
         >
           <Center
-            gap={8}
+            gap={4}
             flexDir="column"
             px={{ base: 8, md: 16 }}
             textAlign="center"
           >
             <Center flexDir="column">
-              <Image src={EthGlypth} alt="" w="82px" />
-              <H2 textAlign="center">Devcon SEA Scholars</H2>
+              <Image src={EthGlypth} alt="" w={{ base: "100px", md:"150px" }} />
+              <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0} color="#206285">Devcon SEA Scholars</H2>
             </Center>
-            <Box maxW="515px">
-              <Text>
+            <Box maxW="650px">
+              <Text color="#206285" fontSize={{ base: 18, md: 24 }}>
                 Come learn, connect, and grow with the Ethereum ecosystem.
                 November 9-17th in Bangkok, Thailand.
               </Text>
             </Box>
             <Box>
-              <ButtonLink href="/">Apply</ButtonLink>
+              <ButtonLink href="/" fontSize={24} bg="#206285" color="white" opacity="0.4">Apply Soon</ButtonLink>
             </Box>
             <Box>
-              <ButtonLink href="/">Devcon website</ButtonLink>
+            <Text color="#206285" fontSize={14} mb={2} mt={8}>
+                Know more about Devcon
+              </Text>
+              <ButtonLink fontSize={14} href="/" bg="white">Devcon website</ButtonLink>
             </Box>
           </Center>
           <Divider my={12} color="action" borderTop="1px solid" />
