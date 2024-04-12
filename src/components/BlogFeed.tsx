@@ -1,8 +1,10 @@
 import { Box, Flex, Grid, Text } from "@chakra-ui/react"
 
 import { H3 } from "@/components/Headings"
+import Link from "./Link"
 
 const BlogFeed = ({ blogs }) => {
+  console.log(blogs)
   return (
     <Grid
       gap={24}
@@ -33,9 +35,9 @@ const BlogFeed = ({ blogs }) => {
             <Text mb={0} fontSize={18}>
               {blog.contentSnippet}
             </Text>
-            <Text color="action" mt={4} fontFamily="heading">
-              Read more [corwin missing the link] and link font
-            </Text>
+            <Link href={blog.link} textStyle='link-text-action' mt={4}>
+              Read more
+            </Link>
           </Box>
         )
       })}
