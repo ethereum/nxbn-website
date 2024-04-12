@@ -32,7 +32,8 @@ const FellowList = ({ fellowsData }) => {
         <H2 variant="action" mb={8}>
           Fellows, past and present
         </H2>
-        <Center
+        {/* TODO: Implement filter for fellows */}
+        {/* <Center
           flexDir={{ base: "column", md: "row" }}
           justifyContent="left"
           alignItems={{ base: "left", md: "center" }}
@@ -44,7 +45,7 @@ const FellowList = ({ fellowsData }) => {
             <FilterButton>Region</FilterButton>
             <FilterButton>Area</FilterButton>
           </Flex>
-        </Center>
+        </Center> */}
         <Divider my={12} color="action" borderTop="1px solid" />
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
