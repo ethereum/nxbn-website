@@ -44,7 +44,7 @@ const ScholarOpen = () => {
       <ImageHero heroImage={ScholarOpenHeroImage}>
         <Box
           w="100%"
-          bg="linear-gradient(180deg, #9DCE64 30%, #9DCE64 100%)"
+          bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
           mt={{ base:"-40%", md:"-22%", lg:"-15%" }}
         >
           <Center
@@ -55,19 +55,19 @@ const ScholarOpen = () => {
           >
             <Center flexDir="column">
               <Image src={EthGlypth} alt="" w={{ base: "100px", md:"150px" }} />
-              <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0} color="#206285">Devcon SEA Scholars</H2>
+              <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0} >Devcon SEA Scholars</H2>
             </Center>
             <Box maxW="650px">
-              <Text color="#206285" fontSize={{ base: 18, md: 24 }}>
+              <Text fontSize={{ base: 18, md: 24 }}>
                 Come learn, connect, and grow with the Ethereum ecosystem.
                 November 9-17th in Bangkok, Thailand.
               </Text>
             </Box>
             <Box>
-              <ButtonLink href="/" fontSize={24} bg="#206285" color="white" opacity="0.4">Apply Soon</ButtonLink>
+              <ButtonLink href="/" fontSize={24} opacity="0.4">Apply Soon</ButtonLink>
             </Box>
             <Box>
-            <Text color="#206285" fontSize={16} mb={2} mt={8}>
+            <Text fontSize={16} mb={2} mt={8}>
                 Know more about Devcon
               </Text>
               <ButtonLink fontSize={14} href="https://devcon.org/en/" bg="white">Devcon website</ButtonLink>
@@ -76,10 +76,10 @@ const ScholarOpen = () => {
         </Box>
       </ImageHero>
 
-    <Box bg="linear-gradient(180deg, #9DCE64 30%, #9DCE6400 100%)" pt={{ base: "100px", md: "250px" }}>
+    <Box bg="linear-gradient(180deg, #16393D 30%, #16393D00 100%)" pt={{ base: "100px", md: "250px" }}>
       <ContentContainer>
         <Box px={{ base: 8, md: 16 }} gap={8}>
-          <H1 variant="action" color="background">Devcon(nect) Scholars</H1>
+          <H1 variant="action" >Devcon(nect) Scholars</H1>
           <Box 
             gap={16}
             flexDir= {{ base: "column", md: "row" }}
