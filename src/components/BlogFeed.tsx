@@ -28,7 +28,7 @@ const BlogFeed = ({ blogs }) => {
               lineHeight="150%"
               mb={4}
               mt={1}
-              color="#99BFCD"
+              color="bodyHover"
             >
               {formattedDate}
             </Text>

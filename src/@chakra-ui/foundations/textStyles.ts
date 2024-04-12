@@ -1,16 +1,16 @@
 export const textStyles = {
   h1: {
-    fontSize: 50,
+    fontSize: 56,
     fontWeight: 400,
     letterSpacing: "2.9px",
   },
   h2: {
-    fontSize: 44,
+    fontSize: 48,
     fontWeight: 400,
     letterSpacing: "2.2px",
   },
   h3: {
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: 500,
     letterSpacing: "0.9px",
   },
@@ -59,9 +59,9 @@ export const textStyles = {
     fontFamily: "body",
     fontWeight: 300,
     fontSyle: "normal",
-    fontSize: 14,
+    fontSize: 12,
     lineHeight: "150%",
-    color: "body",
+    color: "bodyHover",
   },
   "link-text": {
     fontFamily: "link",

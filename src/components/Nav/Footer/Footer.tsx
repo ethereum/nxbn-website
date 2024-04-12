@@ -29,15 +29,16 @@ const Footer = () => {
             textAlign={{ base: "center", lg: "right" }}
             gap={2}
             flexDirection={"column"}
+            
           >
-            <Flex flexDirection="row" flexWrap={"wrap"} width="100%" gap={4}>
+            <Flex flexDirection="row" flexWrap={"wrap"} width="100%" gap={4} justifyContent={"center"}>
               <Link href={ETHEREUM_DOT_ORG_LINK}>Ethereum.org</Link>
               <Link href={ETHEREUM_FOUNDATION_LINK}>Ethereum.foundation</Link>
               <Link href={PRIVACY_POLICY_LINK}>Privacy Policy</Link>
               <Link href={TERMS_OF_USE_LINK}>Terms of Use</Link>
               <Link href={COOKIE_POLICY_PAGE}>Cookie Policy</Link>
             </Flex>
-            <Text textStyle="footer-text">
+            <Text textStyle="footer-text" py={2} color="bodyHover">
               © 2024 Ethereum Foundation. All rights reserved.
             </Text>
           </Flex>
