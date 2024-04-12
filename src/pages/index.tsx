@@ -84,14 +84,16 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
         </ContentContainer>
       </Box>
       <WhoAreNextBillion />
-      <ContentContainer mb={8}>
-        <Box px={{ base: 8, md: 16 }} gap={8}>
-          <H2 variant="action" pt={16}>
-            Our blog updates
-          </H2>
-          <BlogFeed blogs={blogs} />
-        </Box>
+      <Box bg="linear-gradient(180deg, #022B35 0%, #006EA3 50%)">
+        <ContentContainer mb={8}>
+          <Box px={{ base: 8, md: 16 }} gap={8}>
+            <H2 variant="action" pt={16}>
+              Our blog updates
+            </H2>
+            <BlogFeed blogs={blogs} />
+          </Box>
       </ContentContainer>
+      </Box>
     </>
   )
 }

@@ -42,7 +42,7 @@ const WhoAreNextBillion = () => {
           alt=""
         />
       </Box>
-      <Box bg="linear-gradient(180deg, #101521 0%, #056589 100%)">
+      <Box bg="linear-gradient(180deg, #000801 50%, #022B35 100%)" pb={"100px"}>
         <ContentContainer>
           <Box gap={8} px={{ base: 8, md: 16 }} position="relative">
             <H2 variant="action">Who Are The Next Billion?</H2>
