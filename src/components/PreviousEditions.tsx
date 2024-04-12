@@ -2,6 +2,7 @@ import { Box, Center, Divider, Flex, Text } from "@chakra-ui/react"
 import ContentContainer from "@/components/ContentContainer"
 import { H2, H3, H4 } from "@/components/Headings"
 import { Image } from "@/components/Image"
+import Link from "@/components/Link"
 
 import Devconnect2023 from "@/public/images/devconnect_2023.png"
 import Devcon2022 from "@/public/images/devcon_2022.png"
@@ -14,6 +15,7 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devconnect2023,
+    url: 'https://devconnect.org/istanbul'
   },
   {
     name: "Devcon 2022",
@@ -21,6 +23,7 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devcon2022,
+    url: 'https://archive.devcon.org/archive/watch/?order=desc&sort=eventId'
   },
   {
     name: "Devconnect 2022",
@@ -28,6 +31,7 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devconnect2022,
+    url: 'https://devconnect.org/amsterdam'
   },
 ]
 
@@ -72,6 +76,10 @@ const PreviousEditions = () => {
                       {edition.location}
                     </Text>
                     <Text mb={8}>{edition.description}</Text>
+                    <Box>
+                      <Link href={edition.url} textStyle='link-text-action'>Check out {edition.name}</Link>
+                    </Box>
+                    
                   </Center>
                 </Flex>
                 {index < previousEditions.length - 1 && (
