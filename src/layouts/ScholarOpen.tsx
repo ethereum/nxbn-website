@@ -1,4 +1,4 @@
-import { Box, Center, Divider, Text } from "@chakra-ui/react"
+import { Box, Center, Divider, Flex, Text } from "@chakra-ui/react"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import { H1, H2 } from "@/components/Headings"
@@ -44,7 +44,7 @@ const ScholarOpen = () => {
       <ImageHero heroImage={ScholarOpenHeroImage}>
         <Box
           w="100%"
-          bg="linear-gradient(180deg, #3BDFC6 30%, #3BDFC6 100%)"
+          bg="linear-gradient(180deg, #9DCE64 30%, #9DCE64 100%)"
           mt={{ base:"-40%", md:"-22%", lg:"-15%" }}
         >
           <Center
@@ -67,33 +67,38 @@ const ScholarOpen = () => {
               <ButtonLink href="/" fontSize={24} bg="#206285" color="white" opacity="0.4">Apply Soon</ButtonLink>
             </Box>
             <Box>
-            <Text color="#206285" fontSize={14} mb={2} mt={8}>
+            <Text color="#206285" fontSize={16} mb={2} mt={8}>
                 Know more about Devcon
               </Text>
-              <ButtonLink fontSize={14} href="/" bg="white">Devcon website</ButtonLink>
+              <ButtonLink fontSize={14} href="https://devcon.org/en/" bg="white">Devcon website</ButtonLink>
             </Box>
           </Center>
-          <Divider my={12} color="action" borderTop="1px solid" />
         </Box>
       </ImageHero>
 
+    <Box bg="linear-gradient(180deg, #9DCE64 30%, #9DCE6400 100%)" pt={{ base: "100px", md: "250px" }}>
       <ContentContainer>
         <Box px={{ base: 8, md: 16 }} gap={8}>
-          <H1 variant="action">Devcon(nect) Scholars</H1>
-          <Box maxW="515px">
-            <Text>
-              Devcon and Devconnect are events that act as centers of gravity in
-              the Ethereum ecosystem. They are global gatherings that create
-              space and time for community. Places and moments to share, learn,
-              discuss, meet, explore, and live in.
-            </Text>
-            <Text>
-              Physical events are always somewhere in a new city, country, or
-              region. That means no matter where a Devcon(nect) is held it will
-              always be difficult for folks living elsewhere in a different
-              city, country, or region.
-            </Text>
-            <Text>
+          <H1 variant="action" color="background">Devcon(nect) Scholars</H1>
+          <Box 
+            gap={16}
+            flexDir= {{ base: "column", md: "row" }}
+            display="flex">
+            <Box>
+              <Text fontSize={18}>
+                Devcon and Devconnect are events that act as centers of gravity in
+                the Ethereum ecosystem. They are global gatherings that create
+                space and time for community. Places and moments to share, learn,
+                discuss, meet, explore, and live in.
+              </Text>
+              <Text fontSize={18}>
+                Physical events are always somewhere in a new city, country, or
+                region. That means no matter where a Devcon(nect) is held it will
+                always be difficult for folks living elsewhere in a different
+                city, country, or region.
+              </Text>
+            </Box>
+            <Text fontSize={18}>
               Sometimes human flourishing happens just by showing up. As
               organizers of Devcon and Devconnect, we can at least create that
               opportunity for a small group each year. This scholarship provides
@@ -102,12 +107,13 @@ const ScholarOpen = () => {
           </Box>
         </Box>
       </ContentContainer>
+      </Box>
 
       <ContentContainer>
         <ImageSplitContent
           image={TempImage}
           imageBorder="round"
-          imageSide="right"
+          imageSide="left"
         >
           <Box gap={8}>
             <H2>Something to hang a memory on</H2>
