@@ -27,27 +27,42 @@ const Header = styled.h3`
 `
 
 const HorizontalLogo = styled.img`
-  width: 80%;
-  max-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  @media (max-width: ${screenSizeS}) {
-    display: none;
+width: 80%;
+max-width: 450px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+@media (max-width: ${screenSizeS}) {
+  display: none;
+}
+
+/* Hover effect */
+
+
+&:hover {
+  transform: scale(1.1); /* Increase size on hover */
+ 
   }
 `
 
 const VerticalLogo = styled.img`
-  display: none;
-  @media (max-width: ${screenSizeS}) {
-    /* width: 200px; */
-    display: block;
-    margin: 2rem auto;
-  }
-  @media (max-width: 340px) {
-    width: 140px;
-    display: block;
-    margin: 2rem auto;
+display: none;
+@media (max-width: ${screenSizeS}) {
+  /* width: 200px; */
+  display: block;
+  margin: 2rem auto;
+  transition: transform 0.3s ease; 
+}
+@media (max-width: 340px) {
+  width: 140px;
+  display: block;
+  margin: 2rem auto;
+}
+
+&:hover {
+  transform: scale(1.1); 
+  
+}
   }
 `
 
