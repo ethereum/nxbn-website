@@ -8,7 +8,7 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
-import ScholarClosedHeroImage from "@/public/images/scholar/scholar-hero-closed.png"
+import ScholarClosedHeroImage from "@/public/images/scholar/scholar-hero-closed.jpg"
 import TempImage from "@/public/images/temp.png"
 
 const FAQQuestions: Question[] = [

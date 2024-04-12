@@ -10,7 +10,7 @@ import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
 import EthGlypth from "@/public/images/scholar/eth-glyph.png"
-import ScholarOpenHeroImage from "@/public/images/scholar/scholar-hero-open.png"
+import ScholarOpenHeroImage from "@/public/images/scholar/scholar-hero-open.jpg"
 import TempImage from "@/public/images/temp.png"
 
 const FAQQuestions: Question[] = [

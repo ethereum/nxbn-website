@@ -11,7 +11,7 @@ const ImageHero = ({ children, heroImage }) => {
           alt=""
           w="100%"
           minH="515px"
-          maxH="830px"
+          maxH="1000px"
           objectFit="cover"
           objectPosition="bottom"
         />
