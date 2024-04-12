@@ -4,20 +4,20 @@ import ButtonLink from "@/components/Buttons/ButtonLink"
 import ContentContainer from "./ContentContainer"
 import { Image } from "./Image"
 
-import BackgroundTreeImage from "@/public/images/home/background.png"
-import ForegroundTreeImage from "@/public/images/home/foreground.png"
-import MiddlegroundTreeImage from "@/public/images/home/middleground.png"
+import BackgroundTreeImage from "@/public/images/homepage/background.jpg"
+import ForegroundTreeImage from "@/public/images/homepage/foreground.png"
+import MiddlegroundTreeImage from "@/public/images/homepage/middleground.png"
 
 const WhoAreNextBillion = () => {
   return (
     <Box gap={8}>
-      <Box position="relative" height="695px" width="100%">
+      <Box position="relative" height="800px" width="100%">
         <Image
           position="absolute"
           top="0"
           src={BackgroundTreeImage}
           objectFit="cover"
-          h="695px"
+          h="100%"
           w="100%"
           alt=""
         />
@@ -26,7 +26,8 @@ const WhoAreNextBillion = () => {
           top={0}
           src={MiddlegroundTreeImage}
           objectFit="cover"
-          h="695px"
+          objectPosition="bottom"
+          h="100%"
           w="100%"
           alt=""
         />
@@ -34,8 +35,9 @@ const WhoAreNextBillion = () => {
           position="absolute"
           top={0}
           src={ForegroundTreeImage}
-          objectFit="cover"
-          h="695px"
+          objectFit="contain"
+          objectPosition="bottom"
+          h="100%"
           w="100%"
           alt=""
         />
