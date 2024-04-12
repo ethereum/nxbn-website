@@ -39,11 +39,13 @@ export const getStaticProps = async () => {
 const HomePage = ({ allFellowsFrontmatter, blogs }) => {
   return (
     <>
-      <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
-        <Image src={StarsImage} alt="Stars" w="100%" />
+      <Box pos="relative" top="-64px" mb="-64px" >
+        <Box pos="absolute" zIndex={-1} top={0} left={0} right={0} bg="#0E6899" h={"100%"} >
+          <Image src={StarsImage} alt="Stars" w="100%" height="100%" objectFit="cover" objectPosition="bottom" />
+        </Box>
+        <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
       </Box>
-      <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
-      <Box bg="linear-gradient(180deg, #156598 0%, #006EA3 100%)">
+      <Box bg="linear-gradient(180deg, #0E6899 0%, #006EA3 100%)">
         <ContentContainer>
           <ImageSplitContent
             image={FellowHome}
