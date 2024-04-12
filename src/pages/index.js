@@ -32,6 +32,7 @@ max-width: 450px;
 margin-left: auto;
 margin-right: auto;
 display: block;
+transition: transform 0.3s ease; 
 @media (max-width: ${screenSizeS}) {
   display: none;
 }
@@ -40,7 +41,7 @@ display: block;
 
 
 &:hover {
-  transform: scale(1.1); /* Increase size on hover */
+  transform: scale(1.1); 
  
   }
 `
