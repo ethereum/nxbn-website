@@ -4,19 +4,19 @@ import { useEffect, useState } from "react"
 import Link from "@/components/Link"
 
 const TableOfContents = ({ tocItems }) => {
-  function flattenToC(items, result = [] as {title: string, url: string}[]) {
-    items.forEach(item => {
-        // Add the current item to the result list, excluding the 'items' property
-        const { title, url } = item;
-        result.push({ title, url });
+  function flattenToC(items, result = [] as { title: string; url: string }[]) {
+    items.forEach((item) => {
+      // Add the current item to the result list, excluding the 'items' property
+      const { title, url } = item
+      result.push({ title, url })
 
-        // If the current item has nested items, recursively flatten them
-        if (item.items && item.items.length) {
-            flattenToC(item.items, result);
-        }
-    });
-    return result;
-}
+      // If the current item has nested items, recursively flatten them
+      if (item.items && item.items.length) {
+        flattenToC(item.items, result)
+      }
+    })
+    return result
+  }
 
   const flattenedTocItems = flattenToC(tocItems)
 

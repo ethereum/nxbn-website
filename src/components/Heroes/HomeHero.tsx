@@ -24,13 +24,27 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
         flexDir={{ base: "column", lg: "row" }}
       >
         <Center flex={1}>
-          <H2 fontSize={{ base: 46, md: 54, lg:52, xl:56 }} fontWeight={300} lineHeight={1.2} ali>
-            Ethereum’s 
-            <Box as="span" display="block" color="action" fontWeight={500} fontSize={{ base: 50, md: 68, lg:58, xl:66}}>next billion users</Box> 
+          <H2
+            fontSize={{ base: 46, md: 54, lg: 52, xl: 56 }}
+            fontWeight={300}
+            lineHeight={1.2}
+          >
+            Ethereum’s
+            <Box
+              as="span"
+              display="block"
+              color="action"
+              fontWeight={500}
+              fontSize={{ base: 50, md: 68, lg: 58, xl: 66 }}
+            >
+              next billion users
+            </Box>
             are here, now
           </H2>
         </Center>
-        <GlobeComponentWithNoSSR allFellowsFrontmatter={allFellowsFrontmatter} />
+        <GlobeComponentWithNoSSR
+          allFellowsFrontmatter={allFellowsFrontmatter}
+        />
       </Flex>
     </ContentContainer>
   )

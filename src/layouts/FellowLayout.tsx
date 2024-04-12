@@ -20,8 +20,12 @@ export const FellowLayout = ({
     frontmatter
 
   const meetMoreFellows = [
-    allFellowsFrontmatter[index === 0 ? allFellowsFrontmatter.length - 1 : index - 1],
-    allFellowsFrontmatter[index === allFellowsFrontmatter.length -1 ? 0 : index + 1],
+    allFellowsFrontmatter[
+      index === 0 ? allFellowsFrontmatter.length - 1 : index - 1
+    ],
+    allFellowsFrontmatter[
+      index === allFellowsFrontmatter.length - 1 ? 0 : index + 1
+    ],
   ]
 
   return (
@@ -44,7 +48,12 @@ export const FellowLayout = ({
           pb={16}
           justifyContent="space-between"
         >
-          <Box w="auto" maxW={MARKDOWN_CONTENT_MAX_WIDTH} flex="1" sx={{ "h2:first-of-type": { mt: 0 } }}>
+          <Box
+            w="auto"
+            maxW={MARKDOWN_CONTENT_MAX_WIDTH}
+            flex="1"
+            sx={{ "h2:first-of-type": { mt: 0 } }}
+          >
             {children}
           </Box>
           <Box

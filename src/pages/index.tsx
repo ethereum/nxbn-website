@@ -49,7 +49,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
           imageBorder="right"
           imageSide="right"
         >
-          <Box gap={8} >
+          <Box gap={8}>
             <H2>The Next Billion Fellowship</H2>
             <Text fontSize={18}>
               The Next Billion Fellowship at the Ethereum Foundation is a search
@@ -66,11 +66,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
             <ButtonLink href="/about">About the program</ButtonLink>
           </Box>
         </ImageSplitContent>
-        <ImageSplitContent
-          image={DevHome}
-          imageBorder="left"
-          imageSide="left"
-        >
+        <ImageSplitContent image={DevHome} imageBorder="left" imageSide="left">
           <Box gap={8}>
             <H2>Devcon SEA Scholars</H2>
             <Text fontSize={18} mb={16}>
@@ -86,7 +82,9 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
       <WhoAreNextBillion />
       <ContentContainer mb={8}>
         <Box px={{ base: 8, md: 16 }} gap={8}>
-          <H2 variant="action" pt={16}>Our blog updates</H2>
+          <H2 variant="action" pt={16}>
+            Our blog updates
+          </H2>
           <BlogFeed blogs={blogs} />
         </Box>
       </ContentContainer>

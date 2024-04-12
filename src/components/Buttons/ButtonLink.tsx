@@ -1,15 +1,19 @@
-import { Link } from "@chakra-ui/react"
+import Link from "@/components/Link"
 
-const ButtonLink = ({ ...props }) => {
+const ButtonLink = ({ isSecondary = false, href, children, ...props }) => {
   return (
     <Link
-      bg="action"
+      href={href}
+      bg={isSecondary ? "body" : "action"}
       px={10}
       py={2}
       borderRadius="3000px"
       textStyle="button-link"
+      textAlign="center"
       {...props}
-    />
+    >
+      {children}
+    </Link>
   )
 }
 

@@ -7,7 +7,7 @@ import Footer from "@/components/Nav/Footer/Footer"
 export const RootLayout = ({ children }: any) => {
   return (
     <Container>
-      <ContentContainer position="sticky" top={4}>
+      <ContentContainer position="sticky" top={4} zIndex={9999}>
         <Header />
       </ContentContainer>
       {children}
