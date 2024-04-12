@@ -76,7 +76,7 @@ export const textStyles = {
       color: "action",
     },
   },
-  'link-text-action': {
+  "link-text-action": {
     fontFamily: "link",
     fontSize: 16,
     fontStyle: "normal",

@@ -35,7 +35,7 @@ const BlogFeed = ({ blogs }) => {
             <Text mb={0} fontSize={18}>
               {blog.contentSnippet}
             </Text>
-            <Link href={blog.link} textStyle='link-text-action' mt={4}>
+            <Link href={blog.link} textStyle="link-text-action" mt={4}>
               Read more
             </Link>
           </Box>

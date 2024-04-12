@@ -15,7 +15,7 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devconnect2023,
-    url: 'https://devconnect.org/istanbul'
+    url: "https://devconnect.org/istanbul",
   },
   {
     name: "Devcon 2022",
@@ -23,7 +23,7 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devcon2022,
-    url: 'https://archive.devcon.org/archive/watch/?order=desc&sort=eventId'
+    url: "https://archive.devcon.org/archive/watch/?order=desc&sort=eventId",
   },
   {
     name: "Devconnect 2022",
@@ -31,7 +31,7 @@ const previousEditions = [
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
     image: Devconnect2022,
-    url: 'https://devconnect.org/amsterdam'
+    url: "https://devconnect.org/amsterdam",
   },
 ]
 
@@ -77,9 +77,10 @@ const PreviousEditions = () => {
                     </Text>
                     <Text mb={8}>{edition.description}</Text>
                     <Box>
-                      <Link href={edition.url} textStyle='link-text-action'>Check out {edition.name}</Link>
+                      <Link href={edition.url} textStyle="link-text-action">
+                        Check out {edition.name}
+                      </Link>
                     </Box>
-                    
                   </Center>
                 </Flex>
                 {index < previousEditions.length - 1 && (
