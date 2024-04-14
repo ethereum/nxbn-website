@@ -27,7 +27,7 @@ const FellowList = ({ fellowsData }) => {
   const paginate = (pageNumber: number) => setPaginationIndex(pageNumber)
 
   return (
-    <ContentContainer>
+    <ContentContainer mb={130}>
       <Box px={{ base: 6, md: 16 }}>
         <H2 variant="action" mb={8}>
           Fellows, past and present
@@ -66,16 +66,19 @@ const FellowList = ({ fellowsData }) => {
           ))}
         </Grid>
       </Box>
-      <Divider color="action" borderTop="1px solid" mb={4} />
-      <Center gap={2}>
+      <Center gap={2} bg="backgroundHighlight" borderTop="1px solid" borderColor={"action"} py={4}>
         {pageNumbers.map((number) => (
           <Text
             key={number}
-            color={number === paginationIndex ? "action" : "body"}
-            borderBottom="1px solid"
-            borderColor={number === paginationIndex ? "action" : "transparent"}
+            color={number === paginationIndex ? "body" : "body"}
+            borderBottom="2px solid"
+            fontFamily={"heading"}
+            fontSize={20}
+            px={4}
+            m={0}
+            borderColor={number === paginationIndex ? "body" : "transparent"}
             onClick={() => paginate(number)}
-            _hover={{ cursor: "pointer", borderColor: "body" }}
+            _hover={{ cursor: "pointer", borderColor: "action", color: "action"}}
           >
             {number}
           </Text>
