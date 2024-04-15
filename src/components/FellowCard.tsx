@@ -36,7 +36,7 @@ const FellowCard = ({
                   textStyle="tag"
                   color="actionHover"
                   fontFamily="heading"
-                  fontSize={12}
+                  fontSize={14}
                   letterSpacing={0.5}
                   p={1}
                 >
