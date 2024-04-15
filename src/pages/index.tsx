@@ -84,7 +84,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
         </ContentContainer>
       </Box>
       <WhoAreNextBillion />
-      <Box bg="linear-gradient(180deg, #022B35 0%, #006EA3 50%)">
+      <Box bg="linear-gradient(180deg, #022B35 0%, #006EA3 50%, #056589 100%)">
         <ContentContainer mb={8}>
           <Box px={{ base: 8, md: 16 }} gap={8}>
             <H2 variant="action" pt={16}>
