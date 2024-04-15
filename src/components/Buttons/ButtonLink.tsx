@@ -7,7 +7,7 @@ const ButtonLink = ({ isSecondary = false, href, children, ...props }) => {
       bg={isSecondary ? "body" : "action"}
       px={10}
       py={2}
-      borderRadius="3000px"
+      borderRadius="full"
       textStyle="button-link"
       textAlign="center"
       {...props}
