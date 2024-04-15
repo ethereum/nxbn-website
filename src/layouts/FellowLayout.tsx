@@ -16,7 +16,7 @@ export const FellowLayout = ({
   tocItems,
   allFellowsFrontmatter,
 }) => {
-  const { index, title, fellowName, country, tags, image, description, href } =
+  const { index, title, fellowName, country, tags, image } =
     frontmatter
 
   const meetMoreFellows = [
