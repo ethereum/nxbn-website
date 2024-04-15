@@ -12,6 +12,7 @@ import { useState } from "react"
 
 import { ArrowIcon } from "@/components/icons"
 import { H4 } from "@/components/Headings"
+import { wrap } from "module"
 
 const lerp = (start, end, alpha) => start + (end - start) * alpha
 
@@ -128,13 +129,16 @@ const Globe = ({ allFellowsFrontmatter }) => {
         />
         <Flex
           flex={1}
-          w={{ base: "100%", sm: "380px" }}
+          flexDir={{ base: "column", sm: "row" }}
+          w={{ base: "100%", sm: "400px", md: "500px"}}
           bg="#00000050"
-          borderRadius="3000px"
-          height="156px"
+          borderRadius="30px"
+          minH="156px"
           p="16px"
           gap={3.5}
-        >
+          overflow="hidden"
+          alignItems= "center"
+          >
           <Image
             src={allFellowsFrontmatter[activeFellowIndex].image}
             w="124px"
@@ -162,7 +166,7 @@ const Globe = ({ allFellowsFrontmatter }) => {
                 {allFellowsFrontmatter[activeFellowIndex].country}
               </Text>
             </Box>
-            <Flex>
+            <Flex flexWrap="wrap">
               {allFellowsFrontmatter[activeFellowIndex].tags.map(
                 (tag, index) => {
                   return (
