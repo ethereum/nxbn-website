@@ -87,7 +87,7 @@ ContentPage.getLayout = (page) => {
   }
   const Layout = layoutMapping[layout]
 
-  return <Layout {...layoutProps}>{page}</Layout>
+  return layout ? <Layout {...layoutProps}>{page}</Layout> : <></>
 }
 
 export default ContentPage

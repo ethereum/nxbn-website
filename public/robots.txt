@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fellowship.ethereum.org
+
+# Sitemaps
+Sitemap: https://fellowship.ethereum.org/sitemap.xml
