@@ -10,6 +10,7 @@ export const HamburgerIcon = createIcon({
       height="18"
       viewBox="0 0 26 18"
       fill="none"
+      key="0"
     >
       <path
         d="M25 1H1"

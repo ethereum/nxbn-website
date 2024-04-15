@@ -19,6 +19,7 @@ const FellowCard = ({
         h={40}
         borderRadius="250px 100px 250px 100px"
         border="2px solid #6F9D39"
+        alt=""
       />
       <Box gap={4}>
         <Box>

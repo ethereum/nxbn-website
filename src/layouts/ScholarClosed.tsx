@@ -17,7 +17,7 @@ const FAQQuestions: Question[] = [
     answer: [
       "The Ethereum Next Billion Fellowship Program is focused on identifying and supporting unique and talented individuals helping to demystify Ethereum's relevance and break down barriers to entry for people and communities not currently part of the Ethereum ecosystem.",
       "Fellows will be part of a small forum for leaders who, during the course of six months, drive their own projects that address a particular enabler or blocker for Ethereum becoming a public good that acts as a foundational layer for other public goods.",
-      "While there are some cohort-wide activities, it is a self-directed, self-driven program. Depending on the needs of each Fellow and their project, different support is provided, including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network. Fellows’ work will be highlighted to showcase the impact and value of Ethereum and its community.",
+      "While there are some cohort-wide activities, it is a self-directed, self-driven program. Depending on the needs of each Fellow and their project, different support is provided, including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network. Fellows&apos work will be highlighted to showcase the impact and value of Ethereum and its community.",
     ],
   },
   {
@@ -52,7 +52,7 @@ const ScholarClosed = () => {
               Devcon SEA Scholars Program
             </H1>
             <Text maxW="500px">
-              Money doesn't solve everything, but it can pay for flights,
+              Money doesn&apost solve everything, but it can pay for flights,
               hotels, and visa costs.
             </Text>
           </Box>
@@ -69,12 +69,12 @@ const ScholarClosed = () => {
             <Text>
               Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
               suscipit leo. Carpe diem vulputate est nec commodo rutrum.
-              Pellentesque mattis convallis nisi eu and I ain’t stoppin until
-              the swear jar’s full. Ut rhoncus velit at mauris interdum,
+              Pellentesque mattis convallis nisi eu and I ain&apost stoppin until
+              the swear jar&aposs full. Ut rhoncus velit at mauris interdum,
               fringilla dictum neque rutrum. Curabitur mattis odio at erat
-              viverra lobortis. Poppin’ bottles on the ice, tristique suscipit
+              viverra lobortis. Poppin&apos bottles on the ice, tristique suscipit
               mauris elementum tempus. Quisque ut felis vitae elit tempor
-              interdum viverra a est. Drop it like it’s hot, at pretium quam. In
+              interdum viverra a est. Drop it like it&aposs hot, at pretium quam. In
               nec scelerisque purus. Nam dignissim lacus ipsum, a ullamcorper
               nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at,
               vulputate augue.

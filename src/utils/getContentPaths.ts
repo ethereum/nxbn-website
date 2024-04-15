@@ -1,5 +1,5 @@
 import fs from "fs"
-import { join } from "path"
+import { extname, join } from "path"
 
 import { CONTENT_DIR } from "@/utils/constants"
 
@@ -14,7 +14,10 @@ export const getContentPaths = (dirName: string) => {
     if (file.isDirectory()) {
       files = [...files, ...getContentPaths(`${dirName}/${file.name}`)]
     } else {
-      files.push(`/${dirName}/${file.name}`)
+      const fileExtension = extname(file.name)
+      if (fileExtension === '.md') {
+        files.push(`/${dirName}/${file.name}`)
+      }
     }
   }
 

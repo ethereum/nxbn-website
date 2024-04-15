@@ -7,7 +7,7 @@ import theme from "@/@chakra-ui/theme"
 
 import { roboto, roboto_slab } from "@/lib/fonts"
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (

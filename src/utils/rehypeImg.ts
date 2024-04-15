@@ -84,7 +84,7 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
           (dimensions.width || 1) / (dimensions.height || 1)
 
         // Add image node to images array
-        images.push(node)
+        images.push(node as any)
       }
     })
   }

@@ -4,7 +4,7 @@ import { H3 } from "@/components/Headings"
 import Link from "./Link"
 
 const BlogFeed = ({ blogs }) => {
-  console.log(blogs)
+
   return (
     <Grid
       gap={24}

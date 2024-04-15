@@ -26,6 +26,7 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
           h={20}
           borderRadius="121.429px 68px 145.714px 68px"
           border="2px solid #6F9D39"
+          alt=""
         />
         <Center>
           <Box>

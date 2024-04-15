@@ -44,15 +44,19 @@ export const getStaticProps = async (context) => {
   const mdPath = join("/content", slug)
   const mdDir = join("public", mdPath)
 
+  // Explicitly define the plugins with their types
+  const remarkPlugins: any[] = [remarkGfm, [remarkInferToc, { callback: tocCallback }]];
+  const rehypePlugins: any[] = [
+    [rehypeImg, { dir: mdDir, srcPath: mdPath }],
+    rehypeHeadingIds,
+  ];
+
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
-      remarkPlugins: [remarkGfm, [remarkInferToc, { callback: tocCallback }]],
-      rehypePlugins: [
-        [rehypeImg, { dir: mdDir, srcPath: mdPath }],
-        [rehypeHeadingIds],
-      ],
+      remarkPlugins,
+      rehypePlugins,
     },
-  })
+  });
 
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
 
@@ -69,7 +73,7 @@ export const getStaticProps = async (context) => {
 }
 
 const ContentPage = ({ mdxSource }: Props) => {
-  return <MDXRemote {...mdxSource} components={MdComponents} />
+  return <MDXRemote {...mdxSource} components={MdComponents as any} />
 }
 
 ContentPage.getLayout = (page) => {

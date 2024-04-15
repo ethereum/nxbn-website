@@ -2,7 +2,7 @@ import { toc } from "mdast-util-toc"
 import { visit } from "unist-util-visit"
 
 const remarkInferToc = (options) => {
-  const { callback, maxDepth } = {
+  const { callback, maxDepth }: any = {
     maxDepth: 6,
     ...options,
   }

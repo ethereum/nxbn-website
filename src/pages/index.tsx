@@ -41,7 +41,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
     <>
       <Box pos="relative" top="-64px" mb="-64px" >
         <Box pos="absolute" zIndex={-1} top={0} left={0} right={0} bg="#0E6899" h={"100%"} >
-          <Image src={StarsImage} alt="Stars" w="100%" height="100%" objectFit="cover" objectPosition="bottom" />
+          <Image src={StarsImage} alt="Stars" w="100%" h="100%" objectFit="cover" objectPosition="bottom" />
         </Box>
         <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
       </Box>

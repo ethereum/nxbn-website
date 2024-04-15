@@ -18,10 +18,10 @@ const lerp = (start, end, alpha) => start + (end - start) * alpha
 
 const Globe = ({ allFellowsFrontmatter }) => {
   const globeContainerRef = useRef(null)
-  const globeRef = useRef(null)
+  const globeRef = useRef<any>(null)
   const [activeFellowIndex, setActiveFellowIndex] = useState(0)
   const [targetRotation, setTargetRotation] = useState({ x: 0, y: 0 })
-  const animationRef = useRef()
+  const animationRef = useRef<any>()
 
   useEffect(() => {
     if (!globeRef.current) {
@@ -32,12 +32,17 @@ const Globe = ({ allFellowsFrontmatter }) => {
       renderer.setClearColor(0x000000, 0)
       renderer.setSize(380, 380)
 
-      globeContainerRef.current.appendChild(renderer.domElement)
+      if (globeContainerRef.current) {
+        (globeContainerRef.current as HTMLDivElement).appendChild(renderer.domElement);
+    }
 
-      const globe = new ThreeGlobe({ alpha: true, animateIn: true })
+      const globe = new ThreeGlobe({ animateIn: true })
         .globeImageUrl("/images/map.jpg")
         .showAtmosphere(false)
-      globeRef.current = globe
+
+      if (globeRef.current) {
+        globeRef.current = globe
+      }
 
       scene.add(new AmbientLight(0xffffff, 3))
       scene.add(globe)
@@ -149,6 +154,7 @@ const Globe = ({ allFellowsFrontmatter }) => {
             borderRadius="10000px"
             border="2px solid #6F9D39"
             objectFit={"cover"}
+            alt=""
           />
           <Center
             flexDir="column"

@@ -7,18 +7,19 @@ import { Image, type ImageProps } from "@/components/Image"
 import { toPosixPath } from "@/utils/relativePath"
 
 import { MARKDOWN_CONTENT_MAX_WIDTH } from "@/utils/constants"
+import { DetailedHTMLProps, ImgHTMLAttributes } from "react"
 
-interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
+interface MarkdownImageProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
   width: string
   height: string
-  aspectRatio: string
+  aspectRatio?: string
 }
 
 const MarkdownImage = ({
   width,
   height,
-  aspectRatio,
-  alt,
+  aspectRatio='1 / 1',
+  alt="",
   src,
   ...rest
 }: MarkdownImageProps) => {
@@ -27,7 +28,7 @@ const MarkdownImage = ({
   let imageHeight = parseFloat(height)
 
   // Ensure that src path has forward slashes only, to avoid issues with Windows filepaths
-  const transformedSrc = toPosixPath(src.toString())
+  const transformedSrc = toPosixPath(src!.toString())
 
   // keep the size of the images proportional to the max width constraint
   if (imageWidth > MARKDOWN_CONTENT_MAX_WIDTH) {
