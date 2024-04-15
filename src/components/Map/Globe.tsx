@@ -129,17 +129,18 @@ const Globe = ({ allFellowsFrontmatter }) => {
         <Flex
           flex={1}
           w={{ base: "100%", sm: "380px" }}
-          bg="backgroundHighlight"
-          borderRadius="23px"
-          p={4}
+          bg="#00000050"
+          borderRadius="3000px"
+          height="156px"
+          p="16px"
           gap={3.5}
         >
           <Image
             src={allFellowsFrontmatter[activeFellowIndex].image}
-            w="80px"
+            w="124px"
             h="124px"
-            borderRadius="15px"
-            border="1px solid #6F9D39"
+            borderRadius="10000px"
+            border="2px solid #6F9D39"
             objectFit={"cover"}
           />
           <Center
@@ -169,7 +170,8 @@ const Globe = ({ allFellowsFrontmatter }) => {
                       key={index}
                       textStyle="tag"
                       color="actionHover"
-                      fontSize={10}
+                      fontSize={12}
+                      fontFamily={"heading"}
                       p={1}
                       m={0}
                     >
