@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react"
 
-import StarsImage from "@/public/images/stars.jpg"
+import StarsImage from "@/public/images/fellow-stars.png"
 
 import ContentContainer from "@/components/ContentContainer"
 import { Image } from "@/components/Image"
