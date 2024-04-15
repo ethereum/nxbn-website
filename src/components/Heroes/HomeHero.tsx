@@ -5,7 +5,7 @@ const GlobeComponentWithNoSSR = dynamic(
   () => import("../../components/Map/Globe"),
   {
     ssr: false, // This line is key to making sure the import is client-side only
-  }
+    loading: () => <Box flex="1" />,
 )
 
 import { Box, Center, Flex } from "@chakra-ui/react"
