@@ -119,6 +119,9 @@ const Globe = ({ allFellowsFrontmatter }) => {
       </Center>
       <Center>
         <ArrowIcon
+          transform="rotate(180deg)"
+          w={8}
+          h={8}
           _hover={{ cursor: "pointer" }}
           onClick={() => {
             setActiveFellowIndex(
@@ -188,7 +191,7 @@ const Globe = ({ allFellowsFrontmatter }) => {
           </Center>
         </Flex>
         <ArrowIcon
-          transform="rotate(180deg)"
+          
           _hover={{ cursor: "pointer" }}
           onClick={() => {
             setActiveFellowIndex(

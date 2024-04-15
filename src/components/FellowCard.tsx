@@ -1,4 +1,4 @@
-import { Box, Image, Flex, Text } from "@chakra-ui/react"
+import { Box, Image, Flex, Text, Divider } from "@chakra-ui/react"
 import { H3, H5 } from "@/components/Headings"
 import ButtonLink from "./Buttons/ButtonLink"
 
@@ -25,10 +25,17 @@ const FellowCard = ({
           <H3 fontWeight="500" fontSize={36} m={0}>
             {fellowName}
           </H3>
-          <Text fontSize="16" pb={1} fontWeight={300} lineHeight="150%" m={0}>
+          <Text fontSize="16" pb={1} fontWeight={300} lineHeight="150%" m={0} color="bodyHover">
             {country}
           </Text>
-          <Flex>
+          <Divider my={4} color="action" borderTop="1px solid" />
+            
+        </Box>
+        <Box>
+          <H5 my={2} fontSize={24}>
+            {title}
+          </H5>
+          <Flex flexWrap="wrap" mb={2} mt={4}>
             {tags.map((tag, index) => {
               return (
                 <Text
@@ -39,17 +46,13 @@ const FellowCard = ({
                   fontSize={14}
                   letterSpacing={0.5}
                   p={1}
+                  m={0}
                 >
                   {tag}
                 </Text>
               )
             })}
           </Flex>
-        </Box>
-        <Box>
-          <H5 my={2} fontSize={24}>
-            {title}
-          </H5>
           <Text textStyle="base-text" color="body">
             {description}
           </Text>
