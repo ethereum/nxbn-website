@@ -23,7 +23,7 @@ const FAQ = ({ questions }: FAQInterface) => {
           mb={{ base: 8, md: 16 }}
         >
           <Box w="100%" flex="1 0 0" maxW={350}>
-            <H4 variant="action" textAlign="right">{question.question}</H4>
+            <H4 variant="action" textAlign={{ base: "left", md: "right" }}>{question.question}</H4>
           </Box>
           <Box w="auto" flex={1}>
             {question.answer.map((answer, index) => (

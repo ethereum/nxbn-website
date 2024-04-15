@@ -29,7 +29,8 @@ const FellowList = ({ fellowsData }) => {
   return (
     <ContentContainer mb={130}>
       <Box px={{ base: 6, md: 16 }}>
-        <H2 variant="action" mb={8}>
+      <Divider my={12} color="action" borderTop="1px solid" />
+        <H2 variant="action" mb={24}>
           Fellows, past and present
         </H2>
         {/* TODO: Implement filter for fellows */}
@@ -46,7 +47,7 @@ const FellowList = ({ fellowsData }) => {
             <FilterButton>Area</FilterButton>
           </Flex>
         </Center> */}
-        <Divider my={12} color="action" borderTop="1px solid" />
+       
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
           gap={24}

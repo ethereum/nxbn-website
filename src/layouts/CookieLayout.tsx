@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react"
 
-import StarsImage from "@/public/images/stars.jpg"
+import StarsImage from "@/public/images/fellow-stars.png"
 
 import ContentContainer from "@/components/ContentContainer"
 import { Image } from "@/components/Image"
@@ -14,7 +14,7 @@ export const CookieLayout = ({ children, frontmatter, tocItems }) => {
   return (
     <>
       <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
-        <Image src={StarsImage} alt="Stars" w="100%" h="100vh" />
+        <Image src={StarsImage} alt="Stars" w="100%"  />
       </Box>
       <ContentContainer>
         <Box px={{ base: 6, md: 16 }} pt={16} pb={8}>

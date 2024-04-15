@@ -50,7 +50,7 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
     <>
       <Box bg="linear-gradient(180deg, #011E3B 30%, #011E3B00 100%)">
         <ImageHero heroImage={FellowshipHeroImage}>
-          <ContentContainer pb={36}>
+          <ContentContainer >
             <Box px={{ base: 8, md: 16 }} pb={16} mt={-40}>
               <H1 variant="action">The Next Billion Fellowship</H1>
               <Box maxW={600}>
