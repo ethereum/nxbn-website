@@ -12,7 +12,6 @@ import { useState } from "react"
 
 import { ArrowIcon } from "@/components/icons"
 import { H4 } from "@/components/Headings"
-import { wrap } from "module"
 
 const lerp = (start, end, alpha) => start + (end - start) * alpha
 
