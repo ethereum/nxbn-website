@@ -1,4 +1,4 @@
-import { Box, Center, Image, Flex, Text, Heading } from "@chakra-ui/react"
+import { Box, Center, Image, Flex, Text } from "@chakra-ui/react"
 
 import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { H1 } from "@/components/Headings"

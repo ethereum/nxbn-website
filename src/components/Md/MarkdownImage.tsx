@@ -1,8 +1,6 @@
 import { extname } from "path"
 
-import { Flex } from "@chakra-ui/react"
-
-import { Image, type ImageProps } from "@/components/Image"
+import { Flex, Image } from "@chakra-ui/react"
 
 import { toPosixPath } from "@/utils/relativePath"
 
@@ -49,7 +47,6 @@ const MarkdownImage = ({
         height={imageHeight}
         loading="lazy"
         src={transformedSrc}
-        unoptimized={isAnimated}
         h="auto"
         {...rest}
       />

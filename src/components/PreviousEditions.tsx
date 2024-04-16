@@ -1,12 +1,7 @@
-import { Box, Center, Divider, Flex, Text } from "@chakra-ui/react"
+import { Box, Center, Divider, Flex, Image, Text } from "@chakra-ui/react"
 import ContentContainer from "@/components/ContentContainer"
-import { H2, H3, H4 } from "@/components/Headings"
-import { Image } from "@/components/Image"
+import { H2, H4 } from "@/components/Headings"
 import Link from "@/components/Link"
-
-import Devconnect2023 from "@/public/images/devconnect_2023.png"
-import Devcon2022 from "@/public/images/devcon_2022.png"
-import Devconnect2022 from "@/public/images/devconnect_2022.png"
 
 const previousEditions = [
   {
@@ -14,7 +9,7 @@ const previousEditions = [
     location: "Istanbul, Turkey",
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
-    image: Devconnect2023,
+    image: '/images/devconnect_2023.png',
     url: "https://devconnect.org/istanbul",
   },
   {
@@ -22,7 +17,7 @@ const previousEditions = [
     location: "Bogotá, Colombia",
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
-    image: Devcon2022,
+    image: '/images/devcon_2022.png',
     url: "https://archive.devcon.org/archive/watch/?order=desc&sort=eventId",
   },
   {
@@ -30,7 +25,7 @@ const previousEditions = [
     location: "Amsterdam, Netherlands",
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
-    image: Devconnect2022,
+    image: '/images/devconnect_2022.png',
     url: "https://devconnect.org/amsterdam",
   },
 ]

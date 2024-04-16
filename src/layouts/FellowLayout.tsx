@@ -1,9 +1,6 @@
-import { Box, Flex } from "@chakra-ui/react"
-
-import StarsImage from "@/public/images/fellow-stars.png"
+import { Box, Flex, Image } from "@chakra-ui/react"
 
 import ContentContainer from "@/components/ContentContainer"
-import { Image } from "@/components/Image"
 import FellowLayoutHero from "@/components/Heroes/FellowLayoutHero"
 import { MARKDOWN_CONTENT_MAX_WIDTH } from "@/utils/constants"
 import TableOfContents from "@/components/TableOfContents"
@@ -31,7 +28,7 @@ export const FellowLayout = ({
   return (
     <>
       <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
-        <Image src={StarsImage} alt="Stars" w="100%" />
+        <Image src={'/images/fellow-stars.png'} alt="Stars" w="100%" />
       </Box>
       <ContentContainer>
         <FellowLayoutHero

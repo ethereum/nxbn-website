@@ -1,5 +1,3 @@
-"use client"
-
 // Documentation
 // https://vasturiano.github.io/three-globe/
 // https://threejs.org/docs/index.html#api/en/

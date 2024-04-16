@@ -1,10 +1,7 @@
-import { Box, Center, Flex } from "@chakra-ui/react"
-import { StaticImageData } from "next/image"
-
-import { Image } from "@/components/Image"
+import { Box, Center, Flex, Image } from "@chakra-ui/react"
 
 type ImageSplitContentProps = {
-  image: StaticImageData
+  image: string
   imageBorder: "round" | "left" | "right" | "none"
   imageSide: "left" | "right"
   children: React.ReactNode

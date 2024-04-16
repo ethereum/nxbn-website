@@ -5,15 +5,10 @@ import { H1, H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
 import ImageSplitContent from "@/components/ImageSplitContent"
 
-import AboutHeroImage from "@/public/images/about/about-hero.jpg"
-import StoriesImage from "@/public/images/about/stories.jpg"
-import ExplorationImage from "@/public/images/about/exploration.jpg"
-import RepresentationImage from "@/public/images/about/representation.jpg"
-
 const AboutPage = () => {
   return (
     <>
-      <ImageHero heroImage={AboutHeroImage}>
+      <ImageHero heroImage={'/images/about/about-hero.jpg'}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #101214 50%, #101214 100%)"
@@ -47,7 +42,7 @@ const AboutPage = () => {
         <ContentContainer zIndex={3}
               position="relative">
           <ImageSplitContent
-              image={StoriesImage}
+              image={'/images/about/stories.jpg'}
               imageBorder="round"
               imageSide="right"
             >
@@ -67,7 +62,7 @@ const AboutPage = () => {
               </Box>
             </ImageSplitContent>
           <ImageSplitContent
-            image={ExplorationImage}
+            image={'/images/about/exploration.jpg'}
             imageBorder="round"
             imageSide="left"
           >
@@ -85,7 +80,7 @@ const AboutPage = () => {
             </Box>
           </ImageSplitContent>
           <ImageSplitContent
-            image={RepresentationImage}
+            image={'/images/about/representation.jpg'}
             imageBorder="round"
             imageSide="right"
           >

@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header>
-      <Box mx={4} zIndex={999}>
+      <Box mx={4} zIndex='sticky'>
         <Flex
           px={6}
           py={3}

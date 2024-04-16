@@ -1,17 +1,12 @@
-import { Box, Center, Divider, Flex, Text } from "@chakra-ui/react"
+import { Box, Center, Image, Text } from "@chakra-ui/react"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import { H1, H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
 import FAQ, { type Question } from "@/components/FAQ"
-import { Image } from "@/components/Image"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
-
-import EthGlypth from "@/public/images/scholar/eth-glyph.png"
-import ScholarOpenHeroImage from "@/public/images/scholar/scholar-hero-open.jpg"
-import Artifact from "@/public/images/scholar/artifact.jpg"
 
 const FAQQuestions: Question[] = [
   {
@@ -41,7 +36,7 @@ const FAQQuestions: Question[] = [
 const ScholarOpen = () => {
   return (
     <>
-      <ImageHero heroImage={ScholarOpenHeroImage}>
+      <ImageHero heroImage={'/images/scholar/scholar-hero-open.jpg'}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
@@ -54,7 +49,7 @@ const ScholarOpen = () => {
             textAlign="center"
           >
             <Center flexDir="column">
-              <Image src={EthGlypth} alt="" w={{ base: "100px", md:"150px" }} />
+              <Image src={'/images/scholar/eth-glyph.png'} alt="" w={{ base: "100px", md:"150px" }} />
               <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0} >Devcon SEA Scholars</H2>
             </Center>
             <Box maxW="650px">
@@ -111,7 +106,7 @@ const ScholarOpen = () => {
 
       <ContentContainer py={24}>
         <ImageSplitContent
-          image={Artifact}
+          image={'/images/scholar/artifact.jpg'}
           imageBorder="round"
           imageSide="left"
         >

@@ -14,9 +14,5 @@ export const ArrowIcon = createIcon({
     </clipPath>
     </defs>
     </svg>
-
-
-
-
   ),
 })

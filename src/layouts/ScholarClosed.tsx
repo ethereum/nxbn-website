@@ -8,9 +8,6 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
-import ScholarClosedHeroImage from "@/public/images/scholar/scholar-hero-closed.jpg"
-import TempImage from "@/public/images/temp.png"
-
 const FAQQuestions: Question[] = [
   {
     question: "What is the Next Billion Fellowship?",
@@ -39,7 +36,7 @@ const FAQQuestions: Question[] = [
 const ScholarClosed = () => {
   return (
     <>
-      <ImageHero heroImage={ScholarClosedHeroImage}>
+      <ImageHero heroImage={'/images/scholar/scholar-hero-closed.jpg'}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #001121 0%, #056589 100%)"
@@ -60,7 +57,7 @@ const ScholarClosed = () => {
       </ImageHero>
       <ContentContainer>
         <ImageSplitContent
-          image={TempImage}
+          image={'/images/temp.png'}
           imageBorder="round"
           imageSide="right"
         >
@@ -83,7 +80,7 @@ const ScholarClosed = () => {
           </Box>
         </ImageSplitContent>
         <ImageSplitContent
-          image={TempImage}
+          image={'/images/temp.png'}
           imageBorder="round"
           imageSide="left"
         >

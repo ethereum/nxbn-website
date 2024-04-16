@@ -1,15 +1,15 @@
 // pages/index.js or another component file
 import dynamic from "next/dynamic"
 
+import { Box, Center, Flex } from "@chakra-ui/react"
+
 const GlobeComponentWithNoSSR = dynamic(
   () => import("../../components/Map/Globe"),
   {
     ssr: false, // This line is key to making sure the import is client-side only
     loading: () => <Box flex="1" />,
+  }
 )
-
-import { Box, Center, Flex } from "@chakra-ui/react"
-
 import { H2 } from "@/components/Headings"
 import ContentContainer from "../ContentContainer"
 

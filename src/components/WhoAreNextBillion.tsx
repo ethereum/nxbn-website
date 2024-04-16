@@ -1,12 +1,7 @@
-import { Box, Center, Text } from "@chakra-ui/react"
+import { Box, Center, Image, Text } from "@chakra-ui/react"
 import { H2 } from "@/components/Headings"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import ContentContainer from "./ContentContainer"
-import { Image } from "./Image"
-
-import BackgroundTreeImage from "@/public/images/homepage/background.jpg"
-import ForegroundTreeImage from "@/public/images/homepage/foreground.png"
-import MiddlegroundTreeImage from "@/public/images/homepage/middleground.png"
 
 const WhoAreNextBillion = () => {
   return (
@@ -15,7 +10,7 @@ const WhoAreNextBillion = () => {
         <Image
           position="absolute"
           top="0"
-          src={BackgroundTreeImage}
+          src={'/images/homepage/background.jpg'}
           objectFit="cover"
           h="100%"
           w="100%"
@@ -24,7 +19,7 @@ const WhoAreNextBillion = () => {
         <Image
           position="absolute"
           top={0}
-          src={MiddlegroundTreeImage}
+          src={'/images/homepage/middleground.png'}
           objectFit="cover"
           objectPosition="bottom"
           h="100%"
@@ -34,7 +29,7 @@ const WhoAreNextBillion = () => {
         <Image
           position="absolute"
           top={0}
-          src={ForegroundTreeImage}
+          src={'/images/homepage/foreground.png'}
           objectFit="contain"
           objectPosition="bottom"
           h="100%"

@@ -1,20 +1,15 @@
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Image, Text } from "@chakra-ui/react"
 import Parser from "rss-parser"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import { H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
-import { Image } from "@/components/Image"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import HomeHero from "@/components/Heroes/HomeHero"
 
-import DevHome from "@/public/images/homepage/devcon_home.jpg"
-import FellowHome from "@/public/images/homepage/fellow_home.jpg"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 import WhoAreNextBillion from "@/components/WhoAreNextBillion"
-
-import StarsImage from "@/public/images/homepage/home-stars.jpg"
 
 export const getStaticProps = async () => {
   const parser = new Parser({
@@ -41,14 +36,14 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
     <>
       <Box pos="relative" top="-64px" mb="-64px" >
         <Box pos="absolute" zIndex={-1} top={0} left={0} right={0} bg="#0E6899" h={"100%"} >
-          <Image src={StarsImage} alt="Stars" w="100%" h="100%" objectFit="cover" objectPosition="bottom" />
+          <Image src={'/images/homepage/home-stars.jpg'} alt="Stars" w="100%" h="100%" objectFit="cover" objectPosition="bottom" />
         </Box>
         <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
       </Box>
       <Box bg="linear-gradient(180deg, #0E6899 0%, #006EA3 100%)">
         <ContentContainer>
           <ImageSplitContent
-            image={FellowHome}
+            image={'/images/homepage/fellow_home.jpg'}
             imageBorder="right"
             imageSide="right"
           >
@@ -69,7 +64,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
               <ButtonLink href="/about">About the program</ButtonLink>
             </Box>
           </ImageSplitContent>
-          <ImageSplitContent image={DevHome} imageBorder="left" imageSide="left">
+          <ImageSplitContent image={'/images/homepage/devcon_home.jpg'} imageBorder="left" imageSide="left">
             <Box gap={8}>
               <H2>Devcon SEA Scholars</H2>
               <Text fontSize={18} mb={16}>
