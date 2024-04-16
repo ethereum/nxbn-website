@@ -5,9 +5,9 @@ export const ArrowIcon = createIcon({
   path: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="36"
-      height="36"
-      viewBox="0 0 36 36"
+      width="40px"
+      height="40px"
+      viewBox="0 0 60 60"
       fill="none"
     >
       <g clipPath="url(#clip0_1185_6251)">
