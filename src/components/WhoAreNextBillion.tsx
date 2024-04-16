@@ -43,15 +43,10 @@ const WhoAreNextBillion = () => {
             <H2 variant="action">Who Are The Next Billion?</H2>
             <Box>
               <Text>
-                The next billion users are already here, on this planet, today.
-                Ethereum’s narrative of success is woven from the threaded
-                stories of their lives.
+              The next billion users are already here, on this planet, today.
               </Text>
               <Text>
-                They are not a market to be tapped, a mind-share to be
-                influenced, or innocents to be saved. They will have to solve
-                the unsolved problems we leave for them, and protect themselves
-                against the dangers we did not predict.
+              They are not a market to be tapped, a demographic to be influenced, nor are they innocents to be saved. They are just folks, navigating the finite and infinite games of everyday life. The narrative of 'the next billion' is a grand tale about humanity's embrace of a protocol built for global coordination, but it must be told through the authentic stories of individual humans. Stories of real people, in context, solving their own problems, creating their own opportunities.
               </Text>
               <Text>
                 A better future lies ahead, but to get there we need more than
@@ -59,6 +54,9 @@ const WhoAreNextBillion = () => {
                 interact with each other and with their environment. We need new
                 stories to tell, new visions of the future, and new ways of
                 expressing our values in code.
+              </Text>
+              <Text>
+              The Ethereum Foundation endeavors to nurture and support Ethereum, the protocol for human coordination. Team NxBn at the Foundation endeavors to nurture and support the next billion humans who use the protocol to coordinate. 
               </Text>
             </Box>
             <Center

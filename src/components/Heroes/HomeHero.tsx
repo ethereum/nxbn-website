@@ -37,9 +37,9 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
               fontWeight={500}
               fontSize={{ base: 50, md: 68, lg: 58, xl: 66 }}
             >
-              next billion users
+             next billion
             </Box>
-            are here, now
+            are here, now ➡
           </H2>
         </Center>
         <GlobeComponentWithNoSSR
