@@ -11,7 +11,7 @@ export const CookieLayout = ({ children, frontmatter, tocItems }) => {
   return (
     <>
       <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
-        <Image src={'/images/fellow-stars.png'} alt="Stars" w="100%"  />
+        <Image src={"/images/fellow-stars.png"} alt="Stars" w="100%" />
       </Box>
       <ContentContainer>
         <Box px={{ base: 6, md: 16 }} pt={16} pb={8}>

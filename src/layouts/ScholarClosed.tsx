@@ -36,7 +36,7 @@ const FAQQuestions: Question[] = [
 const ScholarClosed = () => {
   return (
     <>
-      <ImageHero heroImage={'/images/scholar/scholar-hero-closed.jpg'}>
+      <ImageHero heroImage={"/images/scholar/scholar-hero-closed.jpg"}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #001121 0%, #056589 100%)"
@@ -57,7 +57,7 @@ const ScholarClosed = () => {
       </ImageHero>
       <ContentContainer>
         <ImageSplitContent
-          image={'/images/temp.png'}
+          image={"/images/temp.png"}
           imageBorder="round"
           imageSide="right"
         >
@@ -66,21 +66,21 @@ const ScholarClosed = () => {
             <Text>
               Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
               suscipit leo. Carpe diem vulputate est nec commodo rutrum.
-              Pellentesque mattis convallis nisi eu and I ain&apost stoppin until
-              the swear jar&aposs full. Ut rhoncus velit at mauris interdum,
-              fringilla dictum neque rutrum. Curabitur mattis odio at erat
-              viverra lobortis. Poppin&apos bottles on the ice, tristique suscipit
-              mauris elementum tempus. Quisque ut felis vitae elit tempor
-              interdum viverra a est. Drop it like it&aposs hot, at pretium quam. In
-              nec scelerisque purus. Nam dignissim lacus ipsum, a ullamcorper
-              nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at,
-              vulputate augue.
+              Pellentesque mattis convallis nisi eu and I ain&apost stoppin
+              until the swear jar&aposs full. Ut rhoncus velit at mauris
+              interdum, fringilla dictum neque rutrum. Curabitur mattis odio at
+              erat viverra lobortis. Poppin&apos bottles on the ice, tristique
+              suscipit mauris elementum tempus. Quisque ut felis vitae elit
+              tempor interdum viverra a est. Drop it like it&aposs hot, at
+              pretium quam. In nec scelerisque purus. Nam dignissim lacus ipsum,
+              a ullamcorper nulla pretium non. Aliquam sed enim faucibus,
+              pulvinar felis at, vulputate augue.
             </Text>
             <ButtonLink href="/">Text</ButtonLink>
           </Box>
         </ImageSplitContent>
         <ImageSplitContent
-          image={'/images/temp.png'}
+          image={"/images/temp.png"}
           imageBorder="round"
           imageSide="left"
         >

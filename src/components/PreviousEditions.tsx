@@ -9,7 +9,7 @@ const previousEditions = [
     location: "Istanbul, Turkey",
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
-    image: '/images/devconnect_2023.png',
+    image: "/images/devconnect_2023.png",
     url: "https://devconnect.org/istanbul",
   },
   {
@@ -17,7 +17,7 @@ const previousEditions = [
     location: "Bogotá, Colombia",
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
-    image: '/images/devcon_2022.png',
+    image: "/images/devcon_2022.png",
     url: "https://archive.devcon.org/archive/watch/?order=desc&sort=eventId",
   },
   {
@@ -25,7 +25,7 @@ const previousEditions = [
     location: "Amsterdam, Netherlands",
     description:
       "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
-    image: '/images/devconnect_2022.png',
+    image: "/images/devconnect_2022.png",
     url: "https://devconnect.org/amsterdam",
   },
 ]

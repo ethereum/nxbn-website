@@ -45,18 +45,21 @@ export const getStaticProps = async (context) => {
   const mdDir = join("public", mdPath)
 
   // Explicitly define the plugins with their types
-  const remarkPlugins: any[] = [remarkGfm, [remarkInferToc, { callback: tocCallback }]];
+  const remarkPlugins: any[] = [
+    remarkGfm,
+    [remarkInferToc, { callback: tocCallback }],
+  ]
   const rehypePlugins: any[] = [
     [rehypeImg, { dir: mdDir, srcPath: mdPath }],
     rehypeHeadingIds,
-  ];
+  ]
 
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       remarkPlugins,
       rehypePlugins,
     },
-  });
+  })
 
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
 

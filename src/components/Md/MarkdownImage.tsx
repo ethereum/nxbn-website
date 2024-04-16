@@ -7,7 +7,11 @@ import { toPosixPath } from "@/utils/relativePath"
 import { MARKDOWN_CONTENT_MAX_WIDTH } from "@/utils/constants"
 import { DetailedHTMLProps, ImgHTMLAttributes } from "react"
 
-interface MarkdownImageProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
+interface MarkdownImageProps
+  extends DetailedHTMLProps<
+    ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  > {
   width: string
   height: string
   aspectRatio?: string
@@ -16,8 +20,8 @@ interface MarkdownImageProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLIma
 const MarkdownImage = ({
   width,
   height,
-  aspectRatio='1 / 1',
-  alt="",
+  aspectRatio = "1 / 1",
+  alt = "",
   src,
   ...rest
 }: MarkdownImageProps) => {

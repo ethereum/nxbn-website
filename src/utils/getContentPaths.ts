@@ -15,7 +15,7 @@ export const getContentPaths = (dirName: string) => {
       files = [...files, ...getContentPaths(`${dirName}/${file.name}`)]
     } else {
       const fileExtension = extname(file.name)
-      if (fileExtension === '.md') {
+      if (fileExtension === ".md") {
         files.push(`/${dirName}/${file.name}`)
       }
     }

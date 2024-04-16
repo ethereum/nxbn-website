@@ -74,7 +74,6 @@ const ImageSplitContent = ({
       <Center
         maxW={{ base: "340px", md: "400px", lg: "380px", xl: "460px" }}
         margin="auto"
-       
       >
         <Box sx={wrapperStyle[imageBorder]}>
           <Image

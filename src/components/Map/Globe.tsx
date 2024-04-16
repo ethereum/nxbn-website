@@ -30,8 +30,10 @@ const Globe = ({ allFellowsFrontmatter }) => {
       renderer.setSize(380, 380)
 
       if (globeContainerRef.current) {
-        (globeContainerRef.current as HTMLDivElement).appendChild(renderer.domElement);
-    }
+        ;(globeContainerRef.current as HTMLDivElement).appendChild(
+          renderer.domElement
+        )
+      }
 
       const globe = new ThreeGlobe({ animateIn: true })
         .globeImageUrl("/images/map.jpg")
@@ -119,11 +121,11 @@ const Globe = ({ allFellowsFrontmatter }) => {
           height="245px"
         />
       </Center>
-      <Center>
+      <Center gap={2}>
         <ArrowIcon
+          w="40px"
+          height="40px"
           transform="rotate(180deg)"
-          w={8}
-          h={8}
           _hover={{ cursor: "pointer" }}
           onClick={() => {
             setActiveFellowIndex(
@@ -135,15 +137,15 @@ const Globe = ({ allFellowsFrontmatter }) => {
         <Flex
           flex={1}
           flexDir={{ base: "column", sm: "row" }}
-          w={{ base: "100%", sm: "400px", md: "500px"}}
+          w={{ base: "100%", sm: "400px", md: "500px" }}
           bg="#00000050"
           borderRadius="30px"
           minH="156px"
           p="16px"
           gap={3.5}
           overflow="hidden"
-          alignItems= "center"
-          >
+          alignItems="center"
+        >
           <Image
             src={allFellowsFrontmatter[activeFellowIndex].image}
             w="124px"
@@ -194,7 +196,8 @@ const Globe = ({ allFellowsFrontmatter }) => {
           </Center>
         </Flex>
         <ArrowIcon
-          
+          w="40px"
+          height="40px"
           _hover={{ cursor: "pointer" }}
           onClick={() => {
             setActiveFellowIndex(

@@ -29,9 +29,14 @@ const Footer = () => {
             textAlign={{ base: "center", lg: "right" }}
             gap={2}
             flexDirection={"column"}
-            
           >
-            <Flex flexDirection="row" flexWrap={"wrap"} width="100%" gap={4} justifyContent={"center"}>
+            <Flex
+              flexDirection="row"
+              flexWrap={"wrap"}
+              width="100%"
+              gap={4}
+              justifyContent={"center"}
+            >
               <Link href={ETHEREUM_DOT_ORG_LINK}>Ethereum.org</Link>
               <Link href={ETHEREUM_FOUNDATION_LINK}>Ethereum.foundation</Link>
               <Link href={PRIVACY_POLICY_LINK}>Privacy Policy</Link>
