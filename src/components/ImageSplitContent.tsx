@@ -38,6 +38,10 @@ const ImageSplitContent = ({
         boxSizing: "border-box",
         opacity: 0.1,
       },
+      transition: "transform 0.3s ease-in-out",
+      _hover: {
+        transform: "scale(1.1)", // Adjust scale value to control zoom level
+      }
     },
     right: {
       position: "relative",
@@ -56,8 +60,32 @@ const ImageSplitContent = ({
         boxSizing: "border-box",
         opacity: 0.1,
       },
+      transition: "transform 0.3s ease-in-out",
+      _hover: {
+        transform: "scale(1.1)", // Adjust scale value to control zoom level
+      }
     },
-    round: {},
+    round: {
+      position: "relative",
+      display: "inline-block",
+      "::before": {
+        content: '""',
+        position: "absolute",
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        borderRadius: imageBorderRadiusOptions[imageBorder],
+        border: "7px solid #034057", // Adjust based on your color needs
+        mixBlendMode: "multiply",
+        boxSizing: "border-box",
+        opacity: 0.1,
+      },
+      transition: "transform 0.3s ease-in-out",
+      _hover: {
+        transform: "scale(1.05)", // Adjust scale value to control zoom level
+      }
+    },
     none: {},
   }
 
@@ -74,6 +102,8 @@ const ImageSplitContent = ({
       <Center
         maxW={{ base: "340px", md: "400px", lg: "380px", xl: "460px" }}
         margin="auto"
+        overflow='hidden'
+        borderRadius={imageBorderRadiusOptions[imageBorder]}
       >
         <Box sx={wrapperStyle[imageBorder]}>
           <Image
