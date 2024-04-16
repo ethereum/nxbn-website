@@ -10,7 +10,7 @@ import {
   SCHOLAR_PAGE,
 } from "@/utils/constants"
 
-const HeaderButtons = () => {
+const HeaderButtons = ({ onClose }) => {
   const router = useRouter()
   const path = router.asPath
 
@@ -27,6 +27,7 @@ const HeaderButtons = () => {
           base: path === `/` ? "drawer-link-active" : "drawer-link",
           md: path === `/` ? "header-link-active" : "header-link",
         }}
+        onClick={onClose}
       >
         Home
       </Link>
@@ -36,6 +37,7 @@ const HeaderButtons = () => {
           base: path === FELLOWSHIP_PAGE ? "drawer-link-active" : "drawer-link",
           md: path === FELLOWSHIP_PAGE ? "header-link-active" : "header-link",
         }}
+        onClick={onClose}
       >
         Fellowship
       </Link>
@@ -45,6 +47,7 @@ const HeaderButtons = () => {
           base: path === SCHOLAR_PAGE ? "drawer-link-active" : "drawer-link",
           md: path === SCHOLAR_PAGE ? "header-link-active" : "header-link",
         }}
+        onClick={onClose}
       >
         Scholar
       </Link>
@@ -54,6 +57,7 @@ const HeaderButtons = () => {
           base: path === ABOUT_PAGE ? "drawer-link-active" : "drawer-link",
           md: path === ABOUT_PAGE ? "header-link-active" : "header-link",
         }}
+        onClick={onClose}
       >
         About
       </Link>
@@ -63,6 +67,7 @@ const HeaderButtons = () => {
           base: path === BLOG_PAGE ? "drawer-link-active" : "drawer-link",
           md: path === BLOG_PAGE ? "header-link-active" : "header-link",
         }}
+        onClick={onClose}
       >
         Blog
       </Link>
