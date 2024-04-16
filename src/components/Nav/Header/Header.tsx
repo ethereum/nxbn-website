@@ -20,18 +20,21 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const router = useRouter()
 
+  const bgColor = isOpen ? 'transparent' : "rgba(0, 0, 0, 0.60)"
+
   return (
     <header>
-      <Box mx={4} zIndex="sticky">
+      <Box mx={4} zIndex='sticky'>
         <Flex
           px={6}
           py={3}
           h={16}
-          bg={"rgba(0, 0, 0, 0.60)"}
           alignItems={{ base: "center", md: "normal" }}
           justifyContent="space-between"
           width="100%"
           borderRadius="60px"
+          transition="transform 12s ease"
+          bg={bgColor}
         >
           <Box
             onClick={isOpen ? undefined : () => router.push("/")}
@@ -69,36 +72,16 @@ const Header = () => {
               placement="start"
             >
               <DrawerOverlay />
-              <DrawerContent bg={"actionHighlight"} px={5}>
-                <Flex
-                  px={6}
-                  py={3}
-                  h={16}
-                  mt={4}
-                  alignItems={{ base: "center", md: "normal" }}
-                  justifyContent="flex-end"
-                  width="100%"
-                >
-                  <Box>
-                    <Menu id="menu-button">
-                      <MenuButton
-                        as={IconButton}
-                        aria-label="Close menu"
-                        icon={<CloseIcon />}
-                        onClick={onClose}
-                      />
-                    </Menu>
-                  </Box>
-                </Flex>
+              <DrawerContent bg={"actionHighlight"} px={5} zIndex='sticky'>
                 <DrawerBody>
-                  <HeaderButtons />
+                  <HeaderButtons onClose={onClose} />
                 </DrawerBody>
               </DrawerContent>
             </Drawer>
           </Box>
 
           <Center display={{ base: "none", md: "flex" }}>
-            <HeaderButtons />
+            <HeaderButtons onClose={onClose} />
           </Center>
         </Flex>
       </Box>

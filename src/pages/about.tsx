@@ -38,7 +38,7 @@ const AboutPage = () => {
       </ImageHero>
 
       <Box w="100%" bg="linear-gradient(180deg, #101214 0%, #10121400 50%)">
-        <ContentContainer zIndex={3} position="relative">
+        <ContentContainer position="relative">
           <ImageSplitContent
             image={"/images/about/stories.jpg"}
             imageBorder="round"
