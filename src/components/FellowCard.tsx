@@ -26,11 +26,22 @@ const FellowCard = ({
           <H3 fontWeight="500" fontSize={36} m={0}>
             {fellowName}
           </H3>
-          <Text fontSize="16" pb={1} fontWeight={300} lineHeight="150%" m={0} color="bodyHover">
+          <Text
+            fontSize="16"
+            pb={1}
+            fontWeight={300}
+            lineHeight="150%"
+            m={0}
+            color="bodyHover"
+          >
             {country}
           </Text>
-          <Divider my={4} color="bodyHover" borderTop="1px solid" opacity="0.5" />
-            
+          <Divider
+            my={4}
+            color="bodyHover"
+            borderTop="1px solid"
+            opacity="0.5"
+          />
         </Box>
         <Box>
           <H5 my={2} fontSize={24}>

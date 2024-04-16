@@ -13,8 +13,7 @@ export const FellowLayout = ({
   tocItems,
   allFellowsFrontmatter,
 }) => {
-  const { index, title, fellowName, country, tags, image } =
-    frontmatter
+  const { index, title, fellowName, country, tags, image } = frontmatter
 
   const meetMoreFellows = [
     allFellowsFrontmatter[
@@ -28,7 +27,7 @@ export const FellowLayout = ({
   return (
     <>
       <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
-        <Image src={'/images/fellow-stars.png'} alt="Stars" w="100%" />
+        <Image src={"/images/fellow-stars.png"} alt="Stars" w="100%" />
       </Box>
       <ContentContainer>
         <FellowLayoutHero

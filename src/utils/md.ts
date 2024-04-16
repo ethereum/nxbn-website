@@ -20,7 +20,7 @@ export const getAllFellowsFrontmatter = () => {
     const { data } = matter(fileContents)
     return {
       slug: slug,
-      ...data
+      ...data,
     }
   })
 

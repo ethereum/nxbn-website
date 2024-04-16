@@ -36,11 +36,11 @@ const FAQQuestions: Question[] = [
 const ScholarOpen = () => {
   return (
     <>
-      <ImageHero heroImage={'/images/scholar/scholar-hero-open.jpg'}>
+      <ImageHero heroImage={"/images/scholar/scholar-hero-open.jpg"}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
-          mt={{ base:"-40%", md:"-22%", lg:"-15%" }}
+          mt={{ base: "-40%", md: "-22%", lg: "-15%" }}
         >
           <Center
             gap={4}
@@ -49,8 +49,14 @@ const ScholarOpen = () => {
             textAlign="center"
           >
             <Center flexDir="column">
-              <Image src={'/images/scholar/eth-glyph.png'} alt="" w={{ base: "100px", md:"150px" }} />
-              <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0} >Devcon SEA Scholars</H2>
+              <Image
+                src={"/images/scholar/eth-glyph.png"}
+                alt=""
+                w={{ base: "100px", md: "150px" }}
+              />
+              <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0}>
+                Devcon SEA Scholars
+              </H2>
             </Center>
             <Box maxW="650px">
               <Text fontSize={{ base: 18, md: 24 }}>
@@ -59,54 +65,67 @@ const ScholarOpen = () => {
               </Text>
             </Box>
             <Box>
-              <ButtonLink href="/" fontSize={24} opacity="0.4">Apply Soon</ButtonLink>
+              <ButtonLink href="/" fontSize={24} opacity="0.4">
+                Apply Soon
+              </ButtonLink>
             </Box>
             <Box>
-            <Text fontSize={16} mb={2} mt={8}>
+              <Text fontSize={16} mb={2} mt={8}>
                 Know more about Devcon
               </Text>
-              <ButtonLink fontSize={14} href="https://devcon.org/en/" bg="white">Devcon website</ButtonLink>
+              <ButtonLink
+                fontSize={14}
+                href="https://devcon.org/en/"
+                bg="white"
+              >
+                Devcon website
+              </ButtonLink>
             </Box>
           </Center>
         </Box>
       </ImageHero>
 
-    <Box bg="linear-gradient(180deg, #16393D 30%, #16393D00 100%)" pt={{ base: "100px", md: "250px" }}>
-      <ContentContainer>
-        <Box px={{ base: 8, md: 16 }} gap={8}>
-          <H1 variant="action" >Devcon(nect) Scholars</H1>
-          <Box 
-            gap={16}
-            flexDir= {{ base: "column", md: "row" }}
-            display="flex">
-            <Box>
+      <Box
+        bg="linear-gradient(180deg, #16393D 30%, #16393D00 100%)"
+        pt={{ base: "100px", md: "250px" }}
+      >
+        <ContentContainer>
+          <Box px={{ base: 8, md: 16 }} gap={8}>
+            <H1 variant="action">Devcon(nect) Scholars</H1>
+            <Box
+              gap={16}
+              flexDir={{ base: "column", md: "row" }}
+              display="flex"
+            >
+              <Box>
+                <Text fontSize={18}>
+                  Devcon and Devconnect are events that act as centers of
+                  gravity in the Ethereum ecosystem. They are global gatherings
+                  that create space and time for community. Places and moments
+                  to share, learn, discuss, meet, explore, and live in.
+                </Text>
+                <Text fontSize={18}>
+                  Physical events are always somewhere in a new city, country,
+                  or region. That means no matter where a Devcon(nect) is held
+                  it will always be difficult for folks living elsewhere in a
+                  different city, country, or region.
+                </Text>
+              </Box>
               <Text fontSize={18}>
-                Devcon and Devconnect are events that act as centers of gravity in
-                the Ethereum ecosystem. They are global gatherings that create
-                space and time for community. Places and moments to share, learn,
-                discuss, meet, explore, and live in.
-              </Text>
-              <Text fontSize={18}>
-                Physical events are always somewhere in a new city, country, or
-                region. That means no matter where a Devcon(nect) is held it will
-                always be difficult for folks living elsewhere in a different
-                city, country, or region.
+                Sometimes human flourishing happens just by showing up. As
+                organizers of Devcon and Devconnect, we can at least create that
+                opportunity for a small group each year. This scholarship
+                provides travel, room & board, a ticket to devcon, and special
+                programming.
               </Text>
             </Box>
-            <Text fontSize={18}>
-              Sometimes human flourishing happens just by showing up. As
-              organizers of Devcon and Devconnect, we can at least create that
-              opportunity for a small group each year. This scholarship provides
-              travel, room & board, a ticket to devcon, and special programming.
-            </Text>
           </Box>
-        </Box>
-      </ContentContainer>
+        </ContentContainer>
       </Box>
 
       <ContentContainer py={24}>
         <ImageSplitContent
-          image={'/images/scholar/artifact.jpg'}
+          image={"/images/scholar/artifact.jpg"}
           imageBorder="round"
           imageSide="left"
         >

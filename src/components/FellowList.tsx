@@ -29,7 +29,7 @@ const FellowList = ({ fellowsData }) => {
   return (
     <ContentContainer mb={130}>
       <Box px={{ base: 6, md: 16 }}>
-      <Divider my={12} color="action" borderTop="1px solid" />
+        <Divider my={12} color="action" borderTop="1px solid" />
         <H2 variant="action" mb={24}>
           Fellows, past and present
         </H2>
@@ -47,7 +47,7 @@ const FellowList = ({ fellowsData }) => {
             <FilterButton>Area</FilterButton>
           </Flex>
         </Center> */}
-       
+
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
           gap={24}
@@ -67,7 +67,13 @@ const FellowList = ({ fellowsData }) => {
           ))}
         </Grid>
       </Box>
-      <Center gap={2} bg="backgroundHighlight" borderTop="1px solid" borderColor={"action"} py={4}>
+      <Center
+        gap={2}
+        bg="backgroundHighlight"
+        borderTop="1px solid"
+        borderColor={"action"}
+        py={4}
+      >
         {pageNumbers.map((number) => (
           <Text
             key={number}
@@ -79,7 +85,11 @@ const FellowList = ({ fellowsData }) => {
             m={0}
             borderColor={number === paginationIndex ? "body" : "transparent"}
             onClick={() => paginate(number)}
-            _hover={{ cursor: "pointer", borderColor: "action", color: "action"}}
+            _hover={{
+              cursor: "pointer",
+              borderColor: "action",
+              color: "action",
+            }}
           >
             {number}
           </Text>

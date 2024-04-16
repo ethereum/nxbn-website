@@ -10,7 +10,7 @@ const WhoAreNextBillion = () => {
         <Image
           position="absolute"
           top="0"
-          src={'/images/homepage/background.jpg'}
+          src={"/images/homepage/background.jpg"}
           objectFit="cover"
           h="100%"
           w="100%"
@@ -19,7 +19,7 @@ const WhoAreNextBillion = () => {
         <Image
           position="absolute"
           top={0}
-          src={'/images/homepage/middleground.png'}
+          src={"/images/homepage/middleground.png"}
           objectFit="cover"
           objectPosition="bottom"
           h="100%"
@@ -29,7 +29,7 @@ const WhoAreNextBillion = () => {
         <Image
           position="absolute"
           top={0}
-          src={'/images/homepage/foreground.png'}
+          src={"/images/homepage/foreground.png"}
           objectFit="contain"
           objectPosition="bottom"
           h="100%"

@@ -1,6 +1,12 @@
 import { Box, Image } from "@chakra-ui/react"
 
-const ImageHero = ({ children, heroImage }: { children: any, heroImage: string}) => {
+const ImageHero = ({
+  children,
+  heroImage,
+}: {
+  children: any
+  heroImage: string
+}) => {
   return (
     <>
       <Box mt={-16}>

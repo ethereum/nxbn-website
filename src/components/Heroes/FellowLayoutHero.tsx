@@ -13,7 +13,12 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
       <Flex gap={4}>
         {tags.map((tag, index) => {
           return (
-            <Text key={index} textStyle="tag" color="actionHover" fontFamily="heading" >
+            <Text
+              key={index}
+              textStyle="tag"
+              color="actionHover"
+              fontFamily="heading"
+            >
               {tag}
             </Text>
           )
@@ -30,7 +35,14 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
         />
         <Center>
           <Box>
-            <Text textStyle="base-text" fontFamily="heading" fontWeight="600" color="body" fontSize={20} m={0}>
+            <Text
+              textStyle="base-text"
+              fontFamily="heading"
+              fontWeight="600"
+              color="body"
+              fontSize={20}
+              m={0}
+            >
               {fellowName}
             </Text>
             <Text textStyle="base-text" fontSize="18" color="body" m={0}>
