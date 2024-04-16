@@ -5,7 +5,7 @@ const FilterButton = ({ children, ...props }) => {
     <Box
       px="18px"
       py={1.5}
-      borderRadius="1800px"
+      borderRadius="full"
       alignItems="center"
       justifyContent={"center"}
       border={"1px solid"}
