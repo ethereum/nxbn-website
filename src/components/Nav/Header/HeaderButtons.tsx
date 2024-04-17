@@ -49,7 +49,7 @@ const HeaderButtons = ({ onClose }) => {
         }}
         onClick={onClose}
       >
-        Scholar
+        Scholars
       </Link>
       <Link
         href={ABOUT_PAGE}
