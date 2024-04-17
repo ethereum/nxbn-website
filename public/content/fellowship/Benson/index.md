@@ -22,7 +22,7 @@ In Sub-Saharan Africa, only 3% of 48 million smallholder farmers are [insured](h
 
 
 
-# Update: 2024
+## Update: 2024
 
 
 

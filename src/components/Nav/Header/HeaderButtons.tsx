@@ -7,7 +7,7 @@ import {
   ABOUT_PAGE,
   BLOG_PAGE,
   FELLOWSHIP_PAGE,
-  SCHOLAR_PAGE,
+  SCHOLARS_PAGE,
 } from "@/utils/constants"
 
 const HeaderButtons = ({ onClose }) => {
@@ -42,10 +42,10 @@ const HeaderButtons = ({ onClose }) => {
         Fellowship
       </Link>
       <Link
-        href={SCHOLAR_PAGE}
+        href={SCHOLARS_PAGE}
         textStyle={{
-          base: path === SCHOLAR_PAGE ? "drawer-link-active" : "drawer-link",
-          md: path === SCHOLAR_PAGE ? "header-link-active" : "header-link",
+          base: path === SCHOLARS_PAGE ? "drawer-link-active" : "drawer-link",
+          md: path === SCHOLARS_PAGE ? "header-link-active" : "header-link",
         }}
         onClick={onClose}
       >
