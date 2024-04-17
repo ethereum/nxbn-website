@@ -1,6 +1,6 @@
-import { Box, Center, Divider, Flex, Image, Text } from "@chakra-ui/react"
+import { Box, Center, Divider, Flex, Heading, Image, Text } from "@chakra-ui/react"
 import ContentContainer from "@/components/ContentContainer"
-import { H2, H4 } from "@/components/Headings"
+import { H2, H3 } from "@/components/Headings"
 import Link from "@/components/Link"
 
 const previousEditions = [
@@ -64,9 +64,9 @@ const PreviousEditions = () => {
                   </Center>
 
                   <Center flexDir="column" alignItems="normal" flex={1}>
-                    <H4 variant="action" mb={1}>
+                    <H3 mb={1}>
                       {edition.name}
-                    </H4>
+                    </H3>
                     <Text {...cityFontStyle} mb={3.5}>
                       {edition.location}
                     </Text>
