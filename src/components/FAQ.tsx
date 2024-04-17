@@ -13,8 +13,8 @@ interface FAQInterface {
 
 const FAQ = ({ questions }: FAQInterface) => {
   return (
-    <Box gap={16} px={{ base: 6, md: 16 }}>
-      <H2 variant="action">FAQ</H2>
+    <Box gap={16} mt="10"px={{ base: 6, md: 16 }}>
+      <H2 variant="action">Frequent asked questions</H2>
       {questions.map((question, index) => (
         <Flex
           key={index}
