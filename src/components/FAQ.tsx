@@ -23,7 +23,7 @@ const FAQ = ({ questions }: FAQInterface) => {
           mb={{ base: 8, md: 16 }}
         >
           <Box w="100%" flex="1 0 0" maxW={350}>
-            <H4 variant="action" textAlign={{ base: "left", md: "right" }}>
+            <H4 variant="action" textAlign={{ base: "left", md: "left" }}>
               {question.question}
             </H4>
           </Box>
