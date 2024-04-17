@@ -104,15 +104,16 @@ const ScholarClosed = () => {
         </ImageSplitContent>
       </ContentContainer>
 
-      <ContentContainer>
-        <FAQ questions={FAQQuestions} />
-      </ContentContainer>
+     
 
       <Box py={16} bg="backgroundHighlight">
         <ContentContainer>
           <PreviousEditions />
         </ContentContainer>
       </Box>
+      <ContentContainer>
+        <FAQ questions={FAQQuestions} />
+      </ContentContainer>
     </>
   )
 }
