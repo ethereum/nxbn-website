@@ -181,11 +181,18 @@ const Globe = ({ allFellowsFrontmatter }) => {
                     <Text
                       key={index}
                       textStyle="tag"
-                      color="actionHover"
-                      fontSize={12}
-                      fontFamily={"heading"}
-                      p={1}
-                      m={0}
+                  textTransform="lowercase"
+                  color="action"
+                  bg="#00000020"
+                  fontFamily="heading"
+                  fontSize={14}
+                  letterSpacing={0.7}
+                  mb="0.75rem"              
+                  px={4}
+                  py={0.5}
+                  mx={1}
+                  border="1px solid"
+                  borderRadius="4000px"
                     >
                       {tag}
                     </Text>

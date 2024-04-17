@@ -10,14 +10,24 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
       <Box my={2.5}>
         <H1 textStyle="fellow-title">{title}</H1>
       </Box>
-      <Flex gap={4}>
+      <Flex flexWrap="wrap">
         {tags.map((tag, index) => {
           return (
             <Text
               key={index}
               textStyle="tag"
-              color="actionHover"
+              textTransform="lowercase"
+              color="action"
+              bg="#00000020"
               fontFamily="heading"
+              fontSize={14}
+              letterSpacing={0.7}
+              mb="0.75rem"              
+              px={4}
+              py={0.5}
+              mx={1}
+              border="1px solid"
+              borderRadius="4000px"
             >
               {tag}
             </Text>
