@@ -36,7 +36,7 @@ const FAQQuestions: Question[] = [
 const ScholarClosed = () => {
   return (
     <>
-      <ImageHero heroImage={"/images/scholar/scholar-hero-closed.jpg"}>
+      <ImageHero heroImage={"/images/scholars/scholars-hero-closed.jpg"}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #001121 0%, #056589 100%)"
