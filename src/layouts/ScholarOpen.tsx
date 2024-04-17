@@ -36,7 +36,7 @@ const FAQQuestions: Question[] = [
 const ScholarOpen = () => {
   return (
     <>
-      <ImageHero heroImage={"/images/scholar/scholar-hero-open.jpg"}>
+      <ImageHero heroImage={"/images/scholars/scholars-hero-open.jpg"}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
@@ -50,7 +50,7 @@ const ScholarOpen = () => {
           >
             <Center flexDir="column">
               <Image
-                src={"/images/scholar/eth-glyph.png"}
+                src={"/images/scholars/eth-glyph.png"}
                 alt=""
                 w={{ base: "100px", md: "150px" }}
               />
@@ -125,7 +125,7 @@ const ScholarOpen = () => {
 
       <ContentContainer py={24}>
         <ImageSplitContent
-          image={"/images/scholar/artifact.jpg"}
+          image={"/images/scholars/artifact.jpg"}
           imageBorder="round"
           imageSide="left"
         >
