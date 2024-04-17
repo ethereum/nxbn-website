@@ -1,7 +1,7 @@
 // pages/index.js or another component file
 import dynamic from "next/dynamic"
 
-import { Box, Center, Flex } from "@chakra-ui/react"
+import { Box, Center, Flex, Heading } from "@chakra-ui/react"
 
 const GlobeComponentWithNoSSR = dynamic(
   () => import("../../components/Map/Globe"),
@@ -10,7 +10,7 @@ const GlobeComponentWithNoSSR = dynamic(
     loading: () => <Box flex="1" />,
   }
 )
-import { H2 } from "@/components/Headings"
+import { H1, H2 } from "@/components/Headings"
 import ContentContainer from "../ContentContainer"
 
 const HomeHero = ({ allFellowsFrontmatter }) => {
@@ -24,7 +24,7 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
         flexDir={{ base: "column", lg: "row" }}
       >
         <Center flex={1}>
-          <H2
+          <Heading as={H1}
             fontSize={{ base: 46, md: 54, lg: 52, xl: 56 }}
             fontWeight={300}
             lineHeight={1.2}
@@ -40,7 +40,7 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
              next billion
             </Box>
             are here, now ➡
-          </H2>
+          </Heading>
         </Center>
         <GlobeComponentWithNoSSR
           allFellowsFrontmatter={allFellowsFrontmatter}
