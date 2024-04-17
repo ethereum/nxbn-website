@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       allFellowsFrontmatter,
-      blogs: feed.items,
+      blogs: feed.items.slice(0, 4),
     },
   }
 }
