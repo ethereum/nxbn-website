@@ -1,5 +1,8 @@
 import { Box, Center, Flex, Image } from "@chakra-ui/react"
-import { IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT, IMAGE_ZOOM_HOVER_STYLE_CONSTANT } from "@/utils/constants"
+import {
+  IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT,
+  IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+} from "@/utils/constants"
 
 type ImageSplitContentProps = {
   image: string
@@ -103,7 +106,7 @@ const ImageSplitContent = ({
       <Center
         maxW={{ base: "340px", md: "400px", lg: "380px", xl: "460px" }}
         margin="auto"
-        overflow='hidden'
+        overflow="hidden"
         borderRadius={imageBorderRadiusOptions[imageBorder]}
       >
         <Box sx={wrapperStyle[imageBorder]}>
