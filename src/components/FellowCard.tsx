@@ -1,4 +1,4 @@
-import { Box, Image, Flex, Text, Divider } from "@chakra-ui/react"
+import { Box, Image, Flex, Text, Divider, Center } from "@chakra-ui/react"
 import { H3, H5 } from "@/components/Headings"
 import ButtonLink from "./Buttons/ButtonLink"
 
@@ -28,7 +28,10 @@ const FellowCard = ({
         },
       }}
     >
-      <Flex flex={1}>
+      <Flex 
+        flex={1} 
+        justifyContent={{ base: "Center", md: "right" }}
+        >
         <Box
           w={40}
           h={40}
@@ -48,12 +51,18 @@ const FellowCard = ({
       </Flex>
       <Box gap={4} flex={1}>
         <Box>
-          <H3 fontWeight="500" fontSize={36} m={0}>
+          <H3 
+            fontWeight="500" 
+            m={0}
+            fontSize={{ base: "28", md: "36" }}
+            textAlign={{ base: "Center", md: "left" }}
+            >
             {fellowName}
           </H3>
           <Text
             fontSize="16"
             pb={1}
+            textAlign={{ base: "Center", md: "left" }}
             fontWeight={300}
             lineHeight="150%"
             m={0}
@@ -69,7 +78,7 @@ const FellowCard = ({
           />
         </Box>
         <Box>
-          <H5 my={2} fontSize={24}>
+          <H5 my={2} fontSize={24} fontSize={{ base: "20", md: "24" }}>
             {title}
           </H5>
           <Flex flexWrap="wrap" mb={2} mt={4}>
