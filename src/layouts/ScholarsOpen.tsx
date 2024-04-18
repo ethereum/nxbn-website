@@ -53,25 +53,25 @@ const ScholarOpen = () => {
             </Center>
             <Box maxW="650px">
               <Text fontSize={{ base: 18, md: 24 }}>
-                Come learn, connect, and grow with the Ethereum ecosystem.
+                Come learn, connect, and grow! 
                 November 9-17th in Bangkok, Thailand.
               </Text>
             </Box>
             <Box>
               <ButtonLink href="/" fontSize={24} variant="disabled">
-                Apply Soon
+                Applications open soon
               </ButtonLink>
             </Box>
             <Box>
               <Text fontSize={16} mb={2} mt={8}>
-                Know more about Devcon
+                Learn more about Devcon
               </Text>
               <ButtonLink
                 fontSize={14}
                 href="https://devcon.org/en/"
                 variant="secondary"
               >
-                Devcon website
+               Devcon website 
               </ButtonLink>
             </Box>
           </Center>
@@ -84,7 +84,7 @@ const ScholarOpen = () => {
       >
         <ContentContainer>
           <Box px={{ base: 8, md: 16 }} gap={8}>
-            <H1 variant="action">Devcon(nect) Scholars</H1>
+            <H1 variant="action">Devcon(nect) Scholars Program</H1>
             <Box
               gap={16}
               flexDir={{ base: "column", md: "row" }}
@@ -100,8 +100,7 @@ const ScholarOpen = () => {
                 <Text fontSize={18}>
                   Physical events are always somewhere in a new city, country,
                   or region. That means no matter where a Devcon(nect) is held
-                  it will always be difficult for folks living elsewhere in a
-                  different city, country, or region.
+                  it will always be difficult for folks living elsewhere.
                 </Text>
               </Box>
               <Text fontSize={18}>
