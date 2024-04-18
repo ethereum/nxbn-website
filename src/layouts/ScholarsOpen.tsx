@@ -10,25 +10,18 @@ import ImageHero from "@/components/Heroes/ImageHero"
 
 const FAQQuestions: Question[] = [
   {
-    question: "What is the Next Billion Fellowship?",
+    question: "Who can apply for a scholarship?",
     answer: [
-      "The Ethereum Next Billion Fellowship Program is focused on identifying and supporting unique and talented individuals helping to demystify Ethereum's relevance and break down barriers to entry for people and communities not currently part of the Ethereum ecosystem.",
-      "Fellows will be part of a small forum for leaders who, during the course of six months, drive their own projects that address a particular enabler or blocker for Ethereum becoming a public good that acts as a foundational layer for other public goods.",
-      "While there are some cohort-wide activities, it is a self-directed, self-driven program. Depending on the needs of each Fellow and their project, different support is provided, including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network. Fellows’ work will be highlighted to showcase the impact and value of Ethereum and its community.",
+      "Everyone may apply for a partial or full scholarship to Devcon (or Devconnect). While all applications are welcome, scholarships are awarded based on a variety of considerations, especially credible and earnest need; those planning to attend devcon(nect) with or without a scholarship need not apply",
     ],
   },
   {
-    question: "What kinds of projects qualify?",
+    question: "What kinds of scholarships are offered?",
     answer: [
-      "A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem. It doesn't have to directly integrate with Ethereum to qualify, but needs to be on-balance 'good' for the ecosystem and future Ethereum community.",
-      "The project can be just an idea, in early stages, or already ongoing. It can be building an application, research, or an organizational program/initiative. Whatever it is, the project must enable the flourishing of regions, populations, or communities that are underrepresented in the existing Ethereum ecosystem today.",
-    ],
-  },
-  {
-    question: "I am building on an L2. Should I apply?",
-    answer: [
-      "Program Duration: April to October, 2024",
-      "While the official duration of the fellowship is six months, we expect and hope fellows remain consistent contributors to the Ethereum community as alumni.",
+      "There are three main types of support: Access, Transport, and Room/board",
+      "Access scholarships are a full ticket to the devcon main event, and participating side-events",
+      "Transport scholarships are for round-trip air travel to Bangkok, Thailand",
+      "Room/board scholarships cover accommodation, meals, and (limited) expenses during the days of the main devcon event.",
     ],
   },
 ]
@@ -114,9 +107,8 @@ const ScholarOpen = () => {
               <Text fontSize={18}>
                 Sometimes human flourishing happens just by showing up. As
                 organizers of Devcon and Devconnect, we can at least create that
-                opportunity for a small group each year. This scholarship
-                provides travel, room & board, a ticket to devcon, and special
-                programming.
+                opportunity for a small group each year. The devcon(nect) scholars program
+                supports travel, room & board, a ticket to devcon, and special programming.
               </Text>
             </Box>
           </Box>
@@ -130,7 +122,7 @@ const ScholarOpen = () => {
           imageSide="left"
         >
           <Box gap={8}>
-            <H2>Something to hang a memory on</H2>
+            <H2>For Artificers</H2>
             <Text>
               All scholars are responsible for creating a story artifact: a
               little something that captures the impact attending Devcon or
