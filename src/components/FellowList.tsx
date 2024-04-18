@@ -24,10 +24,17 @@ const FellowList = ({ fellowsData }) => {
     pageNumbers.push(i)
   }
 
-  const paginate = (pageNumber: number) => setPaginationIndex(pageNumber)
+  const paginate = (pageNumber: number) => {
+    const element = document.getElementById("fellow-list")
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+    setPaginationIndex(pageNumber)
+  }
 
   return (
-    <ContentContainer mb={130}>
+    <ContentContainer id="fellow-list" mb={130}>
       <Box px={{ base: 6, md: 16 }}>
         <Divider my={12} color="action" borderTop="1px solid" />
         <H2 variant="action" mb={24}>
