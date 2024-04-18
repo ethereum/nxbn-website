@@ -139,7 +139,9 @@ const ScholarOpen = () => {
               project, or just reflections -- the value of the artifact is in
               the act of creating it and sharing with others.
             </Text>
-            <ButtonLink href="/" variant="disabled">Coming Soon: Artifacts Archive</ButtonLink>
+            <ButtonLink href="/" variant="disabled">
+              Coming Soon: Artifacts Archive
+            </ButtonLink>
           </Box>
         </ImageSplitContent>
       </ContentContainer>
