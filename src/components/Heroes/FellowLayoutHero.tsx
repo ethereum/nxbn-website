@@ -22,7 +22,7 @@ const FellowLayoutHero = ({ title, fellowName, country, tags, image }) => {
               fontFamily="heading"
               fontSize={14}
               letterSpacing={0.7}
-              mb="0.75rem"              
+              mb="0.75rem"
               px={4}
               py={0.5}
               mx={1}

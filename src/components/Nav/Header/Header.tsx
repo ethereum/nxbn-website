@@ -20,11 +20,11 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const router = useRouter()
 
-  const bgColor = isOpen ? 'transparent' : "rgba(0, 0, 0, 0.60)"
+  const bgColor = isOpen ? "transparent" : "rgba(0, 0, 0, 0.60)"
 
   return (
     <header>
-      <Box mx={4} zIndex='sticky'>
+      <Box mx={4} zIndex="sticky">
         <Flex
           px={6}
           py={3}
@@ -72,7 +72,7 @@ const Header = () => {
               placement="start"
             >
               <DrawerOverlay />
-              <DrawerContent bg={"actionHighlight"} px={5} zIndex='sticky'>
+              <DrawerContent bg={"actionHighlight"} px={5} zIndex="sticky">
                 <DrawerBody>
                   <HeaderButtons onClose={onClose} />
                 </DrawerBody>
