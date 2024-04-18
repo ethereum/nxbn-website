@@ -82,6 +82,7 @@ const WhoAreNextBillion = () => {
                 href="https://ethereum.foundation"
                 isSecondary
                 alignSelf="center"
+                variant="secondary"
               >
                 Ethereum Foundation
               </ButtonLink>

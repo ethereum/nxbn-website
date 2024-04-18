@@ -1,6 +1,19 @@
 import Link from "@/components/Link"
 
-const ButtonLink = ({ isSecondary = false, href, children, ...props }) => {
+const ButtonLink = ({ isSecondary = false, href, children, variant="primary", ...props }) => {
+  const variants = {
+    primary: {
+      bg: "action",
+    },
+    disabled: {
+      bg: "action",
+      opacity: 0.4
+    },
+    secondary: {
+      bg: "white",
+    },
+  }
+
   return (
     <Link
       href={href}
@@ -10,6 +23,7 @@ const ButtonLink = ({ isSecondary = false, href, children, ...props }) => {
       borderRadius="full"
       textStyle="button-link"
       textAlign="center"
+      sx={{...variants[variant]}}
       {...props}
     >
       {children}
