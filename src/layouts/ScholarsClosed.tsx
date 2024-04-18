@@ -104,8 +104,6 @@ const ScholarClosed = () => {
         </ImageSplitContent>
       </ContentContainer>
 
-     
-
       <Box py={16} bg="backgroundHighlight">
         <ContentContainer>
           <PreviousEditions />

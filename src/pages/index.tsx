@@ -106,9 +106,11 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
             <H2 variant="action" pt={16}>
               Our blog updates
             </H2>
-            <BlogFeed blogs={blogs}  />
+            <BlogFeed blogs={blogs} />
             <Flex justify="center" my="64px">
-            <ButtonLink href="https://blog.ethereum.org/">See all posts</ButtonLink>
+              <ButtonLink href="https://blog.ethereum.org/">
+                See all posts
+              </ButtonLink>
             </Flex>
           </Box>
         </ContentContainer>

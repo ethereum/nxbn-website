@@ -24,7 +24,8 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
         flexDir={{ base: "column", lg: "row" }}
       >
         <Center flex={1}>
-          <Heading as={H1}
+          <Heading
+            as={H1}
             fontSize={{ base: 46, md: 54, lg: 52, xl: 56 }}
             fontWeight={300}
             lineHeight={1.2}
@@ -37,7 +38,7 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
               fontWeight={500}
               fontSize={{ base: 50, md: 68, lg: 58, xl: 66 }}
             >
-             next billion
+              next billion
             </Box>
             are here, now ➡
           </Heading>

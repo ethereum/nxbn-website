@@ -17,3 +17,11 @@ export const MARKDOWN_CONTENT_MAX_WIDTH = 800
 export const SCHOLARS_PROGRAM_OPEN = true
 
 export const FELLOW_LIST_PAGINATION_LIMIT = 8
+
+export const IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT = {
+  transition: "transform 0.3s ease-in-out",
+}
+
+export const IMAGE_ZOOM_HOVER_STYLE_CONSTANT = {
+  transform: "scale(1.05)",
+}

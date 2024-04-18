@@ -50,7 +50,9 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
         <ImageHero heroImage={"/images/fellowship/fellowship-hero.jpg"}>
           <ContentContainer>
             <Box px={{ base: 8, md: 16 }} pb={16} mt={-40}>
-              <H1 variant="action">The Next Billion <br></br>Fellowship</H1>
+              <H1 variant="action">
+                The Next Billion <br></br>Fellowship
+              </H1>
               <Box maxW={800}>
                 <Text mb={16} fontSize={18}>
                   A Fellow is a leader committed to their own project that helps
