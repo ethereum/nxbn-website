@@ -3,6 +3,11 @@ import ContentContainer from "@/components/ContentContainer"
 import { H2, H4 } from "@/components/Headings"
 import Link from "@/components/Link"
 
+import {
+  IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+  IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT,
+} from "@/utils/constants"
+
 const previousEditions = [
   {
     name: "Devconnect 2023",
@@ -53,13 +58,19 @@ const PreviousEditions = () => {
                   key={index}
                   gap={8}
                   flexDir={{ base: "column", lg: "row" }}
+                  _hover={{
+                    img: {
+                      ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+                    },
+                  }}
                 >
-                  <Center flex={1}>
+                  <Center flex={1} overflow="hidden" borderRadius="16px">
                     <Image
                       src={edition.image}
                       alt={edition.name}
-                      borderRadius="16px"
                       w="100%"
+                      loading="lazy"
+                      {...IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT}
                     />
                   </Center>
 

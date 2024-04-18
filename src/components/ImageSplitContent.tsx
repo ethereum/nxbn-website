@@ -1,4 +1,5 @@
 import { Box, Center, Flex, Image } from "@chakra-ui/react"
+import { IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT, IMAGE_ZOOM_HOVER_STYLE_CONSTANT } from "@/utils/constants"
 
 type ImageSplitContentProps = {
   image: string
@@ -38,10 +39,10 @@ const ImageSplitContent = ({
         boxSizing: "border-box",
         opacity: 0.1,
       },
-      transition: "transform 0.3s ease-in-out",
       _hover: {
-        transform: "scale(1.1)", // Adjust scale value to control zoom level
-      }
+        ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+      },
+      ...IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT,
     },
     right: {
       position: "relative",
@@ -60,10 +61,10 @@ const ImageSplitContent = ({
         boxSizing: "border-box",
         opacity: 0.1,
       },
-      transition: "transform 0.3s ease-in-out",
       _hover: {
-        transform: "scale(1.1)", // Adjust scale value to control zoom level
-      }
+        ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+      },
+      ...IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT,
     },
     round: {
       position: "relative",
@@ -81,10 +82,10 @@ const ImageSplitContent = ({
         boxSizing: "border-box",
         opacity: 0.1,
       },
-      transition: "transform 0.3s ease-in-out",
       _hover: {
-        transform: "scale(1.05)", // Adjust scale value to control zoom level
-      }
+        ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+      },
+      ...IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT,
     },
     none: {},
   }

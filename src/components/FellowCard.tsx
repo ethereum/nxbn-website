@@ -2,6 +2,11 @@ import { Box, Image, Flex, Text, Divider } from "@chakra-ui/react"
 import { H3, H5 } from "@/components/Headings"
 import ButtonLink from "./Buttons/ButtonLink"
 
+import {
+  IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+  IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT,
+} from "@/utils/constants"
+
 const FellowCard = ({
   title,
   description,
@@ -12,16 +17,36 @@ const FellowCard = ({
   slug,
 }) => {
   return (
-    <Flex mt={6} mb={12} gap={6} flexDir={{ base: "column", md: "row" }}>
-      <Image
-        src={image}
-        w={40}
-        h={40}
-        borderRadius="250px 100px 250px 100px"
-        border="2px solid #6F9D39"
-        alt=""
-      />
-      <Box gap={4}>
+    <Flex
+      mt={6}
+      mb={12}
+      gap={6}
+      flexDir={{ base: "column", md: "row" }}
+      _hover={{
+        img: {
+          ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+        },
+      }}
+    >
+      <Flex flex={1}>
+        <Box
+          w={40}
+          h={40}
+          overflow="hidden"
+          borderRadius="250px 100px 250px 100px"
+          border="2px solid #6F9D39"
+        >
+          <Image
+            src={image}
+            w={40}
+            h={40}
+            alt=""
+            loading="lazy"
+            {...IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT}
+          />
+        </Box>
+      </Flex>
+      <Box gap={4} flex={1}>
         <Box>
           <H3 fontWeight="500" fontSize={36} m={0}>
             {fellowName}
@@ -59,7 +84,7 @@ const FellowCard = ({
                   fontFamily="heading"
                   fontSize={14}
                   letterSpacing={0.7}
-                  mb="0.75rem"              
+                  mb="0.75rem"
                   px={4}
                   py={0.5}
                   mx={1}

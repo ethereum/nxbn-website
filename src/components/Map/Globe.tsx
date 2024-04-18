@@ -11,6 +11,11 @@ import { useState } from "react"
 import { ArrowIcon } from "@/components/icons"
 import { H4 } from "@/components/Headings"
 
+import {
+  IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT,
+  IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+} from "@/utils/constants"
+
 const lerp = (start, end, alpha) => start + (end - start) * alpha
 
 const Globe = ({ allFellowsFrontmatter }) => {
@@ -145,16 +150,28 @@ const Globe = ({ allFellowsFrontmatter }) => {
           gap={3.5}
           overflow="hidden"
           alignItems="center"
+          _hover={{
+            img: {
+              ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
+            },
+          }}
         >
-          <Image
-            src={allFellowsFrontmatter[activeFellowIndex].image}
-            w="124px"
-            h="124px"
-            borderRadius="10000px"
-            border="2px solid #6F9D39"
-            objectFit={"cover"}
-            alt=""
-          />
+          <Flex>
+            <Box
+              w="124px"
+              h="124px"
+              borderRadius="10000px"
+              border="2px solid #6F9D39"
+              overflow="hidden"
+            >
+              <Image
+                src={allFellowsFrontmatter[activeFellowIndex].image}
+                objectFit={"cover"}
+                alt=""
+                {...IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT}
+              />
+            </Box>
+          </Flex>
           <Center
             flexDir="column"
             justifyContent="left"
