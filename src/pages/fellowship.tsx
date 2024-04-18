@@ -9,26 +9,26 @@ import FellowList from "@/components/FellowList"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 
 const FAQQuestions: Question[] = [
-  {
-    question: "What is the Next Billion Fellowship?",
-    answer: [
-      "The Ethereum Next Billion Fellowship Program is focused on identifying and supporting unique and talented individuals helping to demystify Ethereum's relevance and break down barriers to entry for people and communities not currently part of the Ethereum ecosystem.",
-      "Fellows will be part of a small forum for leaders who, during the course of six months, drive their own projects that address a particular enabler or blocker for Ethereum becoming a public good that acts as a foundational layer for other public goods.",
-      "While there are some cohort-wide activities, it is a self-directed, self-driven program. Depending on the needs of each Fellow and their project, different support is provided, including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network. Fellows’ work will be highlighted to showcase the impact and value of Ethereum and its community.",
-    ],
-  },
+
   {
     question: "What kinds of projects qualify?",
     answer: [
       "A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem. It doesn't have to directly integrate with Ethereum to qualify, but needs to be on-balance 'good' for the ecosystem and future Ethereum community.",
-      "The project can be just an idea, in early stages, or already ongoing. It can be building an application, research, or an organizational program/initiative. Whatever it is, the project must enable the flourishing of regions, populations, or communities that are underrepresented in the existing Ethereum ecosystem today.",
+      "Proposals that have not yet begun will be considered, but not likely selected. This fellowship is not meant to be at the beginning or end of a journey.",
+      "Projects can be building an application, research, or an organizational program/initiative. Whatever it is, the project must enable the flourishing of regions, populations, or communities that are underrepresented in the existing Ethereum ecosystem today.",
     ],
   },
   {
-    question: "I am building on an L2. Should I apply?",
+    question: "What support does the Next Billion Fellowship offer?",
     answer: [
-      "Program Duration: April to October, 2024",
-      "While the official duration of the fellowship is six months, we expect and hope fellows remain consistent contributors to the Ethereum community as alumni.",
+      "In a word: Bespoke.",
+      "Different people need different things, and the Foundation is able to offer some things better than others. Fellows that need technical or design support, for example, might ask for mentorship or guidance from a domain expert. Stipends are available to help fellows carve out time from a busy schedule, and in rare cases grants will be considered. Business plans, pitch decks, and cap tables can tell a gripping story, but this fellowship is not an incubator or accellerator, and should not be treated as a means to secure investment.",
+    ],
+  },
+  {
+    question: "What is expected from a Next Billion Fellow?",
+    answer: [
+      "Fellows must be independent, passionate, and deliberate. Six months is not enought time to accomplish anything huge, but it",
     ],
   },
 ]
