@@ -55,7 +55,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
         </Box>
         <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
       </Box>
-      <Box bg="linear-gradient(180deg, #0E6899 0%, #006EA3 100%)">
+      <Box bg="linear-gradient(180deg, #0E6899 0%, #057db3 100%)">
         <ContentContainer>
           <ImageSplitContent
             image={"/images/homepage/fellow_home.jpg"}
