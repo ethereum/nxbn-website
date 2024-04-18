@@ -41,11 +41,11 @@ const WhoAreNextBillion = () => {
         <ContentContainer>
           <Box gap={8} px={{ base: 8, md: 16 }} position="relative">
             <H2 variant="action">Who Are The Next Billion?</H2>
-            <Box>
-              <Text>
+            <Box maxW={900}>
+              <Text fontSize={18}>
                 The next billion users are already here, on this planet, today.
               </Text>
-              <Text>
+              <Text fontSize={18}>
                 They are not a market to be tapped, a demographic to be
                 influenced, nor are they innocents to be saved. They are just
                 folks, navigating the finite and infinite games of everyday
@@ -55,14 +55,14 @@ const WhoAreNextBillion = () => {
                 humans. Stories of real people, in context, solving their own
                 problems, creating their own opportunities.
               </Text>
-              <Text>
+              <Text fontSize={18}>
                 A better future lies ahead, but to get there we need more than
                 just technology -- we need new ways of thinking about how humans
                 interact with each other and with their environment. We need new
                 stories to tell, new visions of the future, and new ways of
                 expressing our values in code.
               </Text>
-              <Text>
+              <Text fontSize={18}>
                 The Ethereum Foundation endeavors to nurture and support
                 Ethereum, the protocol for human coordination. Team NxBn at the
                 Foundation endeavors to nurture and support the next billion
