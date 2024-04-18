@@ -62,11 +62,8 @@ const WhoAreNextBillion = () => {
                 stories to tell, new visions of the future, and new ways of
                 expressing our values in code.
               </Text>
-              <Text fontSize={18}>
-                The Ethereum Foundation endeavors to nurture and support
-                Ethereum, the protocol for human coordination. Team NxBn at the
-                Foundation endeavors to nurture and support the next billion
-                humans who use the protocol to coordinate.
+              <Text>
+               To coordinate is protocol. To cooperate is human. Ethereum is both.
               </Text>
             </Box>
             <Center
