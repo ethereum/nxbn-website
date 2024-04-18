@@ -4,7 +4,7 @@ import { Box, Center, Divider, Flex, Grid, Text } from "@chakra-ui/react"
 import ContentContainer from "@/components/ContentContainer"
 import FellowCard from "@/components/FellowCard"
 import FilterButton from "@/components/Buttons/FilterButton"
-import { H2, H6 } from "@/components/Headings"
+import { H2, H3, H6 } from "@/components/Headings"
 
 import { FELLOW_LIST_PAGINATION_LIMIT } from "@/utils/constants"
 
@@ -37,9 +37,9 @@ const FellowList = ({ fellowsData }) => {
     <ContentContainer id="fellow-list" mb={130}>
       <Box px={{ base: 6, md: 16 }}>
         <Divider my={12} color="action" borderTop="1px solid" />
-        <H2 variant="action" mb={24}>
+        <H3 variant="action" my={12}>
           Fellows, past and present
-        </H2>
+        </H3>
         {/* TODO: Implement filter for fellows */}
         {/* <Center
           flexDir={{ base: "column", md: "row" }}
