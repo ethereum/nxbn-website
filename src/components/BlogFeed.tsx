@@ -29,8 +29,8 @@ const BlogFeed = ({ blogs }) => {
             border="1px solid transparent"
             p={4}
             _hover={{
-              borderColor: "white",
-              bg: "#064A6480",
+              
+              bg: "#00000010",
             }}
           >
             <H3 mb={0}>{blog.title}</H3>
