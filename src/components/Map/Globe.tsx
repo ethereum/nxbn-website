@@ -143,8 +143,8 @@ const Globe = ({ allFellowsFrontmatter }) => {
         />
         <Flex
           flex={1}
-          flexDir={{ base: "column", sm: "row" }}
-          w={{ base: "100%", sm: "400px", md: "500px" }}
+          flexDir={{ base: "column", sm: "row", md: "row", lg: "column", xl: "row"}}
+          w={{ base: "100%", sm: "400px", md: "500px", lg: "330px", xl: "500px"}}
           bg="#00000050"
           borderRadius="30px"
           minH="156px"
@@ -189,10 +189,13 @@ const Globe = ({ allFellowsFrontmatter }) => {
             <Text
               m={0}
               textStyle="footer-text"
+              textAlign={{base: "center", sm: "left", md: "left", lg: "center", xl: "left" }}
               color="bodyHover"
             >{`Fellowship Cohort ${allFellowsFrontmatter[activeFellowIndex].cohort}`}</Text>
-            <Box>
-              <H4 m={0}>
+            <Box 
+              textAlign={{base: "center", sm: "left", md: "left", lg: "center", xl: "left" }}
+              >
+              <H4 m={0} textAlign={{base: "center", sm: "left", md: "left", lg: "center", xl: "left" }}>
                 {allFellowsFrontmatter[activeFellowIndex].fellowName}
               </H4>
               <Text m={0} textStyle="footer-text">

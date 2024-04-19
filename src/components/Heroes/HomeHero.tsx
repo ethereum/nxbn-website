@@ -10,37 +10,40 @@ const GlobeComponentWithNoSSR = dynamic(
     loading: () => <Box flex="1" />,
   }
 )
-import { H1, H2 } from "@/components/Headings"
+import { H1 } from "@/components/Headings"
 import ContentContainer from "../ContentContainer"
 
 const HomeHero = ({ allFellowsFrontmatter }) => {
   return (
-    <ContentContainer pb={36}>
+    <ContentContainer>
       <Flex
         px={{ base: 8, md: 16 }}
         pb={8}
-        pt={16}
-        gap={16}
+        pt={{ base: 32, md: 32, lg: 32, xl: 100 }}
+        gap={{ base: 0, md: 2, lg: 6, xl: 16 }}
         flexDir={{ base: "column", lg: "row" }}
       >
         <Center flex={1}>
           <Heading
             as={H1}
-            fontSize={{ base: 46, md: 54, lg: 52, xl: 56 }}
-            fontWeight={300}
-            lineHeight={1.2}
+            fontSize={{ base: 38, sm:50, md: 60, lg: 64, xl: 80 }}
+            fontWeight={400}
+            lineHeight={{ base: "1.1", md:"1.5", lg: "1.2" }}
+            textAlign={{ base: "center", lg: "left" }}
           >
             Ethereum’s
             <Box
               as="span"
-              display="block"
+              display={{ base: "block", md:"inline", lg: "block" }}
+              
               color="action"
-              fontWeight={500}
-              fontSize={{ base: 50, md: 68, lg: 58, xl: 66 }}
+              px ={{ base: "4", lg: "0" }}
+              fontWeight={800}
+             
             >
               next billion
             </Box>
-            are here, now ➡
+            are here, now
           </Heading>
         </Center>
         <GlobeComponentWithNoSSR
