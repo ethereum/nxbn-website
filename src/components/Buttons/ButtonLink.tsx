@@ -30,6 +30,9 @@ const ButtonLink = ({
       textStyle="button-link"
       textAlign="center"
       sx={{ ...variants[variant] }}
+      _hover={{
+        opacity: 0.8
+      }}
       {...props}
     >
       {children}
