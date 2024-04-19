@@ -1,7 +1,7 @@
 ---
-name: Blank Issue
-about: A generic issue for anything
+name: Contribution
+about: Something that you'd like to contribute to the nxbn website
 title: ""
-labels: ""
+labels: "feature"
 assignees: ""
 ---
