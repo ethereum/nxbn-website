@@ -57,7 +57,7 @@ const FellowList = ({ fellowsData }) => {
 
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
-          gap={24}
+          gap={14}
         >
           {currentItems.map((fellow, index) => (
             <Box key={index}>
