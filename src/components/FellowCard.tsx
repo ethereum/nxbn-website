@@ -18,11 +18,16 @@ const FellowCard = ({
 }) => {
   return (
     <Flex
-      mt={6}
-      mb={12}
+      p={6}
       gap={6}
       flexDir={{ base: "column", md: "row" }}
+      borderRadius={4}
+      cursor="pointer"
+      sx={{
+        transition: 'background-color 0.3s',
+      }}
       _hover={{
+        bg:"#00000040",
         img: {
           ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
         },

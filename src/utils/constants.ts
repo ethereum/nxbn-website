@@ -23,5 +23,5 @@ export const IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT = {
 }
 
 export const IMAGE_ZOOM_HOVER_STYLE_CONSTANT = {
-  transform: "scale(1.05)",
+  transform: "scale(1.02)",
 }
