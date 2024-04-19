@@ -12,7 +12,6 @@ description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam
 tags:
   - defi
   - SEAsia
-  - incomplete
   - hidden
   - 2022-cohort-2
 ---
