@@ -16,7 +16,7 @@ const AboutPage = () => {
         >
           <ContentContainer>
             <Box px={{ base: 8, md: 16 }}>
-              <H1 variant="action" mt="-100px" fontSize={{ base: 50, md: 70 }}>
+              <H1 variant="action" mt="-100px">
                 Time for coordination
               </H1>
               <Box maxW="815px" pb={20}>

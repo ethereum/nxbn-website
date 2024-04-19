@@ -2,7 +2,7 @@ import { Heading } from "@chakra-ui/react"
 
 export const H1 = ({ children, ...props }) => {
   return (
-    <Heading as="h1" textStyle="h1" wordBreak="break-word" {...props}>
+    <Heading as="h1" textStyle="h1" fontSize={{ base: "40", md: "70" }} wordBreak="break-word" {...props}>
       {children}
     </Heading>
   )
