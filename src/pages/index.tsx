@@ -104,7 +104,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
             </H2>
             <BlogFeed blogs={blogs} />
             <Flex justify="center" my="64px">
-              <ButtonLink href="https://blog.ethereum.org/">
+              <ButtonLink href="https://blog.ethereum.org/category/next-billion">
                 See all posts
               </ButtonLink>
             </Flex>
