@@ -9,7 +9,6 @@ import FellowList from "@/components/FellowList"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 
 const FAQQuestions: Question[] = [
-
   {
     question: "What kinds of projects qualify?",
     answer: [

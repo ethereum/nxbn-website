@@ -63,7 +63,8 @@ const WhoAreNextBillion = () => {
                 expressing our values in code.
               </Text>
               <Text>
-               To coordinate is protocol. To cooperate is human. Ethereum is both.
+                To coordinate is protocol. To cooperate is human. Ethereum is
+                both.
               </Text>
             </Box>
             <Center

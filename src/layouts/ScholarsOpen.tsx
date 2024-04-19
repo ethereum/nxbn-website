@@ -53,8 +53,8 @@ const ScholarOpen = () => {
             </Center>
             <Box maxW="650px">
               <Text fontSize={{ base: 18, md: 24 }}>
-                Come learn, connect, and grow! 
-                November 9-17th in Bangkok, Thailand.
+                Come learn, connect, and grow! November 9-17th in Bangkok,
+                Thailand.
               </Text>
             </Box>
             <Box>
@@ -71,7 +71,7 @@ const ScholarOpen = () => {
                 href="https://devcon.org/en/"
                 variant="secondary"
               >
-               Devcon website 
+                Devcon website
               </ButtonLink>
             </Box>
           </Center>
@@ -106,8 +106,9 @@ const ScholarOpen = () => {
               <Text fontSize={18}>
                 Sometimes human flourishing happens just by showing up. As
                 organizers of Devcon and Devconnect, we can at least create that
-                opportunity for a small group each year. The devcon(nect) scholars program
-                supports travel, room & board, a ticket to devcon, and special programming.
+                opportunity for a small group each year. The devcon(nect)
+                scholars program supports travel, room & board, a ticket to
+                devcon, and special programming.
               </Text>
             </Box>
           </Box>

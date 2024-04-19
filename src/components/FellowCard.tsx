@@ -28,10 +28,7 @@ const FellowCard = ({
         },
       }}
     >
-      <Flex 
-        flex={1} 
-        justifyContent={{ base: "Center", md: "right" }}
-        >
+      <Flex flex={1} justifyContent={{ base: "center", md: "right" }}>
         <Box
           w={40}
           h={40}
@@ -51,18 +48,18 @@ const FellowCard = ({
       </Flex>
       <Box gap={4} flex={1}>
         <Box>
-          <H3 
-            fontWeight="500" 
+          <H3
+            fontWeight="500"
             m={0}
             fontSize={{ base: "28", md: "36" }}
             textAlign={{ base: "Center", md: "left" }}
-            >
+          >
             {fellowName}
           </H3>
           <Text
             fontSize="16"
             pb={1}
-            textAlign={{ base: "Center", md: "left" }}
+            textAlign={{ base: "center", md: "left" }}
             fontWeight={300}
             lineHeight="150%"
             m={0}
@@ -78,7 +75,7 @@ const FellowCard = ({
           />
         </Box>
         <Box>
-          <H5 my={2} fontSize={24} fontSize={{ base: "20", md: "24" }}>
+          <H5 my={2} fontSize={{ base: "20", md: "24" }}>
             {title}
           </H5>
           <Flex flexWrap="wrap" mb={2} mt={4}>
