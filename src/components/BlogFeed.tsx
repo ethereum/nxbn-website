@@ -1,12 +1,15 @@
-import { Box, Flex, Grid, Text } from "@chakra-ui/react"
+import { Box, Grid, Text } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 
 import { H3 } from "@/components/Headings"
 import Link from "./Link"
 
 const BlogFeed = ({ blogs }) => {
+  const router = useRouter()
+
   return (
     <Grid
-      gap={24}
+      gap={20}
       templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
     >
       {blogs.map((blog) => {
@@ -18,7 +21,18 @@ const BlogFeed = ({ blogs }) => {
           year: "numeric", // numeric year
         })
         return (
-          <Box key={blog.link}>
+          <Box
+            key={blog.link}
+            onClick={() => router.replace(blog.link)}
+            cursor="pointer"
+            borderRadius={4}
+            border="1px solid transparent"
+            p={4}
+            _hover={{
+              borderColor: "white",
+              bg: "#064A6480",
+            }}
+          >
             <H3 mb={0}>{blog.title}</H3>
             <Text
               variant="action"
