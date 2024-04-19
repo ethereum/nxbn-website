@@ -21,7 +21,7 @@ const lerp = (start, end, alpha) => start + (end - start) * alpha
 
 const Globe = ({ allFellowsFrontmatter }) => {
   const router = useRouter()
-  const globeContainerRef = useRef(null)
+  const globeContainerRef = useRef<HTMLDivElement>(null)
   const globeRef = useRef<any>(null)
   const [activeFellowIndex, setActiveFellowIndex] = useState(0)
   const [targetRotation, setTargetRotation] = useState({ x: 0, y: 0 })
@@ -36,11 +36,11 @@ const Globe = ({ allFellowsFrontmatter }) => {
       renderer.setClearColor(0x000000, 0)
       renderer.setSize(380, 380)
 
-      if (globeContainerRef.current) {
+      if (globeContainerRef.current && !globeContainerRef.current.hasChildNodes()) {
         ;(globeContainerRef.current as HTMLDivElement).appendChild(
           renderer.domElement
         )
-      }
+    }
 
       const globe = new ThreeGlobe({ animateIn: true })
         .globeImageUrl("/images/map.jpg")
