@@ -3,6 +3,7 @@
 // https://threejs.org/docs/index.html#api/en/
 
 import { Box, Center, Divider, Image, Flex, Text } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 import { useEffect, useRef } from "react"
 import ThreeGlobe from "three-globe"
 import { AmbientLight, WebGLRenderer, Scene, PerspectiveCamera } from "three"
@@ -19,6 +20,7 @@ import {
 const lerp = (start, end, alpha) => start + (end - start) * alpha
 
 const Globe = ({ allFellowsFrontmatter }) => {
+  const router = useRouter()
   const globeContainerRef = useRef(null)
   const globeRef = useRef<any>(null)
   const [activeFellowIndex, setActiveFellowIndex] = useState(0)
@@ -150,11 +152,17 @@ const Globe = ({ allFellowsFrontmatter }) => {
           gap={3.5}
           overflow="hidden"
           alignItems="center"
+          cursor="pointer"
+          sx={{
+            transition: 'background-color 0.3s',
+          }}
           _hover={{
+            bg:"#00000040",
             img: {
               ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
             },
           }}
+          onClick={() => router.push(`/fellowship/${allFellowsFrontmatter[activeFellowIndex].slug}`)}
         >
           <Flex>
             <Box
