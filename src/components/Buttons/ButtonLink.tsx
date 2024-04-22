@@ -31,7 +31,7 @@ const ButtonLink = ({
       textAlign="center"
       sx={{ ...variants[variant] }}
       _hover={{
-        opacity: 0.8
+        opacity: 0.8,
       }}
       {...props}
     >

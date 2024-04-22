@@ -22,20 +22,19 @@ const FellowCard = ({
       gap={6}
       flexDir={{ base: "column", md: "row" }}
       borderRadius={4}
-
       cursor="pointer"
       sx={{
-        transition: 'background-color 0.3s',
+        transition: "background-color 0.3s",
       }}
       _hover={{
-        bg:"#00000010",
+        bg: "#00000010",
         cursor: "query",
         img: {
           ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
         },
       }}
     >
-      <Flex flex={1}  justifyContent={{ base: "center", md: "right" }}>
+      <Flex flex={1} justifyContent={{ base: "center", md: "right" }}>
         <Box
           w={40}
           h={40}

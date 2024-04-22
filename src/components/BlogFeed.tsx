@@ -29,7 +29,6 @@ const BlogFeed = ({ blogs }) => {
             border="1px solid transparent"
             p={4}
             _hover={{
-              
               bg: "#00000010",
             }}
           >

@@ -36,11 +36,14 @@ const Globe = ({ allFellowsFrontmatter }) => {
       renderer.setClearColor(0x000000, 0)
       renderer.setSize(380, 380)
 
-      if (globeContainerRef.current && !globeContainerRef.current.hasChildNodes()) {
+      if (
+        globeContainerRef.current &&
+        !globeContainerRef.current.hasChildNodes()
+      ) {
         ;(globeContainerRef.current as HTMLDivElement).appendChild(
           renderer.domElement
         )
-    }
+      }
 
       const globe = new ThreeGlobe({ animateIn: true })
         .globeImageUrl("/images/map.jpg")
@@ -143,8 +146,20 @@ const Globe = ({ allFellowsFrontmatter }) => {
         />
         <Flex
           flex={1}
-          flexDir={{ base: "column", sm: "row", md: "row", lg: "column", xl: "row"}}
-          w={{ base: "100%", sm: "400px", md: "500px", lg: "330px", xl: "500px"}}
+          flexDir={{
+            base: "column",
+            sm: "row",
+            md: "row",
+            lg: "column",
+            xl: "row",
+          }}
+          w={{
+            base: "100%",
+            sm: "400px",
+            md: "500px",
+            lg: "330px",
+            xl: "500px",
+          }}
           bg="#00000050"
           borderRadius="30px"
           minH="156px"
@@ -154,15 +169,19 @@ const Globe = ({ allFellowsFrontmatter }) => {
           alignItems="center"
           cursor="pointer"
           sx={{
-            transition: 'background-color 0.3s',
+            transition: "background-color 0.3s",
           }}
           _hover={{
-            bg:"#00000040",
+            bg: "#00000040",
             img: {
               ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
             },
           }}
-          onClick={() => router.push(`/fellowship/${allFellowsFrontmatter[activeFellowIndex].slug}`)}
+          onClick={() =>
+            router.push(
+              `/fellowship/${allFellowsFrontmatter[activeFellowIndex].slug}`
+            )
+          }
         >
           <Flex>
             <Box
@@ -189,13 +208,34 @@ const Globe = ({ allFellowsFrontmatter }) => {
             <Text
               m={0}
               textStyle="footer-text"
-              textAlign={{base: "center", sm: "left", md: "left", lg: "center", xl: "left" }}
+              textAlign={{
+                base: "center",
+                sm: "left",
+                md: "left",
+                lg: "center",
+                xl: "left",
+              }}
               color="bodyHover"
             >{`Fellowship Cohort ${allFellowsFrontmatter[activeFellowIndex].cohort}`}</Text>
-            <Box 
-              textAlign={{base: "center", sm: "left", md: "left", lg: "center", xl: "left" }}
+            <Box
+              textAlign={{
+                base: "center",
+                sm: "left",
+                md: "left",
+                lg: "center",
+                xl: "left",
+              }}
+            >
+              <H4
+                m={0}
+                textAlign={{
+                  base: "center",
+                  sm: "left",
+                  md: "left",
+                  lg: "center",
+                  xl: "left",
+                }}
               >
-              <H4 m={0} textAlign={{base: "center", sm: "left", md: "left", lg: "center", xl: "left" }}>
                 {allFellowsFrontmatter[activeFellowIndex].fellowName}
               </H4>
               <Text m={0} textStyle="footer-text">
