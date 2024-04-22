@@ -66,12 +66,15 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
               <H2>The Next Billion Fellowship</H2>
               <Text fontSize={18}>
                 A search for stories. Stories that inspire us to focus on the
-                important things, that compel us to find balance and fairness in the way we go
-                about solving our problems, and that encourage us to push deeper into the mysteries of
-                human cooperation.
+                important things, that compel us to find balance and fairness in
+                the way we go about solving our problems, and that encourage us
+                to push deeper into the mysteries of human cooperation.
               </Text>
               <Text fontSize={18} mb={16}>
-                Fellows receive support from the Foundation to complete a small quest inside a big narrative. In return, fellows are asked to share their story with the extended web3 community, or with the world-at-large.
+                Fellows receive support from the Foundation to complete a small
+                quest inside a big narrative. In return, fellows are asked to
+                share their story with the extended web3 community, or with the
+                world-at-large.
               </Text>
               <ButtonLink href="/about">About the program</ButtonLink>
             </Box>
@@ -84,11 +87,12 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
             <Box gap={8}>
               <H2>Devcon SEA Scholars</H2>
               <Text fontSize={18} mb={16}>
-              Devcon is a conference for developers, researchers, thinkers, and makers. 
-              It's the largest single gathering of Ethereum's global community, 
-              and it always happens in a new city. 
-              The scholars program aims to break down at least some barriers-to-entry for people taking their first steps into the infinite garden. 
-
+                Devcon is a conference for developers, researchers, thinkers,
+                and makers. It's the largest single gathering of Ethereum's
+                global community, and it always happens in a new city. The
+                scholars program aims to break down at least some
+                barriers-to-entry for people taking their first steps into the
+                infinite garden.
               </Text>
               <ButtonLink href="/scholars">Learn more</ButtonLink>
             </Box>

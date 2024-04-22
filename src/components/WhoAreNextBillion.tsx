@@ -2,11 +2,33 @@ import { Box, Center, Image, Text } from "@chakra-ui/react"
 import { H2 } from "@/components/Headings"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import ContentContainer from "./ContentContainer"
+import { useEffect, useState, useRef } from "react"
 
 const WhoAreNextBillion = () => {
+  const [offsetY, setOffsetY] = useState(0)
+  const refContainer = useRef<HTMLDivElement>(null)
+
+  const handleScroll = () => {
+    if (refContainer.current) {
+      const { top, height } = refContainer.current.getBoundingClientRect()
+      if (top <= window.innerHeight && top + height >= 0) {
+        setOffsetY(window.scrollY - top)
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const parallaxFactor = 0.05
+  const computedOffset = Math.min(offsetY * parallaxFactor - 110, 1.45)
+
   return (
-    <Box gap={8}>
-      <Box position="relative" height="800px" width="100%">
+    <Box gap={8} ref={refContainer}>
+      <Box position="relative" height="800px" width="100%" zIndex={-1}>
         <Image
           position="absolute"
           top="0"
@@ -15,26 +37,29 @@ const WhoAreNextBillion = () => {
           h="100%"
           w="100%"
           alt=""
+          zIndex={1}
         />
         <Image
           position="absolute"
-          top={0}
+          top={`${-computedOffset}px`}
           src={"/images/homepage/middleground.png"}
           objectFit="cover"
           objectPosition="bottom"
           h="100%"
           w="100%"
           alt=""
+          zIndex={2}
         />
         <Image
           position="absolute"
-          top={0}
+          top="0"
           src={"/images/homepage/foreground.png"}
           objectFit="contain"
           objectPosition="bottom"
           h="100%"
           w="100%"
           alt=""
+          zIndex={3}
         />
       </Box>
       <Box bg="linear-gradient(180deg, #020202 25%, #022B35 100%)" pb={"100px"}>

@@ -26,20 +26,18 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
         <Center flex={1}>
           <Heading
             as={H1}
-            fontSize={{ base: 38, sm:50, md: 60, lg: 64, xl: 80 }}
+            fontSize={{ base: 38, sm: 50, md: 60, lg: 64, xl: 80 }}
             fontWeight={400}
-            lineHeight={{ base: "1.1", md:"1.5", lg: "1.2" }}
+            lineHeight={{ base: "1.1", md: "1.5", lg: "1.2" }}
             textAlign={{ base: "center", lg: "left" }}
           >
             Ethereum’s
             <Box
               as="span"
-              display={{ base: "block", md:"inline", lg: "block" }}
-              
+              display={{ base: "block", md: "inline", lg: "block" }}
               color="action"
-              px ={{ base: "4", lg: "0" }}
+              px={{ base: "4", lg: "0" }}
               fontWeight={800}
-             
             >
               next billion
             </Box>
