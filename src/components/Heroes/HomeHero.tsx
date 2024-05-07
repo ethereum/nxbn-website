@@ -16,19 +16,18 @@ import {
 import { H1 } from "@/components/Headings"
 import ContentContainer from "../ContentContainer"
 
+const GlobeComponentWithNoSSR = dynamic(
+  () => import("../../components/Map/Globe"),
+  {
+    ssr: false, // This line is key to making sure the import is client-side only
+    loading: () => <Box flex="1" w={380} h={380} />,
+  }
+)
+
 const HomeHero = ({ allFellowsFrontmatter }) => {
   const router = useRouter()
   const [activeFellowIndex, setActiveFellowIndex] = useState(0)
   const value = useBreakpointValue({ base: 300, md: 380 })
-  console.log(value)
-
-  const GlobeComponentWithNoSSR = dynamic(
-    () => import("../../components/Map/Globe"),
-    {
-      ssr: false, // This line is key to making sure the import is client-side only
-      loading: () => <Box flex="1" w={value} h={value} />,
-    }
-  )
 
   return (
     <ContentContainer>
