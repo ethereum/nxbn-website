@@ -15,6 +15,7 @@ tags:
   - defi
   - africa-east
   - 2021-cohort-1
+  - kenya
 ---
 
 # Benson
