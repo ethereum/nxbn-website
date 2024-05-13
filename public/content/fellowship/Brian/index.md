@@ -24,7 +24,7 @@ Particularly in Indonesia, the real world needs of a modern worker are not serve
 Web3 is more than financial products, but these are important tools of development. 
 
 
-### The small story
+## The small story
 Copra built an NFT-based personal loan product that has some flaws, but at least it scopes out what lending on-chain might look like for someone who invoices a salary using a web3 tool. 
 
 
