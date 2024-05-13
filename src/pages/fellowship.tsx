@@ -8,6 +8,8 @@ import FellowList from "@/components/FellowList"
 
 import { getAllFellowsFrontmatter } from "@/utils/md"
 
+import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
+
 const FAQQuestions: Question[] = [
   {
     question: "What kinds of projects qualify?",
@@ -46,7 +48,7 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
   return (
     <>
       <Box bg="linear-gradient(180deg, #011E3B 30%, #011E3B00 100%)">
-        <ImageHero heroImage={"/images/fellowship/fellowship-hero.jpg"}>
+        <ImageHero heroImage={HeroImage}>
           <ContentContainer>
             <Box px={{ base: 8, md: 16 }} pb={16} mt={-40}>
               <H1 variant="action">

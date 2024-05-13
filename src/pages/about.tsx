@@ -5,10 +5,12 @@ import { H1, H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
 import ImageSplitContent from "@/components/ImageSplitContent"
 
+import HeroImage from '@/public/images/about/about-hero.jpg'
+
 const AboutPage = () => {
   return (
     <>
-      <ImageHero heroImage={"/images/about/about-hero.jpg"}>
+      <ImageHero heroImage={HeroImage}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #101214 50%, #101214 100%)"

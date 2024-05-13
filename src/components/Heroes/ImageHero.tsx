@@ -1,11 +1,13 @@
-import { Box, Image } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
+
+import Image, { StaticImageData } from 'next/image'
 
 const ImageHero = ({
   children,
   heroImage,
 }: {
   children: any
-  heroImage: string
+  heroImage: StaticImageData
 }) => {
   return (
     <>
@@ -13,11 +15,9 @@ const ImageHero = ({
         <Image
           src={heroImage}
           alt=""
-          w="100%"
-          minH="515px"
-          maxH="1000px"
-          objectFit="cover"
+          placeholder="blur"
           objectPosition="bottom"
+          style={{ width: "100%", height: "515px", maxHeight: "1000px", objectFit: "cover" }}
         />
       </Box>
       {children}

@@ -8,6 +8,8 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
+import HeroImage from '@/public/images/scholars/scholars-hero-open.jpg'
+
 const FAQQuestions: Question[] = [
   {
     question: "Who can apply for a scholarship?",
@@ -29,7 +31,7 @@ const FAQQuestions: Question[] = [
 const ScholarOpen = () => {
   return (
     <>
-      <ImageHero heroImage={"/images/scholars/scholars-hero-open.jpg"}>
+      <ImageHero heroImage={HeroImage}>
         <Box
           w="100%"
           bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
