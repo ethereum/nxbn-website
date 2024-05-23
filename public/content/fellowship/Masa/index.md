@@ -7,7 +7,7 @@ cohort: 1
 country: Country
 lat: 64.1466
 lon: -21.9426
-image: /content/fellowship/Masa/masa-headshot.jpeg
+image: /content/fellowship/Masa/masa-headshot.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - 2022-cohort-2

@@ -7,7 +7,7 @@ cohort: 1
 country: Indonesia
 lat: -54.8019
 lon: -68.303
-image: /content/fellowship/Brian/brian-headshot.jpeg
+image: /content/fellowship/Brian/brian-headshot.jpg
 description: Brian investigated the needs of web3 workers through Copra Finance, a startup that designs web3 financial products for working folks in Jakarta, Indonesia
 tags:
   - defi
@@ -26,6 +26,8 @@ Web3 is more than financial products, but these are important tools of developme
 
 ## The small story
 Copra built an NFT-based personal loan product that has some flaws, but at least it scopes out what lending on-chain might look like for someone who invoices a salary using a web3 tool. 
+
+This primitive is so simple and beautiful. 
 
 
 

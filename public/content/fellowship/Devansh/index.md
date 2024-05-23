@@ -7,7 +7,7 @@ cohort: 1
 country: India
 lat: 44.428
 lon: -110.5885
-image: /content/fellowship/Devansh/devansh-headshot.jpeg
+image: /content/fellowship/Devansh/devansh-headshot.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - asia-south

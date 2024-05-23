@@ -7,7 +7,7 @@ cohort: 1
 country: Guatemala
 lat: 35.0116
 lon: 135.7681
-image: /content/fellowship/Marcus/marcus-headshot.png
+image: /content/fellowship/Marcus/marcus-headshot.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - america-latin

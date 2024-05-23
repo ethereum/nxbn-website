@@ -7,7 +7,7 @@ cohort: 1
 country: Country
 lat: 64.1466
 lon: -21.9426
-image: /content/fellowship/Gabriella/gabriella-headshot.png
+image: /content/fellowship/Gabriella/gabriella-headshot.jpg
 description: Bloinx is a project that focuses on 'tandas' in Mexico. In 2022, Gabriela conducted user research with several women's saving circles, and ran a pilot of Bloinx deployed on the polygon and celo side-chains.
 tags:
   - america-latin

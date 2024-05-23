@@ -7,7 +7,7 @@ cohort: 1
 country: Country
 lat: 44.428
 lon: -110.5885
-image: /content/fellowship/Mary(incomplete)/mary-headshot.jpeg
+image: /content/fellowship/Mary(incomplete)/mary-headshot.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - 2022-cohort-2

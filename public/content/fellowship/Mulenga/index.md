@@ -7,7 +7,7 @@ cohort: 1
 country: Country
 lat: -33.9249
 lon: 18.4241
-image: /content/fellowship/Mulenga/mulenga-headshot.jpeg
+image: /content/fellowship/Mulenga/mulenga-headshot.jpg
 description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
 tags:
   - 2023-cohort-3
