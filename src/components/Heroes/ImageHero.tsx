@@ -11,13 +11,17 @@ const ImageHero = ({
 }) => {
   return (
     <>
-      <Box mt={-16}>
+      <Box mt={-16} minHeight={"450px"}>
         <Image
           src={heroImage}
           alt=""
           placeholder="blur"
           objectPosition="bottom"
-          style={{ width: "100%", height: "515px", maxHeight: "1000px", objectFit: "cover" }}
+          width={"100%"} 
+          height={"515px"} 
+          maxHeight={"700px"} 
+          objectFit="cover"
+          minHeight={"515px"}
         />
       </Box>
       {children}
