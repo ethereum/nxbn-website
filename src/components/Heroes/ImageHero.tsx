@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react"
 
 import Image, { StaticImageData } from 'next/image'
 
+
 const ImageHero = ({
   children,
   heroImage,
@@ -11,18 +12,15 @@ const ImageHero = ({
 }) => {
   return (
     <>
-      <Box mt={-16} minHeight={"450px"}>
-        <Image
-          src={heroImage}
-          alt=""
-          placeholder="blur"
-          objectPosition="bottom"
-          width={"100%"} 
-          height={"515px"} 
-          maxHeight={"700px"} 
-          objectFit="cover"
-          minHeight={"515px"}
-        />
+      <Box mt={-16}>
+        <Box 
+          height={{ base: "500px", md: "600px", lg: "700px", xl: "900px"}}
+          backgroundImage={`url(${heroImage.src})`}
+          backgroundSize="cover"
+          backgroundPosition="center bottom"
+          >
+        
+        </Box>
       </Box>
       {children}
     </>

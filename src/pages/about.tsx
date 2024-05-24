@@ -14,7 +14,7 @@ const AboutPage = () => {
         <Box
           w="100%"
           bg="linear-gradient(180deg, #101214 50%, #101214 100%)"
-          pt="-200px"
+          pt="10px"
         >
           <ContentContainer>
             <Box px={{ base: 8, md: 16 }}>

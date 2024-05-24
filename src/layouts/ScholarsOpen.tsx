@@ -35,7 +35,7 @@ const ScholarOpen = () => {
         <Box
           w="100%"
           bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
-          mt={{ base: "-40%", md: "-22%", lg: "-15%" }}
+         
         >
           <Center
             gap={4}
