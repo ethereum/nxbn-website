@@ -38,13 +38,15 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
         gap={{ base: 0, md: 2, lg: 6, xl: 16 }}
         flexDir={{ base: "column", lg: "row" }}
       >
-        <Center flex={1}>
+        <Center flex={1} height={{ base: "auto", lg:"1000px", xl: "800px" }}>
           <Heading
             as={H1}
             fontSize={{ base: 38, sm: 50, md: 60, lg: 64, xl: 80 }}
             fontWeight={400}
             lineHeight={{ base: "1.1", md: "1.5", lg: "1.2" }}
             textAlign={{ base: "center", lg: "left" }}
+            position={{ base: "relative", lg: "absolute" }}
+            top={{ base: "0", lg: "360px" }}
           >
             Ethereum’s
             <Box
