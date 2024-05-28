@@ -1,6 +1,8 @@
-import { Box, Image, Flex, Text, Divider, Center } from "@chakra-ui/react"
+import { Box, Image, Flex, Text, Divider } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+
+import ButtonLink from "@/components/Buttons/ButtonLink"
 import { H3, H5 } from "@/components/Headings"
-import ButtonLink from "./Buttons/ButtonLink"
 
 import {
   IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
@@ -16,6 +18,8 @@ const FellowCard = ({
   tags,
   slug,
 }) => {
+  const router = useRouter()
+
   return (
     <Flex
       p={6}
@@ -33,6 +37,7 @@ const FellowCard = ({
           ...IMAGE_ZOOM_HOVER_STYLE_CONSTANT,
         },
       }}
+      onClick={() => router.push(`/fellowship/${slug}`)}
     >
       <Flex flex={1} justifyContent={{ base: "center", md: "right" }}>
         <Box
