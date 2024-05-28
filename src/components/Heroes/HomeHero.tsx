@@ -63,7 +63,7 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
           <Center>
           <GlobeComponentWithNoSSR activeFellow={allFellowsFrontmatter[activeFellowIndex]} size={value} />
           </Center>
-          <Center>
+          <Center zIndex={1}>
             <Divider
               borderLeft="2px solid"
               borderColor="#9DCE64"
