@@ -35,7 +35,6 @@ const ScholarOpen = () => {
         <Box
           w="100%"
           bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
-         
         >
           <Center
             gap={4}
@@ -43,7 +42,7 @@ const ScholarOpen = () => {
             px={{ base: 8, md: 16 }}
             textAlign="center"
           >
-            <Center flexDir="column">
+            <Center flexDir="column" mt={{ base: "-100px", md: "-200px", lg: "-300px" }}>
               <Image
                 src={"/images/scholars/eth-glyph.png"}
                 alt=""
