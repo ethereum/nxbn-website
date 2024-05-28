@@ -10,7 +10,7 @@ import Link from "@/components/Link"
 
 export const Breadcrumbs = () => {
   const router = useRouter()
-  const path = router.asPath.split("/").filter((x) => x)
+  const path = router.asPath.split("#")[0].split("/").filter((x) => x)
 
   return (
     <Stack direction="row" spacing={2} pt={4}>
@@ -23,7 +23,7 @@ export const Breadcrumbs = () => {
               <BreadcrumbLink
                 as={Link}
                 href={url}
-                color={router.asPath === url ? "action" : "body"}
+                color={router.asPath.split("#")[0] === url ? "action" : "body"}
               >
                 {segment}
               </BreadcrumbLink>
