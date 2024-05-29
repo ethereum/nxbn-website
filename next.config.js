@@ -25,6 +25,7 @@ module.exports = withMDX((phase) => {
              * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
              * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
              */
+            ".git/**",
             "node_modules/@swc/core-linux-x64-gnu",
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
