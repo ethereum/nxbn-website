@@ -3,9 +3,9 @@ import { extname, join } from "path"
 
 import { CONTENT_DIR } from "@/utils/constants"
 
-const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
-
 export const getContentPaths = (dirName: string) => {
+  const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
+
   let files: string[] = []
   const filesPath = join(CURRENT_CONTENT_DIR, dirName)
   const fileList = fs.readdirSync(filesPath, { withFileTypes: true })
