@@ -52,4 +52,4 @@ module.exports = withMDX((phase) => {
   }
 
   return nextConfig;
-});
+})
