@@ -70,7 +70,7 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
               borderLeft="2px solid"
               borderColor="#9DCE64"
               m="auto"
-              mt="-150px"
+              mt="-190px"
               height="245px"
             />
           </Center>

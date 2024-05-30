@@ -48,6 +48,13 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@babel/runtime@^7.17.8":
+  version "7.24.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.6.tgz#5b76eb89ad45e2e4a0a8db54c456251469a3358e"
+  integrity sha512-Ja18XcETdEl5mzzACGd+DKgaGJzPTCow7EglgwTmHdwokzDFYh/MHua6lU6DV/hjF2IaOJ4oX2nqnjG7RElKOw==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/types@^7.22.15":
   version "7.24.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.24.0.tgz#3b951f435a92e7333eba05b7566fd297960ea1bf"
@@ -1965,7 +1972,6 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-
 data-joint@1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/data-joint/-/data-joint-1.3.1.tgz#d134950322c90f531e81bbbe8454277549031466"
@@ -2743,6 +2749,11 @@ framesync@6.1.2:
   dependencies:
     tslib "2.4.0"
 
+fromentries@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/fromentries/-/fromentries-1.3.2.tgz#e4bca6808816bf8f93b52750f1127f5a6fd86e3a"
+  integrity sha512-cHEpEQHUg0f8XdtZCc2ZAhrHzKzT0MrFUTcvx+hfxYu7rGMDc5SKoXFh+n4YigxsHXRzc6OrCshdR1bWH6HHyg==
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -2868,6 +2879,18 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
+globe.gl@^2.32:
+  version "2.32.4"
+  resolved "https://registry.yarnpkg.com/globe.gl/-/globe.gl-2.32.4.tgz#d571a1592f3a310a802c1ba37cea1f2dccb92967"
+  integrity sha512-sz27f41T/EzKalqhL/ngt1/WizY4EAvzr66k1eVS2Rs6m3A6RvK5/FhyWEjAe5dPB7JV85bw+9SgARKcb5oh+g==
+  dependencies:
+    "@tweenjs/tween.js" "18 - 23"
+    accessor-fn "1"
+    kapsule "1"
+    three ">=0.118 <1"
+    three-globe "^2.31"
+    three-render-objects "^1.29"
+
 gopd@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gopd/-/gopd-1.0.1.tgz#29ff76de69dac7489b7c0918a5788e56477c332c"
@@ -2885,12 +2908,6 @@ graphemer@^1.4.0:
   resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
-
-h3-js@4:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/h3-js/-/h3-js-4.1.0.tgz#f8c4a8ad36612489a954f1a0bb3f4b7657d364e5"
-  integrity sha512-LQhmMl1dRQQjMXPzJc7MpZ/CqPOWWuAvVEoVJM9n/s7vHypj+c3Pd5rLQCkAsOgAoAYKbNCsYFE++LF7MvSfCQ==
-
 gray-matter@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-4.0.3.tgz#e893c064825de73ea1f5f7d88c7a9f7274288798"
@@ -2901,6 +2918,10 @@ gray-matter@^4.0.3:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
+h3-js@4:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/h3-js/-/h3-js-4.1.0.tgz#f8c4a8ad36612489a954f1a0bb3f4b7657d364e5"
+  integrity sha512-LQhmMl1dRQQjMXPzJc7MpZ/CqPOWWuAvVEoVJM9n/s7vHypj+c3Pd5rLQCkAsOgAoAYKbNCsYFE++LF7MvSfCQ==
 
 has-bigints@^1.0.1, has-bigints@^1.0.2:
   version "1.0.2"
@@ -3359,6 +3380,11 @@ jackspeak@^2.3.5:
     "@isaacs/cliui" "^8.0.2"
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
+
+jerrypick@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/jerrypick/-/jerrypick-1.1.1.tgz#db0b15841a53cfe492de2db9544eecf8de73203c"
+  integrity sha512-XTtedPYEyVp4t6hJrXuRKr/jHj8SC4z+4K0b396PMkov6muL+i8IIamJIvZWe3jUspgIJak0P+BaWKawMYNBLg==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -4795,6 +4821,13 @@ picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
+polished@4:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-4.3.1.tgz#5a00ae32715609f83d89f6f31d0f0261c6170548"
+  integrity sha512-OBatVyC/N7SCW/FaDHrSd+vn0o5cS855TOmYi4OkdWUMSJCET/xip//ch8xGUvtr3i44X9LVyWwQlRMTN3pwSA==
+  dependencies:
+    "@babel/runtime" "^7.17.8"
+
 possible-typed-array-names@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/possible-typed-array-names/-/possible-typed-array-names-1.0.0.tgz#89bb63c6fada2c3e90adc4a647beeeb39cc7bf8f"
@@ -4819,7 +4852,7 @@ prettier@^3.2.5:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.5.tgz#e52bc3090586e824964a8813b09aba6233b28368"
   integrity sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==
 
-prop-types@^15.6.2, prop-types@^15.8.1:
+prop-types@15, prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -4843,11 +4876,6 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-rafor@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/rafor/-/rafor-1.0.2.tgz#e927cebcb9d8908da7a931ab0712095f1f199ec9"
-  integrity sha512-b8e8/srbSbC0FZTxivEz9pj5z1mQM8CpCEv1aAxuaK26ljSOHJk8AjimcTaHpHIZlwH/VPbli12LuKKrJyyGmA==
-
 queue@6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/queue/-/queue-6.0.2.tgz#b91525283e2315c7553d2efa18d83e76432fed65"
@@ -4855,6 +4883,10 @@ queue@6.0.2:
   dependencies:
     inherits "~2.0.3"
 
+rafor@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/rafor/-/rafor-1.0.2.tgz#e927cebcb9d8908da7a931ab0712095f1f199ec9"
+  integrity sha512-b8e8/srbSbC0FZTxivEz9pj5z1mQM8CpCEv1aAxuaK26ljSOHJk8AjimcTaHpHIZlwH/VPbli12LuKKrJyyGmA==
 
 react-clientside-effect@^1.2.6:
   version "1.2.6"
@@ -4888,6 +4920,15 @@ react-focus-lock@^2.9.4:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
+react-globe.gl@^2.27.2:
+  version "2.27.2"
+  resolved "https://registry.yarnpkg.com/react-globe.gl/-/react-globe.gl-2.27.2.tgz#6d257197c899c1c9f77d18bb8a7d1a548b2d5d29"
+  integrity sha512-DqYZ1n93U50WZBBOpw+q+bFjzG/msQzSnEZDUgyceTmzu1fDXg/Tjeua6VsIhLDLW1uYOGqIkKQz6wbjbA7AWQ==
+  dependencies:
+    globe.gl "^2.32"
+    prop-types "15"
+    react-kapsule "2"
+
 react-icons@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.0.1.tgz#1694e11bfa2a2888cab47dcc30154ce90485feee"
@@ -4897,6 +4938,14 @@ react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-kapsule@2:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-kapsule/-/react-kapsule-2.4.0.tgz#50d296ed2872a6db89f2de176eebb1a4ce2cccb8"
+  integrity sha512-w4Yv9CgWdj8kWGQEPNWFGJJ08dYEZHZpiaFR/DgZjCMBNqv9wus2Gy1qvHVJmJbzvAZbq6jdvFC+NYzEqAlNhQ==
+  dependencies:
+    fromentries "^1.3.2"
+    jerrypick "^1.1.1"
 
 react-remove-scroll-bar@^2.3.6:
   version "2.3.6"
@@ -5425,7 +5474,7 @@ three-geojson-geometry@1:
     d3-geo "1 - 3"
     earcut "2"
 
-three-globe@^2.31.0:
+three-globe@^2.31:
   version "2.31.0"
   resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.31.0.tgz#a214446c50c6c7d5ddfe427219916c15454cf295"
   integrity sha512-p2pCPaqAoBdjZxS0e+oLbv5d4R5ud6m8wkQENaENToyPX4S5NVnMRXu8zyMP4jnhYbtDqnefeDlKo9wqe4jUug==
@@ -5450,10 +5499,20 @@ three-globe@^2.31.0:
     tinycolor2 "1"
     yaot "^1.1"
 
-three@^0.162.0:
-  version "0.162.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.162.0.tgz#b15a511f1498e0c42d4d00bbb411c7527b06097e"
-  integrity sha512-xfCYj4RnlozReCmUd+XQzj6/5OjDNHBy5nT6rVwrOKGENAvpXe2z1jL+DZYaMu4/9pNsjH/4Os/VvS9IrH7IOQ==
+three-render-objects@^1.29:
+  version "1.29.4"
+  resolved "https://registry.yarnpkg.com/three-render-objects/-/three-render-objects-1.29.4.tgz#f609b73e6058ca703227f0f32674ee6ed6fb7d50"
+  integrity sha512-E6YwTN5zNsaMjo/5rosgnK44b1aq//3YJGJ5BxG9t7+euRm7ZAmNX3NIqFkoDhKtFC5WLoOxZjyNoq8Uc49gaA==
+  dependencies:
+    "@tweenjs/tween.js" "18 - 23"
+    accessor-fn "1"
+    kapsule "1"
+    polished "4"
+
+"three@>=0.118 <1":
+  version "0.164.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.164.1.tgz#b742f76bd8dfd3736ba0d86a12dfddb73c5cdcc0"
+  integrity sha512-iC/hUBbl1vzFny7f5GtqzVXYjMJKaTPxiCxXfrvVdBi1Sf+jhd1CAkitiFwC7mIBFCo3MrDLJG97yisoaWig0w==
 
 tiny-invariant@^1.0.6:
   version "1.3.3"
