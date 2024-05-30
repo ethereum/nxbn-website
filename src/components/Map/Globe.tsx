@@ -7,8 +7,8 @@ const GlobeComponent = ({ activeFellow, size }) => {
 
   useEffect(() => {
     if (globeEl.current) {
-      globeEl.current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 2 }, 0)
-      const controls = globeEl.current.controls()
+      (globeEl.current as any).current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 2 }, 0)
+      const controls = (globeEl.current as any).current.controls()
       controls.enableZoom = false
       controls.enableRotate = false
       controls.enablePan = false
@@ -17,7 +17,7 @@ const GlobeComponent = ({ activeFellow, size }) => {
 
   useEffect(() => {
     if (globeEl.current && activeFellow) {
-      globeEl.current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 1.5 }, 1000); // Second argument for smooth transition
+      (globeEl.current as any).current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 1.5 }, 1000); // Second argument for smooth transition
     }
   }, [activeFellow]);
 
