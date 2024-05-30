@@ -1,14 +1,14 @@
 ---
 index: 7
 layout: fellow
-title: Frugal Innovations for Climate Migrants
+title: What role could crypto play in BRAC?
 fellowName: Kuldeep
 cohort: 1
 country: Bangladesh
 lat: -54.8019
 lon: -68.303
 image: /content/fellowship/Kuldeep/kuldeep-headshot-logo.jpg
-description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
+description: Exploring a crypto strategy within BRAC
 tags:
   - asia-south
   - asia
@@ -17,6 +17,6 @@ tags:
   - 2021-cohort-1
 ---
 
-# Kuldeep's Story
+# Kuldeep Bandhu Aryal
 
-(has yet to be told)
+**Kuldeep Bandhu Aryal** [(BRAC)](http://www.brac.net/) sought to build a blockchain and crypto strategy for BRAC - the world’s largest NGO based in Bangladesh that annually serves over 100 million people. His project - which also involves multiple experiments using blockchain - could serve as a model for other social enterprises and the development sector at large.

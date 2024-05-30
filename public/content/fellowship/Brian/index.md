@@ -15,6 +15,14 @@ tags:
   - asia-southeast
   - 2023-cohort-3
 ---
+
+
+## Brian Limiardi
+**Brian Limiardi** builds for financial inclusion in Indonesia as co-founder of Copra. While access to personal loans is available through banks, there are many contexts in which the only way to get a loan for business is through informal lenders (read: loan sharks). For folks that choose to work and invoice in cryptocurrency, access to even simple legacy financial tools like personal or small business loans can be an obstacle. For his Fellowship, Brian will focus on researching the needs and realities of the growing demographic of workers and small businesses who use crypto as a primary means of invoicing and bookkeeping.
+
+----
+
+
 # The Big Narrative
 
 Brian's story is about learning what workers in today's world need. 

@@ -8,13 +8,15 @@ country: Mexico
 lat: 35.0116
 lon: 135.7681
 image: /content/fellowship/Chuy/chuy-headshot-logo.jpg
-description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
+description: Chuy explores government-issued documents on chain in Argentina and other LatAm countries.
 tags:
   - identity
   - america-latin
   - america-central
   - 2021-cohort-1
 ---
+## Chuy Cepeda 
+**Chuy Cepeda** [(OS.City)](https://os.city/) worked with municipal and national governments to create an Ethereum wallet app in Spanish for citizens, with a vision to one-day hold government-issued documents (like permits and IDs). During the Fellowship Program, he and his team worked with the government of Argentina and created strategies to advance the meaningful adoption of blockchain in the public sector in Latin America. [Read more about Chuy's work here.](https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity/)
 
 ## Upgrading Bureaucracy
 

@@ -4,7 +4,7 @@ layout: fellow
 title: Small Business Savings Circles
 fellowName: Gabriela
 cohort: 1
-country: Country
+country: Mexico
 lat: 64.1466
 lon: -21.9426
 image: /content/fellowship/Gabriela/gabriela-headshot.jpg
@@ -15,3 +15,6 @@ tags:
   - defi
   - research
 ---
+## Gabriela Guerra
+
+**Gabriela Guerra** founded [Bloinx](https://bloinx.io/), a startup that implements blockchain-based tandas (also known as cundinas, susu, hui, arisan, quiniela, stokvel, and others around the world) – informal savings circles. Gabriela is convinced that blockchain can have real benefit for the unbanked population of the world, and that savings circles are one good starting mechanism. During her Fellowship, Gabriela conducted pilots in Mexico and Venezuela and used the research to help improve Bloinx for larger scales.

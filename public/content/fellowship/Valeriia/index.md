@@ -1,21 +1,28 @@
 ---
 index: 14
 layout: fellow
-title: Ukraine and Crypto
+title: How Ukrainians are adopting blockchain
 fellowName: Valeriia
 cohort: 1
-country: Country
+country: Ukraine
 lat: -54.8019
 lon: -68.303
 image: /content/fellowship/Valeriia/valeriia-headshot.jpg
-description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
+description: Studying and documenting grassroots adoption of blockchain and other decentralized applications within the Ukrainian community
 tags:
   - research
   - europe
   - 2023-cohort-3
 ---
 
-# In times of war: how Ukrainians are adopting blockchain
+## Valeriia Panina
+
+Valeriia is a user experience specialist and an advisor to the Ukraine's Ministry of Digital Transformation. The war in Ukraine has shown that ingenuity and tenacity in human coordination is essential. When understanding the potential of protocols like Ethereum to be useful in such a time, pragmatism is wise. During her Fellowship, Ria will research the real drivers and blockers of adoption of cryptocurrencies and other decentralized applications for ordinary users to map emergent use cases and behaviors in Ukraine.
+
+---
+
+
+How Ukrainians are adopting blockchain
 
 Ukraine has ranked as one of the countries with the highest crypto adoption (3rd in 2022, 4th in 2021) on Chainalysis’s Global Crypto Adoption Index. The general perception is that since the full-scale war broke out, crypto adoption has been on rise, with [government agencies and other organizations facilitating donations in crypto](https://www.coindesk.com/business/2022/03/09/ukraine-has-received-close-to-100-million-in-crypto-donations/), [UNHCR sending crypto to displaced people](https://www.wired.co.uk/article/ukraine-crypto-refugee-aid), and [a major pharmacy chain accepting crypto payments](https://bitcoinmagazine.com/business/ukrainian-pharmacy-chain-enables-bitcoin-payments) Does this perception matches the reality of adoption by Ukrainians, be it the general population, founders, educators, government agencies and civil society?
 

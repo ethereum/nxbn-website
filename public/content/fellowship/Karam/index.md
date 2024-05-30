@@ -4,11 +4,11 @@ layout: fellow
 title: Peer to peer aid in Humanitarian Crises
 fellowName: Karam Alhamad
 cohort: 1
-country: Country
+country: Syria
 lat: -33.9249
 lon: 18.4241
 image: /content/fellowship/Karem/karam-headshot.jpg
-description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
+description: Beyond Borders - Unveiling Potential of Blockchain in a Crisis - the case of Syria
 tags:
   - middle-east
   - p2p
@@ -17,6 +17,14 @@ tags:
   - CSO
   - aid
   - 2022-cohort-2
+  - human-rights
+---
+
+
+## Karam Alhamad
+**Karam Alhamad** is an entrepreneur, fintech visionary, international development professional, and human rights policy advocate. Karam founded [ZeFi,](https://zefi.com/en) an educational platform and community focused on fostering blockchain education and research custom-fit for the Syrian context. For the Fellowship, Karam conducted research that increases practical and culturally-sensitive understandings of how blockchains can solve problems in conflict settings.
+
+
 ---
 
 ![](zefi-test.png)

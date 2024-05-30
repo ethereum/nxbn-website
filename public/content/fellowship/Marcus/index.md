@@ -8,12 +8,17 @@ country: Guatemala
 lat: 35.0116
 lon: 135.7681
 image: /content/fellowship/Marcus/marcus-headshot.jpg
-description: Nam dignissim lacus ipsum, a ullamcorper nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at, vulputate augue.
+description: Empowering disenfranchised communities in Latin America using Ethereum
 tags:
   - america-latin
   - defi
   - research
   - 2022-cohort-2
+---
+
+## Marcus Alburez Myers
+**Marcus Alburez Myers** is a Guatemalan entrepreneur working to address today's pressing challenges. He is currently a Founder-in-Residence at Europe's leading accelerator, Entrepreneur First, where he is drawing on the power of web3 to empower marginalized communities. With a focus in Guatemala, Marcus explored the real-world barriers to physical asset financing for DeFi, and compiled his finding into the ["Last Mile DeFi Report"](https://marcus.mirror.xyz/nFmYxl7DkZF655eCFz7Z4QlrOZ5ycg7Ny5gDcMpQ-tQ).
+
 ---
 
 Among many things, crypto's promise is to create new, more equitable economic models that can benefit everyone, not just the wealthy and powerful. Some see DeFi’s promise as being able to provide financial services to those who may not have access to traditional financial instruments in emerging economies around the world, including some of the world’s most disenfranchised communities.
