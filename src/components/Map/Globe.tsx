@@ -8,7 +8,7 @@ interface GlobeComponentProps {
 }
 
 const GlobeComponent: React.FC<GlobeComponentProps> = ({ activeFellow, size }) => {
-  const globeEl = useRef()
+  const globeEl = useRef<any>()
 
   useEffect(() => {
     if (globeEl.current) {
