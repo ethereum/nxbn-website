@@ -2,22 +2,27 @@ import React, { useEffect, useRef } from 'react';
 import Globe from 'react-globe.gl';
 import { Box } from "@chakra-ui/react";
 
-const GlobeComponent = ({ activeFellow, size }) => {
-  const globeEl = useRef();
+interface GlobeComponentProps {
+  activeFellow: { lat: number; lon: number }
+  size: number | undefined
+}
+
+const GlobeComponent: React.FC<GlobeComponentProps> = ({ activeFellow, size }) => {
+  const globeEl = useRef<Globe | null>(null);
 
   useEffect(() => {
     if (globeEl.current) {
-      (globeEl.current as any).current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 2 }, 0)
-      const controls = (globeEl.current as any).current.controls()
-      controls.enableZoom = false
-      controls.enableRotate = false
-      controls.enablePan = false
+      globeEl.current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 2 }, 0);
+      const controls = globeEl.current.controls();
+      controls.enableZoom = false;
+      controls.enableRotate = false;
+      controls.enablePan = false;
     }
   }, [size]);
 
   useEffect(() => {
     if (globeEl.current && activeFellow) {
-      (globeEl.current as any).current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 1.5 }, 1000); // Second argument for smooth transition
+      globeEl.current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 1.5 }, 1000); // Smooth transition
     }
   }, [activeFellow]);
 
@@ -26,7 +31,7 @@ const GlobeComponent = ({ activeFellow, size }) => {
       width={size}
       maxWidth={size}
       height="auto"
-      style={{ aspectRatio: "1 / 1" }}
+      sx={{ aspectRatio: "1 / 1" }}
     >
       <Globe
         ref={globeEl}
