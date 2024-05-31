@@ -3,12 +3,12 @@ import Globe from 'react-globe.gl';
 import { Box } from "@chakra-ui/react";
 
 interface GlobeComponentProps {
-  activeFellow: { lat: number; lon: number }
+  activeFellow: { lat: number; lon: number };
   size: number | undefined
 }
 
 const GlobeComponent: React.FC<GlobeComponentProps> = ({ activeFellow, size }) => {
-  const globeEl = useRef<Globe | null>(null);
+  const globeEl = useRef()
 
   useEffect(() => {
     if (globeEl.current) {
