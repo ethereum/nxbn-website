@@ -15,7 +15,9 @@ tags:
   - america-central
   - 2021-cohort-1
 ---
-## Chuy Cepeda 
+
+## Chuy Cepeda
+
 **Chuy Cepeda** [(OS.City)](https://os.city/) worked with municipal and national governments to create an Ethereum wallet app in Spanish for citizens, with a vision to one-day hold government-issued documents (like permits and IDs). During the Fellowship Program, he and his team worked with the government of Argentina and created strategies to advance the meaningful adoption of blockchain in the public sector in Latin America. [Read more about Chuy's work here.](https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity/)
 
 ## Upgrading Bureaucracy

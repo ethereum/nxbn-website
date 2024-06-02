@@ -20,10 +20,9 @@ tags:
   - human-rights
 ---
 
-
 ## Karam Alhamad
-**Karam Alhamad** is an entrepreneur, fintech visionary, international development professional, and human rights policy advocate. Karam founded [ZeFi,](https://zefi.com/en) an educational platform and community focused on fostering blockchain education and research custom-fit for the Syrian context. For the Fellowship, Karam conducted research that increases practical and culturally-sensitive understandings of how blockchains can solve problems in conflict settings.
 
+**Karam Alhamad** is an entrepreneur, fintech visionary, international development professional, and human rights policy advocate. Karam founded [ZeFi,](https://zefi.com/en) an educational platform and community focused on fostering blockchain education and research custom-fit for the Syrian context. For the Fellowship, Karam conducted research that increases practical and culturally-sensitive understandings of how blockchains can solve problems in conflict settings.
 
 ---
 
