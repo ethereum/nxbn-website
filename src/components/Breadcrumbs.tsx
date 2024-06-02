@@ -10,7 +10,10 @@ import Link from "@/components/Link"
 
 export const Breadcrumbs = () => {
   const router = useRouter()
-  const path = router.asPath.split("#")[0].split("/").filter((x) => x)
+  const path = router.asPath
+    .split("#")[0]
+    .split("/")
+    .filter((x) => x)
 
   return (
     <Stack direction="row" spacing={2} pt={4}>

@@ -1,30 +1,39 @@
-import React, { useEffect, useRef } from 'react';
-import Globe from 'react-globe.gl';
-import { Box } from "@chakra-ui/react";
+import React, { useEffect, useRef } from "react"
+import Globe from "react-globe.gl"
+import { Box } from "@chakra-ui/react"
 
 interface GlobeComponentProps {
-  activeFellow: { lat: number; lon: number };
+  activeFellow: { lat: number; lon: number }
   size: number | undefined
 }
 
-const GlobeComponent: React.FC<GlobeComponentProps> = ({ activeFellow, size }) => {
+const GlobeComponent: React.FC<GlobeComponentProps> = ({
+  activeFellow,
+  size,
+}) => {
   const globeEl = useRef<any>()
 
   useEffect(() => {
     if (globeEl.current) {
-      globeEl.current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 2 }, 0);
-      const controls = globeEl.current.controls();
-      controls.enableZoom = false;
-      controls.enableRotate = false;
-      controls.enablePan = false;
+      globeEl.current.pointOfView(
+        { lat: activeFellow.lat, lng: activeFellow.lon, altitude: 2 },
+        0
+      )
+      const controls = globeEl.current.controls()
+      controls.enableZoom = false
+      controls.enableRotate = false
+      controls.enablePan = false
     }
-  }, [size]);
+  }, [size])
 
   useEffect(() => {
     if (globeEl.current && activeFellow) {
-      globeEl.current.pointOfView({ lat: activeFellow.lat, lng: activeFellow.lon, altitude: 1.5 }, 1000); // Smooth transition
+      globeEl.current.pointOfView(
+        { lat: activeFellow.lat, lng: activeFellow.lon, altitude: 1.5 },
+        1000
+      ) // Smooth transition
     }
-  }, [activeFellow]);
+  }, [activeFellow])
 
   return (
     <Box
@@ -42,7 +51,7 @@ const GlobeComponent: React.FC<GlobeComponentProps> = ({ activeFellow, size }) =
         height={size}
       />
     </Box>
-  );
-};
+  )
+}
 
-export default GlobeComponent;
+export default GlobeComponent

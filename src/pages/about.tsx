@@ -5,7 +5,7 @@ import { H1, H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
 import ImageSplitContent from "@/components/ImageSplitContent"
 
-import HeroImage from '@/public/images/about/about-hero.jpg'
+import HeroImage from "@/public/images/about/about-hero.jpg"
 
 const AboutPage = () => {
   return (

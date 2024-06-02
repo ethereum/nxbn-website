@@ -3,7 +3,16 @@ import dynamic from "next/dynamic"
 import { useState } from "react"
 import { useRouter } from "next/router"
 
-import { Box, Center, Divider, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
 import { ArrowIcon } from "@/components/icons"
 import { H4 } from "@/components/Headings"
@@ -38,7 +47,7 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
         gap={{ base: 0, md: 2, lg: 6, xl: 16 }}
         flexDir={{ base: "column", lg: "row" }}
       >
-        <Center flex={1} height={{ base: "auto", lg:"1000px", xl: "800px" }}>
+        <Center flex={1} height={{ base: "auto", lg: "1000px", xl: "800px" }}>
           <Heading
             as={H1}
             fontSize={{ base: 38, sm: 50, md: 60, lg: 64, xl: 80 }}
@@ -63,7 +72,10 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
         </Center>
         <Center flex={1} flexDir="column">
           <Center>
-          <GlobeComponentWithNoSSR activeFellow={allFellowsFrontmatter[activeFellowIndex]} size={value} />
+            <GlobeComponentWithNoSSR
+              activeFellow={allFellowsFrontmatter[activeFellowIndex]}
+              size={value}
+            />
           </Center>
           <Center zIndex={1}>
             <Divider

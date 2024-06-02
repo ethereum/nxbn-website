@@ -1,5 +1,5 @@
-const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
-const withMDX = require("@next/mdx")();
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
+const withMDX = require("@next/mdx")()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
@@ -51,5 +51,5 @@ module.exports = withMDX((phase) => {
     }
   }
 
-  return nextConfig;
+  return nextConfig
 })

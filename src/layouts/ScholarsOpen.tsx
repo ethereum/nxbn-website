@@ -8,7 +8,7 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
-import HeroImage from '@/public/images/scholars/scholars-hero-open.jpg'
+import HeroImage from "@/public/images/scholars/scholars-hero-open.jpg"
 
 const FAQQuestions: Question[] = [
   {
@@ -32,17 +32,17 @@ const ScholarOpen = () => {
   return (
     <>
       <ImageHero heroImage={HeroImage}>
-        <Box
-          w="100%"
-          bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)"
-        >
+        <Box w="100%" bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)">
           <Center
             gap={4}
             flexDir="column"
             px={{ base: 8, md: 16 }}
             textAlign="center"
           >
-            <Center flexDir="column" mt={{ base: "-100px", md: "-200px", lg: "-300px" }}>
+            <Center
+              flexDir="column"
+              mt={{ base: "-100px", md: "-200px", lg: "-300px" }}
+            >
               <Image
                 src={"/images/scholars/eth-glyph.png"}
                 alt=""
