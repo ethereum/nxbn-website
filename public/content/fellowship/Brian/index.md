@@ -3,7 +3,7 @@ index: 2
 layout: fellow
 title: Fair Lending for Web3 workers
 fellowName: Brian
-cohort: 1
+cohort: 3
 country: Indonesia
 lat: -54.8019
 lon: -68.303

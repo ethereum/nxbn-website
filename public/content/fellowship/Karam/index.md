@@ -3,7 +3,7 @@ index: 6
 layout: fellow
 title: Peer to peer aid in Humanitarian Crises
 fellowName: Karam
-cohort: 1
+cohort: 2
 country: Syria
 lat: -33.9249
 lon: 18.4241

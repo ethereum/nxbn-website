@@ -1,9 +1,9 @@
 ---
 index: 14
 layout: fellow
-title: How Ukrainians are adopting blockchain
+title: Crypto adoption in Ukraine
 fellowName: Valeriia
-cohort: 1
+cohort: 3
 country: Ukraine
 lat: -54.8019
 lon: -68.303

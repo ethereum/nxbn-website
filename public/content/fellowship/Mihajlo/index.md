@@ -3,7 +3,7 @@ index: 11
 layout: fellow
 title: Scouting for the Future
 fellowName: Mihajlo
-cohort: 1
+cohort: 2
 country: Serbia
 lat: -33.9249
 lon: 18.4241

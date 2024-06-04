@@ -8,7 +8,7 @@ country: Mexico
 lat: -54.8019
 lon: -68.303
 image: /content/fellowship/Naroa/naroa-headshot-logo.jpg
-description: Naroa explored Ethereum-based solutions as part of Giga's effort to connect every school to the internet.
+description: Naroa explores Ethereum-based solutions as part of Giga's effort to connect every school to the internet.
 tags:
   - 2021-cohort-1
   - global

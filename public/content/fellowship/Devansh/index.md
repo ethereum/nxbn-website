@@ -3,7 +3,7 @@ index: 4
 layout: fellow
 title: Retroactive Impact funding for Journalists
 fellowName: Devansh
-cohort: 1
+cohort: 3
 country: India
 lat: 44.428
 lon: -110.5885

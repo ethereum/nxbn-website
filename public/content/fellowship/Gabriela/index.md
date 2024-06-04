@@ -3,7 +3,7 @@ index: 5
 layout: fellow
 title: Small Business Savings Circles
 fellowName: Gabriela
-cohort: 1
+cohort: 2
 country: Mexico
 lat: 64.1466
 lon: -21.9426

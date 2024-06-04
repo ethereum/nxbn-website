@@ -3,7 +3,7 @@ index: 12
 layout: fellow
 title: Digital repatriation of art and revenue sharing
 fellowName: Mulenga
-cohort: 1
+cohort: 3
 country: Zambia
 lat: -33.9249
 lon: 18.4241
