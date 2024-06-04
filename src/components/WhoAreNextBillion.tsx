@@ -76,16 +76,16 @@ const WhoAreNextBillion = () => {
               <Text fontSize={18}>
                 Web3 does not yet have a <i>first billion</i> users, but
                 shifting perspectives and challenging assumptions is an
-                evergreen endeavor 🌲. There are about <i>eight billion</i>{" "}
-                people at the time of writing, and Ethereum is supposed to treat
-                *every-one* fairly, (to the extent that it’s possible to treat
+                evergreen endeavor 🌲. There are about <i>eight billion</i>
+                human people at the time of writing, and Ethereum is supposed to treat
+                every-one fairly, to the extent that it’s possible to treat
                 people fairly in a world where everyone’s capabilities and needs
-                are so different).
+                are so different. 
               </Text>
               <Text fontSize={18}>
                 Someone of 'the next billion' lives in a world filled with
                 finite and infinite games, too often played for life-and-death
-                outcomes. It's a messy, complicated world that some think might
+                outcomes. It's a messy, complicated place that some think might
                 need *saving*. But within any world, with the right tools at
                 hand, people will solve their own problems; they will create
                 their own opportunities; they will imagine their own future.
