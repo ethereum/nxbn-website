@@ -119,7 +119,7 @@ const FellowCard = ({
         </Box>
         <Box>
           <ButtonLink href={`/fellowship/${slug}`} variant="primary">
-            Know more
+            Learn more
           </ButtonLink>
         </Box>
       </Box>

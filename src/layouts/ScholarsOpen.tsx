@@ -54,7 +54,7 @@ const ScholarOpen = () => {
             </Center>
             <Box maxW="650px">
               <Text fontSize={{ base: 18, md: 24 }}>
-                Come learn, connect, and grow! November 9-17th in Bangkok,
+                The Ethereum conference for developers, thinkers, and makers. November 9-17th in Bangkok,
                 Thailand.
               </Text>
             </Box>
@@ -125,7 +125,7 @@ const ScholarOpen = () => {
           <Box gap={8}>
             <H2>For Artificers</H2>
             <Text>
-              All scholars are responsible for creating a story artifact: a
+              All scholars are responsible for creating a learning artifact: a
               little something that captures the impact attending Devcon or
               Devconnect had. Artifacts are usually created with words, images,
               and code in some combination. It could be a lesson learned, a new
