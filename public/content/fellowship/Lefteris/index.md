@@ -7,7 +7,7 @@ cohort: 4
 country: Greece
 lat: 142.644
 lon: 76.921
-image: "[[portrait_photograph_lefteris_arapakis.jpg]]"
+image: /content/fellowship/Lefteris/lefteris-headshot.jpg
 description: Lefteris is focused on reducing marine plastic pollution by engaging with fishers in Greece and the Mediterranean and adopting cleaning and sustainability practices.
 tags:
   - hidden
