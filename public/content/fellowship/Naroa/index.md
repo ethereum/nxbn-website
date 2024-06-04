@@ -1,17 +1,20 @@
 ---
 index: 13
 layout: fellow
-title: Fair Finance for Web3 workers
+title: Internet for every school
 fellowName: Naroa
 cohort: 1
 country: Mexico
 lat: -54.8019
 lon: -68.303
-image: /content/fellowship/Naroa/naroa-headshot-logo.jpg
+image: /content/fellowship/Naroa/naroa-headshot.jpg
 description: Naroa explores Ethereum-based solutions as part of Giga's effort to connect every school to the internet.
 tags:
   - 2021-cohort-1
   - global
+  - america-latin
+  - africa
+  - africa-east
 ---
 
 ## **Naroa Zurutuza**
