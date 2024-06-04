@@ -100,19 +100,7 @@ const AboutPage = () => {
               </Text>
             </Box>
           </ImageSplitContent>
-          <ImageSplitContent
-            image={"/images/about/representation.jpg"}
-            imageBorder="round"
-            imageSide="right"
-          >
-            <Box>
-              <H2>Resilience through Diversity</H2>
-              <Text fontSize={18}>
-                From core protocol to end user, Ethereum’s community should grow
-                and evolve to better reflect the world-at-large.
-              </Text>
-            </Box>
-          </ImageSplitContent>
+          
         </ContentContainer>
       </Box>
     </>
