@@ -6,7 +6,7 @@ fellowName: Devansh
 cohort: 3
 country: India
 lat: 12.9716
-lon: -77.5946
+lon: 77.5946
 image: /content/fellowship/Devansh/devansh-headshot.jpg
 description: Devansh is exploring retroactive funding for citizen journalists using the hypercerts standard.
 tags:
