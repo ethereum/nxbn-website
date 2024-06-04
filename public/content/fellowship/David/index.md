@@ -7,7 +7,7 @@ cohort: 4
 country: Nigeria
 lat: 142.644
 lon: 76.921
-image: /content/fellowship/David/David-headshot.jpeg
+image: /content/fellowship/David/david-headshot.jpg
 description: David is documenting the nuts and bolts of running a node in Nigeria and, more generally, on the African continent and all the challenges that come with it.
 tags:
   - hidden
