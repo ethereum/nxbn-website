@@ -7,7 +7,7 @@ cohort: 2
 country: Cayman Islands
 lat: 44.428
 lon: -110.5885
-image: /content/fellowship/Mary(incomplete)/mary-headshot.jpg
+image: /content/fellowship/Mary/mary-headshot.jpg
 description: "Mary's legal research focused on the question: \"What happens to our crypto when we die?\""
 
 
