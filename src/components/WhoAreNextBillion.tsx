@@ -71,16 +71,16 @@ const WhoAreNextBillion = () => {
                 In Internet lore, 'the next billion' is often told as a grand
                 narrative about how the needs of a billion new users can shift
                 perspectives and challenge assumptions about the form and
-                function of technologies reach *world-wide scale.*
+                function of technologies reach world-wide scale.
               </Text>
               <Text fontSize={18}>
                 Web3 does not yet have a <i>first billion</i> users, but
                 shifting perspectives and challenging assumptions is an
-                evergreen endeavor 🌲. There are about <i>eight billion</i>
-                human people at the time of writing, and Ethereum is supposed to treat
+                evergreen endeavor 🌲. There are about eight billion human
+                people at the moment, and Ethereum is supposed to treat
                 every-one fairly, to the extent that it’s possible to treat
                 people fairly in a world where everyone’s capabilities and needs
-                are so different. 
+                are so different.
               </Text>
               <Text fontSize={18}>
                 Someone of 'the next billion' lives in a world filled with
