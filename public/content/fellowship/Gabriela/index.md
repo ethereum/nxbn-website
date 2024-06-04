@@ -5,8 +5,8 @@ title: Small Business Savings Circles
 fellowName: Gabriela
 cohort: 2
 country: Mexico
-lat: 64.1466
-lon: -21.9426
+lat: 25.6866
+lon: -100.3161
 image: /content/fellowship/Gabriela/gabriela-headshot.jpg
 description: Bloinx is a project that focuses on 'tandas' in Mexico. In 2022, Gabriela conducted user research with several women's saving circles, and ran a pilot of Bloinx deployed on the polygon and celo side-chains.
 tags:

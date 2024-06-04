@@ -5,8 +5,8 @@ title: LatAm Empowerment
 fellowName: Marcus
 cohort: 2
 country: Guatemala
-lat: 35.0116
-lon: 135.7681
+lat: 14.6349
+lon: -90.5069
 image: /content/fellowship/Marcus/marcus-headshot.jpg
 description: Empowering disenfranchised communities in Latin America using Ethereum
 tags:

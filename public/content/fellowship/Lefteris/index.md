@@ -5,8 +5,8 @@ title: Sustainability and ocean degradation
 fellowName: Lefteris
 cohort: 4
 country: Greece
-lat: 142.644
-lon: 76.921
+lat: 37.9838
+lon: 23.7275
 image: /content/fellowship/Lefteris/lefteris-headshot.jpg
 description: Lefteris is focused on reducing marine plastic pollution by engaging with fishers in Greece and the Mediterranean and adopting cleaning and sustainability practices.
 tags:

@@ -5,8 +5,8 @@ title: Crypto adoption in Ukraine
 fellowName: Valeriia
 cohort: 3
 country: Ukraine
-lat: -54.8019
-lon: -68.303
+lat: 50.4501
+lon: 30.5234
 image: /content/fellowship/Valeriia/valeriia-headshot.jpg
 description: Studying and documenting grassroots adoption of blockchain and other decentralized applications within the Ukrainian community
 tags:

@@ -5,8 +5,8 @@ title: Fair Lending for Web3 workers
 fellowName: Brian
 cohort: 3
 country: Indonesia
-lat: -54.8019
-lon: -68.303
+lat: -6.2088
+lon: 106.8456
 image: /content/fellowship/Brian/brian-headshot.jpg
 description: Brian investigated the needs of web3 workers through Copra Finance, a startup that designs web3 financial products for working folks in Jakarta, Indonesia
 tags:

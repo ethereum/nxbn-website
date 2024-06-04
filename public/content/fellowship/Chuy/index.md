@@ -5,8 +5,8 @@ title: Identity Solutions for Govtech
 fellowName: Chuy
 cohort: 1
 country: Mexico
-lat: 35.0116
-lon: 135.7681
+lat: 19.4326
+lon: -99.1332
 image: /content/fellowship/Chuy/chuy-headshot-logo.jpg
 description: Chuy explores government-issued documents on chain in Argentina and other LatAm countries.
 tags:

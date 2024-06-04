@@ -5,8 +5,8 @@ title: Digital repatriation of art and revenue sharing
 fellowName: Mulenga
 cohort: 3
 country: Zambia
-lat: -33.9249
-lon: 18.4241
+lat: -15.3875
+lon: 28.3228
 image: /content/fellowship/Mulenga/mulenga-headshot.jpg
 description: Mulenga is developing a tokenized artifact registry and experimenting with museum revenue sharing for community documentation of art, customs, and crafting practices.
 tags:

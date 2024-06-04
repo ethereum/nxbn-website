@@ -1,12 +1,12 @@
 ---
-index: 1 
+index: 1
 layout: fellow
 title: On-chain credit scores for smallholder farmers and co-ops in Kenya
 fellowName: Eddie
 cohort: 4
 country: Kenya
-lat: 142.644
-lon: 76.921
+lat: -1.2922
+lon: 36.8218
 image: /content/fellowship/Eddie/eddie-headshot.jpg
 description: Eddie's Antugrow platform digitizes farmer production records and farm metadata to create reputation scores on-chain, with a goal to access to affordable working capital for smallholder farmers and cooperatives in Kenya
 tags:

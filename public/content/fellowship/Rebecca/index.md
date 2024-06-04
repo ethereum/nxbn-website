@@ -5,8 +5,8 @@ title: Commitment pooling and community currencies
 fellowName: Rebecca
 cohort: 4
 country: South Africa
-lat: 142.644
-lon: 76.921
+lat: -34.1281
+lon: 18.3371
 image: /content/fellowship/Rebecca/rebecca-headshot.jpg
 description: Commitment pooling, local currency, and indigenous mutual aid practices.
 tags:

@@ -5,8 +5,8 @@ title: Internet for every school
 fellowName: Naroa
 cohort: 1
 country: Mexico
-lat: -54.8019
-lon: -68.303
+lat: -1.9499
+lon: 30.0588
 image: /content/fellowship/Naroa/naroa-headshot.jpg
 description: Naroa explores Ethereum-based solutions as part of Giga's effort to connect every school to the internet.
 tags:

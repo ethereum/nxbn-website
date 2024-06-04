@@ -5,8 +5,8 @@ title: Peer to peer aid in Humanitarian Crises
 fellowName: Karam
 cohort: 2
 country: Syria
-lat: -33.9249
-lon: 18.4241
+lat: 35.3292
+lon: 40.135
 image: /content/fellowship/Karam/karam-headshot.jpg
 description: Beyond Borders - Unveiling Potential of Blockchain in a Crisis - the case of Syria
 tags:

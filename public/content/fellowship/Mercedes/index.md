@@ -5,8 +5,8 @@ title: Activism, Human Rights and Web3 in Venezuela
 fellowName: Mercedes
 cohort: 4
 country: Venezuela
-lat: 142.644
-lon: 76.921
+lat: 10.4806
+lon: -66.9036
 image: /content/fellowship/Mercedes/mercedes-headshot.jpg
 description: Mercedes' research focuses on identifying Web3 solutions to strengthen Human Rights organizations in Venezuela
 tags:

@@ -4,8 +4,8 @@ layout: fellow
 title: Microinsurance for Every Farmer
 fellowName: Benson
 cohort: 1
-lat: 38.7223
-lon: -9.1393
+lat: -1.2921
+lon: 36.8219
 country: Kenya
 image: /content/fellowship/Benson/benson-headshot-logo.jpg
 description: Microinsurance products for small-scale farmers in Kenya in extreme weather events

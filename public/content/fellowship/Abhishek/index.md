@@ -5,8 +5,8 @@ title: Farmer Finance
 fellowName: Abhishek
 cohort: 2
 country: India
-lat: 51.0447
-lon: -114.0719
+lat: 28.6139
+lon: 77.209
 image: /content/fellowship/Abhishek/abhishek-headshot.jpg
 description: Harvest-time loans for farmers in India
 tags:

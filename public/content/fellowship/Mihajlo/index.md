@@ -5,8 +5,8 @@ title: Scouting for the Future
 fellowName: Mihajlo
 cohort: 2
 country: Serbia
-lat: -33.9249
-lon: 18.4241
+lat: 44.7866
+lon: 20.4489
 image: /content/fellowship/Mihajlo/mihajlo-headshot.jpg
 description: The scouting movement is decentralised by nature and community-driven by essence. They are working on a Scout’s passport on chain, onboarding youth all over the world.
 tags:

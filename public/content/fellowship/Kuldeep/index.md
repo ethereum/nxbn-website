@@ -1,14 +1,14 @@
 ---
 index: 20
 layout: fellow
-title: What role could crypto play in BRAC?
+title: How should the world's largest NGO approach decentralized technology?
 fellowName: Kuldeep
 cohort: 1
 country: Bangladesh
-lat: -54.8019
-lon: -68.303
-image: /content/fellowship/Kuldeep/kuldeep-headshot-logo.jpg
-description: Exploring a crypto strategy within BRAC
+lat: 23.685
+lon: 90.3563
+image: /content/fellowship/Kuldeep/kuldeep-headshot.jpg
+description: Re-decentralizing with BRAC
 tags:
   - asia-south
   - asia

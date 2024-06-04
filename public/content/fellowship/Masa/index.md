@@ -5,8 +5,8 @@ title: Retroactive solidarity payments in education and employment
 fellowName: Masa
 cohort: 3
 country: Japan
-lat: 64.1466
-lon: -21.9426
+lat: 35.6895
+lon: 139.6917
 image: /content/fellowship/Masa/masa-headshot.jpg
 description: Ongaeshi is exploring retroactive solidarity payments in education and employment.
 tags:
