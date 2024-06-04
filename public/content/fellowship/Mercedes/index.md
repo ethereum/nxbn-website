@@ -7,7 +7,7 @@ cohort: 4
 country: Venezuela
 lat: 142.644
 lon: 76.921
-image: /content/fellowship/Mercedes/Meche_1.png
+image: /content/fellowship/Mercedes/mercedes-headshot.jpg
 description: Mercedes' research focuses on identifying Web3 solutions to strengthen Human Rights organizations in Venezuela
 tags:
   - hidden
