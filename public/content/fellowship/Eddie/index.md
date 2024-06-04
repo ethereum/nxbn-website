@@ -7,7 +7,7 @@ cohort: 4
 country: Kenya
 lat: 142.644
 lon: 76.921
-image: /content/fellowship/Eddie/eddieKago-portrait.jpeg
+image: /content/fellowship/Eddie/eddie-headshot.jpg
 description: Eddie's Antugrow platform digitizes farmer production records and farm metadata to create reputation scores on-chain, with a goal to access to affordable working capital for smallholder farmers and cooperatives in Kenya
 tags:
   - defi

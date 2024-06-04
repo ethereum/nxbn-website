@@ -7,7 +7,7 @@ cohort: 1
 country: Syria
 lat: -33.9249
 lon: 18.4241
-image: /content/fellowship/Karem/karam-headshot.jpg
+image: /content/fellowship/Karam/karam-headshot.jpg
 description: Beyond Borders - Unveiling Potential of Blockchain in a Crisis - the case of Syria
 tags:
   - middle-east

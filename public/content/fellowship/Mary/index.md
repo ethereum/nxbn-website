@@ -9,6 +9,8 @@ lat: 44.428
 lon: -110.5885
 image: /content/fellowship/Mary(incomplete)/mary-headshot.jpg
 description: "Mary's legal research focused on the question: \"What happens to our crypto when we die?\""
+
+
 tags:
   - 2022-cohort-2
   - research
