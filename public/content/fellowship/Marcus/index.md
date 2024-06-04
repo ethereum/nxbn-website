@@ -3,7 +3,7 @@ index: 8
 layout: fellow
 title: LatAm Empowerment
 fellowName: Marcus
-cohort: 1
+cohort: 2
 country: Guatemala
 lat: 35.0116
 lon: 135.7681

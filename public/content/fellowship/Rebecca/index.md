@@ -1,5 +1,5 @@
 ---
-index: 0
+index: 31
 layout: fellow
 title: Farmer Finance
 fellowName: Rebecca
@@ -16,5 +16,4 @@ tags:
   - 2022-cohort-2
 ---
 
-	Rebecca still needs to share a headshot and description
 	

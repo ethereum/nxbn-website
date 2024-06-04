@@ -8,7 +8,7 @@ country: India
 lat: 44.428
 lon: -110.5885
 image: /content/fellowship/Devansh/devansh-headshot.jpg
-description: Devansh is exploring retroactive funding for citizen journalists
+description: Devansh is exploring retroactive funding for citizen journalists using the hypercerts standard.
 tags:
   - asia-south
   - impact
