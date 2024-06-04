@@ -1,5 +1,5 @@
 ---
-index: 2
+index: 7
 layout: fellow
 title: Fair Lending for Web3 workers
 fellowName: Brian

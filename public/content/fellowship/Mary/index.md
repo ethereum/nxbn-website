@@ -1,5 +1,5 @@
 ---
-index: 9
+index: 16 
 layout: fellow
 title: Do you ever wonder what happens to your Ether when you die?
 fellowName: Mary
@@ -8,8 +8,7 @@ country: Cayman Islands
 lat: 44.428
 lon: -110.5885
 image: /content/fellowship/Mary/mary-headshot.jpg
-description: "Mary's legal research focused on the question: \"What happens to our crypto when we die?\""
-
+description: 'Mary''s legal research focused on the question: "What happens to our crypto when we die?"'
 
 tags:
   - 2022-cohort-2

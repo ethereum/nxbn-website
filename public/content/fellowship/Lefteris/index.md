@@ -1,5 +1,5 @@
 ---
-index: 0
+index: 3
 layout: fellow
 title: Sustainability and ocean degradation
 fellowName: Lefteris

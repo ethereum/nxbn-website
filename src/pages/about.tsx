@@ -95,8 +95,8 @@ const AboutPage = () => {
               <Text fontSize={18}>
                 Small, open-world, "finite game" initiatives reflect Ethereum’s
                 culture of mutual discovery, exchange, learning, and teaching.
-                We do our best to support the creation of space for collaboration,
-                experimentation, and play.
+                We do our best to support the creation of space for
+                collaboration, experimentation, and play.
               </Text>
             </Box>
           </ImageSplitContent>
@@ -106,7 +106,7 @@ const AboutPage = () => {
             imageSide="right"
           >
             <Box>
-          <H2>Resilience through Diversity</H2>
+              <H2>Resilience through Diversity</H2>
               <Text fontSize={18}>
                 From core protocol to end user, Ethereum’s community should grow
                 and evolve to better reflect the world-at-large.

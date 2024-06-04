@@ -1,5 +1,5 @@
 ---
-index: 31
+index: 5
 layout: fellow
 title: Commitment pooling and community currencies
 fellowName: Rebecca

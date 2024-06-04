@@ -1,5 +1,5 @@
 ---
-index: 15
+index: 0
 layout: fellow
 title: Operating a node in Africa
 fellowName: David
