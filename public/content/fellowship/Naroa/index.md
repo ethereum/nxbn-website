@@ -4,7 +4,7 @@ layout: fellow
 title: Internet for every school
 fellowName: Naroa
 cohort: 1
-country: Mexico
+country: Spain
 lat: -1.9499
 lon: 30.0588
 image: /content/fellowship/Naroa/naroa-headshot.jpg
