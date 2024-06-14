@@ -82,11 +82,11 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
               borderLeft="2px solid"
               borderColor="#9DCE64"
               m="auto"
-              mt="-190px"
+              mt={{ base: "-150px", md: "-190px" }}
               height="245px"
             />
           </Center>
-          <Center gap={2}>
+          <Center gap={2} maxWidth="100%">
             <ArrowIcon
               w="40px"
               height="40px"

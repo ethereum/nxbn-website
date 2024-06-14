@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from "react"
 import Globe from "react-globe.gl"
-import { Box } from "@chakra-ui/react"
+
+import {
+  Box,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
 interface GlobeComponentProps {
   activeFellow: { lat: number; lon: number }
@@ -11,6 +15,13 @@ const GlobeComponent: React.FC<GlobeComponentProps> = ({
   activeFellow,
   size,
 }) => {
+  const value = useBreakpointValue({ xs: 300, sm: 300, md: 380, lg: 380, xl: 380 })
+  const lastValidValue = useRef<number>(380); // default value
+
+  if (value !== undefined) {
+    lastValidValue.current = value;
+  }
+
   const globeEl = useRef<any>()
 
   useEffect(() => {
@@ -37,8 +48,8 @@ const GlobeComponent: React.FC<GlobeComponentProps> = ({
 
   return (
     <Box
-      width={size}
-      maxWidth={size}
+      width={lastValidValue.current}
+      maxWidth={lastValidValue.current}
       height="auto"
       sx={{ aspectRatio: "1 / 1" }}
     >
@@ -47,8 +58,8 @@ const GlobeComponent: React.FC<GlobeComponentProps> = ({
         globeImageUrl="/images/map.jpg"
         backgroundColor="rgba(0,0,0,0)"
         showAtmosphere={false}
-        width={size}
-        height={size}
+        width={lastValidValue.current}
+        height={lastValidValue.current}
       />
     </Box>
   )
