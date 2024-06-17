@@ -49,7 +49,8 @@ const AboutPage = () => {
                   few ordinary steps. Through fellowships, scholarships, events,
                   and other programs that create space for creative exchange and
                   the assembly of new memes, we support the protocol for human
-                  coordination, and the communities that will keep it living for years to come.
+                  coordination, and the communities that will keep it living for
+                  years to come.
                 </Text>
               </Box>
             </Box>
@@ -100,7 +101,6 @@ const AboutPage = () => {
               </Text>
             </Box>
           </ImageSplitContent>
-          
         </ContentContainer>
       </Box>
     </>

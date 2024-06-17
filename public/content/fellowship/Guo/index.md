@@ -10,7 +10,6 @@ lon: -74.006
 image: /content/fellowship/Guo/guo-headshot.jpg
 description: Guo is building a new form of sustainable funding for content creators, using a Harberger tax (plural ownership) mechanism.
 tags:
-  - hidden
   - asia
   - 2024-cohort-4
   - impact

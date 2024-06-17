@@ -10,7 +10,6 @@ lon: 16.4402
 image: /content/fellowship/Tomislav/tomislav-headshot.jpg
 description: MUQA - Municipal Quadratic Funding Initiative
 tags:
-  - hidden
   - europe
   - 2024-cohort-4
   - funding

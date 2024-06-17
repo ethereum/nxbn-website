@@ -10,7 +10,6 @@ lon: -66.9036
 image: /content/fellowship/Mercedes/mercedes-headshot.jpg
 description: Mercedes' research focuses on identifying Web3 solutions to strengthen Human Rights organizations in Venezuela
 tags:
-  - hidden
   - 2024-cohort-4
   - america-latin
   - research
@@ -20,4 +19,4 @@ tags:
 
 ## Mercedes Rodriguez Simon
 
-Mercedes is conducting practical research on using Web3 solutions to support human rights organizations in Venezuela. Her project focuses on researching international best practices on decentralized tools that human rights activists and NGOs can use in their operations. Mercedes has been a human rights activist and a key member of Ethereum Venezuela.
+Mercedes' project explores the impact of crypto usage on overcoming hyperinflation and devaluation in Venezuela’s national economy and the experiences of small communities and project grantees currently using crypto donation platforms to fund non-governmental initiatives.

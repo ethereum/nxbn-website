@@ -54,8 +54,8 @@ const ScholarOpen = () => {
             </Center>
             <Box maxW="650px">
               <Text fontSize={{ base: 18, md: 24 }}>
-                The Ethereum conference for developers, thinkers, and makers. November 9-17th in Bangkok,
-                Thailand.
+                The Ethereum conference for developers, thinkers, and makers.
+                November 9-17th in Bangkok, Thailand.
               </Text>
             </Box>
             <Box>
