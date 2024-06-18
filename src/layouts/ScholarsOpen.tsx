@@ -59,8 +59,8 @@ const ScholarOpen = () => {
               </Text>
             </Box>
             <Box>
-              <ButtonLink href="/" fontSize={24} variant="disabled">
-                Applications open soon
+              <ButtonLink href="/" fontSize={24} variant="primary">
+                Apply by July 7th
               </ButtonLink>
             </Box>
             <Box>
@@ -124,7 +124,7 @@ const ScholarOpen = () => {
         >
           <Box gap={8}>
             <H2>For Artificers</H2>
-            <Text>
+            <Text fontSize={18}>
               All scholars are responsible for creating a learning artifact: a
               little something that captures the impact attending Devcon or
               Devconnect had. Artifacts are usually created with words, images,

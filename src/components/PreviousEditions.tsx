@@ -13,7 +13,7 @@ const previousEditions = [
     name: "Devconnect 2023",
     location: "Istanbul, Turkey",
     description:
-      "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
+      "The vibrant metropolis of Istanbul hosted Devconnect from November 13-19. Over 3500 Ethereum enthusiasts gathered at the Devconnect Cowork in the Istanbul Congress Center, while many more attended independent events throughout Istanbul.",
     image: "/images/devconnect_2023.png",
     url: "https://devconnect.org/istanbul",
   },
@@ -21,7 +21,7 @@ const previousEditions = [
     name: "Devcon 2022",
     location: "Bogotá, Colombia",
     description:
-      "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
+      "After a three-year-long pause, we emerged from the pandemic stronger than before and reunited in Bogotá for the largest and some would say, “best Devcon yet.”",
     image: "/images/devcon_2022.png",
     url: "https://archive.devcon.org/archive/watch/?order=desc&sort=eventId",
   },
@@ -29,7 +29,7 @@ const previousEditions = [
     name: "Devconnect 2022",
     location: "Amsterdam, Netherlands",
     description:
-      "Devconnect is a week-long gathering of independent Ethereum events to learn, share, and make progress together.",
+      "For eight days, the city of Amsterdam was filled with bicycles bearing the Devconnect flag, as the Ethereum community came together to coordinate a variety of independent events and workshops.",
     image: "/images/devconnect_2022.png",
     url: "https://devconnect.org/amsterdam",
   },
