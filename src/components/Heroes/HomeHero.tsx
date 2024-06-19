@@ -90,6 +90,9 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
             <ArrowIcon
               w="40px"
               height="40px"
+              position={{ base: "absolute", sm: "relative" }}
+              bottom={{ base: "-25px", sm: "auto" }}
+              left={{ base: "64px", sm: "auto" }}
               transform="rotate(180deg)"
               _hover={{ cursor: "pointer" }}
               onClick={() => {
@@ -228,6 +231,9 @@ const HomeHero = ({ allFellowsFrontmatter }) => {
             <ArrowIcon
               w="40px"
               height="40px"
+              position={{ base: "absolute", sm: "relative" }}
+              bottom={{ base: "-25px", sm: "auto" }}
+              right={{ base: "64px", sm: "auto" }}
               _hover={{ cursor: "pointer" }}
               onClick={() => {
                 setActiveFellowIndex(
