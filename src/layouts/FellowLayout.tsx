@@ -61,7 +61,7 @@ export const FellowLayout = ({
             top="100px"
             alignSelf="start"
           >
-            <TableOfContents tocItems={tocItems} dis />
+            <TableOfContents tocItems={tocItems} />
           </Box>
         </Flex>
       </ContentContainer>
