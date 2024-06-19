@@ -29,7 +29,9 @@ export const FellowLayout = ({
       <Box pos="absolute" zIndex={-1} top={-4} left={0} right={0}>
         <Image src={"/images/fellow-stars.png"} alt="Stars" w="100%" />
       </Box>
-      <ContentContainer>
+      <ContentContainer
+        pb={"100px"}
+      >
         <FellowLayoutHero
           title={title}
           fellowName={fellowName}
@@ -54,12 +56,12 @@ export const FellowLayout = ({
           </Box>
           <Box
             w="300px"
-            display={{ base: "none", md: "block" }}
+            display={{ base: "none", md: "none" }}
             position="sticky"
             top="100px"
             alignSelf="start"
           >
-            <TableOfContents tocItems={tocItems} />
+            <TableOfContents tocItems={tocItems} dis />
           </Box>
         </Flex>
       </ContentContainer>
