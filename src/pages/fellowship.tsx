@@ -29,7 +29,7 @@ const FAQQuestions: Question[] = [
   {
     question: "What is expected from a Next Billion Fellow?",
     answer: [
-      "Fellows must be independent, passionate, and deliberate. Six months is not enought time to accomplish anything huge, but it",
+      "Fellows must be independent, passionate, and deliberate. Six months is not enought time to accomplish anything huge, but it should be enough time to figure out how to tell a good story.",
     ],
   },
 ]
