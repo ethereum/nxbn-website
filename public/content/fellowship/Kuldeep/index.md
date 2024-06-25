@@ -1,5 +1,5 @@
 ---
-index: 20
+index: 18
 layout: fellow
 title: Re-decentralizing with BRAC
 fellowName: Kuldeep

@@ -1,5 +1,5 @@
 ---
-index: 4
+index: 3
 layout: fellow
 title: Activism, Human Rights and Web3 in Venezuela
 fellowName: Mercedes

@@ -1,5 +1,5 @@
 ---
-index: 9
+index: 8
 layout: fellow
 title: Retroactive solidarity payments in education and employment
 fellowName: Masa

@@ -1,5 +1,5 @@
 ---
-index: 6
+index: 5
 layout: fellow
 title: Municipal Quadratic Funding
 fellowName: Tomislav

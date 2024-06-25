@@ -1,5 +1,5 @@
 ---
-index: 11
+index: 10
 layout: fellow
 title: Crypto adoption in Ukraine
 fellowName: Valeriia

@@ -1,5 +1,5 @@
 ---
-index: 21
+index: 19
 layout: fellow
 title: Internet for every school
 fellowName: Naroa
