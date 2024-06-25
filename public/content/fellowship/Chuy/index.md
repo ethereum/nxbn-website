@@ -1,5 +1,5 @@
 ---
-index: 19
+index: 17
 layout: fellow
 title: Identity Solutions for Govtech
 fellowName: Chuy

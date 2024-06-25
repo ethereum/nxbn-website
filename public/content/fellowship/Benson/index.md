@@ -1,5 +1,5 @@
 ---
-index: 18
+index: 16
 layout: fellow
 title: Microinsurance for Every Farmer
 fellowName: Benson

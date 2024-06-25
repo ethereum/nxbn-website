@@ -1,5 +1,5 @@
 ---
-index: 8
+index: 7
 layout: fellow
 title: Retroactive Impact funding for Journalists
 fellowName: Devansh

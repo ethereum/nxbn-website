@@ -1,5 +1,5 @@
 ---
-index: 3
+index: 2
 layout: fellow
 title: Fishing for the Commons
 fellowName: Lefteris

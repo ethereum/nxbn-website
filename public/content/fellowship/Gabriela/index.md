@@ -1,5 +1,5 @@
 ---
-index: 13
+index: 12
 layout: fellow
 title: Small Business Savings Circles
 fellowName: Gabriela

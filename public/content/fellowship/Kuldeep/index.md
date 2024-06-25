@@ -1,14 +1,14 @@
 ---
-index: 20
+index: 18
 layout: fellow
-title: How should the world's largest NGO approach decentralized technology?
+title: Re-decentralizing with BRAC
 fellowName: Kuldeep
 cohort: 1
 country: Bangladesh
 lat: 23.685
 lon: 90.3563
 image: /content/fellowship/Kuldeep/kuldeep-headshot.jpg
-description: Re-decentralizing with BRAC
+description: How should the world's largest NGO approach decentralized technology?
 tags:
   - asia-south
   - asia

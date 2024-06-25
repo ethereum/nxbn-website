@@ -76,7 +76,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
                 share their story with the extended web3 community, or with the
                 world-at-large.
               </Text>
-              <ButtonLink href="/about">About the program</ButtonLink>
+              <ButtonLink href="/fellowship">About the program</ButtonLink>
             </Box>
           </ImageSplitContent>
           <ImageSplitContent
