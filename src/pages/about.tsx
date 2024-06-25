@@ -38,8 +38,8 @@ const AboutPage = () => {
                 <Text fontSize={18}>
                   The Ethereum Foundation exists to nurture and support a
                   protocol designed to treat all humans equally; the{" "}
-                  <b>next billion</b> initiative at the Foundation is a frame
-                  of reference for long-term thinking about that protocol's
+                  <b>next billion</b> initiative at the Foundation is a frame of
+                  reference for long-term thinking about that protocol's
                   relationship to humans and, by extension, humanity.
                 </Text>
                 <Text fontSize={18}>
