@@ -57,7 +57,7 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
               <Box maxW={800}>
                 <Text mb={16} fontSize={18}>
                   A Fellow is a leader committed to their own project that helps
-                  Ethereum become a tool of and for the next billion. Their
+                  Ethereum become a tool of and for the next billion users. Their
                   project could be a decentralized app, a piece of research, an
                   organizational initiative, or something else entirely. There
                   are no strict requirements for Next Billion Fellowship
