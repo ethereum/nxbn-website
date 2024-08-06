@@ -1,5 +1,5 @@
 ---
-index: 1
+index: 2
 layout: fellow
 title: Democratizing support for content creators
 fellowName: Guo
