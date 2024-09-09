@@ -60,7 +60,7 @@ const ScholarOpen = () => {
             </Box>
             <Box>
               <ButtonLink href="/" fontSize={24} variant="primary">
-                Apply by July 7th
+                Applications closed
               </ButtonLink>
             </Box>
             <Box>
