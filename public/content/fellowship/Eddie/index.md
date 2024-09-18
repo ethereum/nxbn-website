@@ -18,4 +18,4 @@ tags:
 
 ## Eddie Kago
 
-Eddie, founded [Antugrow](https://app.antugrow.com/auth/login) to help farmer cooperatives modernize their post-harvest record-keeping while creating on-chain credit scores for smallholder farmers in Kenya. By standardizing farmer data for interoperability purposes, Eddie aims to unlock low-cost credit and scalable agricultural insurance, leveraging his expertise in building digital identities within the agricultural development context.
+Eddie, founded [Antugrow](https://antugrow.com/) to help farmer cooperatives modernize their post-harvest record-keeping while creating on-chain credit scores for smallholder farmers in Kenya. By standardizing farmer data for interoperability purposes, Eddie aims to unlock low-cost credit and scalable agricultural insurance, leveraging his expertise in building digital identities within the agricultural development context.
