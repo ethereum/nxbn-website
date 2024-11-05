@@ -9,6 +9,7 @@ import FellowList from "@/components/FellowList"
 import { getAllFellowsFrontmatter } from "@/utils/md"
 
 import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
+import ButtonLink from "@/components/Buttons/ButtonLink"
 
 const FAQQuestions: Question[] = [
   {
@@ -65,13 +66,16 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
                 </Text>
                 <Text fontSize={18}>
                   Whatever the project, whomever the Fellow, the program seeks
-                  to enable the flourishing of populations, communities, or
+                  to enable the flourishing of populations, communities, oru
                   individuals under-represented in the Ethereum ecosystem today.
                   The Fellowship is neither the beginning nor the end of a
                   Fellow&apos;s journey, but it may provide the support needed
                   to encourage more ambitious, long-term goals and mindset.
                 </Text>
               </Box>
+              <ButtonLink href={"https://nxbn-fellowship.paperform.co/"}>
+                Accepting Applications for Cohorts 5 & 6
+              </ButtonLink>
             </Box>
           </ContentContainer>
         </ImageHero>
