@@ -20,3 +20,5 @@ tags:
 ## Mercedes Rodriguez Simon
 
 Mercedes' project explores the impact of crypto usage on overcoming hyperinflation and devaluation in Venezuela’s national economy and the experiences of small communities and project grantees currently using crypto donation platforms to fund non-governmental initiatives.
+
+> Read an Interview with Mercedes on the [ETHKipu blog](https://www.ethkipu.org/en/blog/interview-with-mercedes-rodriguez)
