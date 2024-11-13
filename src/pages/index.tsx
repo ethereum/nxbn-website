@@ -77,8 +77,9 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
                 world-at-large.
               </Text>
               <ButtonLink href="/fellowship">About the program</ButtonLink>
+              <div></div>
               <ButtonLink href={"https://nxbn-fellowship.paperform.co/"}>
-                Accepting Applications for Cohorts 5 & 6
+              Apply for Cohorts 5 & 6
               </ButtonLink>
             </Box>
           </ImageSplitContent>
