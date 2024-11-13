@@ -76,8 +76,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
                 share their story with the extended web3 community, or with the
                 world-at-large.
               </Text>
-              <ButtonLink href="/fellowship">About the program</ButtonLink>
-              <div></div>
+              <ButtonLink href="/fellowship" margin-right=5px>About the program</ButtonLink>
               <ButtonLink href={"https://nxbn-fellowship.paperform.co/"}>
               Apply for Cohorts 5 & 6
               </ButtonLink>
