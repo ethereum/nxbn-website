@@ -29,6 +29,8 @@ const ButtonLink = ({
       borderRadius="full"
       textStyle="button-link"
       textAlign="center"
+      marginRight="10px"
+      marginBottom="10px"
       sx={{ ...variants[variant] }}
       _hover={{
         opacity: 0.8,
