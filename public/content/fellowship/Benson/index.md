@@ -24,4 +24,7 @@ Benson Njuguna [(Acre Africa)](https://acreafrica.com/) worked to implement bl
 
 ---
 
+### Ethereum Foundation Blog
 https://blog.ethereum.org/2021/12/07/fellows-spotlight-on-kenya
+
+### [Interview at Devconnect 2021](https://youtu.be/3wMgDyuWdWU?si=1WboMtuB6VYfc0dd)
