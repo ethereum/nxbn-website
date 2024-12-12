@@ -20,3 +20,5 @@ tags:
 ## Guo
 
 Guo Liu's project combines advertisement protocols and quadratic funding on [Matters Town](https://matters.town/) to support high-quality open-access content. By using advertisement revenue as a matching fund, the project aims to democratize support for content creators, drawing on Guo's experience in building decentralized digital public spaces and his commitment to freedom of information. MattersTown is widely used by content creators around the world (predominance of Chinese-speaking, Russian, and Korean). It is experimenting with a new way to fund journalism and content creation.
+
+## Billboard Protocol
