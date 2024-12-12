@@ -23,3 +23,5 @@ Mulenga Kapwepwe is co-founder of the Women’s History Museum of Zambia. There 
 ## SummitShare
 
 In December, Mulenga and her team launched [SummitShare](https://summitshare.co/), a platform that enables digital exhibitions of art and artifacts. Through a collaboration with the [Sweedish Ethnographic Museum](https://www.etnografiskamuseet.se/en/), SummitShare will host a first exhibition titled "The Leading Ladies", which distributes proceeds to communities in the Gwembe Valley in Zambia with connection to the artifacts on display.
+
+### [Interview at Devconnect 2023](https://youtu.be/rJjcK61UaEE?si=I0Li5E_ey8umGRcw)
