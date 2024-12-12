@@ -7,7 +7,7 @@ cohort: 4
 country: Croatia
 lat: 43.5081
 lon: 16.4402
-image: /content/fellowship/Tomislav/tomislav-headshot.jpg
+image: /content/fellowship/Tomislav/tomislav-photo.jpg
 description: MUQA - Municipal Quadratic Funding Initiative
 tags:
   - europe
