@@ -8,7 +8,7 @@ country: Venezuela
 lat: 10.4806
 lon: -66.9036
 image: /content/fellowship/Mercedes/mercedes-headshot.jpg
-description: Mercedes' research focuses on identifying Web3 solutions to strengthen Human Rights organizations in Venezuela
+description: Mercedes' research focuses on understanding the impact of crypto in Venezuela through the lenses of human experiences and how this can help us creare Web3 solutions to strengthen civil organizations in Venezuela
 tags:
   - 2024-cohort-4
   - america-latin
