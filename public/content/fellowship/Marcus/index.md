@@ -25,4 +25,4 @@ tags:
 ### Ethereum Foundation Blog
 https://blog.ethereum.org/2023/02/06/empower-latam-ethereum-fellows
 
-### [Interview at Devconnect 2023](https://youtu.be/0L0EBD0Ho6c?si=-4SwO25mbQCZPiqB)
+### [Interview at Devcon 2022](https://youtu.be/0L0EBD0Ho6c?si=-4SwO25mbQCZPiqB)
