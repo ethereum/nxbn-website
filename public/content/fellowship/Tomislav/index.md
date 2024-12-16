@@ -17,4 +17,4 @@ tags:
 
 ## Tomislav Mamić
 
-Tomislav or “Tomo,” from Croatia, is working on the Municipal Quadratic Funding Initiative ([MUQA](https://muqa.org/)) - a pilot that aims to assist cities in using QV and QF mechanisms to allocate funding for public projects in Croatia. Apart from the fundraising, he seeks to introduce transparency, efficiency, and citizen participation in managing resources for public goods.
+Tomislav or “Tomo,” from Croatia, is working on the Municipal Quadratic Funding Initiative ([Muqa](https://muqa.org/)). In its broader purpose of onboarding institutions to Ethereum, Muqa team has built and maintains [Zazelenimo](https://zazelenimo.com) - a participatory budgeting application with Quadratic Funding and Ethereum accounts included. This will allow cities to both engage their citizens and fundraise from them for public goods. Visit Muqa site or join their [community](https://t.me/muqaorg) to learn more and engage.
