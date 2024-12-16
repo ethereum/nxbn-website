@@ -26,4 +26,7 @@ tags:
 
 ---
 
+### Ethereum Foundation Blog
 https://blog.ethereum.org/2023/11/15/beyond-borders-nb
+
+### [Interview, 2022](https://youtu.be/obzaTeuJFYQ?si=rGOrThE39mbYTmQa)

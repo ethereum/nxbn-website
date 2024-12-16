@@ -23,4 +23,7 @@ tags:
 
 ---
 
+### Ethereum Foundation Blog
 https://blog.ethereum.org/2023/05/01/scouting-future-movement
+
+### [Interview at Devcon6 2022](https://youtu.be/Gu_Ex8ynyGE?si=bgFiVTRzOKBpXoXn)
