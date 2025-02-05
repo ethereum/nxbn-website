@@ -22,7 +22,7 @@ Devansh Mehta, co-founder of [VoiceDeck](https://voicedeck.org/), is interested
 
 ### [Interview at Devconnect 2023](https://youtu.be/42ukRSN0-ms?si=4T4ud4CDUmIkPsii)
 
-# Piloting Journalism Impact Certificates, a new blockspace frontier
+# Piloting Journalism Impact Certificates: a new blockspace frontier
 
 *The following is an update from Next Billion Fellow Devansh Mehta and his initiative [VoiceDeck](https://voicedeck.org/)*
 
