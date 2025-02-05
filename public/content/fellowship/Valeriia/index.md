@@ -101,7 +101,7 @@ Every day brings more devastation. Like so many Ukrainians abroad with loved one
 
 We all hate this war. And we’re all so damn tired.
 
-## My fellowship project: Exploring grassroots adoption of blockchain technology and other decentralized applications within the Ukrainian community
+## Adoption in Ukraine: Web3 Through the People's Lens
 
 Emerging tech has always fascinated me. And I believe everything comes down to people—when they connect and create a shared context.
 
@@ -132,5 +132,4 @@ Writing this took way longer than I planned. I kept putting it off, feeling that
 
 But then it hit me: that’s exactly the point.
 
-This is the most honest reflection of what’s happening. It will come down to people: their spirit, their resilience, and their collaboration. There is no final answer because the story is still being written. 
-
+This is the most honest reflection of what’s happening. It will come down to people: their spirit, their resilience, and their collaboration. There is no final answer because the story is still being written.
