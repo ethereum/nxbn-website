@@ -26,11 +26,6 @@ Devansh Mehta, co-founder of [VoiceDeck](https://voicedeck.org/), is interested
 
 *The following is an update from Next Billion Fellow Devansh Mehta and his initiative [VoiceDeck](https://voicedeck.org/)*
 
-
-# Piloting Journalism Impact Certificates, a new blockspace frontier
-
-*The following is an update from Next Billion Fellow Devansh Mehta and his initiative [VoiceDeck](https://voicedeck.org/)*
-
 I began my next billion fellowship with a simple question: can we get journalism outlets to record impact from their stories onchain?
 
 I had published stories at the investigative newsroom Organized Crime and Corruption Reporting Project and also worked for 5 years at community media outlet CGNet Swara. Both newsrooms bemoaned the lack of a feedback loop between creating tangible outcomes from their stories and generating revenue.

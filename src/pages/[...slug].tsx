@@ -61,7 +61,10 @@ export const getStaticProps = async (context) => {
     },
   })
 
-  const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
+  let tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
+  
+  // Ensure tocItems is a valid array with no undefined values
+  tocItems = Array.isArray(tocItems) ? tocItems.filter(item => item && item.title) : []
 
   return {
     props: {
