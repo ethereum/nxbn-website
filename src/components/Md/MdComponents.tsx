@@ -55,6 +55,19 @@ export const HR = () => (
 )
 
 // All base html element components
+const BlockQuote = (props) => {
+  return (
+    <Box
+      borderLeft="4px solid"
+      borderColor="action"
+      pl={4}
+      my={4}
+      color="gray.700"
+      {...props}
+    />
+  )
+}
+
 export const htmlElements = {
   a: Link,
   div: Box,
@@ -70,6 +83,7 @@ export const htmlElements = {
   ol: OrderedList,
   ul: UnorderedList,
   hr: HR,
+  blockquote: BlockQuote,
 }
 
 /**
