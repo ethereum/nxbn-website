@@ -39,7 +39,7 @@ const FellowCard = ({
       }}
       onClick={() => router.push(`/fellowship/${slug}`)}
     >
-      <Flex flex={1} justifyContent={{ base: "center", md: "right" }}>
+      <Flex flex="0 0 auto" justifyContent={{ base: "center", md: "center" }}>
         <Box
           w={40}
           h={40}
@@ -57,13 +57,13 @@ const FellowCard = ({
           />
         </Box>
       </Flex>
-      <Box gap={4}>
+      <Box flex="1 1 auto" gap={4}>
         <Box>
           <H3
             fontWeight="500"
             m={0}
             fontSize={{ base: "28", md: "36" }}
-            textAlign={{ base: "Center", md: "left" }}
+            textAlign={{ base: "center", md: "left" }}
           >
             {fellowName}
           </H3>

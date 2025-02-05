@@ -74,7 +74,7 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
                 </Text>
               </Box>
               <ButtonLink href={"https://nxbn-fellowship.paperform.co/"}>
-                Accepting Applications for Cohorts 5 & 6
+                Accepting Applications for Cohort 6
               </ButtonLink>
             </Box>
           </ContentContainer>
