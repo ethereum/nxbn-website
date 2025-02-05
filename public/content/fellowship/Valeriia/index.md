@@ -17,7 +17,7 @@ tags:
 
 ## Valeriia Panina
 
-Valeriia is a user experience specialist and an advisor to the Ukraine's Ministry of Digital Transformation. The war in Ukraine has shown that ingenuity and tenacity in human coordination is essential. When understanding the potential of protocols like Ethereum to be useful.
+Valeriia is a user experience specialist and an advisor to the Ukraine's Ministry of Digital Transformation. The war in Ukraine has shown that ingenuity and tenacity in human coordination is essential. Valeriia took on a user research project for her fellowship in order to better contextualize crypto in the war. 
 
 ---
 ### A Happy New Year
