@@ -66,7 +66,7 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
                 </Text>
                 <Text fontSize={18}>
                   Whatever the project, whomever the Fellow, the program seeks
-                  to enable the flourishing of populations, communities, oru
+                  to enable the flourishing of populations, communities, or
                   individuals under-represented in the Ethereum ecosystem today.
                   The Fellowship is neither the beginning nor the end of a
                   Fellow&apos;s journey, but it may provide the support needed
