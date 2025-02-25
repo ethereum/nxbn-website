@@ -132,8 +132,8 @@ const ScholarOpen = () => {
               project, or just reflections -- the value of the artifact is in
               the act of creating it and sharing with others.
             </Text>
-            <ButtonLink href="/" variant="disabled">
-              Coming Soon: Artifacts Archive
+            <ButtonLink href="https://www.notion.so/efdn/Devcon-SEA-Scholars-Program-Learning-Artifact-Database-18fd989555418092b50af037356c6181/" variant="enabled">
+              DevconSEA Artifacts Archive
             </ButtonLink>
           </Box>
         </ImageSplitContent>
