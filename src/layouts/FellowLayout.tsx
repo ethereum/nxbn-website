@@ -1,4 +1,5 @@
-import { Box, Flex, Image } from "@chakra-ui/react"
+import { Box, Flex, Image, Divider } from "@chakra-ui/react"
+import { MDXRemote } from "next-mdx-remote"
 
 import ContentContainer from "@/components/ContentContainer"
 import FellowLayoutHero from "@/components/Heroes/FellowLayoutHero"
@@ -6,6 +7,7 @@ import { MARKDOWN_CONTENT_MAX_WIDTH } from "@/utils/constants"
 import TableOfContents from "@/components/TableOfContents"
 import { H3 } from "@/components/Headings"
 import FellowCard from "@/components/FellowCard"
+import MdComponents from "@/components/Md/MdComponents"
 
 export const FellowLayout = ({
   children,
@@ -13,7 +15,7 @@ export const FellowLayout = ({
   tocItems,
   allFellowsFrontmatter,
 }) => {
-  const { index, title, fellowName, country, tags, image } = frontmatter
+  const { index, title, fellowName, country, tags, image, bio, bioSource } = frontmatter
 
   const meetMoreFellows = [
     allFellowsFrontmatter[
@@ -39,12 +41,39 @@ export const FellowLayout = ({
           tags={tags}
           image={image}
         />
+        {/* Bio section */}
+        {bioSource && (
+          <Box
+            px={{ base: 6, md: 16 }}
+            pt={4}
+            pb={6}
+            className="fellow-bio"
+          >
+            <Box 
+              sx={{ 
+                "h2:first-of-type": { mt: 0 },
+                "p, li": { fontSize: "sm" },
+                "h2, h3, h4, h5, h6": { fontSize: "md", mb: 2 }
+              }}
+              bg="#00000020"
+              p={6}
+              borderRadius="md"
+              color="body"
+            >
+              <MDXRemote {...bioSource} components={MdComponents as any} />
+            </Box>
+            <Divider mt={8} mb={0} borderColor="divider" />
+          </Box>
+        )}
+        
+        {/* Main content section */}
         <Flex
           px={{ base: 6, md: 16 }}
           gap={16}
-          pt={4}
+          pt={bioSource ? 8 : 4}
           pb={16}
           justifyContent="space-between"
+          className="fellow-story"
         >
           <Box
             w="auto"

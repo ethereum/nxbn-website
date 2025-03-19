@@ -1,5 +1,6 @@
 import { Box, Center, Flex, Image, Text } from "@chakra-ui/react"
 import Parser from "rss-parser"
+import { Item } from "rss-parser"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import { H2 } from "@/components/Headings"
@@ -18,15 +19,35 @@ export const getStaticProps = async () => {
     },
   })
 
-  const feed = await parser.parseURL(
-    "https://blog.ethereum.org/en/next-billion/feed.xml"
-  )
+  let blogs: (Item & { description?: string })[] = [];
+  try {
+    const feed = await parser.parseURL(
+      "https://blog.ethereum.org/en/next-billion/feed.xml"
+    )
+    blogs = feed.items.slice(0, 4);
+  } catch (error) {
+    console.error("Error fetching RSS feed:", error);
+    // Provide fallback blog data
+    blogs = [
+      {
+        title: "Blog post placeholder",
+        link: "#",
+        pubDate: new Date().toISOString(),
+        content: "",
+        contentSnippet: "",
+        guid: "",
+        isoDate: new Date().toISOString(),
+        description: "Unable to fetch blog posts at this time."
+      }
+    ];
+  }
+  
   const allFellowsFrontmatter = getAllFellowsFrontmatter()
 
   return {
     props: {
       allFellowsFrontmatter,
-      blogs: feed.items.slice(0, 4),
+      blogs,
     },
   }
 }
