@@ -48,7 +48,7 @@ Think of the experience of buying a t-shirt: you go to a shop, inspect the quali
 
 The idea of impact certificates was first brought up in 2014 by Paul Christiano on the Effective Altruism forum. He saw it as a coordination mechanism, bringing together people with the ability to undertake a project, means to fund it, and knowledge to evaluate it, premised around creating positive feedback loops between impact creation and revenue generation.
 
-![Funding Flywheel with Impact Certificates](https://storage.googleapis.com/ethereum-hackmd/upload_39d68f98054e596978ae20bbfc754f7e.png)]
+![Funding Flywheel with Impact Certificates](https://storage.googleapis.com/ethereum-hackmd/upload_39d68f98054e596978ae20bbfc754f7e.png)
 
 Even back then, Paul [proposed](https://paulfchristiano.medium.com/certificates-of-impact-34fa4621481e) the use of a blockchain to solve the issue of double spending, where the same impact might be sold multiple times. However, it wasn’t until [Hypercerts](https://www.hypercerts.org/)—digital tokens that represent the impact of some work—launched last year that a clear standard for impact certificates came into existence.
 

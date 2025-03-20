@@ -26,23 +26,23 @@ const Header1 = (props) => {
 }
 
 const Header2 = (props) => {
-  return <H2 variant="action" {...props} mt={20} />
+  return <H2 variant="action" {...props} mt={32} />
 }
 
 const Header3 = (props) => {
-  return <H3 variant="action" {...props} mt={12} />
+  return <H3 variant="action" {...props} mt={24} />
 }
 
 const Header4 = (props) => {
-  return <H4 variant="action" {...props} mt={8} />
+  return <H4 variant="action" {...props} mt={16} />
 }
 
 const Header5 = (props) => {
-  return <H5 variant="action" {...props} />
+  return <H5 variant="action" {...props} mt={12} />
 }
 
 const Header6 = (props) => {
-  return <H6 variant="action" {...props} />
+  return <H6 variant="action" {...props} mt={8} />
 }
 
 const Paragraph = (props) => {
