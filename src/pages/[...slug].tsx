@@ -1,5 +1,6 @@
 import { serialize } from "next-mdx-remote/serialize"
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"
+import { ReactNode } from "react"
 
 import remarkGfm from "remark-gfm"
 import { join } from "path"
@@ -61,6 +62,17 @@ export const getStaticProps = async (context) => {
     },
   })
 
+  // Process bio field if it exists in frontmatter
+  let bioSource: MDXRemoteSerializeResult | null = null;
+  if (markdown.frontmatter.bio) {
+    bioSource = await serialize(markdown.frontmatter.bio, {
+      mdxOptions: {
+        remarkPlugins,
+        rehypePlugins,
+      },
+    });
+  }
+
   let tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   
   // Ensure tocItems is a valid array with no undefined values
@@ -68,7 +80,10 @@ export const getStaticProps = async (context) => {
 
   return {
     props: {
-      frontmatter: markdown.frontmatter,
+      frontmatter: {
+        ...markdown.frontmatter,
+        bioSource
+      },
       layout: markdown.frontmatter.layout,
       mdxSource,
       slug,
