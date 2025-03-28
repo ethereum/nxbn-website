@@ -9,6 +9,10 @@ lat: 23.685
 lon: 90.3563
 image: /content/fellowship/Kuldeep/kuldeep-headshot.jpg
 description: How should the world's largest NGO approach decentralized technology?
+bio: |
+  ## Kuldeep Bandhu Aryal
+
+  **Kuldeep Bandhu Aryal** [(BRAC)](http://www.brac.net/) sought to build a blockchain and crypto strategy for BRAC - the world's largest NGO based in Bangladesh that annually serves over 100 million people. His project - which also involves multiple experiments using blockchain - could serve as a model for other social enterprises and the development sector at large.
 tags:
   - asia-south
   - asia
@@ -16,9 +20,5 @@ tags:
   - NGO
   - 2021-cohort-1
 ---
-
-## Kuldeep Bandhu Aryal
-
-**Kuldeep Bandhu Aryal** [(BRAC)](http://www.brac.net/) sought to build a blockchain and crypto strategy for BRAC - the world’s largest NGO based in Bangladesh that annually serves over 100 million people. His project - which also involves multiple experiments using blockchain - could serve as a model for other social enterprises and the development sector at large.
 
 ### [Interview at Devconnect 2023](https://youtu.be/yhoAygTNsls?si=4wUTfOsyt1zRNtKB)
