@@ -21,3 +21,5 @@ tags:
 ## Socials 
 [Telegram](t.me/nodebridege)
 [X](https://x.com/Nodebridgeafric)
+
+### [Interview, 2024](https://youtu.be/5mN2qoYNAYU?si=D16oaihOpUxbp8VD)

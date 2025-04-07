@@ -24,3 +24,5 @@ tags:
 ## Billboard Protocol
 
 Billboard "protocol" is simply NFTs used as billboards on websites, applications, or even physical spaces. They are traded with Harberger Tax, which puts them on continuous auctions. Advertisers or advertiser agencies bid and use billboards for advertisements, while the tax becomes revenue for the author or community that create the space.
+
+### [Interview, 2024](https://youtu.be/RixIy8hMAZs?si=PC-9sfTZgfIe4CQv)

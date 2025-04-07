@@ -18,3 +18,7 @@ tags:
   - 2024-cohort-4
   - funding
 ---
+
+### [Interview, 2024](https://youtu.be/wf5ua1yO-c4?si=MpvjSu836A6W6A6L)
+
+### [Interview, 2024 (CR)](https://youtu.be/c93SvMTY1hc?si=5NhWU4--66LIeGSn)

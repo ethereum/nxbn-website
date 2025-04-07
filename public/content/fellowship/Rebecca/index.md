@@ -18,3 +18,5 @@ tags:
   - 2024-cohort-4
   - africa-southern
 ---
+
+### [Interview, 2024](https://youtu.be/U8qMzggX1F0?si=a1V5qE5d1xjohwZM)
