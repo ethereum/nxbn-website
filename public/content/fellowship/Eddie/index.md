@@ -19,3 +19,7 @@ tags:
   - africa-east
   - farmers
 ---
+
+### [Interview, 2024](https://youtu.be/qj30b6kuFoM?si=nWnCHh6QPXQ_Os9M)
+
+### [Interview, 2024 (SW)](https://youtu.be/K_S6Mz8SccM?si=-hy1CrOH8V11WeO1)

@@ -22,3 +22,7 @@ tags:
 ---
 
 > Read an Interview with Mercedes on the [ETHKipu blog](https://www.ethkipu.org/en/blog/interview-with-mercedes-rodriguez)
+
+### [Interview, 2024](https://youtu.be/No0I4eMJUa0?si=xV9_Lm_rMn6hw637)
+
+### [Interview, 2024 (ES)](https://youtu.be/XVk7-k5wdNY?si=_fOCBaSR70GlNc2V)

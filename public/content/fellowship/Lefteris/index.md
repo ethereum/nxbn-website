@@ -19,3 +19,7 @@ tags:
   - europe
   - climate
 ---
+
+### [Interview, 2024](https://youtu.be/IgOMyZUQUH0?si=MYjS8tXt-jjksm1I)
+
+### [Interview, 2024 (GR)](https://youtu.be/0E5S9V-uKPg?si=Ow7gqnb53-8l1nNR)
