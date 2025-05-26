@@ -1,5 +1,5 @@
 ---
-index: 1
+index: 15
 layout: fellow
 title: On-chain credit scores for smallholder farmers and co-ops in Kenya
 fellowName: Eddie

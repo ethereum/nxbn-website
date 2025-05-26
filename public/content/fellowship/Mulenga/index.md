@@ -1,5 +1,5 @@
 ---
-index: 10
+index: 12
 layout: fellow
 title: Digital repatriation of art and revenue sharing
 fellowName: Mulenga

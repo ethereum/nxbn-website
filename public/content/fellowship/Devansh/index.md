@@ -1,14 +1,16 @@
 ---
-index: 8
+index: 10
 layout: fellow
 title: Retroactive Impact funding for Journalists
 fellowName: Devansh
 cohort: 3
 country: India
+publishedDate: May 22, 2025
 lat: 12.9716
 lon: 77.5946
 image: /content/fellowship/Devansh/devansh-headshot.jpg
 description: Devansh is exploring retroactive funding for citizen journalists using the hypercerts standard.
+storyHook: "Think of the experience of buying a t-shirt: you go to a shop, inspect the quality, and purchase it directly. Imagine that same experience for buying impact. You can see some verified, achieved outcome, look at the price at which it was achieved, and then purchase it."
 bio: |
   ## Devansh Mehta
 
@@ -22,7 +24,7 @@ tags:
   - 2023-cohort-3
 ---
 
-# **Piloting Journalism Impact Certificates, a new blockspace frontier**
+# Piloting Journalism Impact Certificates, a new blockspace frontier
 
 As an investigative journalist, I have published stories at newsrooms like the Organized Crime and Corruption Reporting Project and CGNet Swara. Both newsrooms, like many investigative outlets, face a common problem: while many of their stories create tangible outcomes, the impact rarely translates into sustainable revenue. In response, I experimented with alternative revenue models like distributing news via WhatsApp API and Bluetooth, and even paying readers to listen to ads!
 
@@ -48,7 +50,7 @@ Think of the experience of buying a t-shirt: you go to a shop, inspect the quali
 
 The idea of impact certificates was first brought up in 2014 by Paul Christiano on the Effective Altruism forum. He saw it as a coordination mechanism, bringing together people with the ability to undertake a project, means to fund it, and knowledge to evaluate it, premised around creating positive feedback loops between impact creation and revenue generation.
 
-![Funding Flywheel with Impact Certificates](https://storage.googleapis.com/ethereum-hackmd/upload_39d68f98054e596978ae20bbfc754f7e.png)
+![Funding Flywheel with Impact Certificates](funding_flywheel.png)
 
 Even back then, Paul [proposed](https://paulfchristiano.medium.com/certificates-of-impact-34fa4621481e) the use of a blockchain to solve the issue of double spending, where the same impact might be sold multiple times. However, it wasn’t until [Hypercerts](https://www.hypercerts.org/)—digital tokens that represent the impact of some work—launched last year that a clear standard for impact certificates came into existence.
 
@@ -58,14 +60,14 @@ As part of the Ethereum Foundation’s Next Billion Fellowship, I attended a glo
 
 We then started collaborations with three social enterprises to bring on chain their past impact—such as getting a human trafficker arrested and suspending a teacher stealing from a lunch program. Each verified outcome was priced, quantified, and made available for purchase by customers.
 
-![Funding System Design](https://storage.googleapis.com/ethereum-hackmd/upload_48d1de4ec58f2f2dcc5ea2361b31ea09.png)
+![Funding System Design](funding_system_design.png)
 
 After a testnet launch, the marketplace of journalism impact went live in November 2024\. That same month, at Devcon SEA, I gave [a talk](https://app.devcon.org/schedule/SJE7VP) about all the support provided in the Ethereum ecosystem to manifest an idea, from Gitcoin quadratic funding rounds that keep the mission alive, to hackathons for recruiting team members, to initiatives like Pollen Labs and the Next Billion Fellowship Program. 
 
 Since the launch, 13 supporters have bought $125 in impact certificates. The project’s repository has had two prominent forks for taking outcome-based funding to other domains. A writeup on our implementation of outcome-based online donations was [published](https://dl.acm.org/doi/abs/10.1145/3678884.3687146) at a top peer-reviewed conference called Computer Supported Cooperative Work (CSCW), showcasing a new blockchain use case to internet researchers outside web3.
 
 ![A look at the marketplace for buying impact created by citizen journalism
-](https://storage.googleapis.com/ethereum-hackmd/upload_af874230af1545217fb9230c8bfc89a3.png)
+](marketplace_journalism.png)
 
 # What’s next? 
 

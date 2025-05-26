@@ -1,14 +1,16 @@
 ---
-index: 5
+index: 19
 layout: fellow
 title: Commitment pooling and community currencies
 fellowName: Rebecca
 cohort: 4
 country: South Africa
+publishedDate: May 22, 2025
 lat: -34.1281
 lon: 18.3371
 image: /content/fellowship/Rebecca/rebecca-headshot.jpg
 description: Commitment pooling, local currency, and indigenous mutual aid practices.
+storyHook: "I began to see community currencies not as monetary innovations but as social technologies—extensions of long-standing mutual aid practices like Kenya's mweriya or South Africa's stokvels. These practices don't thrive because of the novelty of the tool, but because of the relationships they sustain."
 bio: |
   ## Rebecca Mqamelo
 
@@ -37,12 +39,12 @@ I began to see community currencies not as monetary innovations but as **social 
 
 In this blog post, I'll discuss what makes commitment pooling different from "standard" community currencies and some of the lessons learned from doing this work across cultural and geographic contexts.
 
-![watercolor_sketch](https://storage.googleapis.com/ethereum-hackmd/upload_738261a6c6ad5b34175709a811785ac1.jpg) 
+![watercolor_sketch](watercolor_sketch.jpg)
 *Watercolor and pen sketch of a market in Nairobi, Kenya*
 
 # Commitment pooling: Old technology, new affordances
 
-![miyani_pesa](https://storage.googleapis.com/ethereum-hackmd/upload_43137ad4c8a210e469edd7eb5fb15259.jpg) 
+![miyani_pesa](miyani_pesa.jpg)
 *The future of Miyani Pesa (a community asset voucher on sarafu.network) as illustrated by community members in Kinango Kwale, Kenya. What happens when we start to map economic prosperity as a function of place-based relationships? Photo: Patricia Marcella Evite*
 
 Commitment pooling is best described as a socio-economic protocol. The social part is in voicing and honoring these commitments – a process that happens largely in person and follows a set cadence, borrowing from indigenous mutual aid practices like Kenya's *mweria*. The economic part is that these commitments live as ERC20 vouchers on the Celo blockchain and can be swapped, pooled and staked.
@@ -72,7 +74,7 @@ That defiance continues in the work and vision of many local activists today. Wi
 
 We hosted [several workshops](https://www.inethi.org.za/2024/10/18/intro-to-krone-workshop-in-ocean-view-25-may-2024/) to introduce the concept, starting with mapping existing assets in the community. The idea was simple: could Ocean View residents use Community Asset Vouchers (CAVs) to pay for internet access, trade local services, and reward community contributions? Instead of waiting for external funding, could they create their own economy based on shared commitments?
 
-![oceanview_workshop](https://storage.googleapis.com/ethereum-hackmd/upload_65e01e26540cea3daec3ddb0b6dd9f07.jpg)
+![oceanview_workshop](oceanview_workshop.jpg)
 *Community workshop in Ocean View, South Africa. Photo: Rebecca Mqamelo*
 
 ### **Inside the workshops: challenges and insights**

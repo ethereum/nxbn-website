@@ -1,14 +1,16 @@
 ---
-index: 11
+index: 13
 layout: fellow
-title: Crypto adoption in Ukraine
+title: Volya - Web3 through the People's Lens
 fellowName: Valeriia
 cohort: 3
 country: Ukraine
+publishedDate: May 22, 2025
 lat: 50.4501
 lon: 30.5234
 image: /content/fellowship/Valeriia/valeriia-headshot.jpg
 description: Studying and documenting grassroots adoption of blockchain and other decentralized applications within the Ukrainian community
+storyHook: "Ukraine was ranked #1 in adoption within Europe by Chainalysis, and it felt inevitable: we were on the path to becoming a pioneering crypto nation. For me, 2021 was the happiest and busiest year of my life. I remember that New Year's Eve, watching the mirrored disco ball, imagining all the sparks 2022 would bring. Then the ball dropped—and shattered. The early morning of February 24 rewrote everything."
 bio: |
   ## Valeriia Panina
 

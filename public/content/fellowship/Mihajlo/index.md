@@ -1,5 +1,5 @@
 ---
-index: 16
+index: 8
 layout: fellow
 title: Scouting for the Future
 fellowName: Mihajlo

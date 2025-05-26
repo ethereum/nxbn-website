@@ -1,14 +1,16 @@
 ---
-index: 3
+index: 17
 layout: fellow
 title: Fishing for the Commons
 fellowName: Lefteris
 cohort: 4
 country: Greece
+publishedDate: May 22, 2025
 lat: 37.9838
 lon: 23.7275
 image: /content/fellowship/Lefteris/lefteris-headshot.jpg
 description: Lefteris is focused on reducing marine plastic pollution by engaging with fishers in Greece and the Mediterranean and adopting cleaning and sustainability practices.
+storyHook: "On one of the first trips out on the boat, as the men hauled up a net filled with fish, I noticed a can of coke, recognizable if a little bit worn out. I picked it up to examine it, and was startled to see the date 1987 written in faded lettering on the side. As I stood there contemplating that this piece of trash had been floating in the sea for almost 30 years, one of the fishermen came beside me, plucked the can from my hand, and casually tossed it back into the sea. 'Trash isn't our problem,' he said."
 bio: |
   ## Lefteris Arapakis
 
@@ -34,16 +36,16 @@ Enaleia is on a mission to write a new chapter in the story of sea fishing, to r
 
 This problem of plastic is not a national problem, or even an EU problem; it's a Mediterranean problem. And so it requires Mediterranean collaboration. More importantly, the change can't come from the top-down — just like the plastic itself, real change needs to *come from the bottom-up*! We must find a way for many different people, from very different backgrounds, contexts, and cultures to work together to solve a complex coordination challenge. 
 
-![fishers](https://storage.googleapis.com/ethereum-hackmd/upload_52206afea281848a651fe1899a650429.jpg)
+![fishers](fishers.jpg)
 
 ## Writing the Ocean Cleanup Playbook
 The first part of the solution is straightforward: we want to get the *Fishers to fish for plastic*. When you think about it, it makes quite a lot of sense: The fishers were already catching lots of plastic out on their hauls, but because it has no value to them, they would always throw it back. All we needed was a small nudge to keep the plastic on the boat and bring it back to port, instead of tossing it back into the sea.
 
-![boat](https://storage.googleapis.com/ethereum-hackmd/upload_b94db538f5cbbd9c343fd4e0fdf8e1a8.jpg)
+![boat](boat.jpg)
 
 So when we set up at a port, we provide real payments for items like bottles, plastic pipes, nets from the sea (“ghost nets” are a significant part of ocean plastic waste), and we set up a weigh station to pay Fishers for any caught plastics that they haul back. In all of the ports that we operate in combined, participating Fishers bring in about 20,000 kilos weekly (about 2 trucks filled with plastic *daily*). The way we have things set up so far, we've removed more than a million and a half tonnes of plastic from the oceans since 2018. The process works because the Fishers *know* deep down that hauling the plastic to port is better for everyone, and the payment at our port station gives them some validation and incentive to do the right thing.
 
-![port_woman](https://storage.googleapis.com/ethereum-hackmd/upload_00b3721a00b147cac5b159bf12c9a057.jpg)
+![port_woman](port_woman.jpg)
 
 The next step in the pipeline is what to do with all those plastics. In participating ports, with plastics weighed and Fishers paid, the "waste" materials are brought to a container or warehouse where they can be sorted into recycling categories, crushed for transport, or sent to a proper landfill. The goal with this sorting is maximum efficiency for circular economy re-integration. 
 
@@ -69,4 +71,4 @@ By leveraging the Ethereum Attestation Service, Enaleia's system is designed to 
 
 This transition represents a fundamental shift in how environmental initiatives can scale: rather than growing through traditional organizational expansion, we're creating the conditions for permissionless innovation where others can adopt, adapt, and improve upon our model of ocean cleanup to fit their context. The most powerful solution to the tragedy of the commons isn't a single hero, but rather a distributed network of local heroes all working in concert, their efforts verified and valued through a common way of doing things. 
 
-![Lefteris](https://storage.googleapis.com/ethereum-hackmd/upload_a34a4c23de9a010f657b035275bd8dec.jpg)
+![Lefteris](lefteris_final.jpg)

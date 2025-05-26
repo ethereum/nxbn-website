@@ -1,5 +1,5 @@
 ---
-index: 15
+index: 7
 layout: fellow
 title: LatAm Empowerment
 fellowName: Marcus

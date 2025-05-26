@@ -1,18 +1,20 @@
 ---
-index: 2
+index: 16
 layout: fellow
 title: A Quieter Internet
 fellowName: Guo
 cohort: 4
 country: US
+publishedDate: May 22, 2025
 lat: 40.7128
 lon: -74.006
 image: /content/fellowship/Guo/guo-headshot.jpg
 description: Reclaiming space for thought in our attention economy through decentralized publishing and creation networks.
+storyHook: "Again and again, I ran into the same problem: centralization. I realized that our information systems—imagined as humanity's neural network—are, in many ways, less resilient than spoken or written words. Too often, they have a single point of failure, and are easier to control than any communication technology before them. We built global information systems that turned out to be easier to censor than books."
 bio: |
   ## Guo
 
-  Guo Liu's project combines advertisement protocols and quadratic funding on [Matters Town](https://matters.town/) to support high-quality open-access content. By using advertisement revenue as a matching fund, the project aims to democratize support for content creators, drawing on Guo's experience in building decentralized digital public spaces and his commitment to freedom of information. MattersTown is widely used by content creators around the world (predominance of Chinese-speaking, Russian, and Korean). It is experimenting with a new way to fund journalism and content creation.
+  Guo Liu's project combined advertisement protocols and quadratic funding on [Matters Town](https://matters.town/) to support high-quality open-access content. By using advertisement revenue as a matching fund, the project aimed to democratize support for content creators, drawing on Guo's experience in building decentralized digital public spaces and his commitment to freedom of information. MattersTown is widely used by content creators around the world (predominance of Chinese-speaking, Russian, and Korean), experimenting with a new way to fund journalism and content creation.
 
   [**Interview, 2024**](https://youtu.be/RixIy8hMAZs?si=PC-9sfTZgfIe4CQv)
 tags:
