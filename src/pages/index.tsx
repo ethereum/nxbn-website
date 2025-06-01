@@ -128,7 +128,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
             imageSide="left"
           >
             <Box gap={8}>
-              <H2>Devcon SEA Scholars</H2>
+              <H2>Devconnect ARG Scholars</H2>
               <Text fontSize={18} mb={16}>
                 Devcon is a conference for developers, researchers, thinkers,
                 and makers. It's the largest single gathering of Ethereum's
@@ -138,6 +138,9 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
                 infinite garden.
               </Text>
               <ButtonLink href="/scholars">Learn more</ButtonLink>
+              <ButtonLink href="https://devconnectargscholars.paperform.co/">
+                Apply Now
+              </ButtonLink>
             </Box>
           </ImageSplitContent>
         </ContentContainer>
