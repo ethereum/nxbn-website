@@ -1,5 +1,5 @@
 ---
-index: 18
+index: 1
 layout: fellow
 title: Identity Solutions for Govtech
 fellowName: Chuy
@@ -19,7 +19,3 @@ tags:
   - america-central
   - 2021-cohort-1
 ---
-
----
-
-https://blog.ethereum.org/2022/06/07/spotlight-on-latam-identity

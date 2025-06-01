@@ -33,9 +33,9 @@ const GlobeComponentWithNoSSR = dynamic(
   }
 )
 
-const HomeHero = ({ allFellowsFrontmatter }) => {
+const HomeHero = ({ allFellowsFrontmatter, initialFellowIndex = 0 }) => {
   const router = useRouter()
-  const [activeFellowIndex, setActiveFellowIndex] = useState(0)
+  const [activeFellowIndex, setActiveFellowIndex] = useState(initialFellowIndex)
   const value = useBreakpointValue({ base: 300, md: 380 })
 
   return (

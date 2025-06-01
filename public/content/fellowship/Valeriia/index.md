@@ -1,14 +1,16 @@
 ---
-index: 11
+index: 13
 layout: fellow
-title: Crypto adoption in Ukraine
+title: Volya - Web3 through the People's Lens
 fellowName: Valeriia
 cohort: 3
 country: Ukraine
+publishedDate: May 22, 2025
 lat: 50.4501
 lon: 30.5234
 image: /content/fellowship/Valeriia/valeriia-headshot.jpg
 description: Studying and documenting grassroots adoption of blockchain and other decentralized applications within the Ukrainian community
+storyHook: "Ukraine was ranked #1 in adoption within Europe by Chainalysis, and it felt inevitable: we were on the path to becoming a pioneering crypto nation. For me, 2021 was the happiest and busiest year of my life. I remember that New Year's Eve, watching the mirrored disco ball, imagining all the sparks 2022 would bring. Then the ball dropped—and shattered. The early morning of February 24 rewrote everything."
 bio: |
   ## Valeriia Panina
 
@@ -26,9 +28,9 @@ In 2021, I joined Ukraine's Ministry of Digital Transformation, aligning with my
 
 That year, the crypto community was on an incredible high. And not just because of the number going up (though it certainly helped the vibes). It was about unity and self-organization on another level. The most striking example was the community's purchase of the rights to Ukraine's most iconic blockchain convention, with a plan to revive it in 2022. Another? The Foresight 2030 project—a collaborative effort between business, government, and community to create a shared vision for the industry's future.
 
-> "The Foresight Virtual Assets 2030 was an inspiring initiative. It created a safe, collaborative space for all its diverse and highly participative audience (representatives from business and from government and independent experts) and the insights and ideas born there proved to be valuable over time."
+>*The Foresight Virtual Assets 2030 was an inspiring initiative. It created a safe, collaborative space for all its diverse and highly participative audience (representatives from business and from government and independent experts) and the insights and ideas born there proved to be valuable over time.*
 >
-> — Participant, Adviser at one of Ukraine's Government Bodies
+>— Participant, Adviser at one of Ukraine's Government Bodies
 
 On the government side, things were also moving fast. Parliament passed a bill giving cryptocurrencies a basic legal framework—though not without some drama, as the first version was vetoed. But progress was in motion. Ukraine was ranked #1 in adoption within Europe by Chainalysis, and it felt inevitable: we were on the path to becoming a pioneering crypto nation.
 
@@ -42,9 +44,9 @@ The early morning of February 24 rewrote everything. In Ukrainian, "February" tr
 
 In the industry, other misfortunes followed. Yes, the collapse of the centralized exchange FTX was a shock to everyone. But for Ukraine, even that paled in comparison to the damage caused by the National Bank's decision to block payment gateways which obliterated the local crypto market overnight.
 
-> "Ironically, the most dramatic impact on the crypto market was caused not by the war but by the National Bank—indirectly."
+>*Ironically, the most dramatic impact on the crypto market was caused not by the war but by the National Bank—indirectly.*
 >
-> — Crypto entrepreneur
+>— Crypto entrepreneur
 
 Personally, those first weeks were the hardest of my life. A dark, heavy void settled inside me, paired with realization that the future—for me, for my country—was completely uncertain.
 
@@ -54,9 +56,9 @@ Yet even amidst the devastation, *volya*—Ukrainian spirit, meaning 'will' and 
 
 Volya embodies Ukraine's enduring democratic spirit and grassroots power. From electronic petitions to viral social campaigns, Ukrainians leverage civil society tools to drive change—whether reshaping legislation or rallying against controversial figures. Democratic values run deep in our culture, tracing back to the 1710 Constitution of Pylyp Orlyk and the Kozak Republic. Modern milestones include the 2004 Orange Revolution, which sparked global movements, and the 2014 Revolution of Dignity, which changed the government and realigned Ukraine with the West. And the Ukrainian crypto community has fostered countless joint ventures in fully horizontal settings—decentralized yet deeply connected and collaborative. 
 
-> "Ukraine and Ukrainians are often underestimated on the global stage simply because they are not fully understood. Yet, the Ukrainian mentality is uniquely aligned with Web3 values and principles inherent to the crypto community."
+>*Ukraine and Ukrainians are often underestimated on the global stage simply because they are not fully understood. Yet, the Ukrainian mentality is uniquely aligned with Web3 values and principles inherent to the crypto community.*
 >
-> — Web3 entrepreneur
+>— Web3 entrepreneur
 
 In spring of 2022, the community reached unparalleled levels of unity as if we all shared the same soul. Projects sprang up everywhere—from fundraisers to supply chain initiatives run by people who'd never done logistics before.
 
@@ -68,21 +70,21 @@ Crypto stayed on the agenda—for both the country and its people. While financi
 
 Many Ukrainians saw their trust in institutions crumble—or at least take a heavy hit. And here, crypto stepped in, not just as a financial tool, but as an alternative to systems that suddenly felt shaky and less reliable.
 
-> "People are turning to crypto to protect their finances. It's not tax evasion; it's about safeguarding one's rightfully earned money."
+>*People are turning to crypto to protect their finances. It's not tax evasion; it's about safeguarding one's rightfully earned money.*
 >
-> — Ordinary user
+>— Ordinary user
 
 What used to seem shady or obscure became something legitimate: a way to safeguard value in a completely new way.
 
-> "For years, I had been sure that bitcoin was about gambling and something like an illegal casino."
+>*For years, I had been sure that bitcoin was about gambling and something like an illegal casino.*
 >
-> — Freelancer who now accepts crypto from clients
+>— Freelancer who now accepts crypto from clients
 
 When it's about your own money, the motivation to learn is intense—especially if the lessons are harsh. 
 
-> "I had a terrible experience when a wallet froze all my funds because one transaction was linked to gambling. It was a very expensive lesson on custodial and non-custodial wallets."
+>*I had a terrible experience when a wallet froze all my funds because one transaction was linked to gambling. It was a very expensive lesson on custodial and non-custodial wallets.*
 >
-> — Ordinary user
+>— Ordinary user
 
 It's true that many users will stay at the surface level, using crypto for payments, savings, and donations, but the groundwork is laid. Crypto didn't just save assets; it opened doors to curiosity and adoption, probably paving the way for applications that will go beyond financial ones.
 
@@ -102,7 +104,7 @@ Every day brings more devastation. Like so many Ukrainians abroad with loved one
 
 We all hate this war. And we're so damn tired.
 
-## Adoption in Ukraine: Web3 Through the People's Lens
+### Web3 through the lens of the people
 
 Emerging tech has always fascinated me. And I believe everything comes down to people—when they connect and create a shared context.
 
@@ -120,9 +122,9 @@ It lives here: [https://uadoption.super.site/](https://uadoption.super.site/)
 
 When I put everything together, I felt a little better about what's ahead, realizing there's still something to hold on to.
 
-> "Ukraine's competitive edge lies in its people, talent, and high adoption rates. Add to that a remarkable openness to collaboration—Ukrainians are driven to work, compelled by circumstances, and ready to do even more."
+>*Ukraine's competitive edge lies in its people, talent, and high adoption rates. Add to that a remarkable openness to collaboration—Ukrainians are driven to work, compelled by circumstances, and ready to do even more.*
 >
-> — Social entrepreneur
+>— Social entrepreneur
 
 Building a digital future feels on the one hand like my country's way of last resort, but on the other it seems like a path full of immense promise. For Ukraine, the two might be one and the same.
 

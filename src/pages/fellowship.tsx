@@ -2,11 +2,12 @@ import { Box, Flex, Text } from "@chakra-ui/react"
 
 import FAQ, { type Question } from "@/components/FAQ"
 import ImageHero from "@/components/Heroes/ImageHero"
-import { H1 } from "@/components/Headings"
+import { H1, H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
 import FellowList from "@/components/FellowList"
+import FellowStories from "@/components/FellowStories"
 
-import { getAllFellowsFrontmatter } from "@/utils/md"
+import { getAllFellowsFrontmatter, getFellowsWithStories } from "@/utils/md"
 
 import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -37,15 +38,20 @@ const FAQQuestions: Question[] = [
 
 export const getStaticProps = async (context) => {
   const allFellowsFrontmatter = getAllFellowsFrontmatter()
+  const fellowsWithStories = getFellowsWithStories()
+
+  // Get up to 4 stories to display
+  const storiesToDisplay = fellowsWithStories.slice(0, 4)
 
   return {
     props: {
       allFellowsFrontmatter,
+      fellowStories: storiesToDisplay,
     },
   }
 }
 
-const FellowshipPage = ({ allFellowsFrontmatter }) => {
+const FellowshipPage = ({ allFellowsFrontmatter, fellowStories }) => {
   return (
     <>
       <Box bg="linear-gradient(180deg, #011E3B 30%, #011E3B00 100%)">
@@ -79,6 +85,19 @@ const FellowshipPage = ({ allFellowsFrontmatter }) => {
             </Box>
           </ContentContainer>
         </ImageHero>
+
+        {/* Fellow Stories Section */}
+        {fellowStories && fellowStories.length > 0 && (
+          <ContentContainer mb={16}>
+            <Box px={{ base: 8, md: 16 }}>
+              <H2 variant="action" mb={12}>
+                Fellow Stories
+              </H2>
+              <FellowStories fellows={fellowStories} />
+            </Box>
+          </ContentContainer>
+        )}
+
         <FellowList fellowsData={allFellowsFrontmatter} />
         <ContentContainer mb={8}>
           <FAQ questions={FAQQuestions} />

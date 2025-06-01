@@ -8,22 +8,23 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
-import HeroImage from "@/public/images/scholars/scholars-hero-open.jpg"
+import HeroImage from "@/public/images/devconnect-arg-hero.jpg"
 
 const FAQQuestions: Question[] = [
   {
-    question: "Who can apply for a scholarship?",
+    question: "Who can apply for the Devconnect ARG Scholars Program?",
     answer: [
-      "Everyone may apply for a partial or full scholarship to Devcon (or Devconnect). While all applications are welcome, scholarships are awarded based on a variety of considerations, especially credible and earnest need; those planning to attend devcon(nect) with or without a scholarship need not apply",
+      "To be eligible, applicants must have never attended Devcon before, have never attended Devconnect before, and be able and willing to dedicate approximately three hours per week over the course of three months to attend online sessions, complete assignments, and actively engage in learning, collaboration, and shared creation.",
+      "We're selecting 100 Scholars across five categories: (1) Ethereum Community Organizers, (2) Legal & Public Sector Professionals, (3) Journalists, (4) Artists, and (5) Developers & Other Builders of any kind.",
     ],
   },
   {
-    question: "What kinds of scholarships are offered?",
+    question: "What support is provided to Scholars?",
     answer: [
-      "There are three main types of support: Access, Transport, and Room/board",
-      "Access scholarships are a full ticket to the devcon main event, and participating side-events",
-      "Transport scholarships are for round-trip air travel to Bangkok, Thailand",
-      "Room/board scholarships cover accommodation, meals, and (limited) expenses during the days of the main devcon event.",
+      "Financial support: Based on individual needs, Scholars are provided financial support for accommodation, flight, visa application, per diem, and/or ticket to Devconnect. The level of financial needs will not influence the selection process.",
+      "Pre-Devconnect community & programming: Online sessions where Scholars meet each other, learn together, co-create, and prepare for their experience at Devconnect.",
+      "Devconnect week: Spending an amazing Devconnect week in Buenos Aires, Argentina.",
+      "Post-Devconnect: Each Scholar will create a Learning Artifact - a free-format creation that expresses their learning and experience in the medium of their choice.",
     ],
   },
 ]
@@ -31,57 +32,81 @@ const FAQQuestions: Question[] = [
 const ScholarOpen = () => {
   return (
     <>
-      <ImageHero heroImage={HeroImage}>
-        <Box w="100%" bg="linear-gradient(180deg, #16393D 30%, #16393D 100%)">
+      <Box
+        position="relative"
+        height={{ base: "100vh", md: "100vh" }}
+        minHeight="600px"
+        backgroundImage={`url(${HeroImage.src})`}
+        backgroundSize="cover"
+        backgroundPosition="center bottom"
+        mt={-16}
+      >
+        <Box 
+          position="absolute"
+          top={0}
+          left={0}
+          right={0}
+          bottom={0}
+          bg="linear-gradient(180deg, rgba(22, 57, 61, 0.7) 0%, rgba(22, 57, 61, 0.5) 40%, rgba(22, 57, 61, 0.8) 85%, #16393D 100%)"
+        >
           <Center
-            gap={4}
+            height="100%"
+            gap={6}
             flexDir="column"
             px={{ base: 8, md: 16 }}
             textAlign="center"
+            justifyContent="center"
           >
             <Center
               flexDir="column"
-              mt={{ base: "-100px", md: "-200px", lg: "-300px" }}
             >
               <Image
-                src={"/images/scholars/eth-glyph.png"}
-                alt=""
-                w={{ base: "100px", md: "150px" }}
+                src={"/images/devconnect-arg-logo.png"}
+                alt="Devconnect ARG"
+                w={{ base: "150px", md: "200px" }}
               />
-              <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0}>
-                Devcon SEA Scholars
-              </H2>
+              <Box 
+                bg="rgba(0, 0, 0, 0.3)" 
+                px={6} 
+                py={4} 
+                borderRadius="12px"
+                backdropFilter="blur(10px)"
+                maxW="650px"
+              >
+                <H2 textAlign="center" fontSize={{ base: 44, md: 56 }} m={0}>
+                  Devconnect ARG Scholars
+                </H2>
+                <Text fontSize={{ base: 18, md: 24 }} mt={4}>
+                  Welcoming 100 leaders expanding Ethereum's reach by connecting it to new communities, industries, and ideas.
+                  November 17-22 2025 in Buenos Aires, Argentina.
+                </Text>
+              </Box>
             </Center>
-            <Box maxW="650px">
-              <Text fontSize={{ base: 18, md: 24 }}>
-                The Ethereum conference for developers, thinkers, and makers.
-                November 9-17th in Bangkok, Thailand.
-              </Text>
-            </Box>
             <Box>
-              <ButtonLink href="/" fontSize={24} variant="primary">
-                Applications closed
+              <ButtonLink href="https://devconnectargscholars.paperform.co/" fontSize={24} variant="primary">
+                Apply Now - Deadline June 30th
               </ButtonLink>
             </Box>
             <Box>
               <Text fontSize={16} mb={2} mt={8}>
-                Learn more about Devcon
+                Learn more about Devconnect
               </Text>
               <ButtonLink
                 fontSize={14}
-                href="https://devcon.org/en/"
+                href="https://devconnect.org/"
                 variant="secondary"
               >
-                Devcon website
+                Devconnect website
               </ButtonLink>
             </Box>
           </Center>
         </Box>
-      </ImageHero>
+      </Box>
 
       <Box
-        bg="linear-gradient(180deg, #16393D 30%, #16393D00 100%)"
-        pt={{ base: "100px", md: "250px" }}
+        bg="#16393D"
+        pt={{ base: 16, md: 20 }}
+        pb={{ base: 16, md: 20 }}
       >
         <ContentContainer>
           <Box px={{ base: 8, md: 16 }} gap={8}>
@@ -125,15 +150,10 @@ const ScholarOpen = () => {
           <Box gap={8}>
             <H2>For Artificers</H2>
             <Text fontSize={18}>
-              All scholars are responsible for creating a learning artifact: a
-              little something that captures the impact attending Devcon or
-              Devconnect had. Artifacts are usually created with words, images,
-              and code in some combination. It could be a lesson learned, a new
-              project, or just reflections -- the value of the artifact is in
-              the act of creating it and sharing with others.
+              After Devconnect, each Scholar will create a Learning Artifact - a free-format creation that expresses their learning and experience in the medium of their choice. Artifacts are usually created with words, images, and code in some combination. It could be a lesson learned, a new project, or just reflections -- the value of the artifact is in the act of creating it and sharing with others.
             </Text>
             <ButtonLink href="https://www.notion.so/efdn/Devcon-SEA-Scholars-Program-Learning-Artifact-Database-18fd989555418092b50af037356c6181/" variant="enabled">
-              DevconSEA Artifacts Archive
+              Previous Scholars Artifacts
             </ButtonLink>
           </Box>
         </ImageSplitContent>

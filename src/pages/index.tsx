@@ -8,7 +8,7 @@ import ContentContainer from "@/components/ContentContainer"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import HomeHero from "@/components/Heroes/HomeHero"
 
-import { getAllFellowsFrontmatter } from "@/utils/md"
+import { getAllFellowsFrontmatter, getFellowsWithStories } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 import WhoAreNextBillion from "@/components/WhoAreNextBillion"
 
@@ -43,16 +43,35 @@ export const getStaticProps = async () => {
   }
   
   const allFellowsFrontmatter = getAllFellowsFrontmatter()
+  
+  // Calculate initial fellow index for homepage hero
+  let initialFellowIndex = 0
+  try {
+    const fellowsWithStories = getFellowsWithStories()
+    if (fellowsWithStories.length > 0) {
+      // Pick a random fellow with a story
+      const randomStoryFellow = fellowsWithStories[Math.floor(Math.random() * fellowsWithStories.length)]
+      // Find this fellow's index in the full allFellowsFrontmatter array
+      const fellowIndex = allFellowsFrontmatter.findIndex(fellow => fellow.slug === randomStoryFellow.slug)
+      if (fellowIndex >= 0) {
+        initialFellowIndex = fellowIndex
+      }
+    }
+  } catch (error) {
+    console.error("Error calculating initial fellow index:", error)
+    // Fall back to index 0
+  }
 
   return {
     props: {
       allFellowsFrontmatter,
       blogs,
+      initialFellowIndex,
     },
   }
 }
 
-const HomePage = ({ allFellowsFrontmatter, blogs }) => {
+const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
   return (
     <>
       <Box pos="relative" top="-64px" mb="-64px">
@@ -74,7 +93,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
             objectPosition="bottom"
           />
         </Box>
-        <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} />
+        <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} initialFellowIndex={initialFellowIndex} />
       </Box>
       <Box bg="linear-gradient(180deg, #0E6899 0%, #057db3 100%)">
         <ContentContainer>
@@ -109,7 +128,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
             imageSide="left"
           >
             <Box gap={8}>
-              <H2>Devcon SEA Scholars</H2>
+              <H2>Devconnect ARG Scholars</H2>
               <Text fontSize={18} mb={16}>
                 Devcon is a conference for developers, researchers, thinkers,
                 and makers. It's the largest single gathering of Ethereum's
@@ -119,6 +138,9 @@ const HomePage = ({ allFellowsFrontmatter, blogs }) => {
                 infinite garden.
               </Text>
               <ButtonLink href="/scholars">Learn more</ButtonLink>
+              <ButtonLink href="https://devconnectargscholars.paperform.co/">
+                Apply Now
+              </ButtonLink>
             </Box>
           </ImageSplitContent>
         </ContentContainer>

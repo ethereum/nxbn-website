@@ -1,6 +1,6 @@
 import { extname } from "path"
 
-import { Flex, Image } from "@chakra-ui/react"
+import { Box, Flex, Image } from "@chakra-ui/react"
 
 import { toPosixPath } from "@/utils/relativePath"
 
@@ -44,16 +44,24 @@ const MarkdownImage = ({
   return (
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
-    <Flex as="span" justify="center">
-      <Image
-        alt={alt}
-        width={imageWidth}
-        height={imageHeight}
-        loading="lazy"
-        src={transformedSrc}
-        h="auto"
-        {...rest}
-      />
+    <Flex as="span" justify="center" my={4}>
+      <Box
+        borderWidth="1px"
+        borderColor="gray.200"
+        borderRadius="md"
+        overflow="hidden"
+        maxW="100%"
+      >
+        <Image
+          alt={alt}
+          width={imageWidth}
+          height={imageHeight}
+          loading="lazy"
+          src={transformedSrc}
+          h="auto"
+          {...rest}
+        />
+      </Box>
     </Flex>
   )
 }

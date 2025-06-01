@@ -10,6 +10,14 @@ import {
 
 const previousEditions = [
   {
+    name: "Devcon SEA 2024",
+    location: "Bangkok, Thailand",
+    description:
+      "Devcon Southeast Asia brought together the Ethereum community in Bangkok from November 12-15, 2024. The event featured talks, workshops, and networking opportunities, with a special focus on expanding Ethereum's reach across Southeast Asia.",
+    image: "/images/devcon_sea_2024.png",
+    url: "https://archive.devcon.org/watch/?event=devcon-7&sort=eventId&order=desc",
+  },
+  {
     name: "Devconnect 2023",
     location: "Istanbul, Turkey",
     description:
@@ -53,9 +61,8 @@ const PreviousEditions = () => {
           </H2>
           <Box>
             {previousEditions.map((edition, index) => (
-              <>
+              <Box key={index}>
                 <Flex
-                  key={index}
                   gap={8}
                   flexDir={{ base: "column", lg: "row" }}
                   _hover={{
@@ -92,7 +99,7 @@ const PreviousEditions = () => {
                 {index < previousEditions.length - 1 && (
                   <Divider my={12} color="#035A7A" borderTop="1px solid" />
                 )}
-              </>
+              </Box>
             ))}
           </Box>
         </Box>

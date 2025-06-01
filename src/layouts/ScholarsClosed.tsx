@@ -8,7 +8,7 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
-import HeroImage from "@/public/images/scholars/scholars-hero-closed.jpg"
+import HeroImage from "@/public/images/devconnect-arg-hero.jpg"
 
 const FAQQuestions: Question[] = [
   {
@@ -48,11 +48,10 @@ const ScholarClosed = () => {
         >
           <Box px={{ base: 8, md: 16 }}>
             <H1 variant="action" maxW="650px">
-              Devcon SEA Scholars Program
+              Devconnect ARG Scholars Program
             </H1>
             <Text maxW="500px">
-              Money doesn&apost solve everything, but it can pay for flights,
-              hotels, and visa costs.
+              Applications for the 2025 Devconnect ARG Scholars Program have closed. Stay tuned for future opportunities to join the Ethereum community.
             </Text>
           </Box>
         </Box>
