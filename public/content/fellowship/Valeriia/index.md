@@ -104,7 +104,7 @@ Every day brings more devastation. Like so many Ukrainians abroad with loved one
 
 We all hate this war. And we're so damn tired.
 
-## Adoption in Ukraine: Web3 Through the People's Lens
+### Web3 through the lens of the people
 
 Emerging tech has always fascinated me. And I believe everything comes down to people—when they connect and create a shared context.
 

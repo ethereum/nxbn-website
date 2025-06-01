@@ -77,7 +77,7 @@ export const getAllFellowsFrontmatter = () => {
   })
 
   allFellowsFrontmatter.sort((a: any, b: any) => {
-    return a.index - b.index
+    return b.index - a.index
   })
 
   return allFellowsFrontmatter
