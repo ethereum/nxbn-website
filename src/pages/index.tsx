@@ -118,7 +118,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
               </Text>
               <ButtonLink href="/fellowship">About the program</ButtonLink>
               <ButtonLink href={"https://nxbn-fellowship.paperform.co/"}>
-              Apply for Cohorts 5 & 6
+              Apply for Cohort 6
               </ButtonLink>
             </Box>
           </ImageSplitContent>

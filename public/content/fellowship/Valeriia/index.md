@@ -17,6 +17,7 @@ bio: |
   Riia is a user experience specialist and an advisor to the Ukraine's Ministry of Digital Transformation. The war in Ukraine has shown that ingenuity and tenacity in human coordination is essential. Valeriia took on a user research project for her fellowship in order to better contextualize crypto in the war. Through dozens of interviews, Riia sought to understand the real drivers and blockers of adoption for ordinary users in Ukraine. [The full research report](https://uadoption.super.site/) is available to read, and what follows is a personal reflection of her work and its context.
 tags:
   - research
+  - ux
   - europe
   - 2023-cohort-3
 ---

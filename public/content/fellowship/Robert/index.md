@@ -17,8 +17,9 @@ bio: |
   Based in Glasgow, UK, Robert is combining advanced cryptographic techniques with satellite technologies to create systems that can respond to emergencies with speed and reliability. His research aims to overcome jurisdictional barriers that often slow down disaster response by creating verifiable and trustworthy systems that can operate across different political landscapes.
 tags:
   - satellite
-  - emergency response
-  - zero-knowledge proofs
+  - ai
+  - emergency-response
+  - zero-knowledge 
   - trusted execution
   - 2025-cohort-5
 ---
