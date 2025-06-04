@@ -22,4 +22,6 @@ bio: |
 tags:
   - 2024-cohort-4
   - Africa-west
+  - infrastructure
+  - staking-for-good
 ---

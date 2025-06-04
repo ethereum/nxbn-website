@@ -14,7 +14,7 @@ const previousEditions = [
     location: "Bangkok, Thailand",
     description:
       "Devcon Southeast Asia brought together the Ethereum community in Bangkok from November 12-15, 2024. The event featured talks, workshops, and networking opportunities, with a special focus on expanding Ethereum's reach across Southeast Asia.",
-    image: "/images/devcon_sea_2024.png",
+    image: "/images/devconSEA_scholars.jpg",
     url: "https://archive.devcon.org/watch/?event=devcon-7&sort=eventId&order=desc",
   },
   {

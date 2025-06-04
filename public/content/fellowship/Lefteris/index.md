@@ -25,6 +25,7 @@ tags:
   - 2024-cohort-4
   - europe
   - climate
+  - circular-economy
 ---
 
 >*Enaleia started as a training school for fishers; meant to help new people find and learn the timeless trade and tradition that my family has carried on for 5 generations. On one of the first trips out on the boat, and as the men hauled up a net filled with fish , I noticed a can of coke, recognizable if a little bit worn out. I picked it up to examine it, and was startled to see the date 1987 written in faded lettering on the side. As I stood there contemplating that **this piece of trash had been floating in the sea for almost 30 years**, one of the fishermen came beside me, plucked the can from my hand, and casually tossed it back into the sea. "Trash isn't our problem," he said.*
@@ -63,6 +64,7 @@ Over the course of my Fellowship, I and the Enaleia team worked with [Pollen Lab
 
 We built out a powerful new back-end system for our reclaimed plastic supply chain. At the port of collection, fishers get issued ID cards with their vessel name and other unique identifiers, and port coordinators can use a new mobile app to quickly tag plastic hauls with a unique code that will stay with the materials all the way to the point of sale of a recycled product. Using that same tracking code, consumers can use the [public dashboard](https://enaleia-hub.com/) to trace all the way back to the port and waters their bit of recycled ocean plastic came from. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P9QTiQ37r1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## From Platform to Protocol
 While our current model has proven effective in the ports where we operate, the scale of the Mediterranean's plastic pollution demands a solution that can spread faster than any single organization can grow. Enaleia alone cannot be present in every fishing community across 46,000 kilometers of Mediterranean coastline. 

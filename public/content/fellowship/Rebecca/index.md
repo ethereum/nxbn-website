@@ -19,7 +19,9 @@ bio: |
   [**Interview, 2024**](https://youtu.be/U8qMzggX1F0?si=a1V5qE5d1xjohwZM)
 
 tags:
-  - defi
+  - community
+  - informal-finance
+  - local
   - 2024-cohort-4
   - africa-southern
 ---
@@ -42,7 +44,7 @@ In this blog post, I'll discuss what makes commitment pooling different from "st
 ![watercolor_sketch](watercolor_sketch.jpg)
 *Watercolor and pen sketch of a market in Nairobi, Kenya*
 
-# Commitment pooling: Old technology, new affordances
+## Commitment pooling: Old technology, new affordances
 
 ![miyani_pesa](miyani_pesa.jpg)
 *The future of Miyani Pesa (a community asset voucher on sarafu.network) as illustrated by community members in Kinango Kwale, Kenya. What happens when we start to map economic prosperity as a function of place-based relationships? Photo: Patricia Marcella Evite*
@@ -66,7 +68,7 @@ These principles are not new. In fact, they draw directly from indigenous practi
 
 These traditions thrive not because of the novelty of the tool but because of the relationships they sustain. But how do these relationships inform the design of new economic systems? What does trust look like in different contexts, and how can financial tools be shaped to support existing ways of exchanging value? These were some of the questions I explored during my fellowship, beginning with the community in Ocean View, Cape Town.
 
-# Ocean View and the Krone Voucher Experiment
+## Ocean View and the Krone Voucher Experiment
 
 Ocean View, Cape Town is a small community tucked along the edge of Table Mountain National Park. Most families here were displaced in the 1960s from nearby Simon's Town, Noordhoek, Fish Hoek, and Glencairn under the Apartheid Group Areas Act. In an act of defiance, residents renamed their new home from "Slangkop" to "Ocean View" in memory of the coastal places they were forced to leave.
 
@@ -104,7 +106,7 @@ This mirrored something I'd seen while running similar workshops in the US. A ma
 
 The lesson here was clear: new economic tools cannot create trust—they can only amplify or formalize what already exists.
 
-# Conclusion
+## Conclusion
 
 Traditional monetary systems often erode social bonds, commodifying relationships and concentrating power. Protocols like commitment pooling offer a different approach—one that centers reciprocity, trust, and collective agency. 
 

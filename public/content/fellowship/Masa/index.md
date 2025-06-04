@@ -18,5 +18,6 @@ bio: |
 tags:
   - asia
   - education
+  - funding
   - 2023-cohort-3
 ---
