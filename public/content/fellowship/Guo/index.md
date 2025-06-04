@@ -87,7 +87,7 @@ Front pages on Matters, Discourse servers, personal sites with WordPress or Subs
 
 Tradable, on-chain billboards let us auction attention without measuring or commodifying the user. The winning bidder declares a price and gains temporary ownership; in the next period, they receive the payment. The billboard's market value determines profit or loss, discouraging exploitation from the owner. A self-imposed tax, tied to the price, becomes revenue for the billboard owner and discourages inflated pricing[^1].
 
-The price discovery of billboards does rely on measuring attention, so applications can decide what user data, if any, is exposed. Not all applications are willing to protect privacy at the expense of personalized targeting, but with an alternative to selling attention directly, now they do have a choice, and users will in turn have a choice as well.
+The price discovery of billboards does not rely on measuring attention, so applications can decide what user data, if any, is exposed. Not all applications are willing to protect privacy at the expense of personalized targeting, but with an alternative to selling attention directly, now they do have a choice, and users will in turn have a choice as well.
 
 With on-chain revenue, we can further push the attention economy toward transparency. On Matters Town, for example, we use this as a matching fund for continuous quadratic funding to support creators. Other community-driven projects may benefit too.
 

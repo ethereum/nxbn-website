@@ -40,13 +40,10 @@ export const getStaticProps = async (context) => {
   const allFellowsFrontmatter = getAllFellowsFrontmatter()
   const fellowsWithStories = getFellowsWithStories()
 
-  // Get up to 4 stories to display
-  const storiesToDisplay = fellowsWithStories.slice(0, 4)
-
   return {
     props: {
       allFellowsFrontmatter,
-      fellowStories: storiesToDisplay,
+      fellowStories: fellowsWithStories,
     },
   }
 }
@@ -88,7 +85,7 @@ const FellowshipPage = ({ allFellowsFrontmatter, fellowStories }) => {
 
         {/* Fellow Stories Section */}
         {fellowStories && fellowStories.length > 0 && (
-          <ContentContainer mb={16}>
+          <ContentContainer id="fellow-stories" mb={16}>
             <Box px={{ base: 8, md: 16 }}>
               <H2 variant="action" mb={12}>
                 Fellow Stories
