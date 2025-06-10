@@ -6,6 +6,8 @@ import ContentContainer from "@/components/ContentContainer"
 import FAQ, { type Question } from "@/components/FAQ"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import ImageHero from "@/components/Heroes/ImageHero"
+import { OpportunityBoard } from "@/components/OpportunityBoard"
+import { mockProvider } from "@/services/opportunities"
 
 // TODO: Replace with actual internships hero image
 import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
@@ -164,25 +166,8 @@ const InternshipsOpen = () => {
             </Box>
 
             <Box mb={16}>
-              <H2 mb={8}>Opportunity Boards</H2>
-              <Box 
-                p={8} 
-                borderRadius="md"
-                bg="#FFFFFF15"
-                border="1px solid #FFFFFF40"
-                boxShadow="0 2px 10px rgba(255, 255, 255, 0.1)"
-                textAlign="center"
-                transition="all 0.3s ease"
-                _hover={{
-                  transform: "translateY(-4px)",
-                  boxShadow: "0 4px 20px rgba(255, 255, 255, 0.15)",
-                  bg: "#FFFFFF20"
-                }}
-              >
-                <Text fontSize="lg" fontStyle="italic" color="white">
-                  Coming soon: Internship opportunity listings and open source repository opportunities will be displayed here.
-                </Text>
-              </Box>
+              <H2 mb={8}>Opportunity Board</H2>
+              <OpportunityBoard dataProvider={mockProvider} />
             </Box>
           </Box>
         </ContentContainer>
