@@ -7,7 +7,7 @@ import FAQ, { type Question } from "@/components/FAQ"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import ImageHero from "@/components/Heroes/ImageHero"
 import { OpportunityBoard } from "@/components/OpportunityBoard"
-import { mockProvider } from "@/services/opportunities"
+import { createJsonProvider } from "@/services/opportunities"
 
 // TODO: Replace with actual internships hero image
 import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
@@ -39,14 +39,14 @@ const FAQQuestions: Question[] = [
   {
     question: "How do I become a host organization?",
     answer: [
-      "To qualify as a host, your team must:",
+      "Host organization applications are now closed. The internship application period runs from June 12–29, 2025.",
+      "For future hosting opportunities, qualified teams must:",
       "- Be an active contributor to the Ethereum ecosystem (L2s, infrastructure, research, tooling, applications, etc.)",
       "- Demonstrate alignment with Ethereum's core values: decentralization, censorship resistance, open-source innovation, privacy, and security",
       "- Maintain open source projects for interns to work on",
       "- Provide clearly defined projects or tasks with specific learning outcomes",
       "- Have at least 5 full-time contributing members, with one or more willing mentors",
       "- Not be a current participant in the Ethereum Protocol Fellowship (EPF)",
-      "Applications to become a host organization close on May 28, 2025.",
     ],
   },
 ]
@@ -63,16 +63,25 @@ const InternshipsOpen = () => {
               </H1>
               <Box maxW={800}>
                 <Text mb={8} fontSize={18}>
-                  Get hands-on experience contributing to Ethereum! Land a paid, remote internship and make meaningful contributions this summer. Spend 12 weeks working with mentors, contributing to real projects, and applying your skills in development, research, design, marketing, legal, and more!
+                  The Ethereum Season of Internships is a collection of paid, fully remote summer internships offered across the Ethereum ecosystem. It is designed to help establish more paths for the next generation of contributors to connect with Ethereum projects and apply their skills – whether in development, research, design, marketing, finance, legal or more.
                 </Text>
                 <Text fontSize={18} mb={16}>
-                  Every year, the Ethereum ecosystem welcomes thousands of builders through community events, hackathons, courses, bootcamps, and campus clubs. The Ethereum Season of Internships creates structured early-career opportunities to transform newcomers into committed long-term contributors.
+                  Teams from across the Ethereum ecosystem have stepped up to create meaningful learning opportunities that can help new builders level-up to become long-term contributors. If you’ve been looking for a way to become a more active participant in the Ethereum ecosystem, this is your moment!
                 </Text>
-                <ButtonLink href="https://ethereum.org/internships" mb={4}>
+                <ButtonLink 
+                  href="#opportunities-board" 
+                  mb={4}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    document.getElementById('opportunities-board')?.scrollIntoView({ 
+                      behavior: 'smooth' 
+                    })
+                  }}
+                >
                   Apply for an Internship
                 </ButtonLink>
-                <ButtonLink href="https://ethereum.org/internships/host" variant="secondary">
-                  Become a Host Organization
+                <ButtonLink href="https://ethereum-season-of-internships-hostorg-waitlist.paperform.co/" variant="secondary">
+                  Join Host Organization Waitlist
                 </ButtonLink>
               </Box>
             </Box>
@@ -102,14 +111,14 @@ const InternshipsOpen = () => {
                 }}
               >
                 <Box borderLeft="3px solid #FFD54F" pl={4} mb={2}>
-                  <H2 fontSize="2xl" mb={4}>What is SOI?</H2>
+                  <H2 fontSize="2xl" mb={4}>How to Apply</H2>
                 </Box>
-                <Text fontWeight="medium" color="white">
-                  The Ethereum Season of Internships offers a coordinated collection of paid, fully remote summer internships across the Ethereum ecosystem.
-                </Text>
-                <Text mt={4} color="white">
-                  This initiative creates pathways for the next generation of contributors to connect with Ethereum projects and apply their diverse skills.
-                </Text>
+                <Text mb={2} fontWeight="medium" color="white">From June 12–29, internship applications are open. Here's how to get started:</Text>
+                <Box as="ul" pl={4} color="white">
+                  <Box as="li" mb={2}>Choose the projects you're excited about - internships span development, ZK research, community building, education, and legal</Box>
+                  <Box as="li" mb={2}>Follow the application instructions in each listing - each host team manages their own selection process</Box>
+                  <Box as="li">(Optional but encouraged) Start contributing during community bonding - technical interns are encouraged to begin engaging with projects they're interested in</Box>
+                </Box>
               </Box>
               
               <Box 
@@ -165,9 +174,9 @@ const InternshipsOpen = () => {
               </Box>
             </Box>
 
-            <Box mb={16}>
+            <Box id="opportunities-board" mb={16}>
               <H2 mb={8}>Opportunities Board</H2>
-              <OpportunityBoard dataProvider={mockProvider} />
+              <OpportunityBoard dataProvider={createJsonProvider('/data/internships-2025.json')} />
             </Box>
           </Box>
         </ContentContainer>
@@ -185,8 +194,8 @@ const InternshipsOpen = () => {
             <Text fontSize={18} mb={8}>
               By joining forces, we can increase the visibility of internship opportunities and attract even more people to the Ethereum ecosystem.
             </Text>
-            <ButtonLink href="https://ethereum.org/internships/host">
-              Apply to Host by May 28, 2025
+            <ButtonLink href="https://ethereum-season-of-internships-hostorg-waitlist.paperform.co/">
+              Join Host Organization Waitlist
             </ButtonLink>
           </Box>
         </ImageSplitContent>
