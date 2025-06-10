@@ -18,6 +18,7 @@ const OpportunityBoard: React.FC<OpportunityBoardProps> = ({ dataProvider }) => 
   const [paginationIndex, setPaginationIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null);
+  const [isSlideOut, setIsSlideOut] = useState(false);
 
   // Load opportunities on component mount
   useEffect(() => {
@@ -73,10 +74,15 @@ const OpportunityBoard: React.FC<OpportunityBoardProps> = ({ dataProvider }) => 
     const direction = pageNumber > paginationIndex ? 'right' : 'left';
     setSlideDirection(direction);
     setIsTransitioning(true);
+    setIsSlideOut(true); // Start with slide out phase
     
-    // After a brief delay, change the page and reset transition
+    // Phase 1: Slide out the current page
     setTimeout(() => {
+      // Phase 2: Change content and slide in from opposite direction
       setPaginationIndex(pageNumber);
+      setIsSlideOut(false); // Switch to slide in phase
+      
+      // Phase 3: Complete transition
       setTimeout(() => {
         setIsTransitioning(false);
         setSlideDirection(null);
@@ -149,11 +155,15 @@ const OpportunityBoard: React.FC<OpportunityBoardProps> = ({ dataProvider }) => 
               columns={{ base: 1, md: 2, lg: 3 }} 
               spacing={6}
               transform={
-                isTransitioning 
-                  ? slideDirection === 'right' 
-                    ? 'translateX(-100%)' 
-                    : 'translateX(100%)'
-                  : 'translateX(0)'
+                !isTransitioning 
+                  ? 'translateX(0)' 
+                  : isSlideOut
+                    ? slideDirection === 'right' 
+                      ? 'translateX(-100%)' 
+                      : 'translateX(100%)'
+                    : slideDirection === 'right'
+                      ? 'translateX(100%)'
+                      : 'translateX(-100%)'
               }
               opacity={isTransitioning ? 0.3 : 1}
               transition="all 0.3s ease-in-out"
