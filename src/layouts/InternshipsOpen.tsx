@@ -86,29 +86,49 @@ const InternshipsOpen = () => {
               mb={16}
             >
               <Box 
-                bg="rgba(255, 213, 79, 0.1)" 
+                bg="#FFD54F30" 
                 p={8} 
                 borderRadius="md"
+                border="1px solid #FFD54F"
+                boxShadow="0 2px 10px rgba(255, 213, 79, 0.2)"
                 flex={1}
+                transition="all 0.3s ease"
+                _hover={{
+                  transform: "translateY(-4px)",
+                  boxShadow: "0 4px 20px rgba(255, 213, 79, 0.3)",
+                  bg: "#FFD54F35"
+                }}
               >
-                <H2 fontSize="2xl" mb={4}>What is SOI?</H2>
-                <Text>
+                <Box borderLeft="3px solid #FFD54F" pl={4} mb={2}>
+                  <H2 fontSize="2xl" mb={4}>What is SOI?</H2>
+                </Box>
+                <Text fontWeight="medium" color="white">
                   The Ethereum Season of Internships offers a coordinated collection of paid, fully remote summer internships across the Ethereum ecosystem.
                 </Text>
-                <Text mt={4}>
+                <Text mt={4} color="white">
                   This initiative creates pathways for the next generation of contributors to connect with Ethereum projects and apply their diverse skills.
                 </Text>
               </Box>
               
               <Box 
-                bg="rgba(75, 181, 122, 0.1)" 
+                bg="#4CAF5030" 
                 p={8} 
                 borderRadius="md"
+                border="1px solid #4CAF50"
+                boxShadow="0 2px 10px rgba(75, 181, 122, 0.2)"
                 flex={1}
+                transition="all 0.3s ease"
+                _hover={{
+                  transform: "translateY(-4px)",
+                  boxShadow: "0 4px 20px rgba(75, 181, 122, 0.3)",
+                  bg: "#4CAF5035"
+                }}
               >
-                <H2 fontSize="2xl" mb={4}>How It Works</H2>
-                <Text mb={2}>Over the course of 12 weeks, selected interns will:</Text>
-                <Box as="ul" pl={4}>
+                <Box borderLeft="3px solid #4CAF50" pl={4} mb={2}>
+                  <H2 fontSize="2xl" mb={4}>How It Works</H2>
+                </Box>
+                <Text mb={2} fontWeight="medium" color="white">Over the course of 12 weeks, selected interns will:</Text>
+                <Box as="ul" pl={4} color="white">
                   <Box as="li" mb={2}>Work closely with Ethereum project teams and mentors to contribute to real open source tools, protocols, or community initiatives</Box>
                   <Box as="li" mb={2}>Tackle meaningful issues and contribute directly to active ecosystem projects</Box>
                   <Box as="li" mb={2}>Receive paid financial support throughout the internship</Box>
@@ -117,14 +137,24 @@ const InternshipsOpen = () => {
               </Box>
               
               <Box 
-                bg="rgba(52, 152, 219, 0.1)" 
+                bg="#2196F330" 
                 p={8} 
                 borderRadius="md"
+                border="1px solid #2196F3"
+                boxShadow="0 2px 10px rgba(33, 150, 243, 0.2)"
                 flex={1}
+                transition="all 0.3s ease"
+                _hover={{
+                  transform: "translateY(-4px)",
+                  boxShadow: "0 4px 20px rgba(33, 150, 243, 0.3)",
+                  bg: "#2196F335"
+                }}
               >
-                <H2 fontSize="2xl" mb={4}>Who Should Apply</H2>
-                <Text mb={2}>Internships are open to all, especially:</Text>
-                <Box as="ul" pl={4}>
+                <Box borderLeft="3px solid #2196F3" pl={4} mb={2}>
+                  <H2 fontSize="2xl" mb={4}>Who Should Apply</H2>
+                </Box>
+                <Text mb={2} fontWeight="medium" color="white">Internships are open to all, especially:</Text>
+                <Box as="ul" pl={4} color="white">
                   <Box as="li" mb={2}>Early career professionals and students</Box>
                   <Box as="li" mb={2}>Self-taught developers or researchers</Box>
                   <Box as="li" mb={2}>Designers exploring decentralized tools</Box>
@@ -137,12 +167,19 @@ const InternshipsOpen = () => {
               <H2 mb={8}>Opportunity Boards</H2>
               <Box 
                 p={8} 
-                borderRadius="md" 
-                border="1px dashed" 
-                borderColor="gray.400"
+                borderRadius="md"
+                bg="#FFFFFF15"
+                border="1px solid #FFFFFF40"
+                boxShadow="0 2px 10px rgba(255, 255, 255, 0.1)"
                 textAlign="center"
+                transition="all 0.3s ease"
+                _hover={{
+                  transform: "translateY(-4px)",
+                  boxShadow: "0 4px 20px rgba(255, 255, 255, 0.15)",
+                  bg: "#FFFFFF20"
+                }}
               >
-                <Text fontSize="lg" fontStyle="italic">
+                <Text fontSize="lg" fontStyle="italic" color="white">
                   Coming soon: Internship opportunity listings and open source repository opportunities will be displayed here.
                 </Text>
               </Box>
