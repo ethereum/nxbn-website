@@ -166,7 +166,7 @@ const InternshipsOpen = () => {
             </Box>
 
             <Box mb={16}>
-              <H2 mb={8}>Opportunity Board</H2>
+              <H2 mb={8}>Opportunities Board</H2>
               <OpportunityBoard dataProvider={mockProvider} />
             </Box>
           </Box>
