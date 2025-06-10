@@ -1,6 +1,7 @@
 // Header links
 export const FELLOWSHIP_PAGE = "/fellowship"
 export const SCHOLARS_PAGE = "/scholars"
+export const INTERNSHIPS_PAGE = "/internships"
 export const ABOUT_PAGE = "/about"
 export const BLOG_PAGE = "https://blog.ethereum.org/category/next-billion"
 
@@ -15,6 +16,7 @@ export const CONTENT_DIR = "public/content"
 export const MARKDOWN_CONTENT_MAX_WIDTH = 800
 
 export const SCHOLARS_PROGRAM_OPEN = true
+export const INTERNSHIPS_PROGRAM_OPEN = true
 
 export const FELLOW_LIST_PAGINATION_LIMIT = 8
 
