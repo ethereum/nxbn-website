@@ -12,25 +12,39 @@ import HeroImage from "@/public/images/devconnect-arg-hero.jpg"
 
 const FAQQuestions: Question[] = [
   {
-    question: "What is the Next Billion Fellowship?",
+    question: "What is the Devcon(nect) Scholars Program?",
     answer: [
-      "The Ethereum Next Billion Fellowship Program is focused on identifying and supporting unique and talented individuals helping to demystify Ethereum's relevance and break down barriers to entry for people and communities not currently part of the Ethereum ecosystem.",
-      "Fellows will be part of a small forum for leaders who, during the course of six months, drive their own projects that address a particular enabler or blocker for Ethereum becoming a public good that acts as a foundational layer for other public goods.",
-      "While there are some cohort-wide activities, it is a self-directed, self-driven program. Depending on the needs of each Fellow and their project, different support is provided, including financial support, PR opportunities, mentorship, technical advice, and access to the Ethereum Foundation network. Fellows&apos work will be highlighted to showcase the impact and value of Ethereum and its community.",
+      "The Devcon(nect) Scholars Program aims to break down barriers to entry for people taking their first steps into the Ethereum ecosystem. By providing support for travel, accommodations, and conference access, the program enables diverse participants from around the world to attend Ethereum's flagship events and become part of the global community.",
+      "Physical events like Devcon and Devconnect act as centers of gravity in the Ethereum ecosystem. They create space and time for community—places and moments to share, learn, discuss, meet, explore, and live in. The Scholars program ensures these opportunities are accessible to a broader range of participants.",
     ],
   },
   {
-    question: "What kinds of projects qualify?",
+    question: "Who can apply for a scholarship?",
     answer: [
-      "A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem. It doesn't have to directly integrate with Ethereum to qualify, but needs to be on-balance 'good' for the ecosystem and future Ethereum community.",
-      "The project can be just an idea, in early stages, or already ongoing. It can be building an application, research, or an organizational program/initiative. Whatever it is, the project must enable the flourishing of regions, populations, or communities that are underrepresented in the existing Ethereum ecosystem today.",
+      "Everyone may apply for a partial or full scholarship to Devcon or Devconnect events. While all applications are welcome, scholarships are awarded based on a variety of considerations, especially credible and earnest need. Those planning to attend these events with or without a scholarship need not apply.",
     ],
   },
   {
-    question: "I am building on an L2. Should I apply?",
+    question: "What kinds of scholarships are offered?",
     answer: [
-      "Program Duration: April to October, 2024",
-      "While the official duration of the fellowship is six months, we expect and hope fellows remain consistent contributors to the Ethereum community as alumni.",
+      "There are three main types of support: Access, Transport, and Room/board",
+      "Access scholarships provide a full ticket to the main event and participating side-events",
+      "Transport scholarships cover round-trip air travel to the event location",
+      "Room/board scholarships cover accommodation, meals, and (limited) expenses during the days of the main event",
+    ],
+  },
+  {
+    question: "When will applications open again?",
+    answer: [
+      "The next Devconnect will be held in Buenos Aires, Argentina, from November 17th to the 22nd, 2025. Scholars applications typically open several months before the event.",
+      "Follow @ethereum on Twitter, subscribe to the Ethereum Foundation blog, or check the official Devconnect website at https://devconnect.org/ for announcements about the next application period.",
+    ],
+  },
+  {
+    question: "What is Destino Devconnect?",
+    answer: [
+      "Destino Devconnect is a local grant round to support Argentinian builders in bringing their country onchain ahead of Devconnect 2025 in Buenos Aires.",
+      "While separate from the Scholars program, it's another initiative to foster community engagement and Ethereum adoption globally. It provides up to $1,000 in sponsorship for local events and initiatives, connections to speakers, visibility on the Devconnect calendar, and direct support from the Devconnect team.",
     ],
   },
 ]
@@ -48,59 +62,63 @@ const ScholarClosed = () => {
         >
           <Box px={{ base: 8, md: 16 }}>
             <H1 variant="action" maxW="650px">
-              Devconnect ARG Scholars Program
+              Devcon(nect) Scholars Program
             </H1>
-            <Text maxW="500px">
-              Applications for the 2025 Devconnect ARG Scholars Program have closed. Stay tuned for future opportunities to join the Ethereum community.
+            <Text maxW="500px" fontSize={18} mb={16}>
+              Applications for the current Scholars program are now closed. Check back for announcements about the next Devconnect, happening November 17-22, 2025 in Buenos Aires!
             </Text>
           </Box>
         </Box>
       </ImageHero>
       <ContentContainer>
+        <Box px={{ base: 8, md: 16 }} py={16}>
+          <H2 mb={8}>About the Program</H2>
+          <Text fontSize={18} mb={8}>
+            Devcon and Devconnect are events that act as centers of gravity in the Ethereum ecosystem. They are global gatherings that create space and time for community—places and moments to share, learn, discuss, meet, explore, and live in.
+          </Text>
+          <Text fontSize={18} mb={16}>
+            Physical events are always somewhere in a new city, country, or region. That means no matter where they are held, it will always be difficult for folks living elsewhere. The Scholars program supports travel, room & board, a ticket to the event, and special programming for participants from around the world.
+          </Text>
+        </Box>
+        
         <ImageSplitContent
-          image={"/images/temp.png"}
+          image="/images/scholars/artifact.jpg"
           imageBorder="round"
           imageSide="right"
         >
           <Box gap={8}>
-            <H2>Title</H2>
-            <Text>
-              Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
-              suscipit leo. Carpe diem vulputate est nec commodo rutrum.
-              Pellentesque mattis convallis nisi eu and I ain&apost stoppin
-              until the swear jar&aposs full. Ut rhoncus velit at mauris
-              interdum, fringilla dictum neque rutrum. Curabitur mattis odio at
-              erat viverra lobortis. Poppin&apos bottles on the ice, tristique
-              suscipit mauris elementum tempus. Quisque ut felis vitae elit
-              tempor interdum viverra a est. Drop it like it&aposs hot, at
-              pretium quam. In nec scelerisque purus. Nam dignissim lacus ipsum,
-              a ullamcorper nulla pretium non. Aliquam sed enim faucibus,
-              pulvinar felis at, vulputate augue.
+            <H2>Learning Artifacts</H2>
+            <Text fontSize={18} mb={4}>
+              All scholars are responsible for creating a learning artifact: a little something that captures the impact attending the event had. Artifacts are usually created with words, images, and code in some combination. It could be a lesson learned, a new project, or just reflections—the value of the artifact is in the act of creating it and sharing with others.
             </Text>
-            <ButtonLink href="/">Text</ButtonLink>
+            <Text fontSize={18} mb={4}>
+              These artifacts serve as valuable resources for the community and help extend the impact of the Scholars program beyond the event itself.
+            </Text>
+            <ButtonLink href="https://www.notion.so/efdn/Devcon-SEA-Scholars-Program-Learning-Artifact-Database-18fd989555418092b50af037356c6181/">
+              Browse Past Scholar Artifacts
+            </ButtonLink>
           </Box>
         </ImageSplitContent>
+        
         <ImageSplitContent
-          image={"/images/temp.png"}
+          image="/images/scholars/scholars-hero-closed.jpg"
           imageBorder="round"
           imageSide="left"
         >
           <Box gap={8}>
-            <H2>Title</H2>
-            <Text>
-              Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
-              suscipit leo. Carpe diem vulputate est nec commodo rutrum.
-              Pellentesque mattis convallis nisi eu and I ain’t stoppin until
-              the swear jar’s full. Ut rhoncus velit at mauris interdum,
-              fringilla dictum neque rutrum. Curabitur mattis odio at erat
-              viverra lobortis. Poppin’ bottles on the ice, tristique suscipit
-              mauris elementum tempus. Quisque ut felis vitae elit tempor
-              interdum viverra a est. Drop it like it’s hot, at pretium quam. In
-              nec scelerisque purus. Nam dignissim lacus ipsum, a ullamcorper
-              nulla pretium non. Aliquam sed enim faucibus, pulvinar felis at,
-              vulputate augue.
+            <H2>Coming Next: Devconnect Argentina</H2>
+            <Text fontSize={18} mb={4}>
+              The next Devconnect will be held in Buenos Aires, Argentina, from November 17th to the 22nd, 2025. It will feature:
             </Text>
-            <ButtonLink href="/">Text</ButtonLink>
+            <Box as="ul" pl={4}>
+              <Box as="li" mb={2}>The Ethereum World's Fair – a showcase of Ethereum apps and innovations</Box>
+              <Box as="li" mb={2}>Decentralized events hosted by the broader ecosystem</Box>
+              <Box as="li" mb={2}>A week-long coworking space with Community Hubs</Box>
+              <Box as="li">An ecosystem-wide push to bring Argentina onchain</Box>
+            </Box>
+            <ButtonLink href="https://devconnect.org" mt={8}>
+              Learn About Devconnect 2025
+            </ButtonLink>
           </Box>
         </ImageSplitContent>
       </ContentContainer>

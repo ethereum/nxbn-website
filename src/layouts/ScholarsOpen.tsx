@@ -77,7 +77,7 @@ const ScholarOpen = () => {
                   Devconnect ARG Scholars
                 </H2>
                 <Text fontSize={{ base: 18, md: 24 }} mt={4}>
-                  Welcoming 100 leaders expanding Ethereum's reach by connecting it to new communities, industries, and ideas.
+                  Welcoming leaders expanding Ethereum's reach by connecting it to new communities, industries, and ideas.
                   November 17-22 2025 in Buenos Aires, Argentina.
                 </Text>
               </Box>
