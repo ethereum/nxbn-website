@@ -7,6 +7,7 @@ import {
   ABOUT_PAGE,
   BLOG_PAGE,
   FELLOWSHIP_PAGE,
+  INTERNSHIPS_PAGE,
   SCHOLARS_PAGE,
 } from "@/utils/constants"
 
@@ -50,6 +51,16 @@ const HeaderButtons = ({ onClose }) => {
         onClick={onClose}
       >
         Scholars
+      </Link>
+      <Link
+        href={INTERNSHIPS_PAGE}
+        textStyle={{
+          base: path === INTERNSHIPS_PAGE ? "drawer-link-active" : "drawer-link",
+          md: path === INTERNSHIPS_PAGE ? "header-link-active" : "header-link",
+        }}
+        onClick={onClose}
+      >
+        Internships
       </Link>
       <Link
         href={ABOUT_PAGE}
