@@ -9,8 +9,7 @@ import ImageHero from "@/components/Heroes/ImageHero"
 import { OpportunityBoard } from "@/components/OpportunityBoard"
 import { createJsonProvider } from "@/services/opportunities"
 
-// TODO: Replace with actual internships hero image
-import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
+import HeroImage from "@/public/images/internships/internships-hero.jpg"
 
 const FAQQuestions: Question[] = [
   {
@@ -55,9 +54,28 @@ const InternshipsOpen = () => {
   return (
     <>
       <Box bg="linear-gradient(180deg, #011E3B 30%, #011E3B00 100%)">
-        <ImageHero heroImage={HeroImage}>
+        <Box position="relative">
+          <Box mt={-16}>
+            <Box
+              height={{ base: "500px", md: "600px", lg: "700px", xl: "900px" }}
+              backgroundImage={`url(${HeroImage.src})`}
+              backgroundSize="cover"
+              backgroundPosition="center bottom"
+              position="relative"
+              _after={{
+                content: '""',
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: "20%",
+                background: "linear-gradient(to bottom, rgba(1, 30, 59, 0) 0%, rgba(1, 30, 59, 1) 100%)",
+                pointerEvents: "none",
+              }}
+            />
+          </Box>
           <ContentContainer>
-            <Box px={{ base: 8, md: 16 }} pb={16} mt={-40}>
+            <Box px={{ base: 8, md: 16 }} pb={16} mt={-40} position="relative" zIndex={2}>
               <H1 variant="action">
                 Season of Internships
               </H1>
@@ -66,7 +84,7 @@ const InternshipsOpen = () => {
                   The Ethereum Season of Internships is a collection of paid, fully remote summer internships offered across the Ethereum ecosystem. It is designed to help establish more paths for the next generation of contributors to connect with Ethereum projects and apply their skills – whether in development, research, design, marketing, finance, legal or more.
                 </Text>
                 <Text fontSize={18} mb={16}>
-                  Teams from across the Ethereum ecosystem have stepped up to create meaningful learning opportunities that can help new builders level-up to become long-term contributors. If you’ve been looking for a way to become a more active participant in the Ethereum ecosystem, this is your moment!
+                  Teams from across the Ethereum ecosystem have stepped up to create meaningful learning opportunities that can help new builders level-up to become long-term contributors. If you've been looking for a way to become a more active participant in the Ethereum ecosystem, this is your moment!
                 </Text>
                 <ButtonLink 
                   href="#opportunities-board" 
@@ -86,7 +104,7 @@ const InternshipsOpen = () => {
               </Box>
             </Box>
           </ContentContainer>
-        </ImageHero>
+        </Box>
 
         <ContentContainer>
           <Box px={{ base: 8, md: 16 }} py={16}>
@@ -182,7 +200,7 @@ const InternshipsOpen = () => {
         </ContentContainer>
 
         <ImageSplitContent
-          image="/images/fellowship/fellowship-hero.jpg"
+          image="/images/internships/internships-hero.jpg"
           imageBorder="left"
           imageSide="left"
         >
