@@ -1,9 +1,9 @@
 [
   {
     "id": "self-labs-privacy-zk",
-    "title": "Privacy & ZK Development Intern",
+    "title": "Engineering & Community Intern",
     "hostOrg": "Self Labs",
-    "link": "https://docs.google.com/forms/d/e/1FAIpQLScsIAD6gL69sEYOzsVmF9s1Ji5yMHms5v2S-nxkiFEt2ezNRQ/viewform?usp=sharing&ouid=116693312237137286843",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLScsIAD6gL69sEYOzsVmF9s1Ji5yMHms5v2S-nxkiFEt2ezNRQ/viewform",
     "date": "2025-06-29",
     "categories": ["Privacy & ZK"]
   },
@@ -11,7 +11,7 @@
     "id": "celo-data-insights",
     "title": "Data & Ecosystem Insights Intern",
     "hostOrg": "Celo Foundation",
-    "link": "https://docs.google.com/forms/d/e/1FAIpQLScO8qFpOPvhm9I5iUDYmZXnYloFDcx9Hc5FfN6eJ7ixKD6LPQ/viewform?usp=sharing&ouid=109677072249472063098",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLScO8qFpOPvhm9I5iUDYmZXnYloFDcx9Hc5FfN6eJ7ixKD6LPQ/viewform",
     "date": "2025-06-29",
     "categories": ["Rollups / L2s"]
   },
@@ -19,7 +19,7 @@
     "id": "scroll-governance",
     "title": "Governance Intern",
     "hostOrg": "Scroll Foundation",
-    "link": "https://docs.google.com/forms/d/e/1FAIpQLSejDUmjiWoO9AQ_6apJmf1vJNF_Uqm9dJfbfRgehDgOtIN4UA/viewform?usp=sharing&ouid=116892538671124685567",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSejDUmjiWoO9AQ_6apJmf1vJNF_Uqm9dJfbfRgehDgOtIN4UA/viewform",
     "date": "2025-06-29",
     "categories": ["DAOs & Governance", "Public Goods", "Rollups / L2s"]
   },
@@ -27,7 +27,7 @@
     "id": "giveth-marketing-communications",
     "title": "Marketing & Communications Intern",
     "hostOrg": "Giveth",
-    "link": "https://docs.google.com/document/d/1OLmlQIC4QP8ZbqMN2ZDcZC0bmskskmBcyDaoCDuFzYM/edit?usp=sharing",
+    "link": "https://docs.google.com/document/d/1OLmlQIC4QP8ZbqMN2ZDcZC0bmskskmBcyDaoCDuFzYM/edit?tab=t.0",
     "date": "2025-06-29",
     "categories": ["Public Goods"]
   },
@@ -35,7 +35,7 @@
     "id": "remix-developer",
     "title": "Remix Developer Intern",
     "hostOrg": "Remix",
-    "link": "https://docs.google.com/forms/d/1DVdMK4zKHS_3AvRpL0n4d4mvCEj99_OOhR2GOGpz7Ls/edit#settings",
+    "link": "https://docs.google.com/forms/d/1qyWF5CCXw9tmNGOxa7rOU63A349xBAr62ZUNBNEqzTc/viewform?edit_requested=true",
     "date": "2025-06-29",
     "categories": ["Developer Tooling"]
   },
@@ -43,7 +43,7 @@
     "id": "remix-events",
     "title": "Remix Events Intern: East Africa and Devconnect Argentina",
     "hostOrg": "Remix",
-    "link": "https://docs.google.com/forms/d/1qyWF5CCXw9tmNGOxa7rOU63A349xBAr62ZUNBNEqzTc/edit",
+    "link": "https://docs.google.com/forms/d/1DVdMK4zKHS_3AvRpL0n4d4mvCEj99_OOhR2GOGpz7Ls/viewform?edit_requested=true#settings",
     "date": "2025-06-29",
     "categories": ["Developer Tooling"]
   },
@@ -59,7 +59,7 @@
     "id": "avara-software-engineer",
     "title": "Software Engineer Intern",
     "hostOrg": "Avara",
-    "link": "https://jobs.eu.lever.co/avara/648f0da1-7922-4439-bb38-dfd6a169e90f",
+    "link": "https://jobs.eu.lever.co/avara/b7c927c4-fa23-4323-b579-6c33eb55606e",
     "date": "2025-06-29",
     "categories": ["DeFi", "Public Goods", "SocialFi", "Wallets"]
   },
@@ -67,7 +67,7 @@
     "id": "kotani-pay-software-dev",
     "title": "Software Development Intern",
     "hostOrg": "Kotani Pay",
-    "link": "https://www.linkedin.com/posts/jonathan-morgan-20765652_hiring-vietnamese-hochiminhcity-activity-7331026520024510465-iBZA",
+    "link": "https://docs.google.com/document/d/1Xmd8Ldvh-ZLLn9_m-_bZi9-332R66DHQ3xQ6fxAaV4Y/edit?tab=t.0",
     "date": "2025-06-29",
     "categories": ["Infra", "Privacy & ZK"]
   },
@@ -91,7 +91,7 @@
     "id": "geodework-ecodev",
     "title": "EcoDev Operations Intern",
     "hostOrg": "Geodework",
-    "link": "https://www.notion.so/20009a8a03a780749e03d52be5a7ee17?pvs=21",
+    "link": "https://wood-slope-3f8.notion.site/20009a8a03a780749e03d52be5a7ee17",
     "date": "2025-06-29",
     "categories": ["Public Goods"]
   },
@@ -101,7 +101,7 @@
     "hostOrg": "Enterprise Ethereum Alliance",
     "link": "https://tally.so/r/wLqEEG",
     "date": "2025-06-29",
-    "categories": ["Research", "Rollups / L2s"]
+    "categories": ["Research"]
   },
   {
     "id": "eea-visual-brand",
@@ -109,7 +109,7 @@
     "hostOrg": "Enterprise Ethereum Alliance",
     "link": "https://tally.so/r/wLqEEG",
     "date": "2025-06-29",
-    "categories": ["Research", "Rollups / L2s"]
+    "categories": ["Research"]
   },
   {
     "id": "eea-social-media",
@@ -117,13 +117,13 @@
     "hostOrg": "Enterprise Ethereum Alliance",
     "link": "https://tally.so/r/wLqEEG",
     "date": "2025-06-29",
-    "categories": ["Research", "Rollups / L2s"]
+    "categories": ["Research"]
   },
   {
     "id": "obol-marketing",
     "title": "Marketing Intern",
     "hostOrg": "Obol Collective",
-    "link": "placeholder",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSet11JdgFyusfAige7_xjHD2bh5g_bVENsa8Uvj7L3lkJrJMw/viewform",
     "date": "2025-06-29",
     "categories": ["Infra"]
   },
@@ -131,15 +131,15 @@
     "id": "obol-product-engineering",
     "title": "Product or Engineering Intern",
     "hostOrg": "Obol Collective",
-    "link": "placeholder",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSet11JdgFyusfAige7_xjHD2bh5g_bVENsa8Uvj7L3lkJrJMw/viewform",
     "date": "2025-06-29",
     "categories": ["Infra"]
   },
   {
     "id": "gnosis-testing-dev",
-    "title": "Blockchain Testing & Development Intern",
+    "title": "Developer Intern",
     "hostOrg": "Gnosis",
-    "link": "placeholder",
+    "link": "https://gnosis.jobs.personio.com/job/2142482?display=en",
     "date": "2025-06-29",
     "categories": ["Developer Tooling", "Infra", "Security"]
   },
@@ -161,7 +161,7 @@
   },
   {
     "id": "seal-certifications",
-    "title": "Security Certifications Analyst Intern",
+    "title": "Security Certifications Intern",
     "hostOrg": "The Security Alliance",
     "link": "https://www.notion.so/1ff8d08fc71e8059b98bf9e010a840cd?pvs=21",
     "date": "2025-06-29",
@@ -171,23 +171,15 @@
     "id": "openzeppelin-marketing",
     "title": "Marketing Intern",
     "hostOrg": "OpenZeppelin",
-    "link": "https://www.notion.so/208cbd1278608086b420de35ea66a949?pvs=21",
-    "date": "2025-06-29",
-    "categories": ["Developer Tooling", "Public Goods", "Research", "Security"]
-  },
-  {
-    "id": "openzeppelin-security-research",
-    "title": "Security Research Intern",
-    "hostOrg": "OpenZeppelin",
-    "link": "placeholder",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLScXLycDmbNI-dR-By8dOjklfS-DY-2F8ROCPt348cU4akAWDQ/viewform",
     "date": "2025-06-29",
     "categories": ["Developer Tooling", "Public Goods", "Research", "Security"]
   },
   {
     "id": "openzeppelin-opensource",
-    "title": "Open Source Solutions Intern",
+    "title": "Open Source Intern",
     "hostOrg": "OpenZeppelin",
-    "link": "https://www.notion.so/208cbd12786080a0ad0bea2a8dd65505?pvs=21",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSeGVHMnbaMFDEc_R3t2pQoF4iZlhJTQqsiVl3twTruWE6qgrA/viewform",
     "date": "2025-06-29",
     "categories": ["Developer Tooling", "Public Goods", "Research", "Security"]
   },
@@ -251,7 +243,7 @@
     "id": "lisk-devrel",
     "title": "DevRel & Community Intern",
     "hostOrg": "Lisk",
-    "link": "placeholder",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSeFONAwV3hOqhpcPfHqPo9TjNSWcbxUlQWKZTqoMCzBuv9NpQ/viewform",
     "date": "2025-06-29",
     "categories": ["Rollups / L2s"]
   }
