@@ -15,7 +15,7 @@ const FAQQuestions: Question[] = [
   {
     question: "What is the Ethereum Season of Internships?",
     answer: [
-      "The Ethereum Season of Internships offers a coordinated collection of paid, fully remote summer internships across the Ethereum ecosystem. This initiative creates pathways for the next generation of contributors to connect with Ethereum projects and apply their diverse skills in development, research, design, marketing, finance, legal, and more.",
+      "The Ethereum Season of Internships offers a coordinated collection of paid, fully remote summer internships across the Ethereum ecosystem. This initiative creates pathways for the next generation of contributors to connect with Ethereum projects and apply their diverse skills in development, research, design, marketing, operations, and more.",
       "Our long-term vision is to make Ethereum an increasingly welcoming space for new talent, building a sustainable pipeline that transforms newcomers into committed long-term contributors.",
     ],
   },
@@ -81,7 +81,7 @@ const InternshipsOpen = () => {
               </H1>
               <Box maxW={800}>
                 <Text mb={8} fontSize={18}>
-                  The Ethereum Season of Internships is a collection of paid, fully remote summer internships offered across the Ethereum ecosystem. It is designed to help establish more paths for the next generation of contributors to connect with Ethereum projects and apply their skills – whether in development, research, design, marketing, finance, legal or more.
+                  The Ethereum Season of Internships is a collection of paid, fully remote summer internships offered across the Ethereum ecosystem. It is designed to help establish more paths for the next generation of contributors to connect with Ethereum projects and apply their skills – whether in development, research, design, marketing, operations or more.
                 </Text>
                 <Text fontSize={18} mb={16}>
                   Teams from across the Ethereum ecosystem have stepped up to create meaningful learning opportunities that can help new builders level-up to become long-term contributors. If you've been looking for a way to become a more active participant in the Ethereum ecosystem, this is your moment!
@@ -133,9 +133,9 @@ const InternshipsOpen = () => {
                 </Box>
                 <Text mb={2} fontWeight="medium" color="white">From June 12–29, internship applications are open. Here's how to get started:</Text>
                 <Box as="ul" pl={4} color="white">
-                  <Box as="li" mb={2}>Choose the projects you're excited about - internships span development, ZK research, community building, education, and legal</Box>
+                  <Box as="li" mb={2}>Choose the projects you're excited about - internships span development, research, community building, operations, and marketing</Box>
                   <Box as="li" mb={2}>Follow the application instructions in each listing - each host team manages their own selection process</Box>
-                  <Box as="li">(Optional but encouraged) Start contributing during community bonding - technical interns are encouraged to begin engaging with projects they're interested in</Box>
+                  <Box as="li">(Optional but encouraged) Start engaging with projects you're interested in - Early engagement helps you understand the project’s goals and gives the team a chance to see your initiative in action</Box>
                 </Box>
               </Box>
               
