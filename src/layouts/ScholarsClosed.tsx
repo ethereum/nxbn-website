@@ -74,7 +74,7 @@ const ScholarClosed = () => {
         <Box px={{ base: 8, md: 16 }} py={16}>
           <H2 mb={8}>About the Program</H2>
           <Text fontSize={18} mb={8}>
-            Devcon and Devconnect are events that act as centers of gravity in the Ethereum ecosystem. They are global gatherings that create space and time for community—places and moments to share, learn, discuss, meet, explore, and live in.
+            Devcon and Devconnect are events that act as centers of gravity in the Ethereum ecosystem. They are global gatherings that create space and time for community—places and moments to share, learn, discuss, meet, explore, and live in. 
           </Text>
           <Text fontSize={18} mb={16}>
             Physical events are always somewhere in a new city, country, or region. That means no matter where they are held, it will always be difficult for folks living elsewhere. The Scholars program supports travel, room & board, a ticket to the event, and special programming for participants from around the world.
