@@ -22,7 +22,7 @@ const FAQQuestions: Question[] = [
   {
     question: "Who can apply for an internship?",
     answer: [
-      "Internships are open to all, especially early-career professionals and students. Whether you're a self-taught developer, a researcher, a designer exploring decentralized tools, or someone with skills in marketing, legal, or other areas, there are opportunities for various backgrounds and skill sets.",
+      "Internships are open to all, especially to early-career professionals and students. Whether you're a self-taught developer, a researcher, a designer exploring decentralized tools, or someone with skills in marketing, legal, or other areas, there are opportunities for various backgrounds and skill sets.",
     ],
   },
   {
