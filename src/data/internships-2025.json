@@ -249,9 +249,25 @@
   },
   {
     "id": "lisk-devrel",
-    "title": "DevRel & Community Intern",
+    "title": "Ecosystem Growth Intern AFRICA",
     "hostOrg": "Lisk",
-    "link": "placeholder",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSeFONAwV3hOqhpcPfHqPo9TjNSWcbxUlQWKZTqoMCzBuv9NpQ/viewform?usp=sharing&ouid=116572424805650083136",
+    "date": "2025-06-29",
+    "categories": ["Rollups / L2s", "Community", "Marketing"]
+  }
+  {
+    "id": "lisk-devrel",
+    "title": "Ecosystem Growth Intern SEA",
+    "hostOrg": "Lisk",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSfJgjM0xsl3zHe5VyBFtKR4mSCxRZVv00VHo3CXjv9i-jd0BQ/viewform",
+    "date": "2025-06-29",
+    "categories": ["Rollups / L2s", "Community", "Marketing"]
+  }
+  {
+    "id": "lisk-devrel",
+    "title": "Ecosystem Growth Intern LATAM",
+    "hostOrg": "Lisk",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSeytQ5stJhZsu_w7TIVobAc5lBsiNZLrHBJYKyoVBFfPdbo9g/viewform",
     "date": "2025-06-29",
     "categories": ["Rollups / L2s", "Community", "Marketing"]
   }
