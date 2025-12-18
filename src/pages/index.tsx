@@ -117,9 +117,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
                 world-at-large.
               </Text>
               <ButtonLink href="/fellowship">About the program</ButtonLink>
-              <ButtonLink href={"https://nxbn-fellowship.paperform.co/"}>
-              Apply for Cohort 6
-              </ButtonLink>
+              <ButtonLink>Applications closed</ButtonLink>
             </Box>
           </ImageSplitContent>
           <ImageSplitContent
@@ -138,9 +136,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
                 infinite garden.
               </Text>
               <ButtonLink href="/scholars">Learn more</ButtonLink>
-              <ButtonLink href="https://devconnectargscholars.paperform.co/">
-                Apply Now
-              </ButtonLink>
+              <ButtonLink>Applications closed</ButtonLink>
             </Box>
           </ImageSplitContent>
         </ContentContainer>
