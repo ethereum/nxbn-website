@@ -3,11 +3,18 @@ import Link from "@/components/Link"
 
 const ButtonLink = ({
   isSecondary = false,
-  href,
+  href = "",
   children,
   variant = "primary",
   disabled = false,
   ...props
+}: {
+  isSecondary?: boolean
+  href?: string
+  children: React.ReactNode
+  variant?: string
+  disabled?: boolean
+  [x: string]: any
 }) => {
   const variants = {
     primary: {
