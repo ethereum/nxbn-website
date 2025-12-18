@@ -76,9 +76,7 @@ const FellowshipPage = ({ allFellowsFrontmatter, fellowStories }) => {
                   to encourage more ambitious, long-term goals and mindset.
                 </Text>
               </Box>
-              <ButtonLink href={"https://nxbn-fellowship.paperform.co/"}>
-                Accepting Applications for Cohort 6
-              </ButtonLink>
+              <ButtonLink disabled>Applications are closed</ButtonLink>
             </Box>
           </ContentContainer>
         </ImageHero>

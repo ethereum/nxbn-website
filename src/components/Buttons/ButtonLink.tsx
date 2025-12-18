@@ -1,11 +1,20 @@
+import { Box } from "@chakra-ui/react"
 import Link from "@/components/Link"
 
 const ButtonLink = ({
   isSecondary = false,
-  href,
+  href = "",
   children,
   variant = "primary",
+  disabled = false,
   ...props
+}: {
+  isSecondary?: boolean
+  href?: string
+  children: React.ReactNode
+  variant?: string
+  disabled?: boolean
+  [x: string]: any
 }) => {
   const variants = {
     primary: {
@@ -20,18 +29,35 @@ const ButtonLink = ({
     },
   }
 
+  const sharedStyles = {
+    bg: isSecondary ? "body" : "action",
+    px: 10,
+    py: 2,
+    borderRadius: "full",
+    textStyle: "button-link",
+    textAlign: "center",
+    marginRight: "10px",
+    marginBottom: "10px",
+    ...variants[variant],
+  }
+
+  if (disabled) {
+    return (
+      <Box
+        as="span"
+        cursor="default"
+        sx={sharedStyles}
+        {...props}
+      >
+        {children}
+      </Box>
+    )
+  }
+
   return (
     <Link
       href={href}
-      bg={isSecondary ? "body" : "action"}
-      px={10}
-      py={2}
-      borderRadius="full"
-      textStyle="button-link"
-      textAlign="center"
-      marginRight="10px"
-      marginBottom="10px"
-      sx={{ ...variants[variant] }}
+      sx={sharedStyles}
       _hover={{
         opacity: 0.8,
       }}
