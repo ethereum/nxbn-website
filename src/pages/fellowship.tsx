@@ -76,7 +76,7 @@ const FellowshipPage = ({ allFellowsFrontmatter, fellowStories }) => {
                   to encourage more ambitious, long-term goals and mindset.
                 </Text>
               </Box>
-              <ButtonLink href="#" variant="disabled">Applications are closed</ButtonLink>
+              <ButtonLink disabled>Applications are closed</ButtonLink>
             </Box>
           </ContentContainer>
         </ImageHero>
