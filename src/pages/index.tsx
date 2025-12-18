@@ -117,7 +117,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
                 world-at-large.
               </Text>
               <ButtonLink href="/fellowship">About the program</ButtonLink>
-              <ButtonLink>Applications closed</ButtonLink>
+              <ButtonLink href="#" variant="disabled">Applications closed</ButtonLink>
             </Box>
           </ImageSplitContent>
           <ImageSplitContent
@@ -136,7 +136,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
                 infinite garden.
               </Text>
               <ButtonLink href="/scholars">Learn more</ButtonLink>
-              <ButtonLink>Applications closed</ButtonLink>
+              <ButtonLink href="#" variant="disabled">Applications closed</ButtonLink>
             </Box>
           </ImageSplitContent>
         </ContentContainer>
