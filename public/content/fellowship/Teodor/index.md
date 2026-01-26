@@ -178,7 +178,7 @@ This is an invitation, not a conclusion. We're building v1.0 of the framework, a
 - **Ethereum builders and community members:** Fork the framework. Adapt it to your protocols, your contexts, your communities. Contribute insights back to the registry.
 - **Impact evaluators and researchers:** Critique the methods. Stress-test the assumptions. We want rigorous pushback.
 
-You can reach me at @teopetricevic on Telegram, or @XtXeXo on Twitter.
+You can reach me at [@teopetricevic](https://t.me/teopetricevic) on Telegram, or [@XtXeXo](https://x.com/XtXeXo) on X.
 
 ---
 
