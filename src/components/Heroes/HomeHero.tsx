@@ -1,6 +1,4 @@
-// pages/index.js or another component file
-import dynamic from "next/dynamic"
-import { useState } from "react"
+import { useEffect, useState, type ComponentType } from "react"
 import { useRouter } from "next/router"
 
 import {
@@ -25,18 +23,47 @@ import {
 import { H1 } from "@/components/Headings"
 import ContentContainer from "../ContentContainer"
 
-const GlobeComponentWithNoSSR = dynamic(
-  () => import("../../components/Map/Globe"),
-  {
-    ssr: false, // This line is key to making sure the import is client-side only
-    loading: () => <Box flex="1" w={380} h={380} />,
-  }
-)
+type GlobeProps = { activeFellow: any; size: number | undefined }
+
+// Lazy-load Globe via an effect rather than next/dynamic({ssr:false}) and
+// tear it down on routeChangeStart. react-globe.gl wraps globe.gl with
+// react-kapsule's useEffectOnce, whose cleanup is guarded by a
+// renderAfterCalled ref that doesn't reliably flip under React 19's
+// concurrent rendering — the Three.js destructor gets skipped on unmount,
+// leaving the WebGL scene live and stalling the next render commit on
+// Netlify. By unmounting Globe before the navigation transition starts,
+// destruction happens in a normal render cycle and route transitions
+// complete cleanly. Manifested as: clicking any header nav link from /
+// changed the URL but never swapped the page.
+const useClientOnlyGlobe = () => {
+  const router = useRouter()
+  const [Globe, setGlobe] = useState<ComponentType<GlobeProps> | null>(null)
+  const [showGlobe, setShowGlobe] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false
+    import("../../components/Map/Globe").then((mod) => {
+      if (!cancelled) setGlobe(() => mod.default as ComponentType<GlobeProps>)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  useEffect(() => {
+    const hide = () => setShowGlobe(false)
+    router.events.on("routeChangeStart", hide)
+    return () => router.events.off("routeChangeStart", hide)
+  }, [router.events])
+
+  return showGlobe ? Globe : null
+}
 
 const HomeHero = ({ allFellowsFrontmatter, initialFellowIndex = 0 }) => {
   const router = useRouter()
   const [activeFellowIndex, setActiveFellowIndex] = useState(initialFellowIndex)
   const value = useBreakpointValue({ base: 300, md: 380 })
+  const Globe = useClientOnlyGlobe()
 
   return (
     <ContentContainer>
@@ -72,10 +99,14 @@ const HomeHero = ({ allFellowsFrontmatter, initialFellowIndex = 0 }) => {
         </Center>
         <Center flex={1} flexDir="column">
           <Center>
-            <GlobeComponentWithNoSSR
-              activeFellow={allFellowsFrontmatter[activeFellowIndex]}
-              size={value}
-            />
+            {Globe ? (
+              <Globe
+                activeFellow={allFellowsFrontmatter[activeFellowIndex]}
+                size={value}
+              />
+            ) : (
+              <Box flex="1" w={380} h={380} />
+            )}
           </Center>
           <Center zIndex={1}>
             <Divider

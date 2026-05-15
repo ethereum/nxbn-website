@@ -16,19 +16,19 @@
     "@emotion/styled": "^11.11.0",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.1.3",
+    "@next/mdx": "^15.5.16",
     "@types/mdx": "^2.0.11",
     "eslint-config-prettier": "^9.1.0",
     "framer-motion": "^11.0.3",
     "gray-matter": "^4.0.3",
     "image-size": "^1.1.1",
     "mdast-util-toc": "^7.0.0",
-    "next": "14.2.35",
-    "next-mdx-remote": "^4.4.1",
+    "next": "^15.5.16",
+    "next-mdx-remote": "^5.0.0",
     "next-sitemap": "^3.1.32",
     "prettier": "^3.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-globe.gl": "^2.27.2",
     "react-icons": "^5.0.1",
     "remark-gfm": "^4.0.0",
@@ -36,11 +36,13 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@types/hast": "^3.0.4",
     "@types/node": "^20.4.2",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "eslint": "^8.45.0",
-    "eslint-config-next": "^14.2.35",
-    "typescript": "^5.1.6"
+    "eslint-config-next": "^15.5.16",
+    "typescript": "^5.1.6",
+    "unified": "^11.0.5"
   }
 }

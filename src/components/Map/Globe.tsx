@@ -25,7 +25,7 @@ const GlobeComponent: React.FC<GlobeComponentProps> = ({
     lastValidValue.current = value
   }
 
-  const globeEl = useRef<any>()
+  const globeEl = useRef<any>(null)
 
   useEffect(() => {
     if (globeEl.current) {
