@@ -7,13 +7,12 @@ This directory contains the implementation of the Opportunity Board feature for 
 The feature is designed with flexibility in mind, allowing for different data sources to be used:
 
 - `types.ts` - Defines the core interfaces for opportunities and data providers
-- `mock-provider.ts` - Uses local mock data for development and testing
-- `json-provider.ts` - Can fetch opportunity data from an external JSON source
+- `json-provider.ts` - Fetches opportunity data from a JSON file in `/public/data/`
 - `notion-provider.ts` - Placeholder implementation for fetching from a Notion database
 
 ## Current Setup
 
-The current implementation uses the `MockOpportunityProvider` which loads data from `src/data/mock-opportunities.json`.
+The current implementation uses `createJsonProvider` which loads data from `/public/data/internships-2025.json`.
 
 ## UI Components
 
