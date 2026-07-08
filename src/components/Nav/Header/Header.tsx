@@ -14,10 +14,8 @@ const Header = () => {
           py={3}
           h={16}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="center"
           width="100%"
-          borderRadius="60px"
-          bg="rgba(0, 0, 0, 0.60)"
         >
           <Box
             onClick={() => router.push("/")}

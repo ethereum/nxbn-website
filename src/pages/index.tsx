@@ -44,7 +44,7 @@ const ArchivePage = () => {
           pointerEvents="none"
         >
           <Box
-            h={{ base: "130px", sm: "180px", md: "260px" }}
+            h={{ base: "180px", sm: "240px", md: "340px" }}
             backgroundImage="url('/images/homepage/foreground.png')"
             backgroundSize="cover"
             backgroundPosition="center bottom"
@@ -54,8 +54,8 @@ const ArchivePage = () => {
             bottom={0}
             left={0}
             right={0}
-            h="100px"
-            bgGradient="linear(to-b, transparent, #056589)"
+            h={{ base: "160px", md: "220px" }}
+            bgGradient="linear(to-b, transparent, #056589 85%)"
           />
         </Box>
         {/* headline */}
