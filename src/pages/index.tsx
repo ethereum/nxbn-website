@@ -90,7 +90,7 @@ const ArchivePage = () => {
       <ContentContainer>
         <Box
           as="main"
-          maxW="800px"
+          maxW="900px"
           mx="auto"
           px={{ base: 6, md: 8 }}
           pb={{ base: 16, md: 24 }}
