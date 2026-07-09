@@ -1,164 +1,158 @@
-import { Box, Center, Flex, Image, Text } from "@chakra-ui/react"
-import Parser from "rss-parser"
-import { Item } from "rss-parser"
+import Head from "next/head"
+import { Box, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
-import { H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
-import ImageSplitContent from "@/components/ImageSplitContent"
-import HomeHero from "@/components/Heroes/HomeHero"
+import { H1 } from "@/components/Headings"
+import Link from "@/components/Link"
 
-import { getAllFellowsFrontmatter, getFellowsWithStories } from "@/utils/md"
-import BlogFeed from "@/components/BlogFeed"
-import WhoAreNextBillion from "@/components/WhoAreNextBillion"
-
-export const getStaticProps = async () => {
-  const parser = new Parser({
-    customFields: {
-      item: ["description"],
-    },
-  })
-
-  let blogs: (Item & { description?: string })[] = [];
-  try {
-    const feed = await parser.parseURL(
-      "https://blog.ethereum.org/en/next-billion/feed.xml"
-    )
-    blogs = feed.items.slice(0, 4);
-  } catch (error) {
-    console.error("Error fetching RSS feed:", error);
-    // Provide fallback blog data
-    blogs = [
-      {
-        title: "Blog post placeholder",
-        link: "#",
-        pubDate: new Date().toISOString(),
-        content: "",
-        contentSnippet: "",
-        guid: "",
-        isoDate: new Date().toISOString(),
-        description: "Unable to fetch blog posts at this time."
-      }
-    ];
-  }
-  
-  const allFellowsFrontmatter = getAllFellowsFrontmatter()
-  
-  // Calculate initial fellow index for homepage hero
-  let initialFellowIndex = 0
-  try {
-    const fellowsWithStories = getFellowsWithStories()
-    if (fellowsWithStories.length > 0) {
-      // Pick a random fellow with a story
-      const randomStoryFellow = fellowsWithStories[Math.floor(Math.random() * fellowsWithStories.length)]
-      // Find this fellow's index in the full allFellowsFrontmatter array
-      const fellowIndex = allFellowsFrontmatter.findIndex(fellow => fellow.slug === randomStoryFellow.slug)
-      if (fellowIndex >= 0) {
-        initialFellowIndex = fellowIndex
-      }
-    }
-  } catch (error) {
-    console.error("Error calculating initial fellow index:", error)
-    // Fall back to index 0
-  }
-
-  return {
-    props: {
-      allFellowsFrontmatter,
-      blogs,
-      initialFellowIndex,
-    },
-  }
-}
-
-const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
+const ArchivePage = () => {
   return (
     <>
-      <Box pos="relative" top="-64px" mb="-64px">
+      <Head>
+        <title>Next Billion — Program Archive</title>
+        <meta
+          name="description"
+          content="The Next Billion team's programs at the Ethereum Foundation have concluded. Applications for all programs are closed."
+        />
+      </Head>
+      {/* Hero — starfield sky with the "infinite garden" horizon, echoing the
+          production homepage. Pulled up behind the sticky header. */}
+      <Box
+        as="section"
+        position="relative"
+        top="-64px"
+        mb="-64px"
+        overflow="hidden"
+        bg="#0E6899"
+      >
+        {/* starfield */}
         <Box
-          pos="absolute"
-          zIndex={-1}
-          top={0}
+          position="absolute"
+          inset={0}
+          zIndex={0}
+          backgroundImage="url('/images/homepage/home-stars.jpg')"
+          backgroundSize="cover"
+          backgroundPosition="center top"
+        />
+        {/* infinite-garden horizon, fading into the page background */}
+        <Box
+          position="absolute"
+          bottom={0}
           left={0}
           right={0}
-          bg="#0E6899"
-          h={"100%"}
+          zIndex={1}
+          pointerEvents="none"
         >
-          <Image
-            src={"/images/homepage/home-stars.jpg"}
-            alt="Stars"
-            w="100%"
-            h="100%"
-            objectFit="cover"
-            objectPosition="bottom"
+          <Box
+            h={{ base: "180px", sm: "240px", md: "340px" }}
+            backgroundImage="url('/images/homepage/foreground.png')"
+            backgroundSize="cover"
+            backgroundPosition="center bottom"
+          />
+          <Box
+            position="absolute"
+            bottom={0}
+            left={0}
+            right={0}
+            h={{ base: "160px", md: "220px" }}
+            bgGradient="linear(to-b, transparent, #056589 85%)"
           />
         </Box>
-        <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} initialFellowIndex={initialFellowIndex} />
-      </Box>
-      <Box bg="linear-gradient(180deg, #0E6899 0%, #057db3 100%)">
-        <ContentContainer>
-          <ImageSplitContent
-            image={"/images/homepage/fellow_home.jpg"}
-            imageBorder="right"
-            imageSide="right"
+        {/* headline */}
+        <ContentContainer position="relative" zIndex={2}>
+          <Box
+            maxW="900px"
+            mx="auto"
+            px={{ base: 6, md: 8 }}
+            pt={{ base: "128px", md: "184px" }}
+            pb={{ base: "168px", md: "264px" }}
           >
-            <Box gap={8}>
-              <H2>The Next Billion Fellowship</H2>
-              <Text fontSize={18}>
-                A search for stories. Stories that inspire us to focus on the
-                important things, that compel us to find balance and fairness in
-                the way we go about solving our problems, and that encourage us
-                to push deeper into the mysteries of human cooperation.
-              </Text>
-              <Text fontSize={18} mb={16}>
-                Fellows receive support from the Foundation to complete a small
-                quest inside a big narrative. In return, fellows are asked to
-                share their story with the extended web3 community, or with the
-                world-at-large.
-              </Text>
-              <ButtonLink href="/fellowship">About the program</ButtonLink>
-              <ButtonLink disabled>Applications closed</ButtonLink>
-            </Box>
-          </ImageSplitContent>
-          <ImageSplitContent
-            image={"/images/homepage/devcon_home.jpg"}
-            imageBorder="left"
-            imageSide="left"
-          >
-            <Box gap={8}>
-              <H2>Devconnect ARG Scholars</H2>
-              <Text fontSize={18} mb={16}>
-                Devcon is a conference for developers, researchers, thinkers,
-                and makers. It's the largest single gathering of Ethereum's
-                global community, and it always happens in a new city. The
-                scholars program aims to break down at least some
-                barriers-to-entry for people taking their first steps into the
-                infinite garden.
-              </Text>
-              <ButtonLink href="/scholars">Learn more</ButtonLink>
-              <ButtonLink disabled>Applications closed</ButtonLink>
-            </Box>
-          </ImageSplitContent>
-        </ContentContainer>
-      </Box>
-      <WhoAreNextBillion />
-      <Box bg="linear-gradient(180deg, #022B35 0%, #006EA3 50%, #056589 100%)">
-        <ContentContainer mb={8}>
-          <Box px={{ base: 8, md: 16 }} gap={8}>
-            <H2 variant="action" pt={16}>
-              Our blog updates
-            </H2>
-            <BlogFeed blogs={blogs} />
-            <Flex justify="center" my="64px">
-              <ButtonLink href="https://blog.ethereum.org/category/next-billion">
-                See all posts
-              </ButtonLink>
-            </Flex>
+            <H1 mb={8}>
+              The Next Billion team&apos;s programs have concluded
+            </H1>
+            <Text
+              textStyle="base-text"
+              fontSize={{ base: 18, md: 20 }}
+              maxW="640px"
+              mb={0}
+            >
+              From 2022–2025, the Next Billion initiative at the Ethereum
+              Foundation ran the Next Billion Fellowship, the Devcon(nect)
+              Scholars program, and the Ethereum Season of Internships —
+              supporting builders, researchers, and organizers working to make
+              Ethereum more accessible to underrepresented communities around
+              the world.
+            </Text>
           </Box>
         </ContentContainer>
       </Box>
+
+      <ContentContainer>
+        <Box
+          as="main"
+          maxW="900px"
+          mx="auto"
+          px={{ base: 6, md: 8 }}
+          pb={{ base: 16, md: 24 }}
+        >
+          <Text textStyle="base-text" fontSize={18} mb={6}>
+            This site is no longer maintained and applications for all programs
+            are closed. The team&apos;s work continues to live on in a few
+            places:
+          </Text>
+
+          <UnorderedList
+            spacing={5}
+            mb={6}
+            fontSize={18}
+            sx={{ textStyle: "base-text" }}
+          >
+            <ListItem>
+              <Box as="strong" fontWeight={600} color="body">
+                Fellow stories
+              </Box>{" "}
+              — read the essays and project writeups from five cohorts of
+              fellows on the{" "}
+              <Link href="https://blog.ethereum.org/category/next-billion">
+                Ethereum Foundation blog
+              </Link>
+              .
+            </ListItem>
+            <ListItem>
+              <Box as="strong" fontWeight={600} color="body">
+                Devcon(nect) Scholars
+              </Box>{" "}
+              — the scholars program supported travel and access for
+              underrepresented builders to attend Devcon and Devconnect. Future
+              scholarship opportunities, if any, will be announced through{" "}
+              <Link href="https://devcon.org">Devcon.org</Link> and the{" "}
+              <Link href="https://blog.ethereum.org">
+                Ethereum Foundation blog
+              </Link>
+              .
+            </ListItem>
+            <ListItem>
+              <Box as="strong" fontWeight={600} color="body">
+                Season of Internships
+              </Box>{" "}
+              — if this program continues under new ownership, updates will be
+              posted on the{" "}
+              <Link href="https://blog.ethereum.org">
+                Ethereum Foundation blog
+              </Link>{" "}
+              and ethereum.org&apos;s{" "}
+              <Link href="https://ethereum.org/community/">community hub</Link>.
+            </ListItem>
+          </UnorderedList>
+
+          <Text textStyle="base-text" fontSize={18}>
+            Questions? Visit the{" "}
+            <Link href="https://ethereum.foundation">Ethereum Foundation</Link>.
+          </Text>
+        </Box>
+      </ContentContainer>
     </>
   )
 }
 
-export default HomePage
+export default ArchivePage
