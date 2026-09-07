@@ -38,19 +38,24 @@ const AboutPage = () => {
                 <Text fontSize={18}>
                   The Ethereum Foundation exists to nurture and support a
                   protocol designed to treat all humans equally; the{" "}
-                  <b>next billion</b> initiative at the Foundation is a frame of
-                  reference for long-term thinking about that protocol's
+                  <b>next billion</b> initiative at the Foundation was a frame
+                  of reference for long-term thinking about that protocol's
                   relationship to humans and, by extension, humanity.
                 </Text>
                 <Text fontSize={18}>
-                  We think that operating at the scale of humans is the way to
-                  engage with the challenges and opportunities existing at the
-                  scale of humanity. Even a 10,000 year journey begins with a
-                  few ordinary steps. Through fellowships, scholarships, events,
-                  and other programs that create space for creative exchange and
-                  the assembly of new memes, we support the protocol for human
-                  coordination, and the communities that will keep it living for
-                  years to come.
+                  We thought that operating at the scale of humans was the way
+                  to engage with the challenges and opportunities existing at
+                  the scale of humanity. Even a 10,000 year journey begins with
+                  a few ordinary steps. Through fellowships, scholarships,
+                  events, and other programs that created space for creative
+                  exchange and the assembly of new memes, we supported the
+                  protocol for human coordination, and the communities that will
+                  keep it living for years to come.
+                </Text>
+                <Text fontSize={18}>
+                  The initiative ran from 2021 to 2025. The team has since wound
+                  down, and this site remains as a record of the fellows, the
+                  scholars, and the work they did.
                 </Text>
               </Box>
             </Box>
