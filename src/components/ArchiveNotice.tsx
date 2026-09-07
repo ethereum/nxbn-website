@@ -25,7 +25,7 @@ const ArchiveNotice = () => {
         letterSpacing="0.02em"
         m={0}
       >
-        Archive — the Next Billion programs have concluded
+        The Next Billion programs have concluded
       </Text>
     </Box>
   )
