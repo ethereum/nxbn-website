@@ -9,12 +9,12 @@ publishedDate: January 26, 2026
 lat: 45.8150
 lon: 15.9819
 image: /content/fellowship/Teodor/teodor-headshot.jpg
-description: Teodor Petricevic leads blockchain initiatives at the UN Development Programme, mapping Ethereum-based projects within the UN ecosystem and developing an impact management framework.
+description: Teodor Petricevic leads blockchain initiatives at the UN Development Programme. For his fellowship he mapped Ethereum-based projects within the UN ecosystem and developed an impact management framework.
 storyHook: "How do we create systems where trust is distributed, not concentrated? Where communities see the results of their engagement? Where power isn't hidden in black boxes?"
 bio: |
   ## Teodor Petricevic
 
-  **Teodor Petricevic** (X: @XtXeXo) leads blockchain initiatives at the UN Development Programme. He will map Ethereum-based projects within the UN ecosystem and develop an impact management framework that enables global development organisations - such as UN agencies - to effectively design impact models, measure and analyse outcomes and impacts, and harness the unique properties of blockchain technology to advance global development initiatives.
+  **Teodor Petricevic** (X: @XtXeXo) leads blockchain initiatives at the UN Development Programme. He mapped Ethereum-based projects within the UN ecosystem and developed an impact management framework that enables global development organisations - such as UN agencies - to effectively design impact models, measure and analyse outcomes and impacts, and harness the unique properties of blockchain technology to advance global development initiatives.
 tags:
   - impact
   - international development

@@ -9,13 +9,13 @@ publishedDate: May 22, 2025
 lat: 37.9838
 lon: 23.7275
 image: /content/fellowship/Lefteris/lefteris-headshot.jpg
-description: Lefteris is focused on reducing marine plastic pollution by engaging with fishers in Greece and the Mediterranean and adopting cleaning and sustainability practices.
+description: Lefteris focused on reducing marine plastic pollution by engaging with fishers in Greece and the Mediterranean and adopting cleaning and sustainability practices.
 storyHook: "On one of the first trips out on the boat, as the men hauled up a net filled with fish, I noticed a can of coke, recognizable if a little bit worn out. I picked it up to examine it, and was startled to see the date 1987 written in faded lettering on the side. As I stood there contemplating that this piece of trash had been floating in the sea for almost 30 years, one of the fishermen came beside me, plucked the can from my hand, and casually tossed it back into the sea. 'Trash isn't our problem,' he said."
 bio: |
   ## Lefteris Arapakis
 
   Lefteris was born into a family with a deep-rooted tradition in the fishing industry. In 2016, he founded [Enaleia](https://enaleia.com/) to engage fishers in addressing the social and environmental challenges of ocean degradation.
-  Lefteris began by educating fishers on sustainable practices and integrating collected waste into a circular economy, focusing on the plastics value chain in Greece. His initiative quickly expanded to encompass the entire Mediterranean Sea. A key aspect of Enaleia's work is tracking the lifecycle of ocean-collected plastic, and as part of his Fellowship, Lefteris will transition the platform into a public chain and explore other blockchain-related verticals into Eneleia.
+  Lefteris began by educating fishers on sustainable practices and integrating collected waste into a circular economy, focusing on the plastics value chain in Greece. His initiative quickly expanded to encompass the entire Mediterranean Sea. A key aspect of Enaleia's work is tracking the lifecycle of ocean-collected plastic, and as part of his Fellowship, Lefteris transitioned the platform onto a public chain and explored other blockchain-related verticals for Enaleia.
 
   [**Interview, 2024**](https://youtu.be/IgOMyZUQUH0?si=MYjS8tXt-jjksm1I)
   

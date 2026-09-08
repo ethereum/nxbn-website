@@ -2,8 +2,56 @@
 User-agent: *
 Allow: /
 
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# OAI-SearchBot
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# Claude-SearchBot
+User-agent: Claude-SearchBot
+Allow: /
+
+# Claude-User
+User-agent: Claude-User
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity-User
+User-agent: Perplexity-User
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
+# Applebot
+User-agent: Applebot
+Allow: /
+
+# Applebot-Extended
+User-agent: Applebot-Extended
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
 # Host
-Host: https://fellowship.ethereum.org
+Host: https://nxbn.ethereum.foundation
 
 # Sitemaps
-Sitemap: https://fellowship.ethereum.org/sitemap.xml
+Sitemap: https://nxbn.ethereum.foundation/sitemap.xml

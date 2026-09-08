@@ -11,6 +11,14 @@ import HomeHero from "@/components/Heroes/HomeHero"
 import { getAllFellowsFrontmatter, getFellowsWithStories } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 import WhoAreNextBillion from "@/components/WhoAreNextBillion"
+import Seo from "@/components/Seo"
+
+import { PROGRAM_YEARS, PROGRAM_YEARS_PROSE } from "@/utils/seo"
+import {
+  collectionPageLd,
+  organizationLd,
+  webSiteLd,
+} from "@/utils/structuredData"
 
 export const getStaticProps = async () => {
   const parser = new Parser({
@@ -71,9 +79,28 @@ export const getStaticProps = async () => {
   }
 }
 
+const HOME_DESCRIPTION =
+  `From ${PROGRAM_YEARS_PROSE} the Next Billion initiative at the Ethereum Foundation backed 25 fellows across five cohorts, ` +
+  "brought first-time attendees to Devcon and Devconnect as Scholars, and placed paid interns across the ecosystem. " +
+  "The programs have concluded; their work is collected here."
+
 const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
   return (
     <>
+      <Seo
+        title={`Next Billion — Ethereum Foundation programs, ${PROGRAM_YEARS}`}
+        description={HOME_DESCRIPTION}
+        path="/"
+        structuredData={[
+          organizationLd(),
+          webSiteLd(),
+          collectionPageLd({
+            name: `Next Billion — programs archive, ${PROGRAM_YEARS}`,
+            description: HOME_DESCRIPTION,
+            path: "/",
+          }),
+        ]}
+      />
       <Box pos="relative" top="-64px" mb="-64px">
         <Box
           pos="absolute"
@@ -105,19 +132,20 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
             <Box gap={8}>
               <H2>The Next Billion Fellowship</H2>
               <Text fontSize={18}>
-                A search for stories. Stories that inspire us to focus on the
-                important things, that compel us to find balance and fairness in
-                the way we go about solving our problems, and that encourage us
-                to push deeper into the mysteries of human cooperation.
+                A search for stories. Stories that inspired us to focus on the
+                important things, that compelled us to find balance and fairness
+                in the way we go about solving our problems, and that encouraged
+                us to push deeper into the mysteries of human cooperation.
               </Text>
               <Text fontSize={18} mb={16}>
-                Fellows receive support from the Foundation to complete a small
-                quest inside a big narrative. In return, fellows are asked to
-                share their story with the extended web3 community, or with the
-                world-at-large.
+                Across five cohorts, fellows received support from the
+                Foundation to complete a small quest inside a big narrative. In
+                return, they shared their story with the extended web3
+                community, and with the world-at-large.
               </Text>
-              <ButtonLink href="/fellowship">About the program</ButtonLink>
-              <ButtonLink disabled>Applications closed</ButtonLink>
+              <ButtonLink href="/fellowship">
+                Meet the fellows
+              </ButtonLink>
             </Box>
           </ImageSplitContent>
           <ImageSplitContent
@@ -126,17 +154,18 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
             imageSide="left"
           >
             <Box gap={8}>
-              <H2>Devconnect ARG Scholars</H2>
+              <H2>Devcon(nect) Scholars</H2>
               <Text fontSize={18} mb={16}>
                 Devcon is a conference for developers, researchers, thinkers,
                 and makers. It's the largest single gathering of Ethereum's
-                global community, and it always happens in a new city. The
-                scholars program aims to break down at least some
-                barriers-to-entry for people taking their first steps into the
-                infinite garden.
+                global community, and it always happens in a new city. From
+                Devcon Bogotá through Devconnect Buenos Aires, the scholars
+                program broke down at least some barriers-to-entry for people
+                taking their first steps into the infinite garden.
               </Text>
-              <ButtonLink href="/scholars">Learn more</ButtonLink>
-              <ButtonLink disabled>Applications closed</ButtonLink>
+              <ButtonLink href="/scholars">
+                About the program
+              </ButtonLink>
             </Box>
           </ImageSplitContent>
         </ContentContainer>

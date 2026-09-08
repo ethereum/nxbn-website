@@ -1,10 +1,7 @@
-import InternshipsOpen from "@/layouts/InternshipsOpen"
-import InternshipsClosed from "@/layouts/InternshipsClosed"
-
-import { INTERNSHIPS_PROGRAM_OPEN } from "@/utils/constants"
+import InternshipsLegacy from "@/layouts/InternshipsLegacy"
 
 const InternshipsPage = () => {
-  return INTERNSHIPS_PROGRAM_OPEN ? <InternshipsOpen /> : <InternshipsClosed />
+  return <InternshipsLegacy />
 }
 
 export default InternshipsPage

@@ -46,6 +46,8 @@ const MarkdownImage = ({
     // sometimes wraps images in `p` tags
     <Flex as="span" justify="center" my={4}>
       <Box
+        as="span"
+        display="inline-block"
         borderWidth="1px"
         borderColor="gray.200"
         borderRadius="md"

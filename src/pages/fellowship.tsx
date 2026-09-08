@@ -9,29 +9,37 @@ import FellowStories from "@/components/FellowStories"
 
 import { getAllFellowsFrontmatter, getFellowsWithStories } from "@/utils/md"
 
+import Seo from "@/components/Seo"
+
+import { PROGRAM_YEARS, PROGRAM_YEARS_PROSE } from "@/utils/seo"
+import {
+  breadcrumbLd,
+  collectionPageLd,
+  faqLd,
+} from "@/utils/structuredData"
+
 import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 
 const FAQQuestions: Question[] = [
   {
-    question: "What kinds of projects qualify?",
+    question: "What kinds of projects qualified?",
     answer: [
-      "A Fellow candidate must have a project that is mutually cooperative with the Ethereum ecosystem. It doesn't have to directly integrate with Ethereum to qualify, but needs to be on-balance 'good' for the ecosystem and future Ethereum community.",
-      "Proposals that have not yet begun will be considered, but not likely selected. This fellowship is not meant to be at the beginning or end of a journey.",
-      "Projects can be building an application, research, or an organizational program/initiative. Whatever it is, the project must enable the flourishing of regions, populations, or communities that are underrepresented in the existing Ethereum ecosystem today.",
+      "A Fellow needed a project that was mutually cooperative with the Ethereum ecosystem. It didn't have to directly integrate with Ethereum to qualify, but it needed to be on-balance 'good' for the ecosystem and the future Ethereum community.",
+      "Proposals that had not yet begun were considered, but rarely selected. The fellowship was not meant to sit at the beginning or the end of a journey.",
+      "Projects ranged from software to research to organizational programs and initiatives. Whatever the shape, the project had to enable the flourishing of regions, populations, or communities underrepresented in the Ethereum ecosystem.",
     ],
   },
   {
-    question: "What support does the Next Billion Fellowship offer?",
+    question: "What support did the Next Billion Fellowship offer?",
     answer: [
       "In a word: Bespoke.",
-      "Different people need different things, and the Foundation is able to offer some things better than others. Fellows that need technical or design support, for example, might ask for mentorship or guidance from a domain expert. Stipends are available to help fellows carve out time from a busy schedule, and in rare cases grants will be considered. Business plans, pitch decks, and cap tables can tell a gripping story, but this fellowship is not an incubator or accellerator, and should not be treated as a means to secure investment.",
+      "Different people needed different things, and the Foundation was able to offer some things better than others. Fellows who needed technical or design support, for example, could ask for mentorship or guidance from a domain expert. Stipends helped fellows carve out time from a busy schedule, and in rare cases grants were considered. Business plans, pitch decks, and cap tables can tell a gripping story, but the fellowship was not an incubator or accelerator, and was never a means to secure investment.",
     ],
   },
   {
-    question: "What is expected from a Next Billion Fellow?",
+    question: "What was expected from a Next Billion Fellow?",
     answer: [
-      "Fellows must be independent, passionate, and deliberate. Six months is not enought time to accomplish anything huge, but it should be enough time to figure out how to tell a good story.",
+      "Fellows were independent, passionate, and deliberate. Six months was not enough time to accomplish anything huge, but it was enough time to figure out how to tell a good story.",
     ],
   },
 ]
@@ -48,9 +56,31 @@ export const getStaticProps = async (context) => {
   }
 }
 
+const FELLOWSHIP_DESCRIPTION =
+  `The Next Billion Fellowship ran from ${PROGRAM_YEARS_PROSE}, supporting 25 fellows across five cohorts in ` +
+  "financial inclusion, digital identity, public goods funding, climate and civic infrastructure. " +
+  "Read what each fellow built and the stories they wrote."
+
 const FellowshipPage = ({ allFellowsFrontmatter, fellowStories }) => {
   return (
     <>
+      <Seo
+        title={`The Next Billion Fellowship — 25 fellows, ${PROGRAM_YEARS}`}
+        description={FELLOWSHIP_DESCRIPTION}
+        path="/fellowship"
+        structuredData={[
+          collectionPageLd({
+            name: `The Next Billion Fellowship, ${PROGRAM_YEARS}`,
+            description: FELLOWSHIP_DESCRIPTION,
+            path: "/fellowship",
+          }),
+          faqLd(FAQQuestions),
+          breadcrumbLd([
+            { name: "Next Billion", path: "/" },
+            { name: "Fellowship", path: "/fellowship" },
+          ]),
+        ]}
+      />
       <Box bg="linear-gradient(180deg, #011E3B 30%, #011E3B00 100%)">
         <ImageHero heroImage={HeroImage}>
           <ContentContainer>
@@ -60,23 +90,26 @@ const FellowshipPage = ({ allFellowsFrontmatter, fellowStories }) => {
               </H1>
               <Box maxW={800}>
                 <Text mb={16} fontSize={18}>
-                  A Fellow is a leader committed to their own project that helps
-                  Ethereum become a tool of and for the next billion users. Their
-                  project could be a decentralized app, a piece of research, an
-                  organizational initiative, or something else entirely. There
-                  are no strict requirements for Next Billion Fellowship
-                  projects, save one: earnesty.
+                  A Fellow was a leader committed to their own project that
+                  helped Ethereum become a tool of and for the next billion
+                  users. Their project might be a decentralized app, a piece of
+                  research, an organizational initiative, or something else
+                  entirely. There were no strict requirements for Next Billion
+                  Fellowship projects, save one: earnesty.
                 </Text>
                 <Text fontSize={18}>
-                  Whatever the project, whomever the Fellow, the program seeks
-                  to enable the flourishing of populations, communities, or
-                  individuals under-represented in the Ethereum ecosystem today.
-                  The Fellowship is neither the beginning nor the end of a
-                  Fellow&apos;s journey, but it may provide the support needed
-                  to encourage more ambitious, long-term goals and mindset.
+                  Whatever the project, whoever the Fellow, the program sought
+                  to enable the flourishing of populations, communities, and
+                  individuals under-represented in the Ethereum ecosystem. The
+                  Fellowship was neither the beginning nor the end of a
+                  Fellow&apos;s journey, but it provided the support needed to
+                  encourage more ambitious, long-term goals and mindset.
+                </Text>
+                <Text fontSize={18}>
+                  The program ran from 2021 to 2025 across five cohorts. The
+                  fellows and their projects are collected below.
                 </Text>
               </Box>
-              <ButtonLink disabled>Applications are closed</ButtonLink>
             </Box>
           </ContentContainer>
         </ImageHero>
