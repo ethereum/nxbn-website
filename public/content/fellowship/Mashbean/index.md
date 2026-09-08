@@ -9,7 +9,7 @@ publishedDate: September 7, 2026
 lat: 25.0330
 lon: 121.5654
 image: /content/fellowship/Mashbean/mashbean-headshot.jpg
-description: Mashbean researched robust digital identity in Taiwan, with a focus on resillience and decentralized infrastructure.
+description: Mashbean researched robust digital identity in Taiwan, with a focus on resilience and decentralized infrastructure.
 storyHook: "If digital identity becomes a centralized surveillance portal, digitization risks turning people into objects of real-time management, and civil rights can be redefined at the interface."
 bio: |
   ## Mashbean

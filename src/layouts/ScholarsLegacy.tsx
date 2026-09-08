@@ -8,6 +8,10 @@ import ImageSplitContent from "@/components/ImageSplitContent"
 import PreviousEditions from "@/components/PreviousEditions"
 import ImageHero from "@/components/Heroes/ImageHero"
 
+import Seo from "@/components/Seo"
+
+import { breadcrumbLd, collectionPageLd, faqLd } from "@/utils/structuredData"
+
 import HeroImage from "@/public/images/devconnect-arg-hero.jpg"
 
 const FAQQuestions: Question[] = [
@@ -42,9 +46,31 @@ const FAQQuestions: Question[] = [
   },
 ]
 
+const SCHOLARS_DESCRIPTION =
+  "The Devcon(nect) Scholars Program covered travel, accommodation and tickets so first-time attendees could reach " +
+  "Ethereum's flagship events, from Devcon Bogotá in 2022 through Devconnect Buenos Aires in 2025. " +
+  "Every scholar produced a learning artifact, and those remain available."
+
 const ScholarsLegacy = () => {
   return (
     <>
+      <Seo
+        title="Devcon(nect) Scholars Program — 2022–2025"
+        description={SCHOLARS_DESCRIPTION}
+        path="/scholars"
+        structuredData={[
+          collectionPageLd({
+            name: "Devcon(nect) Scholars Program, 2022–2025",
+            description: SCHOLARS_DESCRIPTION,
+            path: "/scholars",
+          }),
+          faqLd(FAQQuestions),
+          breadcrumbLd([
+            { name: "Next Billion", path: "/" },
+            { name: "Scholars", path: "/scholars" },
+          ]),
+        ]}
+      />
       <ImageHero heroImage={HeroImage}>
         <Box
           w="100%"

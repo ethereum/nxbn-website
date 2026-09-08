@@ -5,11 +5,36 @@ import { H1, H2 } from "@/components/Headings"
 import ContentContainer from "@/components/ContentContainer"
 import ImageSplitContent from "@/components/ImageSplitContent"
 
+import Seo from "@/components/Seo"
+
+import { PROGRAM_YEARS_PROSE } from "@/utils/seo"
+import { breadcrumbLd, collectionPageLd } from "@/utils/structuredData"
+
 import HeroImage from "@/public/images/about/about-hero.jpg"
+
+const ABOUT_DESCRIPTION =
+  "Why the Ethereum Foundation ran a next billion initiative: operating at the scale of humans to engage with " +
+  `challenges at the scale of humanity. The initiative ran from ${PROGRAM_YEARS_PROSE} and this site remains its record.`
 
 const AboutPage = () => {
   return (
     <>
+      <Seo
+        title="About the Next Billion initiative"
+        description={ABOUT_DESCRIPTION}
+        path="/about"
+        structuredData={[
+          collectionPageLd({
+            name: "About the Next Billion initiative",
+            description: ABOUT_DESCRIPTION,
+            path: "/about",
+          }),
+          breadcrumbLd([
+            { name: "Next Billion", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+        ]}
+      />
       <ImageHero heroImage={HeroImage}>
         <Box
           w="100%"

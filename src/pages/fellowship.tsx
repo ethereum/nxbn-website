@@ -9,6 +9,15 @@ import FellowStories from "@/components/FellowStories"
 
 import { getAllFellowsFrontmatter, getFellowsWithStories } from "@/utils/md"
 
+import Seo from "@/components/Seo"
+
+import { PROGRAM_YEARS, PROGRAM_YEARS_PROSE } from "@/utils/seo"
+import {
+  breadcrumbLd,
+  collectionPageLd,
+  faqLd,
+} from "@/utils/structuredData"
+
 import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
 
 const FAQQuestions: Question[] = [
@@ -47,9 +56,31 @@ export const getStaticProps = async (context) => {
   }
 }
 
+const FELLOWSHIP_DESCRIPTION =
+  `The Next Billion Fellowship ran from ${PROGRAM_YEARS_PROSE}, supporting 25 fellows across five cohorts in ` +
+  "financial inclusion, digital identity, public goods funding, climate and civic infrastructure. " +
+  "Read what each fellow built and the stories they wrote."
+
 const FellowshipPage = ({ allFellowsFrontmatter, fellowStories }) => {
   return (
     <>
+      <Seo
+        title={`The Next Billion Fellowship — 25 fellows, ${PROGRAM_YEARS}`}
+        description={FELLOWSHIP_DESCRIPTION}
+        path="/fellowship"
+        structuredData={[
+          collectionPageLd({
+            name: `The Next Billion Fellowship, ${PROGRAM_YEARS}`,
+            description: FELLOWSHIP_DESCRIPTION,
+            path: "/fellowship",
+          }),
+          faqLd(FAQQuestions),
+          breadcrumbLd([
+            { name: "Next Billion", path: "/" },
+            { name: "Fellowship", path: "/fellowship" },
+          ]),
+        ]}
+      />
       <Box bg="linear-gradient(180deg, #011E3B 30%, #011E3B00 100%)">
         <ImageHero heroImage={HeroImage}>
           <ContentContainer>

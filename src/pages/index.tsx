@@ -11,6 +11,14 @@ import HomeHero from "@/components/Heroes/HomeHero"
 import { getAllFellowsFrontmatter, getFellowsWithStories } from "@/utils/md"
 import BlogFeed from "@/components/BlogFeed"
 import WhoAreNextBillion from "@/components/WhoAreNextBillion"
+import Seo from "@/components/Seo"
+
+import { PROGRAM_YEARS, PROGRAM_YEARS_PROSE } from "@/utils/seo"
+import {
+  collectionPageLd,
+  organizationLd,
+  webSiteLd,
+} from "@/utils/structuredData"
 
 export const getStaticProps = async () => {
   const parser = new Parser({
@@ -71,9 +79,28 @@ export const getStaticProps = async () => {
   }
 }
 
+const HOME_DESCRIPTION =
+  `From ${PROGRAM_YEARS_PROSE} the Next Billion initiative at the Ethereum Foundation backed 25 fellows across five cohorts, ` +
+  "brought first-time attendees to Devcon and Devconnect as Scholars, and placed paid interns across the ecosystem. " +
+  "The programs have concluded; their work is collected here."
+
 const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
   return (
     <>
+      <Seo
+        title={`Next Billion — Ethereum Foundation programs, ${PROGRAM_YEARS}`}
+        description={HOME_DESCRIPTION}
+        path="/"
+        structuredData={[
+          organizationLd(),
+          webSiteLd(),
+          collectionPageLd({
+            name: `Next Billion — programs archive, ${PROGRAM_YEARS}`,
+            description: HOME_DESCRIPTION,
+            path: "/",
+          }),
+        ]}
+      />
       <Box pos="relative" top="-64px" mb="-64px">
         <Box
           pos="absolute"

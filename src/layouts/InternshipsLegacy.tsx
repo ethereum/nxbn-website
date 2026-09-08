@@ -7,6 +7,10 @@ import FAQ, { type Question } from "@/components/FAQ"
 import ImageSplitContent from "@/components/ImageSplitContent"
 import ImageHero from "@/components/Heroes/ImageHero"
 
+import Seo from "@/components/Seo"
+
+import { breadcrumbLd, collectionPageLd, faqLd } from "@/utils/structuredData"
+
 import HeroImage from "@/public/images/fellowship/fellowship-hero.jpg"
 
 const FAQQuestions: Question[] = [
@@ -41,9 +45,31 @@ const FAQQuestions: Question[] = [
   },
 ]
 
+const INTERNSHIPS_DESCRIPTION =
+  "The Ethereum Season of Internships placed paid, fully remote interns with teams across the Ethereum ecosystem " +
+  "in 12-week summer placements spanning development, research, design, community and operations. " +
+  "The program has concluded; this page records how it worked."
+
 const InternshipsLegacy = () => {
   return (
     <>
+      <Seo
+        title="Ethereum Season of Internships — program archive"
+        description={INTERNSHIPS_DESCRIPTION}
+        path="/internships"
+        structuredData={[
+          collectionPageLd({
+            name: "Ethereum Season of Internships",
+            description: INTERNSHIPS_DESCRIPTION,
+            path: "/internships",
+          }),
+          faqLd(FAQQuestions),
+          breadcrumbLd([
+            { name: "Next Billion", path: "/" },
+            { name: "Internships", path: "/internships" },
+          ]),
+        ]}
+      />
       <ImageHero heroImage={HeroImage}>
         <Box
           w="100%"
