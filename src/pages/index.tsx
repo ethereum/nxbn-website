@@ -14,11 +14,7 @@ import WhoAreNextBillion from "@/components/WhoAreNextBillion"
 import Seo from "@/components/Seo"
 
 import { PROGRAM_YEARS, PROGRAM_YEARS_PROSE } from "@/utils/seo"
-import {
-  collectionPageLd,
-  organizationLd,
-  webSiteLd,
-} from "@/utils/structuredData"
+import { collectionPageLd } from "@/utils/structuredData"
 
 export const getStaticProps = async () => {
   const parser = new Parser({
@@ -27,14 +23,14 @@ export const getStaticProps = async () => {
     },
   })
 
-  let blogs: (Item & { description?: string })[] = [];
+  let blogs: (Item & { description?: string })[] = []
   try {
     const feed = await parser.parseURL(
       "https://blog.ethereum.org/en/next-billion/feed.xml"
     )
-    blogs = feed.items.slice(0, 4);
+    blogs = feed.items.slice(0, 4)
   } catch (error) {
-    console.error("Error fetching RSS feed:", error);
+    console.error("Error fetching RSS feed:", error)
     // Provide fallback blog data
     blogs = [
       {
@@ -45,22 +41,27 @@ export const getStaticProps = async () => {
         contentSnippet: "",
         guid: "",
         isoDate: new Date().toISOString(),
-        description: "Unable to fetch blog posts at this time."
-      }
-    ];
+        description: "Unable to fetch blog posts at this time.",
+      },
+    ]
   }
-  
+
   const allFellowsFrontmatter = getAllFellowsFrontmatter()
-  
+
   // Calculate initial fellow index for homepage hero
   let initialFellowIndex = 0
   try {
     const fellowsWithStories = getFellowsWithStories()
     if (fellowsWithStories.length > 0) {
       // Pick a random fellow with a story
-      const randomStoryFellow = fellowsWithStories[Math.floor(Math.random() * fellowsWithStories.length)]
+      const randomStoryFellow =
+        fellowsWithStories[
+          Math.floor(Math.random() * fellowsWithStories.length)
+        ]
       // Find this fellow's index in the full allFellowsFrontmatter array
-      const fellowIndex = allFellowsFrontmatter.findIndex(fellow => fellow.slug === randomStoryFellow.slug)
+      const fellowIndex = allFellowsFrontmatter.findIndex(
+        (fellow) => fellow.slug === randomStoryFellow.slug
+      )
       if (fellowIndex >= 0) {
         initialFellowIndex = fellowIndex
       }
@@ -92,8 +93,6 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
         description={HOME_DESCRIPTION}
         path="/"
         structuredData={[
-          organizationLd(),
-          webSiteLd(),
           collectionPageLd({
             name: `Next Billion — programs archive, ${PROGRAM_YEARS}`,
             description: HOME_DESCRIPTION,
@@ -120,7 +119,10 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
             objectPosition="bottom"
           />
         </Box>
-        <HomeHero allFellowsFrontmatter={allFellowsFrontmatter} initialFellowIndex={initialFellowIndex} />
+        <HomeHero
+          allFellowsFrontmatter={allFellowsFrontmatter}
+          initialFellowIndex={initialFellowIndex}
+        />
       </Box>
       <Box bg="linear-gradient(180deg, #0E6899 0%, #057db3 100%)">
         <ContentContainer>
@@ -143,9 +145,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
                 return, they shared their story with the extended web3
                 community, and with the world-at-large.
               </Text>
-              <ButtonLink href="/fellowship">
-                Meet the fellows
-              </ButtonLink>
+              <ButtonLink href="/fellowship">Meet the fellows</ButtonLink>
             </Box>
           </ImageSplitContent>
           <ImageSplitContent
@@ -163,9 +163,7 @@ const HomePage = ({ allFellowsFrontmatter, blogs, initialFellowIndex }) => {
                 program broke down at least some barriers-to-entry for people
                 taking their first steps into the infinite garden.
               </Text>
-              <ButtonLink href="/scholars">
-                About the program
-              </ButtonLink>
+              <ButtonLink href="/scholars">About the program</ButtonLink>
             </Box>
           </ImageSplitContent>
         </ContentContainer>

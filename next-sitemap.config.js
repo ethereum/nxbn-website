@@ -30,6 +30,5 @@ module.exports = {
       { userAgent: "Applebot-Extended", allow: "/" },
       { userAgent: "Bingbot", allow: "/" },
     ],
-    additionalSitemaps: [`${siteUrl}/sitemap.xml`],
   },
 }

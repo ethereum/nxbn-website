@@ -71,26 +71,28 @@ export const getStaticProps = async (context) => {
   })
 
   // Process bio field if it exists in frontmatter
-  let bioSource: MDXRemoteSerializeResult | null = null;
+  let bioSource: MDXRemoteSerializeResult | null = null
   if (markdown.frontmatter.bio) {
     bioSource = await serialize(markdown.frontmatter.bio, {
       mdxOptions: {
         remarkPlugins,
         rehypePlugins,
       },
-    });
+    })
   }
 
   let tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
-  
+
   // Ensure tocItems is a valid array with no undefined values
-  tocItems = Array.isArray(tocItems) ? tocItems.filter(item => item && item.title) : []
+  tocItems = Array.isArray(tocItems)
+    ? tocItems.filter((item) => item && item.title)
+    : []
 
   return {
     props: {
       frontmatter: {
         ...markdown.frontmatter,
-        bioSource
+        bioSource,
       },
       layout: markdown.frontmatter.layout,
       mdxSource,
@@ -112,14 +114,14 @@ const ContentPage = ({ mdxSource, frontmatter, slug }: Props) => {
 
   const name = frontmatter?.fellowName
   const project = frontmatter?.title
-  const title = isFellow
-    ? `${name} — ${project}`
-    : project || "Next Billion"
+  const title = isFellow ? `${name} — ${project}` : project || "Next Billion"
 
+  // Frontmatter descriptions don't end in a period, so appending "A Next
+  // Billion Fellow, cohort 3, based in Indonesia." produced a run-on
+  // sentence — and `clampDescription` cut the whole clause back off at 155
+  // chars anyway, so it cost a malformed sentence and bought no context.
   const description = isFellow
-    ? `${frontmatter?.description || ""} A Next Billion Fellow${
-        frontmatter?.cohort ? `, cohort ${frontmatter.cohort}` : ""
-      }${frontmatter?.country ? `, based in ${frontmatter.country}` : ""}.`
+    ? frontmatter?.description || ""
     : `${project || "Next Billion"} for the Next Billion initiative at the Ethereum Foundation (${PROGRAM_YEARS}).`
 
   const structuredData: Record<string, unknown>[] = isFellow

@@ -18,7 +18,6 @@ import {
  * 2021–2025" instead of implying applications are still open.
  */
 export const organizationLd = () => ({
-  "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
   name: "Next Billion",
@@ -47,7 +46,6 @@ export const organizationLd = () => ({
 })
 
 export const webSiteLd = () => ({
-  "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
   name: SITE_NAME,
@@ -70,7 +68,6 @@ export const collectionPageLd = ({
   description: string
   path: string
 }) => ({
-  "@context": "https://schema.org",
   "@type": "CollectionPage",
   name,
   description: clampDescription(description, 300),
@@ -97,7 +94,6 @@ export const articleLd = ({
   image?: string
 }) => {
   const ld: Record<string, unknown> = {
-    "@context": "https://schema.org",
     "@type": "Article",
     headline,
     description: clampDescription(description, 300),
@@ -117,24 +113,53 @@ export const articleLd = ({
   return ld
 }
 
+/**
+ * Some answers are written as bulleted lines ("- Software development …").
+ * Joining those with a space produces "…including: - Software development -
+ * Research", which reads as broken prose to exactly the answer engines this
+ * markup is for. `acceptedAnswer.text` accepts limited HTML, so emit real
+ * paragraphs and lists instead.
+ */
+const answerToHtml = (lines: string[]) => {
+  const blocks: string[] = []
+  let bullets: string[] = []
+
+  const flushBullets = () => {
+    if (!bullets.length) return
+    blocks.push(`<ul>${bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`)
+    bullets = []
+  }
+
+  for (const line of lines) {
+    const text = line.trim()
+    if (!text) continue
+    const bullet = /^[-*]\s+(.*)$/.exec(text)
+    if (bullet) {
+      bullets.push(bullet[1])
+    } else {
+      flushBullets()
+      blocks.push(`<p>${text}</p>`)
+    }
+  }
+  flushBullets()
+
+  return blocks.join("")
+}
+
 /** FAQ blocks are one of the few schema types answer engines quote directly. */
-export const faqLd = (
-  questions: { question: string; answer: string[] }[]
-) => ({
-  "@context": "https://schema.org",
+export const faqLd = (questions: { question: string; answer: string[] }[]) => ({
   "@type": "FAQPage",
   mainEntity: questions.map((q) => ({
     "@type": "Question",
     name: q.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: q.answer.join(" "),
+      text: answerToHtml(q.answer),
     },
   })),
 })
 
 export const breadcrumbLd = (items: { name: string; path: string }[]) => ({
-  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: items.map((item, i) => ({
     "@type": "ListItem",
@@ -142,4 +167,23 @@ export const breadcrumbLd = (items: { name: string; path: string }[]) => ({
     name: item.name,
     item: absoluteUrl(item.path),
   })),
+})
+
+/**
+ * Emit a single `@graph` rather than an array of standalone nodes.
+ *
+ * Two problems this solves. Every page references
+ * `{"@id": ".../#organization"}` and `{"@id": ".../#website"}` from
+ * `publisher` / `isPartOf` / `about`, but those nodes were only emitted on the
+ * home page. Google resolves `@id` per page, so on a fellow story
+ * `Article.publisher` resolved to an object with no `name` and failed Rich
+ * Results. Including them in every page's graph fixes that.
+ *
+ * Second, a top-level array is valid JSON-LD but naive consumers read
+ * `parsed["@context"].toLowerCase()`, which throws on an array. A single
+ * object keeps `@context` where everyone looks for it.
+ */
+export const graphLd = (nodes: Record<string, unknown>[]) => ({
+  "@context": "https://schema.org",
+  "@graph": [organizationLd(), webSiteLd(), ...nodes],
 })

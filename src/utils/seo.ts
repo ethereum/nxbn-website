@@ -42,11 +42,17 @@ export const clampDescription = (text: string, max = 155) => {
  */
 export const toIsoDate = (value?: string) => {
   if (!value) return undefined
-  const parsed = new Date(value)
+  const trimmed = value.trim()
+  // Already ISO date-only. Pass it straight through: `new Date("2026-09-07")`
+  // parses as UTC midnight, so reading local parts back off it yields the
+  // previous day anywhere WEST of Greenwich (a UTC-7 build machine gives the
+  // 6th). Round-tripping a value that is already correct can only corrupt it.
+  if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) return trimmed
+  const parsed = new Date(trimmed)
   if (Number.isNaN(parsed.getTime())) return undefined
-  // Read the local date parts rather than going through toISOString(): a
-  // date-only string parses as local midnight, so a UTC conversion moves it to
-  // the previous day anywhere east of Greenwich.
+  // Human forms ("September 7, 2026") parse as LOCAL midnight, so the local
+  // parts are the intended date; toISOString() would move them back a day
+  // anywhere east of Greenwich.
   const year = parsed.getFullYear()
   const month = String(parsed.getMonth() + 1).padStart(2, "0")
   const day = String(parsed.getDate()).padStart(2, "0")

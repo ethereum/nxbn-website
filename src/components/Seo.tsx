@@ -1,5 +1,7 @@
 import Head from "next/head"
 
+import { graphLd } from "@/utils/structuredData"
+
 import {
   OG_IMAGE,
   SITE_NAME,
@@ -19,8 +21,11 @@ interface SeoProps {
   type?: "website" | "article"
   publishedTime?: string
   authorName?: string
-  /** JSON-LD to embed for search and answer engines. */
-  structuredData?: Record<string, unknown> | Record<string, unknown>[]
+  /**
+   * Page-specific JSON-LD nodes. Organization and WebSite are added for every
+   * page by `graphLd`, so the `@id` references in these nodes always resolve.
+   */
+  structuredData?: Record<string, unknown>[]
 }
 
 const Seo = ({
@@ -77,13 +82,15 @@ const Seo = ({
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={imageUrl} />
 
-      {structuredData && (
+      {structuredData?.length ? (
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(graphLd(structuredData)),
+          }}
         />
-      )}
+      ) : null}
     </Head>
   )
 }
