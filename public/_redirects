@@ -1,0 +1,5 @@
+# Unknown paths were answering 200 with the 404 page (a soft 404), because
+# they fall through to a Next.js runtime rather than being served statically.
+# This rule is not forced, so Netlify still serves any existing file first —
+# it only applies when nothing matches, which is exactly the 404 case.
+/*  /404.html  404
