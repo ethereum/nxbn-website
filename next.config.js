@@ -23,13 +23,27 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
 }
 
-module.exports = withMDX((phase) => {
+// `withMDX` takes a config OBJECT, not a function. Passing it a function
+// silently dropped every setting below (spreading a function yields no own
+// enumerable properties), so the config resolved to `{ webpack }` alone.
+// Build the object first, then wrap it.
+module.exports = (phase) => {
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
-    return {
+    return withMDX({
       ...nextConfig,
       experimental,
+      // Pin the trace root to this repo. Without it Next infers the root from
+      // the nearest lockfile and can wander outside the project.
+      outputFileTracingRoot: __dirname,
       outputFileTracingExcludes: {
         "*": [
+          /**
+           * `[...slug]` reads content directories at build time with paths the
+           * tracer can't resolve statically, so it conservatively pulls in the
+           * whole repo root — including `.git`, which is ~110MB of packfiles
+           * and pushed the Netlify function past its upload limit.
+           */
+          ".git/**",
           /**
            * Exclude these paths from the trace output to avoid bloating the
            * Netlify functions bundle.
@@ -45,8 +59,8 @@ module.exports = withMDX((phase) => {
           "public/**/*.gif",
         ],
       },
-    }
+    })
   }
 
-  return nextConfig
-})
+  return withMDX(nextConfig)
+}
