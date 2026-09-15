@@ -31,6 +31,12 @@ module.exports = (phase) => {
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
     return withMDX({
       ...nextConfig,
+      // The archive is fully static: no API routes, no getServerSideProps, no
+      // ISR, no middleware. Exporting means Netlify serves plain files and no
+      // server-handler function is produced at all.
+      output: "export",
+      // Image optimisation needs a server; without one, serve the originals.
+      images: { unoptimized: true },
       experimental,
       // Pin the trace root to this repo. Without it Next infers the root from
       // the nearest lockfile and can wander outside the project.

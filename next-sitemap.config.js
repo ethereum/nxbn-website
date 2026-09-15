@@ -7,6 +7,9 @@ const siteUrl = "https://nxbn.ethereum.foundation"
 
 module.exports = {
   siteUrl,
+  // `postbuild` runs after the static export, so writing to the default
+  // `public/` would never reach `out/`. Emit straight into the export.
+  outDir: "out",
   generateRobotsTxt: true,
   // The programs have concluded, but the archive should stay discoverable —
   // both to search engines and to the answer engines people now ask about

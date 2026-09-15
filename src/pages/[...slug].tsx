@@ -34,7 +34,10 @@ interface Props {
 export const getStaticPaths = () => {
   const paths = getContentPaths("/")
 
-  return { paths: paths, fallback: true }
+  // `getContentPaths` walks public/content, so every slug is known here.
+  // `fallback: true` would ask for on-demand rendering of paths that cannot
+  // exist, which is what forced a server function for this route.
+  return { paths: paths, fallback: false }
 }
 
 export const getStaticProps = async (context) => {
