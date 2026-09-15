@@ -37,34 +37,13 @@ module.exports = (phase) => {
       output: "export",
       // Image optimisation needs a server; without one, serve the originals.
       images: { unoptimized: true },
-      experimental,
-      // Pin the trace root to this repo. Without it Next infers the root from
-      // the nearest lockfile and can wander outside the project.
+      // Not about file tracing any more — a static export produces no server
+      // function to trace. This repo carries both pnpm-lock.yaml and a stale
+      // yarn.lock, so without an explicit root Next infers one from the
+      // nearest lockfile (a stray package-lock.json in $HOME, locally) and
+      // warns on every build and lint.
       outputFileTracingRoot: __dirname,
-      outputFileTracingExcludes: {
-        "*": [
-          /**
-           * `[...slug]` reads content directories at build time with paths the
-           * tracer can't resolve statically, so it conservatively pulls in the
-           * whole repo root — including `.git`, which is ~110MB of packfiles
-           * and pushed the Netlify function past its upload limit.
-           */
-          ".git/**",
-          /**
-           * Exclude these paths from the trace output to avoid bloating the
-           * Netlify functions bundle.
-           *
-           * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
-           * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
-           */
-          "node_modules/@swc/core-linux-x64-gnu",
-          "node_modules/@swc/core-linux-x64-musl",
-          "node_modules/@esbuild/linux-x64",
-          "public/**/*.png",
-          "public/**/*.jpg",
-          "public/**/*.gif",
-        ],
-      },
+      experimental,
     })
   }
 
