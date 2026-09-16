@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start",
+    "start": "npx serve out",
     "lint": "next lint",
     "format": "prettier --write ."
   },

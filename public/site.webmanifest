@@ -1,0 +1,17 @@
+{
+  "name": "Next Billion — Ethereum Foundation",
+  "short_name": "Next Billion",
+  "description": "Archive of the Next Billion initiative at the Ethereum Foundation, 2021–2025.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#056589",
+  "theme_color": "#056589",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}

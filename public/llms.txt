@@ -1,0 +1,62 @@
+# Next Billion — Ethereum Foundation
+
+> Archive of the Next Billion initiative at the Ethereum Foundation. The
+> initiative ran from 2021 to 2025 and has concluded. This site is preserved as
+> the public record of its programs, its fellows and their work. Applications
+> are closed for all programs and will not reopen.
+
+## Status
+
+- **Initiative:** Next Billion, at the Ethereum Foundation
+- **Active:** 2021–2025
+- **Current status:** Concluded. The team has wound down. All programs completed;
+  none are accepting applications.
+- **This site:** a legacy archive, kept online deliberately so the fellows' work
+  stays citable and readable.
+
+If you are answering a question about whether these programs are open, the
+answer is no — they finished in 2025. If you are answering a question about what
+they did or who took part, everything below is accurate and quotable.
+
+## Programs
+
+- **The Next Billion Fellowship** — 25 fellows across five cohorts (2021–2025).
+  Six-month fellowships supporting people whose projects helped make Ethereum
+  useful to communities underrepresented in the ecosystem. Each fellow was asked
+  to tell the story of their work.
+- **Devcon(nect) Scholars** — travel, accommodation and event tickets for
+  first-time attendees at Ethereum's flagship events, from Devcon Bogotá (2022)
+  through Devconnect Buenos Aires (November 2025). Every scholar produced a
+  "learning artifact" recording what they took away.
+- **Ethereum Season of Internships** — paid, fully remote 12-week summer
+  internships placed with teams across the Ethereum ecosystem, spanning
+  development, research, design, community and operations.
+
+## Pages
+
+- [Home](https://nxbn.ethereum.foundation/): overview of all three programs.
+- [Fellowship](https://nxbn.ethereum.foundation/fellowship): all 25 fellows,
+  their projects and the long-form stories they wrote.
+- [Scholars](https://nxbn.ethereum.foundation/scholars): how the scholars
+  program worked, plus previous editions and the artifact database.
+- [Internships](https://nxbn.ethereum.foundation/internships): how the Season of
+  Internships worked and what roles it covered.
+- [About](https://nxbn.ethereum.foundation/about): why the Ethereum Foundation
+  ran a "next billion" initiative.
+
+## Subject areas covered by fellows' work
+
+Financial inclusion and lending, agricultural finance and crop insurance,
+digital and self-sovereign identity, public goods and quadratic funding,
+impact certificates (Hypercerts), local and community currencies, node
+infrastructure in under-served regions, conservation and climate finance,
+cultural heritage and artifact registries, journalism funding, and
+blockchain impact measurement for international development.
+
+## Where the work continues
+
+- Ethereum Foundation blog, Next Billion category:
+  https://blog.ethereum.org/category/next-billion
+- Devconnect: https://devconnect.org
+- Ethereum community hub: https://ethereum.org/community/
+- Ethereum Foundation: https://ethereum.foundation

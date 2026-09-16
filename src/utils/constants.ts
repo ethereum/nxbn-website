@@ -15,9 +15,6 @@ export const CONTENT_DIR = "public/content"
 
 export const MARKDOWN_CONTENT_MAX_WIDTH = 800
 
-export const SCHOLARS_PROGRAM_OPEN = false
-export const INTERNSHIPS_PROGRAM_OPEN = false
-
 export const FELLOW_LIST_PAGINATION_LIMIT = 8
 
 export const IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT = {
@@ -27,3 +24,12 @@ export const IMAGE_ZOOM_TRANSITION_STYLE_CONSTANT = {
 export const IMAGE_ZOOM_HOVER_STYLE_CONSTANT = {
   transform: "scale(1.02)",
 }
+
+/**
+ * Breathing room below the sticky header, added in db167f1.
+ *
+ * `ImageHero` pulls the hero up to sit under the header, so its offset has to
+ * cancel this margin as well or an empty band appears above the hero art.
+ * Both read this value so they cannot drift apart.
+ */
+export const HEADER_BOTTOM_MARGIN = "2rem"

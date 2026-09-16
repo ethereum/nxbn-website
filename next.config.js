@@ -23,30 +23,29 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
 }
 
-module.exports = withMDX((phase) => {
+// `withMDX` takes a config OBJECT, not a function. Passing it a function
+// silently dropped every setting below (spreading a function yields no own
+// enumerable properties), so the config resolved to `{ webpack }` alone.
+// Build the object first, then wrap it.
+module.exports = (phase) => {
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
-    return {
+    return withMDX({
       ...nextConfig,
+      // The archive is fully static: no API routes, no getServerSideProps, no
+      // ISR, no middleware. Exporting means Netlify serves plain files and no
+      // server-handler function is produced at all.
+      output: "export",
+      // Image optimisation needs a server; without one, serve the originals.
+      images: { unoptimized: true },
+      // Not about file tracing any more — a static export produces no server
+      // function to trace. This repo carries both pnpm-lock.yaml and a stale
+      // yarn.lock, so without an explicit root Next infers one from the
+      // nearest lockfile (a stray package-lock.json in $HOME, locally) and
+      // warns on every build and lint.
+      outputFileTracingRoot: __dirname,
       experimental,
-      outputFileTracingExcludes: {
-        "*": [
-          /**
-           * Exclude these paths from the trace output to avoid bloating the
-           * Netlify functions bundle.
-           *
-           * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
-           * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
-           */
-          "node_modules/@swc/core-linux-x64-gnu",
-          "node_modules/@swc/core-linux-x64-musl",
-          "node_modules/@esbuild/linux-x64",
-          "public/**/*.png",
-          "public/**/*.jpg",
-          "public/**/*.gif",
-        ],
-      },
-    }
+    })
   }
 
-  return nextConfig
-})
+  return withMDX(nextConfig)
+}

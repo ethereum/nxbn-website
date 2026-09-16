@@ -9,6 +9,7 @@ import { CookieLayout } from "@/layouts/CookieLayout"
 import { FellowLayout } from "@/layouts/FellowLayout"
 
 import MdComponents from "@/components/Md/MdComponents"
+import Seo from "@/components/Seo"
 
 import { getContentPaths } from "@/utils/getContentPaths"
 import { getAllFellowsFrontmatter, getContentBySlug } from "@/utils/md"
@@ -16,6 +17,8 @@ import rehypeHeadingIds from "@/utils/rehypeHeadingIds"
 import rehypeImg from "@/utils/rehypeImg"
 import remarkInferToc from "@/utils/remarkInferToc"
 import { remapTableOfContents } from "@/utils/toc"
+import { PROGRAM_YEARS } from "@/utils/seo"
+import { articleLd, breadcrumbLd } from "@/utils/structuredData"
 
 export const layoutMapping = {
   fellow: FellowLayout,
@@ -24,12 +27,17 @@ export const layoutMapping = {
 
 interface Props {
   mdxSource: MDXRemoteSerializeResult
+  frontmatter?: Record<string, any>
+  slug?: string
 }
 
 export const getStaticPaths = () => {
   const paths = getContentPaths("/")
 
-  return { paths: paths, fallback: true }
+  // `getContentPaths` walks public/content, so every slug is known here.
+  // `fallback: true` would ask for on-demand rendering of paths that cannot
+  // exist, which is what forced a server function for this route.
+  return { paths: paths, fallback: false }
 }
 
 export const getStaticProps = async (context) => {
@@ -63,26 +71,28 @@ export const getStaticProps = async (context) => {
   })
 
   // Process bio field if it exists in frontmatter
-  let bioSource: MDXRemoteSerializeResult | null = null;
+  let bioSource: MDXRemoteSerializeResult | null = null
   if (markdown.frontmatter.bio) {
     bioSource = await serialize(markdown.frontmatter.bio, {
       mdxOptions: {
         remarkPlugins,
         rehypePlugins,
       },
-    });
+    })
   }
 
   let tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
-  
+
   // Ensure tocItems is a valid array with no undefined values
-  tocItems = Array.isArray(tocItems) ? tocItems.filter(item => item && item.title) : []
+  tocItems = Array.isArray(tocItems)
+    ? tocItems.filter((item) => item && item.title)
+    : []
 
   return {
     props: {
       frontmatter: {
         ...markdown.frontmatter,
-        bioSource
+        bioSource,
       },
       layout: markdown.frontmatter.layout,
       mdxSource,
@@ -93,8 +103,59 @@ export const getStaticProps = async (context) => {
   }
 }
 
-const ContentPage = ({ mdxSource }: Props) => {
-  return <MDXRemote {...mdxSource} components={MdComponents as any} />
+/**
+ * Markdown pages carry their own metadata. Fellow stories become `Article`s
+ * attributed to the fellow; the cookie policy is a plain page that should stay
+ * indexable but never outrank the program content.
+ */
+const ContentPage = ({ mdxSource, frontmatter, slug }: Props) => {
+  const path = (slug || "/").replace(/\/$/, "") || "/"
+  const isFellow = frontmatter?.layout === "fellow"
+
+  const name = frontmatter?.fellowName
+  const project = frontmatter?.title
+  const title = isFellow ? `${name} — ${project}` : project || "Next Billion"
+
+  // Frontmatter descriptions don't end in a period, so appending "A Next
+  // Billion Fellow, cohort 3, based in Indonesia." produced a run-on
+  // sentence — and `clampDescription` cut the whole clause back off at 155
+  // chars anyway, so it cost a malformed sentence and bought no context.
+  const description = isFellow
+    ? frontmatter?.description || ""
+    : `${project || "Next Billion"} for the Next Billion initiative at the Ethereum Foundation (${PROGRAM_YEARS}).`
+
+  const structuredData: Record<string, unknown>[] = isFellow
+    ? [
+        articleLd({
+          headline: title,
+          description,
+          path,
+          authorName: name,
+          datePublished: frontmatter?.publishedDate,
+          image: frontmatter?.image,
+        }),
+        breadcrumbLd([
+          { name: "Next Billion", path: "/" },
+          { name: "Fellowship", path: "/fellowship" },
+          { name: name || "Fellow", path },
+        ]),
+      ]
+    : []
+
+  return (
+    <>
+      <Seo
+        title={title}
+        description={description}
+        path={path}
+        type={isFellow ? "article" : "website"}
+        publishedTime={isFellow ? frontmatter?.publishedDate : undefined}
+        authorName={isFellow ? name : undefined}
+        structuredData={structuredData.length ? structuredData : undefined}
+      />
+      <MDXRemote {...mdxSource} components={MdComponents as any} />
+    </>
+  )
 }
 
 ContentPage.getLayout = (page) => {
