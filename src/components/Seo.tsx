@@ -22,6 +22,11 @@ interface SeoProps {
   publishedTime?: string
   authorName?: string
   /**
+   * Keep the page out of search results. The archive is deliberately
+   * indexable, so this is only for pages with no standalone value — the 404.
+   */
+  noindex?: boolean
+  /**
    * Page-specific JSON-LD nodes. Organization and WebSite are added for every
    * page by `graphLd`, so the `@id` references in these nodes always resolve.
    */
@@ -36,6 +41,7 @@ const Seo = ({
   type = "website",
   publishedTime,
   authorName,
+  noindex = false,
   structuredData,
 }: SeoProps) => {
   const fullTitle = title.includes("Next Billion")
@@ -58,7 +64,11 @@ const Seo = ({
       {/* The programs are over, but the record of them should stay findable. */}
       <meta
         name="robots"
-        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        content={
+          noindex
+            ? "noindex, follow"
+            : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        }
       />
 
       <meta property="og:type" content={type} />
