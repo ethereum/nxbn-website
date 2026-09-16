@@ -43,7 +43,7 @@ It was through that thread that I came across [Hypercerts](https://hypercerts.or
 
 Hypercerts is an open, interoperable standard for impact certificates that came out of the Ethereum ecosystem. The idea is to take a verified outcome and represent it as something legible and ownable: a funder can see what they are supporting, and a community can be paid for producing it. Putting these certificates on-chain makes each outcome verifiable, stops the same impact from being counted or sold twice, and means no single institution has to be trusted as the arbiter of what's true.
 
-[Devansh, another Next Billion fellow](/fellowship/Devansh), had taken the same idea and built VoiceDeck, a Hypercerts marketplace for journalism, where a reader can fund a piece of reporting that has already been done.
+[Devansh, another Next Billion fellow](/fellowship/devansh), had taken the same idea and built VoiceDeck, a Hypercerts marketplace for journalism, where a reader can fund a piece of reporting that has already been done.
 
 Seeing it work is what made it click. The same shape could work for the people protecting forests. VoiceDeck is open source, so we forked it and started from there.
 
@@ -61,7 +61,7 @@ We also tested this in the Amazon, sending communities crypto directly through M
 
 ![ecocertain.xyz, the first iteration of an environmental hypercert marketplace](ecocertain.png)
 
-*ecocertain.xyz, the first iteration of an environmental hypercert marketplace*
+_ecocertain.xyz, the first iteration of an environmental hypercert marketplace_
 
 In late 2024 GainForest built [Ecocertain](https://github.com/GainForest/ecocertain), an on-chain marketplace for environmental impact certificates. This app has now been deprecated (you'll read more about why in this article), but what we learned from it became a second version, now simply [gainforest.app](https://www.gainforest.app/). My Next Billion Fellowship project has been about scaling this work. How can we scale the number of people who can take part in funding and receiving funds for environmental impact?
 

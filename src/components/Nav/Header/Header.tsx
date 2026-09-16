@@ -16,6 +16,8 @@ import { useRouter } from "next/router"
 import { CloseIcon, HamburgerIcon, LogoIcon } from "@/components/icons"
 import HeaderButtons from "@/components/Nav/Header/HeaderButtons"
 
+import { HEADER_BOTTOM_MARGIN } from "@/utils/constants"
+
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const router = useRouter()
@@ -24,7 +26,7 @@ const Header = () => {
 
   return (
     <header>
-      <Box mx={4} mb={8} zIndex="sticky">
+      <Box mx={4} mb={HEADER_BOTTOM_MARGIN} zIndex="sticky">
         <Flex
           px={6}
           py={3}

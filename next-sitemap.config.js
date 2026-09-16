@@ -11,6 +11,12 @@ module.exports = {
   // `public/` would never reach `out/`. Emit straight into the export.
   outDir: "out",
   generateRobotsTxt: true,
+  // The programs are over and these pages don't change. Leaving next-sitemap's
+  // defaults told crawlers every URL changes daily and was modified at build
+  // time, refreshed on each deploy — the opposite of what the rest of this
+  // site's metadata says.
+  autoLastmod: false,
+  changefreq: "yearly",
   // The programs have concluded, but the archive should stay discoverable —
   // both to search engines and to the answer engines people now ask about
   // Ethereum's fellowship and scholars programs.
