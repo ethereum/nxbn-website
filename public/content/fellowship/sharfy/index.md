@@ -4,10 +4,10 @@ layout: fellow
 title: Climate Finance for Local Conservation
 fellowName: Sharfy
 cohort: 5
-country: France
+country: Indonesia
 publishedDate: September 7, 2026
-lat: 48.8566
-lon: 2.3522
+lat: -6.2088
+lon: 106.8456
 image: /content/fellowship/sharfy/sharfy-headshot.jpg
 description: Sharfy Adamantine enables environmental stewardship by connecting climate finance directly to local conservation efforts and data at Gainforest, improving compatibility and functionality of the Hypercerts standard.
 storyHook: "Proving your work should be as easy as posting on social media. Take the photo, write the note, publish. Billions of people already know how to do this."
